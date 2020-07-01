@@ -6,7 +6,7 @@ module.exports = {
 
         if(argument[2] == `${member}`){
             message.channel.send(`${message.author} gave ${member} a pat!`);
-            message.channel.send(`https://media.giphy.com/media/osYdfUptPqV0s/giphy.gif`);
+            message.channel.send('https://media.giphy.com/media/osYdfUptPqV0s/giphy.gif');
         }
     }
 }
