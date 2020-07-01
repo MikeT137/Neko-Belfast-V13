@@ -78,8 +78,7 @@ bot.on('message', (message) => {
         break;
 
         case 'kiss':
-            if(!argument[2])
-                message.channel.send('https://data.whicdn.com/images/10377184/original.gif');
+            bot.commands.get('kiss').execute(message, argument);
         break;
     }
 });
