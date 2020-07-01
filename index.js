@@ -70,8 +70,8 @@ bot.on('message', (message) => {
         break;
 
         case 'hug':
-            if(!argument[2])
-                message.channel.send('https://tenor.com/view/anime-hug-sweet-love-gif-14246498');
+            if(argument[2] == `${member}`)
+            bot.commands.get('hug').execute(message, argument);
         break;
 
         case 'snuggle':
