@@ -21,10 +21,8 @@ bot.on('message', (message) => {
 });
 
 bot.on('message', (message) => {
-    if(message.content == 'uwu')
+    if(message.content == 'uwu', 'UwU')
          message.channel.send('>w<');
-    else if(message.content == 'UwU')
-        message.channel.send('>w<');
 });
 
 bot.on('message', message => {
