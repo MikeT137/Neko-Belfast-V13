@@ -4,7 +4,7 @@ module.exports = {
     execute(message, argument){
         let member = message.mentions.members.first()
 
-        if(!argument[3]){
+        if(argument[2] == `${member}`){
             message.channel.send(`${message.author} gave ${member} a hug!`);
             message.channel.send("https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif");
         }
