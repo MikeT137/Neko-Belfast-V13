@@ -15,7 +15,7 @@ module.exports = {
         if(message.mentions.members.size == 1) {
             let member = message.mentions.members.first()
             message.channel.send(`${message.author} hugs ${member} !`);
-            file: random_hug[Math.floor(Math.random() * random_hug.length)]
+            message.channel.send(random_hug[Math.floor(Math.random() * random_hug.length)]);
         }
     }
 }
