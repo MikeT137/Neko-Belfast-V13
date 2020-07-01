@@ -70,7 +70,6 @@ bot.on('message', (message) => {
         break;
 
         case 'hug':
-            if(argument[2] == `${member}`)
             bot.commands.get('hug').execute(message, argument);
         break;
 
