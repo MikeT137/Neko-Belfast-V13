@@ -6,7 +6,7 @@ module.exports = {
 
         if(!argument[3]){
             message.channel.send(`${message.author} gave ${member} a hug!`, {
-            file: "https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif"
+            file: "https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif",
             });
         }
     }
