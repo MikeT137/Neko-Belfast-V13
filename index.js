@@ -65,8 +65,7 @@ bot.on('message', (message) => {
         break;
 
         case 'pat':
-            if(!argument[2])
-                message.channel.send('https://i.imgur.com/2lacG7l.gif');
+            bot.commands.get('pat').execute(message, argument);
         break;
 
         case 'hug':
