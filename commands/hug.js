@@ -9,4 +9,4 @@ module.exports = {
             message.channel.send('https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif');
         }
     }
-}}
+}
