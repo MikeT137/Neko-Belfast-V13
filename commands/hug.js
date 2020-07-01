@@ -2,7 +2,7 @@ module.exports = {
     name:'hug',
     description: "Hugs a user",
     execute(message, argument){
-        const random_hug[
+        const random_hug = [
             'https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif',
             'https://media.giphy.com/media/49mdjsMrH7oze/giphy.gif',
             'https://media.giphy.com/media/QFPoctlgZ5s0E/giphy.gif',
