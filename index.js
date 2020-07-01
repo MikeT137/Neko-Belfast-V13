@@ -65,8 +65,7 @@ bot.on('message', (message) => {
         break;
 
         case 'pat':
-            if(!argument[2])
-                message.channel.send('https://media.giphy.com/media/osYdfUptPqV0s/giphy.gif');
+            bot.commands.get('pat').execute(message, argument);
         break;
 
         case 'hug':
