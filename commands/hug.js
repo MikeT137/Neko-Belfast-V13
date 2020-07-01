@@ -2,7 +2,6 @@ module.exports = {
     name:'hug',
     description: "Hugs a user",
     execute(message, argument){
-        if(message.mentions.members.size == 1) {
         let member = message.mentions.members.first()
 
         if(argument[2] == `${member}`){
