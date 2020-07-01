@@ -20,6 +20,13 @@ bot.on('message', (message) => {
          message.channel.send('hewwo');
 });
 
+bot.on('message', (message) => {
+    if(message.content == 'uwu')
+         message.channel.send('>w<');
+    else if(message.content == 'UwU')
+        message.channel.send('>w<');
+});
+
 bot.on('message', message => {
 	if (!message.content.startsWith(PREFIX)) return;
 
