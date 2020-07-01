@@ -16,7 +16,7 @@ bot.on('ready', () => {
 });
 
 bot.on('message', (message) => {
-    if(message.content == 'hey')
+    if(message.content == 'hey' || message.content == 'hi' || message.content == 'hello')
          message.channel.send('hewwo');
 });
 
