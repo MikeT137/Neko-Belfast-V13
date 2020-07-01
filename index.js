@@ -73,8 +73,7 @@ bot.on('message', (message) => {
         break;
 
         case 'snuggle':
-            if(!argument[2])
-                message.channel.send('https://media.tenor.com/images/5829c20ecce80dedec8a42537d32292e/tenor.gif');
+            bot.commands.get('snuggle').execute(message, argument);
         break;
 
         case 'kiss':
