@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const PREFIX = 'bel ';
+const PREFIX = 'b!';
 
 const fs = require('fs');
 bot.commands = new Discord.Collection();
@@ -33,7 +33,7 @@ bot.on('message', message => {
 	    const args = split.slice(1);
         let argument = message.content.substring(PREFIX.length).split(" ");
 
-        switch(argument[0] == prefix) {
+        switch(argument[0] == PREFIX) {
             case 'help':
                 bot.commands.get('help').execute(message, argument);
             break;
