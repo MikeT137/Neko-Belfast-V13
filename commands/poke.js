@@ -14,10 +14,12 @@ module.exports = {
             'https://pa1.narvii.com/5679/d39dc10bcad2fd42a130de685d192c166d55f69a_hq.gif',
             'https://steamuserimages-a.akamaihd.net/ugc/957465844206544934/F541AE935C936C3BAF5250F8D2606CFECE17A2DA/',
         ]
-        if(message.mentions.members.size == 1) {
-            let member = message.mentions.members.first()
-            message.channel.send(`${message.author} pokes ${member}`);
-            message.channel.send(random_poke[Math.floor(Math.random() * random_poke.length)]);
+        if(!argument[2]) && message.mentions.members.size == 1{
+            const embed = new Discord.MessageEmbed()
+
+            .setImage(random_poke[Math.floor(Math.random() * random_poke.length)])
+            .setColor(0x4AEFBA)
+            message.channel.send(embed);
         }
     }
 }
