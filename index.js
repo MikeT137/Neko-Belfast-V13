@@ -31,72 +31,69 @@ bot.on('message', message => {
 	    const split = withoutPrefix.split(/ +/);
 	    const command = split[0];
 	    const args = split.slice(1);
-
-        bot.on('message', (message) => {
         let argument = message.content.substring(PREFIX.length).split(" ");
 
-            switch(argument[0]){
-                case 'help':
+        switch(argument[0]) {
+            case 'help':
                 bot.commands.get('help').execute(message, argument);
-                break;
+            break;
 
-                case 'info':
-                    bot.commands.get('info').execute(message, argument);
-                break;
+            case 'info':
+                bot.commands.get('info').execute(message, argument);
+            break;
                 
-                case 'mute':
-                    bot.commands.get('mute').execute(message, argument);
-                break;
+            case 'mute':
+                bot.commands.get('mute').execute(message, argument);
+            break;
 
-                case 'love':
-                    bot.commands.get('love').execute(message, argument);
-                break;
+            case 'love':
+                bot.commands.get('love').execute(message, argument);
+            break;
 
-                case 'clear':
-                    bot.commands.get('clear').execute(message, argument);
-                break;
+            case 'clear':
+                bot.commands.get('clear').execute(message, argument);
+            break;
                 
-                case 'avatar':
-                    bot.commands.get('avatar').execute(message, argument);
-                break;
+            case 'avatar':
+                bot.commands.get('avatar').execute(message, argument);
+            break;
 
-                case 'pat':
-                    bot.commands.get('pat').execute(message, argument);
-                break;
+            case 'pat':
+                bot.commands.get('pat').execute(message, argument);
+            break;
 
-                case 'hug':
-                    bot.commands.get('hug').execute(message, argument);
-                break;
+            case 'hug':
+                bot.commands.get('hug').execute(message, argument);
+            break;
 
-                case 'snuggle':
-                    bot.commands.get('snuggle').execute(message, argument);
-                break;
+            case 'snuggle':
+                bot.commands.get('snuggle').execute(message, argument);
+            break;
 
-                case 'kiss':
-                    bot.commands.get('kiss').execute(message, argument);
-                break;
+            case 'kiss':
+                bot.commands.get('kiss').execute(message, argument);
+            break;
                 
-                case 'handhold':
-                    bot.commands.get('handhold').execute(message, argument);
-                break;
+            case 'handhold':
+                bot.commands.get('handhold').execute(message, argument);
+            break;
 
-                case 'poke':
-                    bot.commands.get('poke').execute(message, argument);
-                break;
+            case 'poke':
+                bot.commands.get('poke').execute(message, argument);
+            break;
 
-                case 'lick':
-                    bot.commands.get('lick').execute(message, argument);
-                break;
+            case 'lick':
+                bot.commands.get('lick').execute(message, argument);
+            break;
 
-                case 'punch':
-                    bot.commands.get('punch').execute(message, argument);
-                break;
+            case 'punch':
+                bot.commands.get('punch').execute(message, argument);
+            break;
 
-                case 'slap':
-                    bot.commands.get('slap').execute(message, argument);
-                break;
-            }
-        });
+            case 'slap':
+                bot.commands.get('slap').execute(message, argument);
+            break;
+        }
     }
 });
 
