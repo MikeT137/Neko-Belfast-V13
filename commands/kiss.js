@@ -14,7 +14,7 @@ module.exports = {
             'https://pa1.narvii.com/6836/cf4d3f8516103d493f7f7d6a18cc3082eca0a063_hq.gif',
             'https://i.gifer.com/QPB7.gif',
         ]
-        if(!argument[2]) && message.mentions.members.size == 1{
+        if(!argument[2] && message.mentions.members.size == 1) {
             const embed = new Discord.MessageEmbed()
 
             .setImage(random_kiss[Math.floor(Math.random() * random_kiss.length)])
