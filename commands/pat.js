@@ -17,7 +17,7 @@ module.exports = {
         ]
         if(message.mentions.members.size == 1) {
             let member = message.mentions.members.first()
-            message.channel.send(`${user.username} pats ${member.username}...so cute`);
+            message.channel.send(`${user.username} pats ${member}...so cute`);
             message.channel.send(random_pat[Math.floor(Math.random() * random_pat.length)]);
         }
     }
