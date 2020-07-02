@@ -15,11 +15,19 @@ module.exports = {
             'https://acegif.com/wp-content/uploads/anime-hug.gif',
             'https://media.tenor.com/images/2e1d34d002d73459b6119d57e6a795d6/tenor.gif',
         ]
+        function getUserFromMention(mention) {
+            if (mention.startsWith('<@') && mention.endsWith('>')) {
+                mention = mention.slice(2, -1);
+                return client.users.cache.get(mention);
+            }
+        }
+        const user = getUserFromMention(args[0]);
 
         if(!argument[2] && message.mentions.members.size == 1) {
             let member = message.mentions.members.first()
             const embed = new Discord.MessageEmbed()
-            .addField(`${message.author.username} hugs ${member}`, 'so adorable')
+
+            .addField(`${message.author.username} hugs ${.user.username}`, 'so adorable')
             .setImage(random_hug[Math.floor(Math.random() * random_hug.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
