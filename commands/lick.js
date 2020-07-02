@@ -14,7 +14,7 @@ module.exports = {
             'https://vignette.wikia.nocookie.net/date-a-live/images/9/9a/Kurumi_licks_shido%27s_wound.gif/revision/latest?cb=20160722115544',
             'https://68.media.tumblr.com/ff60ce6b4ae9fde3267537faf5b56578/tumblr_omijznkrLe1rmzw91o1_500.gif',
         ]
-        if(!argument[2]) && message.mentions.members.size == 1{
+        if(!argument[2] && message.mentions.members.size == 1) {
             const embed = new Discord.MessageEmbed()
 
             .setImage(random_lick[Math.floor(Math.random() * random_lick.length)])
