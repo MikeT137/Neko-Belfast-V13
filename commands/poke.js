@@ -2,6 +2,7 @@ module.exports = {
     name:'poke',
     description: "Pokes a user",
     execute(message, argument){
+        const Discord = require('discord.js');
         const random_poke = [
             'https://media.giphy.com/media/pWd3gD577gOqs/giphy.gif',
             'https://media.giphy.com/media/aZSMD7CpgU4Za/giphy.gif',
