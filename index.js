@@ -101,6 +101,10 @@ bot.on('message', message => {
             case 'smile':
                 bot.commands.get('smile').execute(message, argument);
             break;
+
+            case 'smug':
+                bot.commands.get('smug').execute(message, argument);
+            break;
         }
     }
 });
