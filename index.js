@@ -93,6 +93,10 @@ bot.on('message', (message) => {
         case 'punch':
             bot.commands.get('punch').execute(message, argument);
         break;
+
+        case 'slap':
+            bot.commands.get('slap').execute(message, argument);
+        break;
     }
 });
 
