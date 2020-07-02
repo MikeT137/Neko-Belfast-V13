@@ -14,10 +14,12 @@ module.exports = {
             'https://mrwgifs.com/wp-content/uploads/2013/04/Snuggling-Cuddling-Anime-Girls-Gif-.gif',
             'https://thumbs.gfycat.com/ShowyObedientCrane-max-1mb.gif',
         ]
-        if(message.mentions.members.size == 1) {
-            let member = message.mentions.members.first()
-            message.channel.send(`${message.author} snuggles ${member}...so adorable`);
-            message.channel.send(random_snuggle[Math.floor(Math.random() * random_snuggle.length)]);
+        if(!argument[2]) && message.mentions.members.size == 1{
+            const embed = new Discord.MessageEmbed()
+
+            .setImage(random_snuggle[Math.floor(Math.random() * random_snuggle.length)])
+            .setColor(0x4AEFBA)
+            message.channel.send(embed);
         }
     }
 }
