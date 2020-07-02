@@ -33,7 +33,7 @@ bot.on('message', message => {
 	    const args = split.slice(1);
         let argument = message.content.substring(PREFIX.length).split(" ");
 
-        switch(argument[0] == PREFIX) {
+        switch(argument[1]) {
             case 'help':
                 bot.commands.get('help').execute(message, argument);
             break;
