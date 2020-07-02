@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const PREFIX = 'b!';
+const PREFIX = 'bel ';
 
 const fs = require('fs');
 bot.commands = new Discord.Collection();
