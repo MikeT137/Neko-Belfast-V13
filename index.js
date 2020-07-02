@@ -77,6 +77,10 @@ bot.on('message', (message) => {
         case 'kiss':
             bot.commands.get('kiss').execute(message, argument);
         break;
+        
+        case 'handhold':
+            bot.commands.get('handhold').execute(message, argument);
+        break;
     }
 });
 
