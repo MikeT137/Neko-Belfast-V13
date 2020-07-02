@@ -21,7 +21,7 @@ module.exports = {
                 return client.users.cache.get(mention);
             }
         }
-        const user = getUserFromMention(args[0]);
+        const user = getUserFromMention(argument[0]);
 
         if(!argument[2] && message.mentions.members.size == 1) {
             let member = message.mentions.members.first()
