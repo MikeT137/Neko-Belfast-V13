@@ -11,6 +11,8 @@ module.exports = {
             'https://media.giphy.com/media/nUz7d1sUppGta/giphy.gif',
             'https://media.giphy.com/media/EGauSkKQZuXxS/giphy.gif',
             'https://media.giphy.com/media/PHZ7v9tfQu0o0/giphy.gif',
+            'https://mrwgifs.com/wp-content/uploads/2013/04/Snuggling-Cuddling-Anime-Girls-Gif-.gif',
+            'https://thumbs.gfycat.com/ShowyObedientCrane-max-1mb.gif',
         ]
         if(message.mentions.members.size == 1) {
             let member = message.mentions.members.first()
