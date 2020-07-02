@@ -2,6 +2,7 @@ module.exports = {
     name:'lick',
     description: "Licks a user",
     execute(message, argument){
+        const Discord = require('discord.js');
         const random_lick = [
             'https://media1.tenor.com/images/5ca31fd724f6baca41e366db4258a1e6/tenor.gif?itemid=12141726',
             'https://media1.tenor.com/images/c4f68fbbec3c96193386e5fcc5429b89/tenor.gif?itemid=13451325',
