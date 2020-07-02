@@ -27,7 +27,7 @@ module.exports = {
             let member = message.mentions.members.first()
             const embed = new Discord.MessageEmbed()
 
-            .addField(`${message.author.username} hugs ${.user.username}`, 'so adorable')
+            .addField(`${message.author.username} hugs ${user.username}`, 'so adorable')
             .setImage(random_hug[Math.floor(Math.random() * random_hug.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
