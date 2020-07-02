@@ -14,10 +14,12 @@ module.exports = {
             'https://i.kym-cdn.com/photos/images/original/001/100/981/002.gif',
             'https://data.whicdn.com/images/248505351/original.gif',
         ]
-        if(message.mentions.members.size == 1) {
-            let member = message.mentions.members.first()
-            message.channel.send(`${message.author} holds ${member}'s hand...so lewd :flushed:`);
-            message.channel.send(random_hh[Math.floor(Math.random() * random_hh.length)]);
+        if(!argument[2]) && message.mentions.members.size == 1{
+            const embed = new Discord.MessageEmbed()
+
+            .setImage(random_hh[Math.floor(Math.random() * random_hh.length)])
+            .setColor(0x4AEFBA)
+            message.channel.send(embed);
         }
     }
 }
