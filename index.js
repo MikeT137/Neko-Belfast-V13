@@ -97,6 +97,10 @@ bot.on('message', message => {
             case 'cry':
                 bot.commands.get('cry').execute(message, argument);
             break;
+
+            case 'smile':
+                bot.commands.get('smile').execute(message, argument);
+            break;
         }
     }
 });
