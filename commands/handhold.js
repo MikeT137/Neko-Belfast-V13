@@ -1,5 +1,5 @@
 module.exports = {
-    name:'hhandhold',
+    name:'handhold',
     description: "Hold a user's hand",
     execute(message, argument){
         const random_hh = [
