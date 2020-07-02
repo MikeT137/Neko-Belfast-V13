@@ -2,6 +2,7 @@ module.exports = {
     name:'pat',
     description: "Pats a user",
     execute(message, argument){
+        const Discord = require('discord.js');
         const random_pat = [
             'https://media.giphy.com/media/osYdfUptPqV0s/giphy.gif',
             'https://media.giphy.com/media/L2z7dnOduqEow/giphy.gif',
