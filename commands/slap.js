@@ -2,6 +2,7 @@ module.exports = {
     name:'slap',
     description: "Slaps a user",
     execute(message, argument){
+        const Discord = require('discord.js');
         const random_slap = [
             'https://media.tenor.com/images/9a2c17416b01df4363c05702a489425b/tenor.gif',
             'https://i.imgur.com/GPQJEx5.gif',
