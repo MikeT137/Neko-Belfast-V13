@@ -26,7 +26,8 @@ bot.on('message', (message) => {
 });
 
 bot.on('message', message => {
-	if (!message.content.startsWith(PREFIX)) return;
+    if (!message.content.startsWith(PREFIX)) 
+        return;
 
     else{
 	    const withoutPrefix = message.content.slice(PREFIX.length);
