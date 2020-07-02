@@ -2,6 +2,7 @@ module.exports = {
     name:'punch',
     description: "Punchess a user",
     execute(message, argument){
+        const Discord = require('discord.js');
         const random_punch = [
             'https://media1.tenor.com/images/31686440e805309d34e94219e4bedac1/tenor.gif?itemid=4790446',
             'https://media.giphy.com/media/AlsIdbTgxX0LC/giphy.gif',
