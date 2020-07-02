@@ -2,6 +2,7 @@ module.exports = {
     name:'kiss',
     description: "Kisses a user",
     execute(message, argument){
+        const Discord = require('discord.js');
         const random_kiss = [
             'https://media.giphy.com/media/MQVpBqASxSlFu/giphy.gif',
             'https://media.giphy.com/media/G3va31oEEnIkM/giphy.gif',
