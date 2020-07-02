@@ -15,7 +15,7 @@ module.exports = {
             'https://acegif.com/wp-content/uploads/anime-hug.gif',
             'https://media.tenor.com/images/2e1d34d002d73459b6119d57e6a795d6/tenor.gif',
         ]
-        if(!argument[2]) {
+        if(!argument[2]) && message.mentions.members.size == 1{
             const embed = new Discord.MessageEmbed()
 
             .setImage(random_hug[Math.floor(Math.random() * random_hug.length)])
