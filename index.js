@@ -89,6 +89,10 @@ bot.on('message', (message) => {
         case 'lick':
             bot.commands.get('lick').execute(message, argument);
         break;
+
+        case 'punch':
+            bot.commands.get('punch').execute(message, argument);
+        break;
     }
 });
 
