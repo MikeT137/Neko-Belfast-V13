@@ -2,6 +2,7 @@ module.exports = {
     name:'snuggle',
     description: "Snuggles a user",
     execute(message, argument){
+        const Discord = require('discord.js');
         const random_snuggle = [
             'https://media.giphy.com/media/C4gbG94zAjyYE/giphy.gif',
             'https://media.giphy.com/media/BXrwTdoho6hkQ/giphy.gif',
