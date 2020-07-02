@@ -10,7 +10,7 @@ module.exports = {
             .setTitle('Help')
             .addField('Prefix: ', PREFIX)
             .addField('Commands', 'avatar - shows your avatar\nclear - clears the amount of messages you want\nhelp - shows this message\ninfo - shows bot information\nlove - a lovely message from the bot\nmute - mutes someone for a certain period of time')
-            .addField('Interactive commands (@someone)', 'handhold, hug, kiss, pat, snuggle')
+            .addField('Interactive commands (@someone)', 'handhold, hug, kiss, lick, pat, poke, punch, slap, snuggle')
             .setColor(0x4AEFBA)
             message.channel.send(embed);
         }
