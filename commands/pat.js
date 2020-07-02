@@ -2,6 +2,7 @@ module.exports = {
     name:'pat',
     description: "Pats a user",
     execute(message, argument){
+        const user = getUserFromMention(args[0]);
         const random_pat = [
             'https://media.giphy.com/media/osYdfUptPqV0s/giphy.gif',
             'https://media.giphy.com/media/L2z7dnOduqEow/giphy.gif',
@@ -16,7 +17,7 @@ module.exports = {
         ]
         if(message.mentions.members.size == 1) {
             let member = message.mentions.members.first()
-            message.channel.send(`${user.username} pats ${member}...so cute`);
+            message.channel.send(`${message.author.username} pats ${user.username}...so cute`);
             message.channel.send(random_pat[Math.floor(Math.random() * random_pat.length)]);
         }
     }
