@@ -85,6 +85,10 @@ bot.on('message', (message) => {
         case 'poke':
             bot.commands.get('poke').execute(message, argument);
         break;
+
+        case 'lick':
+            bot.commands.get('lick').execute(message, argument);
+        break;
     }
 });
 
