@@ -26,10 +26,7 @@ bot.on('message', (message) => {
 });
 
 bot.on('message', message => {
-    if (!message.content.startsWith(PREFIX)) 
-        return;
-
-    else{
+    if (message.content.startsWith(PREFIX)) {
 	    const withoutPrefix = message.content.slice(PREFIX.length);
 	    const split = withoutPrefix.split(/ +/);
 	    const command = split[0];
