@@ -14,7 +14,7 @@ module.exports = {
             'https://em.wattpad.com/7eb08d93b3a97f02bc611f78d8608d4fabe79951/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f4f4876343146766e4a7136665a773d3d2d3635313034303939312e31353634663135626330663632636161363839393833333730382e676966',
             'https://thumbs.gfycat.com/AgileHeavyGecko-max-1mb.gif',
         ]
-        if(!argument[2]) && message.mentions.members.size == 1{
+        if(!argument[2] && message.mentions.members.size == 1) {
             const embed = new Discord.MessageEmbed()
 
             .setImage(random_pat[Math.floor(Math.random() * random_pat.length)])
