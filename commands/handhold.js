@@ -2,6 +2,7 @@ module.exports = {
     name:'handhold',
     description: "Hold a user's hand",
     execute(message, argument){
+        const Discord = require('discord.js');
         const random_hh = [
             'https://media.giphy.com/media/yX0CDRs2B2y88/giphy.gif',
             'https://media.giphy.com/media/w7RGPBLGO8rjq/giphy.gif',
