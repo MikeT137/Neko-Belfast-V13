@@ -3,7 +3,7 @@ module.exports = {
     description: "Shows you the commands",
     execute(message, argument){
         const Discord = require('discord.js');
-        const PREFIX = 'b!';
+        const PREFIX = 'bel(space)';
         
         if(!argument[1]){
             const embed = new Discord.MessageEmbed()
