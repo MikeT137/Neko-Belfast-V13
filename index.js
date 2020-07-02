@@ -105,6 +105,10 @@ bot.on('message', message => {
             case 'smug':
                 bot.commands.get('smug').execute(message, argument);
             break;
+
+            case 'laugh':
+                bot.commands.get('laugh').execute(message, argument);
+            break;
         }
     }
 });
