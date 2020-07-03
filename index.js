@@ -34,6 +34,10 @@ bot.on('message', message => {
 
      if (message.content.startsWith(PREFIX)) {
         switch(argument[0]) {
+            case 'mooni':
+                bot.commands.get('mooni').execute(message, argument);
+            break;
+
             case 'help':
                 bot.commands.get('help').execute(message, argument);
             break;
