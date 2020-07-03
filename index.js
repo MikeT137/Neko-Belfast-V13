@@ -34,7 +34,7 @@ bot.on('message', message => {
 
      if (message.content.startsWith(PREFIX)) {
         switch(argument[0]) {
-            case ('mooni' || 'moon'):
+            case ('mooni' && 'moon'):
                 bot.commands.get('mooni').execute(message, argument);
             break;
 
