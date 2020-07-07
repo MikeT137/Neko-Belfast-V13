@@ -113,6 +113,10 @@ bot.on('message', message => {
             case 'laugh':
                 bot.commands.get('laugh').execute(message, argument);
             break;
+
+            case 'kick':
+                bot.commands.get('kick').execute(message, argument);
+            break;
         }
     }
 });
