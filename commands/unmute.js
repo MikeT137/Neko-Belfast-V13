@@ -14,8 +14,9 @@ module.exports = {
         if(!muterole) {
             return message.channel.send('Couldnt find the mute role');
         }
-            person.roles.remove(muterole.id);
-            message.channel.send(`@${person.user.tag} has been unmuted`);
+        
+        person.roles.remove(muterole.id);
+        message.channel.send(`@${person.user.tag} has been unmuted`);
         
     }
 }
