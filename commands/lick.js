@@ -3,6 +3,8 @@ module.exports = {
     description: "Licks a user",
     execute(message, argument){
         const Discord = require('discord.js');
+        const author = message.author;
+        const person = message.mentions.users.first();
         const random_lick = [
             'https://media1.tenor.com/images/5ca31fd724f6baca41e366db4258a1e6/tenor.gif?itemid=12141726',
             'https://media1.tenor.com/images/c4f68fbbec3c96193386e5fcc5429b89/tenor.gif?itemid=13451325',
@@ -18,6 +20,7 @@ module.exports = {
         if(!argument[2] && message.mentions.members.size == 1) {
             const embed = new Discord.MessageEmbed()
 
+            .setTitle(`${author.username} gave ${person.username} a lick :flushed:`)
             .setImage(random_lick[Math.floor(Math.random() * random_lick.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
