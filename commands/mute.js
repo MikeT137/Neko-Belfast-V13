@@ -3,9 +3,9 @@ module.exports = {
     description: "Mutes a user temporarily",
     execute(message, argument){
         const ms = require('ms');
-        
         let person = message.guild.member(message.mentions.users.first() || message.guild.members.get(argument[2]))
-        if(!person) return message.reply('I cant find that member');
+        
+        if(!person) return message.reply('Please specify a member');
         
         let mainrole = message.guild.roles.cache.find(role => role.name === 'Member')
         let muterole = message.guild.roles.cache.find(role => role.name === 'BMuted')
