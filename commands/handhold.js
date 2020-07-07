@@ -3,6 +3,8 @@ module.exports = {
     description: "Hold a user's hand",
     execute(message, argument){
         const Discord = require('discord.js');
+        const author = message.author;
+        const person = message.mentions.users.first();
         const random_hh = [
             'https://media.giphy.com/media/yX0CDRs2B2y88/giphy.gif',
             'https://media.giphy.com/media/w7RGPBLGO8rjq/giphy.gif',
@@ -17,7 +19,8 @@ module.exports = {
         ]
         if(!argument[2] && message.mentions.members.size == 1) {
             const embed = new Discord.MessageEmbed()
-
+            
+            .setTitle(`${author.username} holds ${person.username}s hand...:flushed:`)
             .setImage(random_hh[Math.floor(Math.random() * random_hh.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
