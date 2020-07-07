@@ -5,7 +5,7 @@ module.exports = {
         const member = message.mentions.members.first();
 
         if(!message.member.hasPermission("MANAGE_ROLES") || !message.guild.owner) return message.channel.send('You dont have permissions to use this command');
-        if(!message.guild.ne.hasPermission(["MANAGE_ROLES", "ADMINISTRATOR"])) return message.channel.send('I dont have permission to add roles')
+        if(!message.guild.hasPermission(["MANAGE_ROLES", "ADMINISTRATOR"])) return message.channel.send('I dont have permission to add roles')
 
         if(!argument[1]) return message.channel.send('Please specify a member');
 
