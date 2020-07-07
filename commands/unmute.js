@@ -5,15 +5,17 @@ module.exports = {
         const ms = require('ms');
         let mainrole = message.guild.roles.cache.find(role => role.name === 'Member')
         let muterole = message.guild.roles.cache.find(role => role.name === 'BMuted')
-        let person = message.guild.member(message.mentions.users.first() || message.guild.members.get(argument[1]))
+        let person = message.guild.member(message.mentions.users.first())
         
         if(!muterole) return message.channel.send('Couldnt find the mute role');
-        
-        if (person){
+
+        if (argument[1] == person){
             person.roles.remove(muterole.id);
             message.channel.send(`@${person.user.tag} has been unmuted`);
-        }else {
-            message.channel.send('Please specify a member');
+        }else if (!argument[1]){
+            message.channel.send('Please specify a muted member')
+        }else{
+            message.channel.send('You typed the wrong arguments');
         }
     }
 }
