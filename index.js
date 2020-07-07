@@ -121,6 +121,10 @@ bot.on('message', message => {
             case 'ban':
                 bot.commands.get('ban').execute(message, argument);
             break;
+
+            case 'mute':
+                bot.commands.get('unmute').execute(message, argument);
+            break;
         }
     }
 });
