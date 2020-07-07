@@ -14,8 +14,6 @@ module.exports = {
             if(user) {
                 user.ban().then(() => {
                     message.channel.send(`Successfullky banned ${person.tag}`);
-                }).catch(err => {
-                    message.channel.send('I was unnable to ban that member');
                 });
             }else {
                 message.channel.send('That member isnt in the server')
