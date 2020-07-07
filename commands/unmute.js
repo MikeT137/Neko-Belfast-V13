@@ -8,15 +8,14 @@ module.exports = {
         let person = message.guild.member(message.mentions.users.first())
         
         if(!muterole) return message.channel.send('Couldnt find the mute role');
-        else {
-            if (argument[1] == person){
-                person.roles.remove(muterole.id);
-                message.channel.send(`@${person.user.tag} has been unmuted`);
-            }else if (!argument[1]){
-                message.channel.send('Please specify a muted member')
-            }else{
-                message.channel.send('You typed the wrong arguments');
-            }
+
+        if (argument[1] == person && !argument[2]){
+            person.roles.remove(muterole.id);
+            message.channel.send(`@${person.user.tag} has been unmuted`);
+        }else if (!argument[1]){
+            message.channel.send('Please specify a muted member')
+        }else{
+            message.channel.send('You typed the wrong arguments');
         }
     }
 }
