@@ -5,6 +5,10 @@ module.exports = {
         const ms = require('ms');
         let person = message.guild.member(message.mentions.users.first() || message.guild.members.get(argument[2]))
         
+        if(!message.member.hasPermission("MANAGE_ROLES") || !message.guild.owner) return message.channel.send('You dont have permissions to use this command');
+
+        if(!argument[1]) return message.channel.send('Please specify a member');
+
         if(!person) return message.channel.send('Please specify a member');
         
         let mainrole = message.guild.roles.cache.find(role => role.name === 'Member')
