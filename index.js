@@ -122,7 +122,7 @@ bot.on('message', message => {
                 bot.commands.get('ban').execute(message, argument);
             break;
 
-            case 'mute':
+            case 'unmute':
                 bot.commands.get('unmute').execute(message, argument);
             break;
         }
