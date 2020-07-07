@@ -13,7 +13,7 @@ module.exports = {
 
             if(user) {
                 user.kick().then(() => {
-                    message.channel.send(`Successfullky kicked ${user.tag}`);
+                    message.channel.send(`Successfullky kicked ${person.tag}`);
                 }).catch(err => {
                     message.channel.send('I was unnable to kick that member');
                 });
