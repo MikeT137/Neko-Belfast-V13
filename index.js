@@ -117,6 +117,10 @@ bot.on('message', message => {
             case 'kick':
                 bot.commands.get('kick').execute(message, argument);
             break;
+
+            case 'ban':
+                bot.commands.get('kick').execute(message, argument);
+            break;
         }
     }
 });
