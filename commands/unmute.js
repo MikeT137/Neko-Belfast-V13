@@ -9,7 +9,7 @@ module.exports = {
         
         if(!muterole) return message.channel.send('Couldnt find the mute role');
         if (argument[1] == person){
-            person.roles.remove(muterole.id);
+            person.roles.removeRole(muterole.id);
             message.channel.send(`@${person.user.tag} has been unmuted`);
         }else {
             message.channel.send('Please specify a member');
