@@ -18,7 +18,7 @@ module.exports = {
         if(!argument[1]) {
             const embed = new Discord.MessageEmbed()
 
-            .setImage(random_dances[Math.floor(Math.random() * random_dances.length)])
+            .setImage(random_dance[Math.floor(Math.random() * random_dance.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
         }
