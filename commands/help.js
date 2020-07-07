@@ -9,7 +9,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
             .setTitle('Help')
             .addField('Prefix: ', PREFIX)
-            .addField('Commands', 'clear - clears the amount of messages you want\nhelp - shows this message\ninfo - shows bot information\nmute - mutes someone for a certain period of time')
+            .addField('Modertion Commands', 'ban - bans a member\nclear - clears the amount of messages you want\nhelp - shows this message\ninfo - shows bot information\nkick - kicks a member\nmute - mutes someone for a certain period of time')
             .addField('Self commands', 'avatar, cry, laugh, love, smile, smug')
             .addField('Interactive commands (@someone)', 'handhold, hug, kiss, lick, pat, poke, punch, slap, snuggle')
             .setColor(0x4AEFBA)
