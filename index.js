@@ -125,6 +125,10 @@ bot.on('message', message => {
             case 'unmute':
                 bot.commands.get('unmute').execute(message, argument);
             break;
+
+            case 'dance':
+                bot.commands.get('dance').execute(message, argument);
+            break;
         }
     }
 });
