@@ -8,7 +8,7 @@ module.exports = {
             'https://media.giphy.com/media/49mdjsMrH7oze/giphy.gif',
             'https://media.giphy.com/media/QFPoctlgZ5s0E/giphy.gif',
             'https://media.giphy.com/media/IRUb7GTCaPU8E/giphy.gif',
-            'https://media.giphy.com/media/hnNyVPIXgLdle/giphy.gif',
+            'https://66.media.tumblr.com/2a3ec53a742008eb61979af6b7148e8d/tumblr_mt1cllxlBr1s2tbc6o1_500.gif',
             'https://media.giphy.com/media/xJlOdEYy0r7ZS/giphy.gif',
             'https://media.giphy.com/media/DjczAlIcyK1Co/giphy.gif',
             'https://media.giphy.com/media/aD1fI3UUWC4/giphy.gif',
