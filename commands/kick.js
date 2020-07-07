@@ -6,7 +6,7 @@ module.exports = {
 
         const person = message.mentions.users.first();
         if(person) {
-            person.kick.then(() => {
+            person.kick().then(() => {
                 message.channel.send(`Successfullky kicked ${person.tag}`);
             }).catch(err => {
                 message.channel.send('I was unnable to kick that user');
