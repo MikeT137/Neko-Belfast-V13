@@ -8,7 +8,7 @@ module.exports = {
         if(person) {
             person.kick.then(() => {
                 message.channel.send(`Successfullky kicked ${person.tag}`);
-            }) = catch(err => {
+            }).catch(err => {
                 message.channel.send('I was unnable to kick that user');
             });
         }else {
