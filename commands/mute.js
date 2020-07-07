@@ -5,17 +5,17 @@ module.exports = {
         const ms = require('ms');
         let person = message.guild.member(message.mentions.users.first() || message.guild.members.get(argument[2]))
         
-        if(!person) return message.reply('Please specify a member');
+        if(!person) return message.channel.send('Please specify a member');
         
         let mainrole = message.guild.roles.cache.find(role => role.name === 'Member')
         let muterole = message.guild.roles.cache.find(role => role.name === 'BMuted')
 
-        if(!muterole) return message.reply('Couldnt find the mute role');
+        if(!muterole) return message.channel.send('Couldnt find the mute role');
 
         let time = argument[2];
 
         if(!time){
-            return message.reply('You didnt specify the time');
+            return message.channel.send('You didnt specify the time');
         }
             person.roles.add(muterole.id);
             message.channel.send(`@${person.user.tag} has been muted for ${ms(ms(time))}`)
