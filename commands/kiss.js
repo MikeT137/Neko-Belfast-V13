@@ -3,6 +3,8 @@ module.exports = {
     description: "Kisses a user",
     execute(message, argument){
         const Discord = require('discord.js');
+        const author = message.author;
+        const person = message.mentions.users.first();
         const random_kiss = [
             'https://media.giphy.com/media/MQVpBqASxSlFu/giphy.gif',
             'https://media.giphy.com/media/G3va31oEEnIkM/giphy.gif',
@@ -18,6 +20,7 @@ module.exports = {
         if(!argument[2] && message.mentions.members.size == 1) {
             const embed = new Discord.MessageEmbed()
 
+            .setTitle(`${author.username} gave ${person.username} a kiss!`)
             .setImage(random_kiss[Math.floor(Math.random() * random_kiss.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
