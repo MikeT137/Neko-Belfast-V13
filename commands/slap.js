@@ -3,6 +3,8 @@ module.exports = {
     description: "Slaps a user",
     execute(message, argument){
         const Discord = require('discord.js');
+        const author = message.author;
+        const person = message.mentions.users.first();
         const random_slap = [
             'https://media.tenor.com/images/9a2c17416b01df4363c05702a489425b/tenor.gif',
             'https://i.imgur.com/GPQJEx5.gif',
@@ -18,6 +20,7 @@ module.exports = {
         if(!argument[2] && message.mentions.members.size == 1) {
             const embed = new Discord.MessageEmbed()
 
+            .setTitle(`${author.username} gave ${person.username} a slap...so violent`)
             .setImage(random_slap[Math.floor(Math.random() * random_slap.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
