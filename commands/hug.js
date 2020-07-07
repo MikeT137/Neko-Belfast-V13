@@ -20,7 +20,7 @@ module.exports = {
         if(!argument[2] && message.mentions.members.size == 1) {
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`${author.username} gave ${person.tag} a hug!`)
+            .setTitle(`${author.username} gave ${person.username} a hug!`)
             .setImage(random_hug[Math.floor(Math.random() * random_hug.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
