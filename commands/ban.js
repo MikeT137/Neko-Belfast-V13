@@ -4,6 +4,10 @@ module.exports = {
     execute(message, argument){
         const member = message.mentions.members.first();
 
+        if(!message.member.hasPermission("MANAGE_ROLES") || !message.guild.owner) return message.channel.send('You dont have permissions to use this command');
+
+        if(!argument[1]) return message.channel.send('Please specify a member');
+
         if(!argument[1]) return message.channel.send('Please specify a member');
 
         const person = message.mentions.users.first();
