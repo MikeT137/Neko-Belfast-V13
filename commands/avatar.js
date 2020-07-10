@@ -16,7 +16,7 @@ module.exports = {
         }else if (!argument[2] && message.mentions.members.size == 1) {
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`${person.username}s avatar:`)
+            .setTitle(`${person.username}'s avatar:`)
             .setImage(`${person.displayAvatarURL({ dynamic: true })}`)
             .setColor(0x4AEFBA)
             message.channel.send(embed);
