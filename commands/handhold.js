@@ -18,11 +18,11 @@ module.exports = {
             'https://data.whicdn.com/images/248505351/original.gif',
         ]
         if(!argument[2] && message.mentions.members.size == 1) {
-            const embed = new Discord.MessageEmbed()
-            
             if(argument[1] == `${author.username}`) {
                 message.channel.send('Aww, ill hold your hand :blush:')
             }else if(argument[1] == `${person.username}`) {
+                const embed = new Discord.MessageEmbed()
+
                 .setTitle(`${author.username} holds ${person.username}s hand...:flushed:`)
                 .setImage(random_hh[Math.floor(Math.random() * random_hh.length)])
                 .setColor(0x4AEFBA)
