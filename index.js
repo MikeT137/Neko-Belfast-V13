@@ -25,24 +25,6 @@ bot.on('message', (message) => {
          message.channel.send('>w<');
 });
 
-bot.on('guild.MemberAdd', member => {
-    const channel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
-
-    if(!channel) return;
-    else {
-        channel.send(`${member} left the server, oof`)
-    }
-});
-
-bot.on('guild.MemberRemove', member => {
-    const channel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
-
-    if(!channel) return;
-    else {
-        channel.send(`${member} left the server, oof`)
-    }
-});
-
 bot.on('message', message => {
 	const withoutPrefix = message.content.slice(PREFIX.length);
 	const split = withoutPrefix.split(/ +/);
