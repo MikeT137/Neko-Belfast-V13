@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-
+const person = message.mentions.users.first();
 const PREFIX = 'b!';
 
 const fs = require('fs');
