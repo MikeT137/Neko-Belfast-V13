@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const person = mentions.users.first();
+
 const PREFIX = 'b!';
 
 const fs = require('fs');
@@ -30,7 +30,7 @@ bot.on('guild.MmemberAdd', member => {
 
     if(!channel) return;
 
-    channel.send(`Welcome to the server ${person.username}, i hope youll enjoy your stay`)
+    channel.send(`Welcome to the server ${member}, i hope youll enjoy your stay`)
 });
 
 
