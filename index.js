@@ -25,6 +25,15 @@ bot.on('message', (message) => {
          message.channel.send('>w<');
 });
 
+bot.on('guild.MmemberAdd', member => {
+    const channel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
+
+    if(!channel) return;
+
+    channel.send(`Welcome to the server ${person.username}, i hope youll enjoy your stay`)
+});
+
+
 bot.on('message', message => {
 	const withoutPrefix = message.content.slice(PREFIX.length);
 	const split = withoutPrefix.split(/ +/);
