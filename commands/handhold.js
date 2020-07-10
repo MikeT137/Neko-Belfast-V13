@@ -20,10 +20,14 @@ module.exports = {
         if(!argument[2] && message.mentions.members.size == 1) {
             const embed = new Discord.MessageEmbed()
             
-            .setTitle(`${author.username} holds ${person.username}s hand...:flushed:`)
-            .setImage(random_hh[Math.floor(Math.random() * random_hh.length)])
-            .setColor(0x4AEFBA)
-            message.channel.send(embed);
+            if(argument[1] == `${author.username}`) {
+                message.channel.send('Aww, ill hold your hand :blush:')
+            }else if(argument[1] == `${person.username}`) {
+                .setTitle(`${author.username} holds ${person.username}s hand...:flushed:`)
+                .setImage(random_hh[Math.floor(Math.random() * random_hh.length)])
+                .setColor(0x4AEFBA)
+                message.channel.send(embed);
+            }
         }
     }
 }
