@@ -2,7 +2,7 @@ module.exports = {
     name:'dance',
     description: "The user dances",
     execute(message, argument){
-        const person = message.mentions.users.first();
+        const author = message.author;
         const Discord = require('discord.js');
         const random_dance = [
             'https://media1.tenor.com/images/c925511d32350cc04411756d623ebad6/tenor.gif?itemid=13462237',
@@ -19,7 +19,7 @@ module.exports = {
         if(!argument[1]) {
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`Looks like ${person.username} is having fun`)
+            .setTitle(`Looks like ${author.username} is having fun`)
             .setImage(random_dance[Math.floor(Math.random() * random_dance.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
