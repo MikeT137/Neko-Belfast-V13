@@ -2,6 +2,7 @@ module.exports = {
     name:'laugh',
     description: "The user laughs",
     execute(message, argument){
+        const author = message.author;
         const Discord = require('discord.js');
         const random_laugh = [
             'https://media.tenor.com/images/c281eb235f5f6bc5667cf856e8c3eb1a/tenor.gif',
@@ -18,6 +19,7 @@ module.exports = {
         if(!argument[1]) {
             const embed = new Discord.MessageEmbed()
 
+            .setTitle(`${author.username} starts laughing`)
             .setImage(random_laugh[Math.floor(Math.random() * random_laugh.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
