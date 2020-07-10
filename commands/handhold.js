@@ -21,7 +21,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
 
             .setTitle(`${author.username} holds ${person.username}s hand...:flushed:`)
-            .setImage(random_hug[Math.floor(Math.random() * random_hug.length)])
+            .setImage(random_hh[Math.floor(Math.random() * random_hh.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
         }
