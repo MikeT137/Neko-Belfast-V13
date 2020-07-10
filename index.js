@@ -129,6 +129,10 @@ bot.on('message', message => {
             case 'dance':
                 bot.commands.get('dance').execute(message, argument);
             break;
+
+            case 'clap':
+                bot.commands.get('clap').execute(message, argument);
+            break;
         }
     }
 });
