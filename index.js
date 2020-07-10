@@ -25,7 +25,7 @@ bot.on('message', (message) => {
          message.channel.send('>w<');
 });
 
-bot.on('guild.MmemberAdd', member => {
+bot.on('guild.MemberAdd', member => {
     const channel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
 
     if(!channel) return;
@@ -33,6 +33,13 @@ bot.on('guild.MmemberAdd', member => {
     channel.send(`Welcome to the server ${member}, i hope youll enjoy your stay`)
 });
 
+bot.on('guild.MemberRemove', member => {
+    const channel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
+
+    if(!channel) return;
+
+    channel.send(`${member} left the server, oof`)
+});
 
 bot.on('message', message => {
 	const withoutPrefix = message.content.slice(PREFIX.length);
