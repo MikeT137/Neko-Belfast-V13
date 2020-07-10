@@ -18,9 +18,9 @@ module.exports = {
             'https://data.whicdn.com/images/248505351/original.gif',
         ]
         if(!argument[2] && message.mentions.members.size == 1) {
-            if(argument[1] == ${author.username}) {
+            if(argument[1] == `${author.username}`) {
                 message.channel.send('Aww, ill hold your hand :blush:')
-            }else if(argument[1] == ${person.username}) {
+            }else if(argument[1] == `${person.username}`) {
                 const embed = new Discord.MessageEmbed()
 
                 .setTitle(`${author.username} holds ${person.username}s hand...:flushed:`)
