@@ -17,14 +17,14 @@ module.exports = {
             'https://i.kym-cdn.com/photos/images/original/001/100/981/002.gif',
             'https://data.whicdn.com/images/248505351/original.gif',
         ]
-        if(message.mentions.members.size >= 1 && argument == `${person.username}`) {
+        if(message.mentions.members.size >= 1 && argument[0] < `${person.username}`) {
             const embed = new Discord.MessageEmbed()
 
             .setTitle(`${author.username} holds ${person.username}s hand...:flushed:`)
             .setImage(random_hh[Math.floor(Math.random() * random_hh.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
-        }else if(argument[1] == `${author.username}`) {
+        }else if(argument[0] < `${author.username}`) {
             message.channel.send('Aww, ill hold your hand :blush:')
         }
     }
