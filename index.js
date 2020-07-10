@@ -29,16 +29,18 @@ bot.on('guild.MemberAdd', member => {
     const channel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
 
     if(!channel) return;
-
-    channel.send(`Welcome to the server ${member}, i hope youll enjoy your stay`)
+    else {
+        channel.send(`${member} left the server, oof`)
+    }
 });
 
 bot.on('guild.MemberRemove', member => {
     const channel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
 
     if(!channel) return;
-
-    channel.send(`${member} left the server, oof`)
+    else {
+        channel.send(`${member} left the server, oof`)
+    }
 });
 
 bot.on('message', message => {
