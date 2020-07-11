@@ -137,6 +137,10 @@ bot.on('message', message => {
             case 'highfive':
                 bot.commands.get('highfive').execute(message, argument);
             break;
+
+            case 'blush':
+                bot.commands.get('blush').execute(message, argument);
+            break;
         }
     }
 });
