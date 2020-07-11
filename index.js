@@ -133,6 +133,14 @@ bot.on('message', message => {
             case 'clap':
                 bot.commands.get('clap').execute(message, argument);
             break;
+
+            case 'pout':
+                bot.commands.get('pout').execute(message, argument);
+            break;
+
+            case 'highfive':
+                bot.commands.get('highfive').execute(message, argument);
+            break;
         }
     }
 });
