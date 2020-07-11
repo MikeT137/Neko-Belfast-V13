@@ -4,23 +4,23 @@ module.exports = {
     execute(message, argument){
         const author = message.author;
         const Discord = require('discord.js');
-        const random_hug = [
-            'https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif',
-            'https://media.giphy.com/media/49mdjsMrH7oze/giphy.gif',
-            'https://media.giphy.com/media/QFPoctlgZ5s0E/giphy.gif',
-            'https://media.giphy.com/media/IRUb7GTCaPU8E/giphy.gif',
-            'https://66.media.tumblr.com/2a3ec53a742008eb61979af6b7148e8d/tumblr_mt1cllxlBr1s2tbc6o1_500.gif',
-            'https://media.giphy.com/media/xJlOdEYy0r7ZS/giphy.gif',
-            'https://media.giphy.com/media/DjczAlIcyK1Co/giphy.gif',
-            'https://media.giphy.com/media/aD1fI3UUWC4/giphy.gif',
-            'https://acegif.com/wp-content/uploads/anime-hug.gif',
-            'https://media.tenor.com/images/2e1d34d002d73459b6119d57e6a795d6/tenor.gif',
+        const random_snuggle = [
+            'https://media.giphy.com/media/C4gbG94zAjyYE/giphy.gif',
+            'https://media.giphy.com/media/BXrwTdoho6hkQ/giphy.gif',
+            'https://media.giphy.com/media/eMpDBxxTzKety/giphy.gif',
+            'https://media.giphy.com/media/GMFUrC8E8aWoo/giphy.gif',
+            'https://media.giphy.com/media/3bqtLDeiDtwhq/giphy.gif',
+            'https://media.giphy.com/media/nUz7d1sUppGta/giphy.gif',
+            'https://media.giphy.com/media/EGauSkKQZuXxS/giphy.gif',
+            'https://media.giphy.com/media/PHZ7v9tfQu0o0/giphy.gif',
+            'https://mrwgifs.com/wp-content/uploads/2013/04/Snuggling-Cuddling-Anime-Girls-Gif-.gif',
+            'https://thumbs.gfycat.com/ShowyObedientCrane-max-1mb.gif',
         ]
         if(!argument[1]) {
             const embed = new Discord.MessageEmbed()
 
             .setTitle('I love you master~:heart:')
-            .setImage(random_hug[Math.floor(Math.random() * random_hug.length)])
+            .setImage(random_snuggle[Math.floor(Math.random() * random_snuggle.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
         }
