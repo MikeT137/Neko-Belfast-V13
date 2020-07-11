@@ -50,10 +50,6 @@ bot.on('message', message => {
                 bot.commands.get('mute').execute(message, argument);
             break;
 
-            case 'love':
-                bot.commands.get('love').execute(message, argument);
-            break;
-
             case 'clear':
                 bot.commands.get('clear').execute(message, argument);
             break;
