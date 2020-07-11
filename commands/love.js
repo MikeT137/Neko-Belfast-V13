@@ -1,6 +1,6 @@
 module.exports = {
     name:'love',
-    description: "The bot gives a nice message and hugs the user",
+    description: "The bot gives a nice message and snuggles the user",
     execute(message, argument){
         const author = message.author;
         const Discord = require('discord.js');
@@ -19,7 +19,7 @@ module.exports = {
         if(!argument[1]) {
             const embed = new Discord.MessageEmbed()
 
-            .setTitle('I love you master~:heart:')
+            .setTitle(`I love you ${author.username}~:heart:`)
             .setImage(random_snuggle[Math.floor(Math.random() * random_snuggle.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
