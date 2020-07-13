@@ -13,7 +13,7 @@ for(const file of commandFiles){
 
 bot.on('ready', () => {
     console.log('Belfast is online!');
-    bot.user.setActivity('b!help');
+    bot.user.setActivity('b!help', {type: 'PLAYING'}).catch(console.error);
 });
 
 bot.on('message', (message) => {
