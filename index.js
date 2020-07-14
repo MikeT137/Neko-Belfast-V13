@@ -146,6 +146,10 @@ bot.on('message', message => {
             case 'love':
                 bot.commands.get('love').execute(message, argument);
             break;
+
+            case 'lewd':
+                bot.commands.get('lewd').execute(message, argument);
+            break;
         }
     }
 });
