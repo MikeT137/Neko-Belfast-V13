@@ -16,6 +16,11 @@ module.exports = {
             'https://media.giphy.com/media/aD1fI3UUWC4/giphy.gif',
             'https://acegif.com/wp-content/uploads/anime-hug.gif',
             'https://media.tenor.com/images/2e1d34d002d73459b6119d57e6a795d6/tenor.gif',
+            'https://cdn.weeb.sh/images/S1a0DJhqG.gif',
+            'https://thumbs.gfycat.com/GlaringIllegalKoodoo-small.gif',
+            'https://cdn.weeb.sh/images/SJebhd1Ob.gif',
+            'https://cdn.weeb.sh/images/SJZ-Qy35f.gif',
+            'https://giffiles.alphacoders.com/172/172308.gif',
         ]
         if(!argument[2] && message.mentions.members.size == 1) {
             const embed = new Discord.MessageEmbed()
