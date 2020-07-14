@@ -26,7 +26,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
 
             .setTitle(`Here you go ${author.username}`)
-            .setImage(random_cry[Math.floor(Math.random() * random_cry.length)])
+            .setImage(random_hug[Math.floor(Math.random() * random_hug.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
         }else if(!argument[2] && message.mentions.members.size == 1) {
