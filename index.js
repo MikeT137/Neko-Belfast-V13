@@ -154,6 +154,10 @@ bot.on('message', message => {
             case 'yawn':
                 bot.commands.get('yawn').execute(message, argument);
             break;
+
+            case 'stare':
+                bot.commands.get('stare').execute(message, argument);
+            break;
         }
     }
 });
