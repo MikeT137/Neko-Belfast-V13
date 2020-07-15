@@ -33,7 +33,7 @@ bot.on('message', message => {
 	const args = split.slice(1);
     let argument = message.content.substring(PREFIX.length).split(" ");
 
-     if (message.content.startsWith(PREFIX)) {
+    if (message.content.startsWith(PREFIX)) {
         switch(argument[0]) {
             case 'mooni':
                 bot.commands.get('mooni').execute(message, argument);
