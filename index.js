@@ -150,6 +150,10 @@ bot.on('message', message => {
             case 'lewd':
                 bot.commands.get('lewd').execute(message, argument);
             break;
+
+            case 'yawn':
+                bot.commands.get('yawn').execute(message, argument);
+            break;
         }
     }
 });
