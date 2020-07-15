@@ -158,6 +158,10 @@ bot.on('message', message => {
             case 'stare':
                 bot.commands.get('stare').execute(message, argument);
             break;
+
+            case 'facepalm':
+                bot.commands.get('facepalm').execute(message, argument);
+            break;
         }
     }
 });
