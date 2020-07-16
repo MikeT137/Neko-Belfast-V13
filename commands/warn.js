@@ -2,10 +2,7 @@ const Discord = require('discord.js');
 const fs = require('fs');
 const ms = require('ms');
 
-module.exports = {
-    name:'warn',
-    description: "Warns a user",
-    execute(message, argument){
+module.exports.run = async (bot, message, agrument) => {
         const member = message.mentions.members.first();
         let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"))
 
@@ -28,4 +25,7 @@ module.exports = {
 
         message.channel.send(`${message.author.username} has been warned for the ${warns[member.id.warns]} time\nReason: ${reason}`)
     }
+}
+module.exports.help = {
+    name:'warn'
 }
