@@ -21,5 +21,12 @@ module.exports.run = async (bot, message, argument) => {
         } 
     });
 
-    message.channel.send(`${message.author.username} has been warned for the ${warns[member.id.warns]} time\nReason: ${reason}`)
+    let warnEmbed = new Discord.MessageEmbed()
+
+        .setTitle('Warnings')
+        .addField('Warned user', member)
+        .addField('Number of warns', warns[member.id].warns)
+        .addField('Reason', reason)
+        .setColor(0x4AEFBA)
+        message.channel.send(embed);
 }
