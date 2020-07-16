@@ -23,10 +23,10 @@ module.exports.run = async (bot, message, argument) => {
 
     let warnEmbed = new Discord.MessageEmbed()
 
-        .setTitle('Warnings')
-        .addField('Warned user', member)
-        .addField('Number of warns', warns[member.id].warns)
-        .addField('Reason', reason)
-        .setColor(0x4AEFBA)
-        message.channel.send(embed);
+    .setTitle('Warnings')
+    .addField('Warned user', member)
+    .addField('Number of warns', warns[member.id].warns)
+    .addField('Reason', reason)
+    .setColor(0x4AEFBA)
+    message.channel.send(embed);
 }
