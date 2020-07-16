@@ -18,12 +18,12 @@ bot.on('ready', () => {
 
 bot.on('message', (message) => {
     if(message.content == 'hey' || message.content == 'Hey' || message.content == 'HEY')
-         message.channel.send('hewwo');
+        message.channel.send('hewwo');
 });
 
 bot.on('message', (message) => {
     if(message.content == 'uwu' || message.content == 'UwU' || message.content == 'UWU' || message.content == 'owo' || message.content == 'OwO' || message.content == 'OWO')
-         message.channel.send('>w<');
+        message.channel.send('>w<');
 });
 
 bot.on('message', message => {
