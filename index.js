@@ -162,6 +162,10 @@ bot.on('message', message => {
             case 'facepalm':
                 bot.commands.get('facepalm').execute(message, argument);
             break;
+
+            case 'warn':
+                bot.commands.get('warn').execute(message, argument);
+            break;
         }
     }
 });
