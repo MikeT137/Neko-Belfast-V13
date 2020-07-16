@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, argument) => {
 
     if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.channel.send('You dont have permissoin to do that');
     if(!member) return message.channel.send('I couldnt find that member');
-    if(member.hasPermission("MANAGE_MESSAGES")) return message.channel.send('');
+    if(member.hasPermission("MANAGE_MESSAGES")) return message.channel.send('You cant warn a moderator');
 
     let reason = argument.join(" ").slice(22);
 
