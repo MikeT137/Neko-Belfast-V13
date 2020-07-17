@@ -17,7 +17,7 @@ module.exports = {
             'https://i.kym-cdn.com/photos/images/original/001/100/981/002.gif',
             'https://data.whicdn.com/images/248505351/original.gif',
         ]
-        if(!argument[2] && message.mentions.members.size == 1) {
+        if(!argument[2] && message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
 
             .setTitle(`${author.username} holds ${person.username}s hand...:flushed:`)
