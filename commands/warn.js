@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, argument) => {
         } 
     });
 
-    let warnEmbed = new Discord.MessageEmbed()
+    const embed = new Discord.MessageEmbed()
 
     .setTitle('Warnings')
     .addField('Warned user', member)
