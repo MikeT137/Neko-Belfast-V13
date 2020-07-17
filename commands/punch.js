@@ -17,7 +17,7 @@ module.exports = {
             'https://i.pinimg.com/originals/bc/96/17/bc9617a2460e4640fcd9cf474bea2c10.gif',
             'https://66.media.tumblr.com/992e4cac19f6a0ef68ea89ab5c3a59a0/tumblr_nrnfw7UZyR1uo5k7bo1_500.gif',
         ]
-        if(!argument[2] && message.mentions.members.size == 1) {
+        if(message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
 
             .setTitle(`${author.username} gave ${person.username} a punch...awee`)
