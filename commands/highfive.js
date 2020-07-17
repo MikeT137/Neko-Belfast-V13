@@ -17,7 +17,7 @@ module.exports = {
             'https://1.bp.blogspot.com/-zCYOY8ef-Ro/WfUW-iO8Y5I/AAAAAAAA-MM/uQYRw57PmYM_pjl8kJQDAs1EKLB_-2CKgCKgBGAs/s1600/Omake+Gif+Anime+-+Love+Live%2521+Sunshine%2521%2521+S2+-+Episode+4+-+Yoshiko+Mari+High+Five.gif',
             'https://data.whicdn.com/images/330723767/original.gif',
         ]
-        if(!argument[2] && message.mentions.members.size >= 1) {
+        if(message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
 
             .setTitle(`${author.username} highfives ${person.username}`)
