@@ -164,7 +164,7 @@ bot.on('message', message => {
             break;
 
             case 'warn':
-                bot.commands.get('warn').async(bot, message, argument);
+                bot.commands.get('warn').execute(message, argument);
             break;
         }
     }
