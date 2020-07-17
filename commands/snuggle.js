@@ -17,7 +17,7 @@ module.exports = {
             'https://mrwgifs.com/wp-content/uploads/2013/04/Snuggling-Cuddling-Anime-Girls-Gif-.gif',
             'https://thumbs.gfycat.com/ShowyObedientCrane-max-1mb.gif',
         ]
-        if(!argument[2] && message.mentions.members.size == 1) {
+        if(message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
 
             .setTitle(`${author.username} gave ${person.username} a snuggle...so cute`)
