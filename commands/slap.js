@@ -17,7 +17,7 @@ module.exports = {
             'https://media1.tenor.com/images/9ea4fb41d066737c0e3f2d626c13f230/tenor.gif?itemid=7355956',
             'https://i.imgur.com/Li9mx3A.gif',
         ]
-        if(!argument[2] && message.mentions.members.size == 1) {
+        if(message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
 
             .setTitle(`${author.username} gave ${person.username} a slap...so violent`)
