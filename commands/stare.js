@@ -17,7 +17,7 @@ module.exports = {
             'https://i.gifer.com/9jXw.gif',
             'https://media1.tenor.com/images/e5ccc1cb4489b244e02c7999669328ae/tenor.gif?itemid=12242945',
         ]
-        if(!argument[2] && message.mentions.members.size == 1) {
+        if(message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
 
             .setTitle(`${author.username} stares at ${person.username}`)
