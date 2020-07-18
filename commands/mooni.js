@@ -13,7 +13,7 @@ module.exports = {
             .setFooter('Sincerely, Miku')
             message.channel.send(embed);
             
-            message.delete(1000);
+            message.delete(1000).catch(console.error);
         }
     }
 }
