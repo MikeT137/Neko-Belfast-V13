@@ -22,14 +22,7 @@ module.exports = {
             'https://cdn.weeb.sh/images/SJZ-Qy35f.gif',
             'https://giffiles.alphacoders.com/172/172308.gif',
         ]
-        if(argument [1] == message.mentions.author) {
-            const embed = new Discord.MessageEmbed()
-
-            .setTitle(`Awww, dont worry ${author.username}, ill give you a hug!`)
-            .setImage(random_hug[Math.floor(Math.random() * random_hug.length)])
-            .setColor(0x4AEFBA)
-            message.channel.send(embed);
-        }else if(message.mentions.members.size >= 1) {
+        if(message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
     
             .setTitle(`${author.username} gave ${person.username} a hug!`)
