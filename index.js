@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const PREFIX = 'b!';
-
 const fs = require('fs');
 bot.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
@@ -30,14 +28,12 @@ bot.on('guildMemberRemove', member => {
 bot.on('message', (message) => {
     if(message.content == 'hey' || message.content == 'Hey' || message.content == 'HEY')
         message.channel.send('hewwo');
-});
-
-bot.on('message', (message) => {
-    if(message.content == 'uwu' || message.content == 'UwU' || message.content == 'UWU' || message.content == 'owo' || message.content == 'OwO' || message.content == 'OWO')
+    else if(message.content == 'uwu' || message.content == 'UwU' || message.content == 'UWU' || message.content == 'owo' || message.content == 'OwO' || message.content == 'OWO')
         message.channel.send('>w<');
 });
 
 bot.on('message', message => {
+    const PREFIX = 'b!';
 	const withoutPrefix = message.content.slice(PREFIX.length);
 	const split = withoutPrefix.split(/ +/);
 	const command = split[0];
