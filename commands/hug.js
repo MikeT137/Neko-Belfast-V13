@@ -30,5 +30,13 @@ module.exports = {
             .setColor(0x4AEFBA)
             message.channel.send(embed);
         }
+        if(person == author) {
+            const embed = new Discord.MessageEmbed()
+
+            .setTitle(`Awww, dont worry ${author.username}, ill give you a hug!`)
+            .setImage(random_hug[Math.floor(Math.random() * random_hug.length)])
+            .setColor(0x4AEFBA)
+            message.channel.send(embed);
+        }
     }
 }
