@@ -1,7 +1,7 @@
 module.exports = {
     name:'kick',
     description: "Kicks a user",
-    run: async (bot, message, argument){
+    execute(message, argument){
         const member = message.mentions.members.first();
 
         if(!message.member.hasPermission("MANAGE_ROLES") || !message.guild.owner) return message.channel.send('You dont have permissions to use this command');
