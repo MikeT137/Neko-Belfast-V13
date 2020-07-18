@@ -177,6 +177,10 @@ bot.on('message', message => {
             case 'meme':
                 bot.commands.get('meme').execute(message, argument);
             break;
+
+            case 'nom':
+                bot.commands.get('nom').execute(message, argument);
+            break;
         }
     }
 });
