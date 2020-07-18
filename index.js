@@ -184,7 +184,7 @@ bot.on('message', message => {
     }
 });
 function image(message){
-    const options = {
+    var options = {
         url: "https://www.reddit.com/r/memes/",
         method: "GET",
         headers: {
