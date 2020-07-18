@@ -185,12 +185,12 @@ bot.on('message', message => {
 });
 function image(message){
     var options = {
-        url: "https://www.reddit.com/search/?q=" + "memes",
+        url: "http://results.dogpile.com/serp?qc=images&q=" + "memes",
         method: "GET",
-        headers: [
+        headers: {
             "Accept": "text/html",
             "User-Agent": "Chrome"
-        ]
+        }
     }
     request(options, function(error, response, responseBody) {
         if (error) {
