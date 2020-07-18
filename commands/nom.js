@@ -1,7 +1,7 @@
 module.exports = {
     name:'nom',
     description: "Noms a user",
-    execute(message, argument){
+    run: async (bot, message, argument){
         const Discord = require('discord.js');
         const author = message.author;
         const person = message.mentions.users.first();
