@@ -1,7 +1,7 @@
 module.exports = {
     name:'mooni',
     description: "A secret command only for mooni",
-    run: async (bot, message, argument){
+    execute(message, argument){
         const Discord = require('discord.js');
         
         if(!argument[1]) {
