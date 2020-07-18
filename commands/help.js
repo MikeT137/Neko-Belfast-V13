@@ -6,6 +6,8 @@ module.exports = {
         const PREFIX = 'b!';
         
         if(!argument[1]){
+            message.channel.send(`${message.author.username}, look in your DM for the commands!`)
+            
             const embed = new Discord.MessageEmbed()
             .setTitle('Help')
             .addField('Prefix: ', PREFIX)
@@ -13,7 +15,8 @@ module.exports = {
             .addField('Self commands', 'avatar, blush, clap, cry, dance, facepalm, laugh, lewd, love, pout, smile, smug, yawn') //mooni
             .addField('Interactive commands (@someone)', 'handhold, highfive, hug, kiss, lick, pat, poke, punch, slap, snuggle, stare')
             .setColor(0x4AEFBA)
-            message.channel.send(embed);
+            message.author.send(embed);
+
         }
     }
 }
