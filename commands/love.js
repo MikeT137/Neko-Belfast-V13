@@ -1,7 +1,7 @@
 module.exports = {
     name:'love',
     description: "The bot gives a nice message and snuggles the user",
-    execute(message, argument){
+    run: async (bot, message, argument){
         const author = message.author;
         const Discord = require('discord.js');
         const random_snuggle = [
