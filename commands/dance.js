@@ -8,7 +8,7 @@ module.exports = {
             'https://media1.tenor.com/images/c925511d32350cc04411756d623ebad6/tenor.gif?itemid=13462237',
             'https://i.pinimg.com/originals/4b/34/c2/4b34c2fd473942b7fbd25c443b8ed8a2.gif',
             'https://i.ya-webdesign.com/images/anime-dance-gif-png.gif',
-            'https://66.media.tumblr.com/6365c83624552427f6de9c92e8e28b52/tumblr_nmud2yJw7D1unbsixo1_500.gifv',
+            'https://bestanimations.com/Music/Dancers/anime-dancing-girls/anime-girl-dancing-animated-gif.gif',
             'https://d2w9rnfcy7mm78.cloudfront.net/2145256/original_cd9c01187cead45cd791beafa78f7e08.gif?1525707539',
             'https://i.ya-webdesign.com/images/transparent-dancer-animated-4.gif',
             'https://media.tenor.com/images/279bf22997edc0703cee75385645d7f8/tenor.gif',
