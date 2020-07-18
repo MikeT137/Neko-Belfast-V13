@@ -1,31 +1,40 @@
-module.exports = {
-    name:'meme',
-    description: "Gives the user a meme",
-    execute(message, argument){
-        const Discord = require('discord.js');
-        const cheerio = require('cheerio');
-        const request = require('request');
-        var options = {
-            url: "http://results.dogpile.com/serp?qc=images&q=" + "memes",
-            method: "GET",
-            headers: {
-                "Accept": "text/html",
-                "User-Agent": "Chrome"
-            }
-        }
-        request(options, function(error, response, responseBody) {
-            if (error) {
-                return;
-            }
-            $ = cheerio.load(responseBody);
-            var links = $(".image a.link");
-            var urls = new Array(links.length).fill(0).map((v, i) => links.eq(i).attr("href"));
-            console.log(urls);
-    
-            if (!urls.length) {
-                return;
-            }
-            message.channel.send( urls[Math.floor(Math.random() * urls.length)]);
-        });
-    }
+const randomPuppy = require('random-puppy');
+
+module.exports.run = async (bot, message, args) => {
+
+    let reddit = [
+        "meme",
+        "animemes",
+        "MemesOfAnime",
+        "animememes",
+        "AnimeFunny",
+        "dankmemes",
+        "dankmeme",
+        "wholesomememes",
+        "MemeEconomy",
+        "techsupportanimals",
+        "meirl",
+        "me_irl",
+        "2meirl4meirl",
+        "AdviceAnimals"
+    ]
+
+    let subreddit = reddit[Math.floor(Math.random() * reddit.length)];
+
+    message.channel.startTyping();
+
+    randomPuppy(subreddit).then(async url => {
+            await message.channel.send({
+                files: [{
+                    attachment: url,
+                    name: 'meme.png'
+                }]
+            }).then(() => message.channel.stopTyping());
+    }).catch(err => console.error(err));
+
+};
+
+module.exports.help = {
+    name: 'meme',
+    aliases: ['memes']
 }
