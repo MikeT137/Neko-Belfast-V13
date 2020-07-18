@@ -3,6 +3,9 @@ const bot = new Discord.Client();
 
 const PREFIX = 'b!';
 
+const cheerio = require('cheerio');
+const request = require('request');
+
 const fs = require('fs');
 bot.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
@@ -173,8 +176,36 @@ bot.on('message', message => {
             case 'facepalm':
                 bot.commands.get('facepalm').execute(message, argument);
             break;
+
+            case 'image':
+                image(message);
+            break;
         }
     }
+});
+function image(message){
+    var options = {
+        url: "https://www.reddit.com/r/memes/",
+        method: "GET",
+        headers: {
+            "Accept": "text/html",
+            "User-Agent": "Chrome"
+        }
+    }
+}
+request(options, function(error, response, responseBody) {
+    if (error) {
+        return;
+    }
+    $ = cheerio.load(responseBody);
+    var links = $(".image a.link");
+    var urls = new Array(links.length).fill(0).map((v, i) => links.eq(i).attr("href"));
+    console.log(urls);
+
+    if (!urls.length) {
+        return;
+    }
+    message.channel.send( urls[Math.floor(Math.random() * urls.length)]);
 });
 
 bot.login(process.env.token);
