@@ -16,6 +16,17 @@ bot.on('ready', () => {
     bot.user.setActivity('b!help', {type: 'PLAYING'}).catch(console.error);
 });
 
+bot.on('guildMemberAdd', member => {
+    const channel = member.guild.channels.find(channel => channel.name === 'welcome')
+
+    channel.send(`Welcome ${member} to the server! Hope you enjoy your stay`)
+})
+bot.on('guildMemberRemove', member => {
+    const channel = member.guild.channels.find(channel => channel.name === 'welcome')
+
+    channel.send(`${member} left the server, oof`)
+})
+
 bot.on('message', (message) => {
     if(message.content == 'hey' || message.content == 'Hey' || message.content == 'HEY')
         message.channel.send('hewwo');
