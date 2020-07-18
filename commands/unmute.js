@@ -1,7 +1,7 @@
 module.exports = {
     name:'unmute',
     description: "Unmutes a user",
-    execute(message, argument){
+    run: async (bot, message, argument){
         const ms = require('ms');
         let mainrole = message.guild.roles.cache.find(role => role.name === 'Member')
         let muterole = message.guild.roles.cache.find(role => role.name === 'BMuted')
