@@ -1,7 +1,7 @@
 module.exports = {
     name:'help',
     description: "Shows you the commands",
-    execute(message, argument){
+    run: async (bot, message, argument){
         const Discord = require('discord.js');
         const PREFIX = 'b!';
         
