@@ -17,12 +17,12 @@ bot.on('ready', () => {
 });
 
 bot.on('guildMemberAdd', member => {
-    const channel = member.guild.channels.find(channel => channel.name === 'welcome')
+    const channel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
 
     channel.send(`Welcome ${member} to the server! Hope you enjoy your stay`)
 })
 bot.on('guildMemberRemove', member => {
-    const channel = member.guild.channels.find(channel => channel.name === 'welcome')
+    const channel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
 
     channel.send(`${member} left the server, oof`)
 })
