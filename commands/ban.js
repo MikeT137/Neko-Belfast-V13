@@ -1,7 +1,7 @@
 module.exports = {
     name:'ban',
     description: "Bans a user",
-    execute(message, argument){
+    run: async (bot, message, argument){
         const member = message.mentions.members.first();
 
         if(!message.member.hasPermission("MANAGE_ROLES") || !message.guild.owner) return message.channel.send('You dont have permissions to use this command');
