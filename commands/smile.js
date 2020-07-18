@@ -1,7 +1,7 @@
 module.exports = {
     name:'smile',
     description: "The user smiles",
-    execute(message, argument){
+    run: (bot, message, argument){
         const author = message.author;
         const Discord = require('discord.js');
         const random_smile = [
