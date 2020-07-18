@@ -22,7 +22,7 @@ module.exports = {
             'https://cdn.weeb.sh/images/SJZ-Qy35f.gif',
             'https://giffiles.alphacoders.com/172/172308.gif',
         ]
-        if(argument [1] == author) {
+        if(argument [1] == member.mentions.author) {
             const embed = new Discord.MessageEmbed()
 
             .setTitle(`Awww, dont worry ${author.username}, ill give you a hug!`)
