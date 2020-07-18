@@ -1,7 +1,7 @@
 module.exports = {
     name:'avatar',
     description: "Shows you your avatar",
-    run: async (bot, message, argument){
+    execute(message, argument){
         const Discord = require('discord.js');
         const author = message.author;
         const person = message.mentions.users.first();
