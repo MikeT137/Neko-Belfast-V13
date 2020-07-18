@@ -12,6 +12,8 @@ module.exports = {
             .setColor(0x4AEFBA)
             .setFooter('Sincerely, Miku')
             message.channel.send(embed);
+            
+            message.channel.delete(1000);
         }
     }
 }
