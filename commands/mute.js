@@ -1,7 +1,7 @@
 module.exports = {
     name:'mute',
     description: "Mutes a user temporarily",
-    execute(message, argument){
+    run: async (bot, message, argument){
         const ms = require('ms');
         let person = message.guild.member(message.mentions.users.first() || message.guild.members.get(argument[2]))
         
