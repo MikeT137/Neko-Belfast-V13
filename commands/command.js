@@ -17,7 +17,7 @@ module.exports = (bot) => {
                 continue;
             }
 
-            if(pull.aliases && Array.isArray(pull))
+            if(pull.aliases && Array.isArray(pull.aliases))
             pull.aliases.forEach(alias => this.bot.aliases.set(alias, pull.name));
         }
     });
