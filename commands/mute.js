@@ -11,7 +11,7 @@ module.exports = {
 
         if(!person) return message.channel.send('Please specify a member');
         
-        let mainrole = message.guild.roles.cache.find(role => role.name === 'Member')
+        let mainrole = message.guild.roles.cache.find(role => role.name === '@everyone')
         let muterole = message.guild.roles.cache.find(role => role.name === 'BMuted')
 
         if(!muterole) return message.channel.send('Couldnt find the mute role');
