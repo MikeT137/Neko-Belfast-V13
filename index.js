@@ -184,14 +184,14 @@ bot.on('message', message => {
     }
 });
 function image(message){
-    var options = {
+    var options = [
         url: "https://www.reddit.com/search/?q=" + "memes",
         method: "GET",
         headers: {
             "Accept": "text/html",
             "User-Agent": "Chrome"
         }
-    }
+    ]
     request(options, function(error, response, responseBody) {
         if (error) {
             return;
