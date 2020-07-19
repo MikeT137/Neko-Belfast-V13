@@ -174,6 +174,10 @@ bot.on('message', message => {
                 bot.commands.get('nom').execute(message, argument);
             break;
 
+            case 'wave':
+                bot.commands.get('wave').execute(message, argument);
+            break;
+
         }
     }
 });
