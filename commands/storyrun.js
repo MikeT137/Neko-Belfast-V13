@@ -4,7 +4,7 @@ module.exports = {
     execute(message, argument){
         const Discord = require('discord.js');
 
-        if(!argument[2]) {
+        if(!argument[1]) {
             message.channel.send(`${message.author.username}, look in your DM for the story! (dont give spoilers)`)
 
             const embed = new Discord.MessageEmbed()
@@ -17,6 +17,6 @@ module.exports = {
             .addField('\nSelect your choice:')
             .setColor(0x4AEFBA)
             message.author.send(embed);
-        }.catch(err => console.error(err));
+        }
     }
 }
