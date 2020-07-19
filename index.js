@@ -178,9 +178,6 @@ bot.on('message', message => {
                 bot.commands.get('wave').execute(message, argument);
             break;
 
-            case 'storyrun':
-                bot.commands.get('storyrun').execute(message, argument);
-            break;
 
         }
     }
