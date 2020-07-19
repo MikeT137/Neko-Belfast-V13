@@ -15,6 +15,7 @@ module.exports = {
             'https://cdn.lowgif.com/full/07924591983847ac-shinryaku-ika-musume-anime-smile-gif-on-gifer-by-agamazar.gif',
             'https://i.gifer.com/AfZ2.gif',
             'https://media1.tenor.com/images/e9808bd93cc8961ef81e6fa8ae560046/tenor.gif?itemid=13857197',
+            'https://cdn.discordapp.com/attachments/682723921510006786/734433346255323136/image0.gif',
         ]
         if(!argument[1]) {
             const embed = new Discord.MessageEmbed()
