@@ -170,12 +170,12 @@ bot.on('message', message => {
                 bot.commands.get('facepalm').execute(message, argument);
             break;
 
-            case 'meme':
-                bot.commands.get('meme').execute(message, argument);
-            break;
-
             case 'nom':
                 bot.commands.get('nom').execute(message, argument);
+            break;
+
+            case 'storyrun':
+                bot.commands.get('storyrun').execute(message, argument);
             break;
         }
     }
