@@ -12,24 +12,23 @@ module.exports = {
             .catch(() => console.error('One of the emojis failed to react.'));
 
             const filter = (reaction, user) => {
-                return [':one:', ':two:', ':three:'].includes(reaction.emoji.name) && user.id === message.author.id;
+                return ['👍', '✋', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
             };
             
-            message.awaitReactions(filter, { max: 1, time: 90000, errors: ['time'] })
+            message.awaitReactions(filter, {max: 1})
                 .then(collected => {
                     const reaction = collected.first();
             
-                    if (reaction.emoji.name === ':one:') {
+                    if (reaction.emoji.name === '👍') {
                         message.channel.send('you reacted with a thumbs up.');
-                    }else if(reaction.emoji.name === ':two:') {
-                        message.channel.send('you reacted with a thumbs down.');
+                    }else if(reaction.emoji.name === '✋') {
+                        message.channel.send('you reacted with a hand.');
                     }else {
                         message.channel.send('bish');
                     }
                 })
                 .catch(collected => {
                     console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                    message.channel.send('you didn\'t react with neither a thumbs up, nor a thumbs down.');
                 });
 
             if(message.content === 'b!1') {
