@@ -12,6 +12,27 @@ module.exports = {
             .then(() => message.react(':three:'))
             .catch(() => console.error('One of the emojis failed to react.'));
 
+            const filter = (reaction, user) => {
+                return [':one:', ':two:', ':three:'].includes(reaction.emoji.name) && user.id === message.author.id;
+            };
+            
+            message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                .then(collected => {
+                    const reaction = collected.first();
+            
+                    if (reaction.emoji.name === ':one:') {
+                        message.author.send('you reacted with a thumbs up.');
+                    }else if(reaction.emoji.name === ':two:') {
+                        message.author.send('you reacted with a thumbs down.');
+                    }else {
+                        message.author.send('bish');
+                    }
+                })
+                .catch(collected => {
+                    console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
+                    message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
+                });
+
             if(message.content === 'b!1') {
                 message.author.send('You think to yourself that it was just an animal or something, so you decide to ignore it. You then finish chopping the wood, you grab all of it, and go towards your basement so you can leave it there. But then you hear that weird sound again, this time coming from your basement. You then:\nb!1)go in the basement\n   2)leave the cabin\nSelect your choice:');
 
