@@ -10,6 +10,10 @@ module.exports = {
             msg.react('✋');
             msg.react('👎');
 
+            const filter = reaction => {
+                return ['👍', '✋', '👎'].includes(reaction.emoji.name)
+            }
+
             message.awaitReactions(filter, {max: 1})
             .then(collected => {
                 const reaction = collected.first();
