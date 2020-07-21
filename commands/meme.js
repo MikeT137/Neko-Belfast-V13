@@ -3,7 +3,7 @@ const randomPuppy = require('random.Puppy');
 module.exports = {
     name:'meme',
     description: "The user is given a meme",
-    execute(message, argument) => {
+    execute(message, argument) {
         const subreddits = [
             "dankmemes",
             "memes",
