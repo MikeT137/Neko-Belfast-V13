@@ -179,7 +179,7 @@ bot.on('message', message => {
             break;
 
             case 'meme':
-                bot.commands.get('meme').execute(message, argument);
+                bot.commands.get('meme').run(message, argument);
             break;
 
             /*case 'storyrun':
