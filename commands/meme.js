@@ -1,4 +1,4 @@
-const randomPuppy = require('random.Puppy');
+const randomPuppy = require('random-puppy');
 
 module.exports = {
     name:'meme',
