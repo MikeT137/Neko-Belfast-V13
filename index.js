@@ -179,28 +179,7 @@ bot.on('message', message => {
             break;
 
             case 'meme':
-                module.exports = {
-                    run: async( message, argument) => {
-                        const randomPuppy = require('random-puppy');
-                        const subreddits = [
-                            "dankmemes",
-                            "memes",
-                            "Animemes",
-                            "wholesomememes",
-                            "wholesomeanimemes",
-                        ]
-                        const random = subreddits[Math.floor(Math.random() * subreddits.length)];
-                        const img = await randomPuppy(random);
-                
-                        const embed = new Discord.MessageEmbed()
-                
-                        .setTitle(`From r/${random}`)
-                        .setImage(img)
-                        .setURL(`htps://reddit.com/r/${random}`)
-                        .setColor(0x4AEFBA)
-                        message.channel.send(embed);
-                    }
-                }
+                bot.commands.get('meme').execute(message, argument);
             break;
 
             /*case 'storyrun':
