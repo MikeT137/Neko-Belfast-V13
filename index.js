@@ -196,7 +196,7 @@ bot.on('message', message => {
 
                     .setTitle(`From r/${random}`)
                     .setImage(img)
-                    .setURL(`htps://reddit.com/r/${random}`)
+                    .setURL(`http://reddit.com/r/${random}`)
                     .setColor(0x4AEFBA)
                     message.channel.send(embed);
                 }
