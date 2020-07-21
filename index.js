@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
+const PREFIX = 'b!';
+
 const fs = require('fs');
 bot.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
@@ -28,12 +30,14 @@ bot.on('guildMemberRemove', member => {
 bot.on('message', (message) => {
     if(message.content == 'hey' || message.content == 'Hey' || message.content == 'HEY')
         message.channel.send('hewwo');
-    else if(message.content == 'uwu' || message.content == 'UwU' || message.content == 'UWU' || message.content == 'owo' || message.content == 'OwO' || message.content == 'OWO')
+});
+
+bot.on('message', (message) => {
+    if(message.content == 'uwu' || message.content == 'UwU' || message.content == 'UWU' || message.content == 'owo' || message.content == 'OwO' || message.content == 'OWO')
         message.channel.send('>w<');
 });
 
 bot.on('message', message => {
-    const PREFIX = 'b!';
 	const withoutPrefix = message.content.slice(PREFIX.length);
 	const split = withoutPrefix.split(/ +/);
 	const command = split[0];
@@ -174,34 +178,8 @@ bot.on('message', message => {
                 bot.commands.get('nom').execute(message, argument);
             break;
 
-            case 'wave':
-                bot.commands.get('wave').execute(message, argument);
-            break;
-
             case 'meme':
-                async (bot, message, argument) => {
-                    const Discord = require('discord.js');
-                    const randomPuppy = require('random-puppy');
-                    const subreddits = [
-                        "dankmemes",
-                        "memes",
-                        "Animemes",
-                        "wholesomememes",
-                        "wholesomeanimemes",
-                    ]
-                    const random = subreddits[Math.floor(Math.random() * subreddits.length)];
-                    const img = randomPuppy(random);
-
-                    if(!argument[1]) {
-                        const embed = new Discord.MessageEmbed()
-
-                        .setTitle(`From r/${random}`)
-                        .setImage(img)
-                        .setURL(`http://reddit.com/r/${random}`)
-                        .setColor(0x4AEFBA)
-                        message.channel.send(embed);
-                    }
-                }
+                bot.commands.get('meme').execute(message, argument);
             break;
 
             /*case 'storyrun':
