@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const PREFIX = 'b!' || 'B!';
+const PREFIX = 'b!';
+const PREFIX2 = 'B!';
 
 const fs = require('fs');
 bot.commands = new Discord.Collection();
@@ -38,13 +39,13 @@ bot.on('message', (message) => {
 });
 
 bot.on('message', message => {
-	const withoutPrefix = message.content.slice(PREFIX.length);
+	const withoutPrefix = message.content.slice(PREFIX.length || PREFIX2.length);
 	const split = withoutPrefix.split(/ +/);
 	const command = split[0];
 	const args = split.slice(1);
-    let argument = message.content.substring(PREFIX.length).split(" ");
+    let argument = message.content.substring(PREFIX.length || PREFIX2.length).split(" ");
 
-    if (message.content.startsWith(PREFIX)) {
+    if (message.content.startsWith(PREFIX || PREFIX2)) {
         switch(argument[0]) {
             case 'mooni':
                 bot.commands.get('mooni').execute(message, argument);
