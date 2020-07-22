@@ -46,7 +46,7 @@ bot.on('message', message => {
     let argument = message.content.substring(PREFIX.length).split(" ") || message.content.substring(PREFIX2.length).split(" ");;
 
     if (message.content.startsWith(PREFIX || PREFIX2) {
-        switch(argument[0]) {
+        switch (argument[0]) {
             case 'mooni':
                 bot.commands.get('mooni').execute(message, argument);
             break;
