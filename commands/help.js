@@ -3,7 +3,7 @@ module.exports = {
     description: "Shows you the commands",
     execute(message, argument){
         const Discord = require('discord.js');
-        const PREFIX = 'b!';
+        const PREFIX = 'b! or B!';
         
         if(!argument[1]){
             message.channel.send(`${message.author.username}, look in your DM for the commands!`)
