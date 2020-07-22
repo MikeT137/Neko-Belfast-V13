@@ -178,6 +178,10 @@ bot.on('message', message => {
                 bot.commands.get('nom').execute(message, argument);
             break;
 
+            case 'boop':
+                bot.commands.get('boop').execute(message, argument);
+            break;
+
             case 'meme':
                 bot.commands.get('meme').execute(message, argument);
             break;
