@@ -39,13 +39,13 @@ bot.on('message', (message) => {
 });
 
 bot.on('message', message => {
-	const withoutPrefix = message.content.slice(PREFIX.length || PREFIX2.length);
+	const withoutPrefix = message.content.slice(PREFIX.length) || message.content.slice(PREFIX2.length);
 	const split = withoutPrefix.split(/ +/);
 	const command = split[0];
 	const args = split.slice(1);
-    let argument = message.content.substring(PREFIX.length || PREFIX2.length).split(" ");
+    let argument = message.content.substring(PREFIX.length).split(" ") || message.content.substring(PREFIX2.length).split(" ");;
 
-    if (message.content.startsWith(PREFIX || PREFIX2)) {
+    if (message.content.startsWith(PREFIX) || (message.content.startsWith(PREFIX2) {
         switch(argument[0]) {
             case 'mooni':
                 bot.commands.get('mooni').execute(message, argument);
