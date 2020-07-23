@@ -12,9 +12,9 @@ module.exports = {
             'https://66.media.tumblr.com/7a1d87c8e7056ac5ce2a202d53a36905/tumblr_myqbqfZWSb1sp0cggo1_500.gif',
             'https://media.tenor.com/images/6ac3e0ade34f080bb295e4caf2207756/tenor.gif',
             'https://i.pinimg.com/originals/cf/27/a2/cf27a233bea49a54f805bd4f5e0e44b5.gif',
-            'https://lh3.googleusercontent.com/proxy/ztVUWisAM2h821ArCPcnTiqlSvkqwiqoFczqE0lVgd7ixWAjuPniwAVr3v1CbQbSXIXOhVcizc4GBdkUDJwe2nXfN5R7GP5QjyxHRV0mYKlHvDgP9yQ0bBV5aNB8YHy3gRaDu-fpo1SoKg',
+            'https://media1.tenor.com/images/07a7924fe3c511df7bf445e954ec4ec1/tenor.gif?itemid=12607434',
             'https://giffiles.alphacoders.com/906/90663.gif',
-            'https://i.kym-cdn.com/photos/images/original/001/100/981/002.gif',
+            'https://64.media.tumblr.com/fab4919414ceaceeea4d3e3336a99915/tumblr_onnkquUkxy1viiyyio1_500.gif',
             'https://data.whicdn.com/images/248505351/original.gif',
         ]
         if(message.mentions.members.size >= 1) {
