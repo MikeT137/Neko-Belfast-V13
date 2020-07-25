@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
+const token = 'NzI3MDkzMjM2OTU0NDMxNDg4.Xvm0WA.MUsucWPrzd0NlKnK1DrVOEOR6fw';
 
 const PREFIX = 'b!';
 const PREFIX2 = 'B!';
@@ -20,12 +21,12 @@ bot.on('ready', () => {
 bot.on('guildMemberAdd', member => {
     const channel = member.guild.channels.cache.find(channel => channel.name === 'welcome' || channel.name === 'Welcome' || channel.name === 'welcome-goodbye' || channel.name === 'Welcome-Goodbye' || channel.name === '???welcome-goodbye' || channel.name === '???Welcome-Goodbye')
 
-    channel.send(`Welcome ${member} to the server! Before doing anything, please read the rules of the server and...enjoy your stay ;3`)
+    message.channel.send(`Welcome ${member} to the server! Before doing anything, please read the rules of the server and...enjoy your stay ;3`)
 })
 bot.on('guildMemberRemove', member => {
     const channel = member.guild.channels.cache.find(channel => channel.name === 'welcome' || channel.name === 'Welcome' || channel.name === 'welcome-goodbye' || channel.name === 'Welcome-Goodbye' || channel.name === '???welcome-goodbye' || channel.name === '???Welcome-Goodbye')
 
-    channel.send(`${member} left the server, oof`)
+    message.channel.send(`${member} left the server, oof`)
 })
 
 bot.on('message', message => {
@@ -195,4 +196,4 @@ bot.on('message', message => {
     }
 });
 
-bot.login(process.env.token);
+bot.login(token);
