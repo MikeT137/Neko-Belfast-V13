@@ -183,11 +183,11 @@ bot.on('message', message => {
                 bot.commands.get('boop').execute(message, argument);
             break;
 
-            case 'meme':
+            /*case 'meme':
                 bot.commands.get('meme').execute(message, argument);
             break;
 
-            /*case 'storyrun':
+            case 'storyrun':
                     bot.commands.get('storyrun').execute(message, argument);
                 break;
             */
