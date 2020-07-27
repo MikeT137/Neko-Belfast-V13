@@ -61,4 +61,5 @@ bot.on('message', async message => {
     if(command) command.run(bot, message, args);
 })
 
-bot.login(token);
+//Token
+bot.login(process.env.token);
