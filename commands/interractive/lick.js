@@ -12,7 +12,7 @@ module.exports = {
             'https://thumbs.gfycat.com/BestBlueGalapagosalbatross-size_restricted.gif',
             'https://i.imgur.com/Clk8A6M.gif',
             'https://i.pinimg.com/originals/e6/1d/a7/e61da774938e4f209818edcbc0d4a671.gif',
-            'https://steamuserimages-a.akamaihd.net/ugc/932676970225506188/DD67E197E5131C57261829E69CF516DE1B99A08E/',
+            'https://media1.tenor.com/images/2c15d00633af18a31a1d45aeb6e7ae0d/tenor.gif?itemid=9152683',
             'https://thumbs.gfycat.com/PopularSociableAmericanredsquirrel-size_restricted.gif',
             'https://vignette.wikia.nocookie.net/date-a-live/images/9/9a/Kurumi_licks_shido%27s_wound.gif/revision/latest?cb=20160722115544',
             'https://68.media.tumblr.com/ff60ce6b4ae9fde3267537faf5b56578/tumblr_omijznkrLe1rmzw91o1_500.gif',

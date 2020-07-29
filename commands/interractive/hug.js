@@ -22,6 +22,7 @@ module.exports = {
             'https://cdn.weeb.sh/images/SJZ-Qy35f.gif',
             'https://giffiles.alphacoders.com/172/172308.gif',
         ]
+        
         if(message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
     

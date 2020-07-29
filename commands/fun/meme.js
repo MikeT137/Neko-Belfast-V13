@@ -19,7 +19,7 @@ module.exports = {
 
             .setTitle(`From r/${random}`)
             .setImage(img)
-            .setURL(`https://reddit.com/r/${random}`)
+            .setURL(`https://reddit.com/r/${random}/new`)
             .setColor(0x4AEFBA)
             message.channel.send(embed);
 
@@ -34,7 +34,7 @@ module.exports = {
 
             .setTitle(`From r/${random}`)
             .setImage(img)
-            .setURL(`https://reddit.com/r/${random}`)
+            .setURL(`https://reddit.com/r/${random}/new`)
             .setColor(0x4AEFBA)
             message.channel.send(embed);
 
@@ -49,7 +49,7 @@ module.exports = {
 
             .setTitle(`From r/${random}`)
             .setImage(img)
-            .setURL(`https://reddit.com/r/${random}`)
+            .setURL(`https://reddit.com/r/${random}/new`)
             .setColor(0x4AEFBA)
             message.channel.send(embed);
 
@@ -64,7 +64,7 @@ module.exports = {
 
             .setTitle(`From r/${random}`)
             .setImage(img)
-            .setURL(`https://reddit.com/r/${random}`)
+            .setURL(`https://reddit.com/r/${random}/new`)
             .setColor(0x4AEFBA)
             message.channel.send(embed);
 
@@ -79,7 +79,7 @@ module.exports = {
 
             .setTitle(`From r/${random}`)
             .setImage(img)
-            .setURL(`https://reddit.com/r/${random}`)
+            .setURL(`https://reddit.com/r/${random}/new`)
             .setColor(0x4AEFBA)
             message.channel.send(embed);
 
@@ -94,7 +94,7 @@ module.exports = {
 
             .setTitle(`From r/${random}`)
             .setImage(img)
-            .setURL(`https://reddit.com/r/${random}`)
+            .setURL(`https://reddit.com/r/${random}/new`)
             .setColor(0x4AEFBA)
             message.channel.send(embed);
         }
