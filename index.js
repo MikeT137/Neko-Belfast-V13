@@ -1,7 +1,7 @@
 const {Collection, Client, Discord} = require('discord.js');
 const bot = new Client();
-bot.prefix = 'my prefix';
 const config = require('./config.json');
+bot.prefix = 'my prefix';
 const prefix = config.prefix;
 const token = config.token;
 const fs = require('fs');
@@ -16,7 +16,7 @@ bot.categories = fs.readdirSync("./commands/");
 
 bot.on('ready', () => {
     console.log('Belfast is online!');
-    bot.user.setActivity('use b!help for commands', {type: 'PLAYING'}).catch(console.error);
+    bot.user.setActivity('Use b!help for commands', {type: 'PLAYING'}).catch(console.error);
 });
 
 //Welcome Command
@@ -62,5 +62,5 @@ bot.on('message', async message => {
 })
 
 //Token
-bot.login(process.env.token);
-//bot.login(token);
+//bot.login(process.env.token);
+bot.login(token);

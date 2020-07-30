@@ -83,7 +83,7 @@ module.exports = {
             .setColor(0x4AEFBA)
             message.channel.send(embed);
 
-        }else if(args[0] == 'wholesomeanime') {
+        }else if(args[0] == 'wholesomeanime' || args[0] == 'wanime') {
             const subreddits = [
                 "wholesomeanimemes",
             ]

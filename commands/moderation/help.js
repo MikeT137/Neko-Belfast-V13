@@ -9,7 +9,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
 
                 .addField('Help', 'Type b!help (command) to get information about a specific command')
-                .addField('Modertion Commands', 'ban, clear, help, info, kick, mute, unmute, warn')
+                .addField('Modertion Commands', 'ban, clear, help, info, invite, kick, mute, unmute, warn')
                 .addField('Self commands', 'avatar, blush, clap, cry, dance, facepalm, laugh, love, pout, purr, smile, smug, wag, yawn') //mooni
                 .addField('Interactive commands (@someone)', 'boop, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
                 .addField('Fun commands', '8ball, meme')
@@ -28,6 +28,10 @@ module.exports = {
 
             case 'info':
                 message.channel.send('It shows some information about the bot')
+            break;
+
+            case 'invite':
+                message.channel.send('It gives the member an invite link of the bot')
             break;
 
             case 'kick':
@@ -171,7 +175,7 @@ module.exports = {
             break;
 
             case 'meme':
-                message.channel.send('It sends a meme from a subreddit: b!meme (...)\n(nothing) -> random\ndank -> dankmemes\nmemes -> memes\nanime -> Animemes\nwholesome -> wholesomememes\nwholesomeanime -> wholesomeaniememes')
+                message.channel.send('It sends a meme from a subreddit: b!meme (...)\n(nothing) -> random\ndank -> dankmemes\nmemes -> memes\nanime -> Animemes\nwholesome -> wholesomememes\nwholesomeanime / wanime -> wholesomeaniememes')
             break;
         }
     }
