@@ -1,4 +1,6 @@
 const math = require('math.js');
+const Discord = require('dicsord.js');
+const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'calculate',
@@ -14,7 +16,12 @@ module.exports = {
         }catch(e){
             message.channel.send('Sorry, please input a valid calculation')
         }
+        const embed = new Discord.MessageEmbed()
 
-        message.channel.send(`\`\`\`css${resp}\`\`\``);
+        .setTitle('Calculation')
+        .addField('Question', `\`\`\`css\n${args.join(' ')}\`\`\``)
+        .addField('Answer', `\`\`\`css\n${resp}\`\`\``);
+        .setColor(0x4AEFBA)
+        message.channel.send(embed);
     }
 }
