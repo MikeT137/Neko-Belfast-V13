@@ -3,7 +3,7 @@ module.exports = {
         if(type == '*') return num1*num2;
         if(type == '+') return num1+num2;
         if(type == '-') return num1-num2;
-        if(type == '/') return num2/num1;
+        if(type == '/') return num1/num2;
         if(type == '^') return num1^num2;
     }
 }
