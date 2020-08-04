@@ -20,7 +20,7 @@ bot.on('ready', () => {
 });
 
 bot.on('message', message => {
-    require('./events/guild/message')(message);
+    require('./events/guild/message')(bot, message);
 });
 
 //Hello Command
