@@ -13,11 +13,13 @@ module.exports = {
                 .addField('Self commands', 'avatar, blush, clap, cry, dance, facepalm, laugh, love, pout, purr, smile, smug, wag, yawn')
                 .addField('Interactive commands (@someone)', 'boop, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
                 .addField('Fun commands', '8ball, math, meme')
+                .addField('Events (no prefix)', 'hey, leave, owo, uwu, welcome')
                 .setColor(0x4AEFBA)
             message.channel.send(embed);
         }
 
         switch (args[0]){
+            //Moderation Commands
             case 'ban':
                 message.channel.send('It bans a user: b!ban (ping)')
             break;
@@ -54,6 +56,7 @@ module.exports = {
                 message.channel.send('It warns a user for a reason: b!warn (ping) (reason)')
             break;
 
+            //Self Commands
             case 'avatar':
                 message.channel.send('It shows yours or someone elses avatar: b!avatar / b!avatar (ping)')
             break;
@@ -118,6 +121,7 @@ module.exports = {
                 message.channel.send('It sends a crying gif: b!cry')
             break;
             
+            //Interactive commands (@someone)
             case 'boop':
                 message.channel.send('It sends a boop gif: b!boop (ping)')
             break;
@@ -174,6 +178,7 @@ module.exports = {
                 message.channel.send('It sends a waving gif: b!wave (ping)')
             break;
   
+            //Fun commands
             case '8ball':
                 message.channel.send('It sends a random response to your question: b!8ball (question)')
             break;
@@ -184,6 +189,27 @@ module.exports = {
 
             case 'meme':
                 message.channel.send('It sends a meme from a subreddit: b!meme (...)\n(nothing) -> random\ndank -> dankmemes\nmemes -> memes\nanime -> Animemes\nwholesome -> wholesomememes\nwholesomeanime / wanime -> wholesomeaniememes')
+            break;
+
+            //Events (no prefix)
+            case 'hey':
+                message.channel.send('The bot replyes with: hewwo')
+            break;
+
+            case 'leave':
+                message.channel.send('The bot sends a message when someone leaves the server')
+            break;
+
+            case 'owo':
+                message.channel.send('The bot replyes with: >w<')
+            break;
+
+            case 'uwu':
+                message.channel.send('The bot replyes with: >w<')
+            break;
+
+            case 'welcome':
+                message.channel.send('The bot sends a message when someone joins the server')
             break;
         }
     }
