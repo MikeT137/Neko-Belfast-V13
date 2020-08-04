@@ -17,7 +17,7 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
 
         .setTitle('Calculation')
-        .addField('Question', `\`\`\`css\n${args.join(' ')}\`\`\` = ?`)
+        .addField('Question', `\`\`\`css\n${args.join(' ')}\`\`\ = ?``)
         .addField('Answer', `\`\`\`css\n${resp}\`\`\``)
         .setColor(0x4AEFBA)
         message.channel.send(embed);
