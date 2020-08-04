@@ -10,9 +10,9 @@ module.exports = {
 
                 .addField('Help', 'Type b!help (command) to get information about a specific command')
                 .addField('Modertion Commands', 'ban, clear, help, info, invite, kick, mute, unmute, warn')
-                .addField('Self commands', 'avatar, blush, clap, cry, dance, facepalm, laugh, love, pout, purr, smile, smug, wag, yawn') //mooni
+                .addField('Self commands', 'avatar, blush, clap, cry, dance, facepalm, laugh, love, pout, purr, smile, smug, wag, yawn')
                 .addField('Interactive commands (@someone)', 'boop, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
-                .addField('Fun commands', '8ball, meme')
+                .addField('Fun commands', '8ball, math, meme')
                 .setColor(0x4AEFBA)
             message.channel.send(embed);
         }
@@ -172,6 +172,10 @@ module.exports = {
   
             case '8ball':
                 message.channel.send('It sends a random response to your question: b!8ball (question)')
+            break;
+
+            case 'math':
+                message.channel.send('It solves an ecuation based on only 2 numbers: b!math (num1) (type) (num2))\ntypes: +, -, *, /, ^')
             break;
 
             case 'meme':
