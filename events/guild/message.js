@@ -1,4 +1,3 @@
-const Timeout = new Set();
 const {prefix} = require('../../config.json');
 const ms = require('ms');
 module.exports = async(bot, message) => {
