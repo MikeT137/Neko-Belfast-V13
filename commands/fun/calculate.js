@@ -1,7 +1,5 @@
 const math = require('math.js');
 const Discord = require('dicsord.js');
-const { MessageEmbed } = require('discord.js');
-
 module.exports = {
     name: 'calculate',
     description: "Solves a mathematic equation",
