@@ -1,5 +1,4 @@
 const {prefix} = require('../../config.json');
-const ms = require('ms');
 module.exports = async(bot, message) => {
     if(!message.content.startsWith(prefix)) return;
     if(!message.guild) return;
