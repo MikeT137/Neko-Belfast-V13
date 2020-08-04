@@ -9,7 +9,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
 
                 .addField('Help', 'Type b!help (command) to get information about a specific command')
-                .addField('Modertion Commands', 'ban, clear, help, info, invite, kick, mute, unmute, warn')
+                .addField('Modertion Commands', 'ban, clear, help, info, invite, kick, mute, server, unmute, warn')
                 .addField('Self commands', 'avatar, blush, clap, cry, dance, facepalm, laugh, love, pout, purr, smile, smug, wag, yawn')
                 .addField('Interactive commands (@someone)', 'boop, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
                 .addField('Fun commands', '8ball, math, meme')
@@ -40,6 +40,10 @@ module.exports = {
 
             case 'mute':
                 message.channel.send('It mutes a user temporarily: b!mute (number) (time: s, m, h, d)')
+            break;
+
+            case 'server':
+                message.channel.send('It send the link of bot\'s official server')
             break;
 
             case 'unmute':
