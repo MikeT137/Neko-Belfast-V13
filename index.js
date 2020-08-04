@@ -19,7 +19,7 @@ bot.on('ready', () => {
     require('./events/client/ready')(bot);
 });
 
-bot.on('message', message => {
+bot.on('message', async (bot, message) => {
     require('./events/guild/message')(bot, message);
 });
 
