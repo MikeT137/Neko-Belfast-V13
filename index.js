@@ -23,14 +23,6 @@ bot.on('message', message => {
     require('./events/guild/message')(message);
 });
 
-bot.on('messageDelete', async (message) => {
-    require('./events/guild/messageDelete')(message);
-});
-
-bot.on('messageUpdate', async (oldMessage, newMessage) => {
-    require('./events/guild/messageUpdate')(oldMessage, newMessage);
-});
-
 //Hello Command
 bot.on('hey', message => {
     require('./events/client/hey')(message);
