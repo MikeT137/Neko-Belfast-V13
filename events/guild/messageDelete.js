@@ -1,4 +1,4 @@
-module.exports = async(message) => {
+module.exports = async (message) => {
     const embed = new Discord.MessageEmbed()
 
     .setTitle('New message deleted!')
