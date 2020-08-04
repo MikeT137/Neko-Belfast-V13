@@ -9,7 +9,6 @@ const fs = require('fs');
 //Command & Event Handler
 bot.commands = new Collection();
 bot.aliases = new Collection();
-bot.snipes = new Collection();
 bot.categories = fs.readdirSync("./commands/");
 ["command", "event"].forEach(handler => {
     require(`./handlers/${handler}`)(bot);
