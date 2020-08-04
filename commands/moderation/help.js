@@ -43,7 +43,7 @@ module.exports = {
             break;
 
             case 'server':
-                message.channel.send('It send the link of bot\'s official server')
+                message.channel.send('It send the link of the bot\'s official server')
             break;
 
             case 'unmute':
