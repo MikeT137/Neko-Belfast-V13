@@ -1,7 +1,7 @@
-const math = require('math.js');
+const math = require('mathjs');
 const Discord = require('discord.js');
 module.exports = {
-    name: 'calculate',
+    name: 'math',
     description: "Solves a mathematic equation",
     run: async(bot, message, args) => {
         if(!args[0]){
