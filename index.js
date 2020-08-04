@@ -29,12 +29,6 @@ bot.on('guildMemberRemove', member => {
     channel.send(`${member} left the server, oof`)
 })
 
-//Hello command
-bot.on('message', (message) => {
-    if(message.content == 'hey' || message.content == 'Hey' || message.content == 'HEY')
-        message.channel.send('hewwo');
-});
-
 //UwU command
 bot.on('message', (message) => {
     if(message.content == 'uwu' || message.content == 'UwU' || message.content == 'UWU' || message.content == 'owo' || message.content == 'OwO' || message.content == 'OWO')
