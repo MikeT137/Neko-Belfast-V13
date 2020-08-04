@@ -1,12 +1,21 @@
-const {calculator} = require('../../functions')
-module.exports = {
-    name:'math',
-    description: "Does calculations",
-    run: async (bot, message, args) => {
-        if(!args[0]) return message.channel.send('You did not specify your fisrt number');
-        if(!args[1]) return message.channel.send('You did not specify the type of sum');
-        if(!args[2]) return message.channel.send('You did not specify your second number');
+const math = require('math.js');
+const Discord = require('discord.js');
 
-        message.channel.send(calculator(args[0], args[1], args[2]));
+module.exports = {
+    name: 'math',
+    description: "Solves a mathematic equation",
+    run: async(bot, message, args) => {
+        if(!args[0]){
+            message.channel.send('You didnt add a calculation')
+        }
+        let resp;
+
+        try{
+            resp = math.eval(args.join(' '));
+        }catch(e){
+            message.channel.send('Sorry, please input a valid calculation')
+        }
+
+        message.channel.send(`${resp}`);
     }
 }
