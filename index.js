@@ -30,7 +30,7 @@ bot.on('guildMemberRemove', member => {
 
 //Hello command
 bot.on('message', (message) => {
-    require('./events/guild/hey')(bot, message);
+    require('./events/client/hey')(bot, message);
 });
 
 //UwU command
