@@ -15,6 +15,6 @@ module.exports = {
             message.channel.send('Sorry, please input a valid calculation')
         }
 
-        message.channel.send(`${resp}`);
+        message.channel.send(`\`\`\`css${resp}\`\`\``);
     }
 }
