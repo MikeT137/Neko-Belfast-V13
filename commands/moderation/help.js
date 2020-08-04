@@ -179,7 +179,7 @@ module.exports = {
             break;
 
             case 'math':
-                message.channel.send('It solves an ecuation based on only 2 numbers: b!math (num1) (type) (num2)\ntypes: +  -  *  /  ^')
+                message.channel.send('It solves a your math equation: b!math x(operator)y\noperator: +  -  *  /  %  ^')
             break;
 
             case 'meme':
