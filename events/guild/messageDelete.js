@@ -1,8 +1,9 @@
 module.exports = async (message) => {
+    const author = message.author;
     const embed = new Discord.MessageEmbed()
 
     .setTitle('New message deleted!')
-    .setDescription(`**${message.author.tag} has deleted a message in <#${message.channel.id}>**`)
+    .setDescription(`**${author.tag} has deleted a message in <#${message.channel.id}>**`)
     .addField('Content', message.content, true)
     .setColor(0x4AEFBA)
 
