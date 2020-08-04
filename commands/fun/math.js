@@ -14,7 +14,9 @@ module.exports = {
         }catch(e){
             message.channel.send('Sorry, please input a valid calculation')
         }
-        await message.bulkDelete(message);
+        await message.channel.messages.fetch({ limit: 1 }).then(messages => {
+            message.channel.bulkDelete(messages);
+        }
         const embed = new Discord.MessageEmbed()
 
         .setTitle('Calculation')
