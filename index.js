@@ -9,6 +9,7 @@ const fs = require('fs');
 //Command Handler
 bot.commands = new Collection();
 bot.aliases = new Collection();
+bot.snipes = new Collection();
 bot.categories = fs.readdirSync("./commands/");
 ["command"].forEach(handler => {
     require(`./handlers/${handler}`)(bot);
@@ -19,26 +20,34 @@ bot.on('ready', () => {
 });
 
 bot.on('message', message => {
-    require('./events/guild/message')(bot, message);
+    require('./events/guild/message')(message);
+});
+
+bot.on('messageDelete', message => {
+    require('./events/guild/messageDelete')(message);
+});
+
+bot.on('messageUpdate', message => {
+    require('./events/guild/messageUpdate')(message);
 });
 
 //Hello Command
-bot.on('message', message => {
+bot.on('hey', message => {
     require('./events/client/hey')(message);
 });
 
 //UwU command
-bot.on('message', message => {
+bot.on('uwu', message => {
     require('./events/client/uwu')(message)
 });
 
 //Welcome Command
-bot.on('guildMemberAdd', member => {
+bot.on('welcome', member => {
     require('./events/guild/welcome')(member);
 })
 
 //Leaving Command
-bot.on('guildMemberRemove', member => {
+bot.on('leave', member => {
     require('./events/guild/leave')(member);
 })
 
