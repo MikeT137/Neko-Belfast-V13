@@ -1,9 +1,9 @@
 module.exports = async (oldMessage, newMessage) => {
-    const author = oldMessage.author;
+    const Discord = require('discord.js');
     const embed = new Discord.MessageEmbed()
 
     .setTitle('New message edited!')
-    .setDescription(`**${author.tag} has edited a message in <#${oldMessage.channel.id}>**`)
+    .setDescription(`**${oldMessage.author.tag} has edited a message in <#${oldMessage.channel.id}>**`)
     .addField('Old Content', oldMessage.content, true)
     .addField('New Content', newMessage.content, true)
     .setColor(0x4AEFBA)
