@@ -19,10 +19,6 @@ bot.on('ready', () => {
     require('./events/client/ready')(bot);
 });
 
-bot.on('message', async (bot, message) => {
-    require('./events/guild/message')(bot, message);
-});
-
 //Hello Command
 bot.on('hey', message => {
     require('./events/client/hey')(message);
@@ -44,20 +40,9 @@ bot.on('leave', member => {
 })
 
 //Commands
-bot.on('message', async message => {
-    if(message.author.bot) return;
-    if(!message.content.startsWith(prefix)) return;
-    if(!message.guild) return;
-    if(!message.member) message.member = await message.guild.forEach(message);
-
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    const cmd = args.shift().toLowerCase();
-    const command = bot.commands.get(cmd);
-
-    if(cmd.length == 0) return;
-    if(!command) command = bot.commands.get(bot.aliases.get(cmd));
-    if(command) command.run(bot, message, args);
-})
+bot.on('message', async (bot, message) => {
+    require('./events/guild/message')(bot, message);
+});
 
 //Token
 bot.login(process.env.token);

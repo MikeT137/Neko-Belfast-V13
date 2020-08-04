@@ -1,5 +1,6 @@
 const {prefix} = require('../../config.json');
 module.exports = async(bot, message) => {
+    if(message.author.bot) return;
     if(!message.content.startsWith(prefix)) return;
     if(!message.guild) return;
     if(!message.member) message.member = await message.guild.forEach(message);
