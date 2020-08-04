@@ -18,26 +18,29 @@ bot.on('ready', () => {
     require('./events/client/ready')(bot);
 });
 
-//Welcome Command
-bot.on('guildMemberAdd', member => {
-    require('./events/client/welcome')(member);
-})
-
-//Leaving Command
-bot.on('guildMemberRemove', member => {
-    require('./events/client/leave')(member);
-})
-
-//Hello command
 bot.on('message', message => {
     require('./events/guild/message')(bot, message);
 });
 
+//Hello Command
+bot.on('message', message => {
+    require('./events/client/hey')(message);
+});
+
 //UwU command
 bot.on('message', message => {
-    if(message.content == 'uwu' || message.content == 'UwU' || message.content == 'UWU' || message.content == 'owo' || message.content == 'OwO' || message.content == 'OWO')
-        message.channel.send('>w<');
+    require('./events/client/uwu')(message)
 });
+
+//Welcome Command
+bot.on('guildMemberAdd', member => {
+    require('./events/guild/welcome')(member);
+})
+
+//Leaving Command
+bot.on('guildMemberRemove', member => {
+    require('./events/guild/leave')(member);
+})
 
 //Commands
 bot.on('message', async message => {
