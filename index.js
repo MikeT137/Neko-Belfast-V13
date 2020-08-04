@@ -29,12 +29,12 @@ bot.on('guildMemberRemove', member => {
 })
 
 //Hello command
-bot.on('message', (message) => {
+bot.on('message', message => {
     require('./events/guild/message')(bot, message);
 });
 
 //UwU command
-bot.on('message', (message) => {
+bot.on('message', message => {
     if(message.content == 'uwu' || message.content == 'UwU' || message.content == 'UWU' || message.content == 'owo' || message.content == 'OwO' || message.content == 'OWO')
         message.channel.send('>w<');
 });
