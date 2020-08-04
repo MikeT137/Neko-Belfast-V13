@@ -9,7 +9,6 @@ const fs = require('fs');
 //Command Handler
 bot.commands = new Collection();
 bot.aliases = new Collection();
-bot.snipes = new Collection();
 bot.categories = fs.readdirSync("./commands/");
 ["command"].forEach(handler => {
     require(`./handlers/${handler}`)(bot);
@@ -39,20 +38,9 @@ bot.on('leave', member => {
     require('./events/guild/leave')(member);
 })
 
-//Commands
+
 bot.on('message', async (bot, message) => {
-    if(message.author.bot) return;
-    if(!message.content.startsWith(prefix)) return;
-    if(!message.guild) return;
-    if(!message.member) message.member = await message.guild.forEach(message);
-
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    const cmd = args.shift().toLowerCase();
-    const command = bot.commands.get(cmd);
-
-    if(cmd.length == 0) return;
-    if(!command) command = bot.commands.get(bot.aliases.get(cmd));
-    if(command) command.run(bot, message, args);
+    require('./events/guild/message')(bot, message);
 });
 
 //Token
