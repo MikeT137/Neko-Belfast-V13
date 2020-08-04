@@ -1,7 +1,7 @@
 const math = require('math.js');
 
 module.exports = {
-    name: 'math',
+    name: 'calculate',
     description: "Solves a mathematic equation",
     run: async(bot, message, args) => {
         if(!args[0]){
