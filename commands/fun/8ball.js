@@ -8,35 +8,29 @@ module.exports = {
             message.channel.send('You must ask a question to use that command');
         }else{
             let rr = [
-                //No
-                'No',
-                'Absolutely not',
-                'Don’t count on it',
-                'My reply is no',
-                'My sources say no',
-                'Outlook not so good',
-                'Very doubtful',
-                'Definitely not',
-                'You may not rely on it',
-                'Signs point to no',
-
-                //Yes
                 'Absolutely',
+                'No',
                 'It is certain',
-                'It is decidedly so',
-                'Most likely',
-                'Outlook good',
-                'Signs point to yes',
-                'Without a doubt',
-                'Yes',
-                'Definitely',
-                'You may rely on it',
-
-                //Maybe or IDK
+                'Absolutely not',
                 'Better not tell you now',
+                'It is decidedly so',
+                'Don’t count on it',
+                'Most likely',
+                'My reply is no',
                 'Cannot predict now',
+                'Outlook good',
+                'My sources say no',
+                'Signs point to yes',
                 'Im not sure',
+                'Without a doubt',
+                'Very doubtful',
+                'Yes',
+                'Definitely not',
+                'Definitely',
                 'I dont know',
+                'You may not rely on it',
+                'You may rely on it',
+                'Signs point to no',
             ]
             let response = rr[Math.floor(Math.random() * rr.length)]
             message.channel.send(response);
