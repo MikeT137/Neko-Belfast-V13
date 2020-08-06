@@ -13,7 +13,7 @@ module.exports = {
                 .addField('Self commands', 'avatar, blush, clap, cry, dance, facepalm, laugh, love, pout, purr, smile, smug, wag, yawn')
                 .addField('Interactive commands (@someone)', 'boop, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
                 .addField('Fun commands', '8ball, math, meme')
-                .addField('Events (no prefix)', 'hey, leave, owo, uwu, welcome')
+                .addField('Events (no prefix)', 'leave, welcome')
                 .setColor(0x4AEFBA)
             message.channel.send(embed);
         }
@@ -192,24 +192,12 @@ module.exports = {
             break;
 
             //Events (no prefix)
-            case 'hey':
-                message.channel.send('The bot replyes with: hewwo')
-            break;
-
             case 'leave':
-                message.channel.send('The bot sends a message when someone leaves the server')
-            break;
-
-            case 'owo':
-                message.channel.send('The bot replyes with: >w<')
-            break;
-
-            case 'uwu':
-                message.channel.send('The bot replyes with: >w<')
+                message.channel.send('The bot sends a message when someone leaves the server. For it to work, youll have to name a chat: welcome, Welcome, welcome-goodbye, Welcome-Goodbye, 👋┊welcome-goodbye, 👋┊Welcome-Goodbye')
             break;
 
             case 'welcome':
-                message.channel.send('The bot sends a message when someone joins the server')
+                message.channel.send('The bot sends a message when someone joins the server. For it to work, youll have to name a chat: welcome, Welcome, welcome-goodbye, Welcome-Goodbye, 👋┊welcome-goodbye, 👋┊Welcome-Goodbye')
             break;
         }
     }
