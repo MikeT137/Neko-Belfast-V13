@@ -11,7 +11,7 @@ module.exports = {
                 .addField('Help', 'Type b!help (command) to get information about a specific command')
                 .addField('Modertion Commands', 'ban, clear, help, info, invite, kick, mute, server, unmute, warn')
                 .addField('Self commands', 'avatar, blush, clap, cry, dance, facepalm, laugh, love, pout, purr, smile, smug, wag, yawn')
-                .addField('Interactive commands (@someone)', 'boop, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
+                .addField('Interactive commands (@someone)', 'boop, cuddle, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
                 .addField('Fun commands', '8ball, math, meme')
                 .addField('Events (no prefix)', 'leave, welcome')
                 .setColor(0x4AEFBA)
@@ -124,6 +124,10 @@ module.exports = {
             //Interactive commands (@someone)
             case 'boop':
                 message.channel.send('It sends a boop gif: b!boop (ping)')
+            break;
+
+            case 'cuddle':
+                message.channel.send('It sends a cuddle gif: b!cuddle (ping)')
             break;
                             
             case 'handhold':
