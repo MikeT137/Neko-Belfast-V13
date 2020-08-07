@@ -2,12 +2,7 @@ module.exports = {
     name: 'test',
     description: 'Just testing the emoji react',
     run: async(bot, message,sergs) => {
-        const Discord = require('discord.js')
-        const embed = new Discord.MessageEmbed()
-
-        .addField('What type of icecream do you like?', '👍 - chocolate\n✊ - vanilla\n👎 - mint')
-        .setColor(0x4AEFBA)
-        message.channel.send(embed);
+        message.channel.send('What type of icecream do you like?', '👍 - chocolate\n✊ - vanilla\n👎 - mint');
         await message.react('👍');
         await message.react('✊');
         await message.react('👎')
