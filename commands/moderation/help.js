@@ -8,12 +8,12 @@ module.exports = {
         if(!args[0]) {
             const embed = new Discord.MessageEmbed()
 
-                .addField('Help', 'Type b!help (command) to get information about a specific command')
-                .addField('Modertion Commands', 'ban, clear, help, info, invite, kick, mute, server, unmute, warn')
-                .addField('Self commands', 'avatar, blush, clap, cry, dance, facepalm, laugh, love, pout, purr, smile, smug, wag, yawn')
-                .addField('Interactive commands (@someone)', 'boop, cuddle, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
-                .addField('Fun commands', '8ball, math, meme')
-                .addField('Events (no prefix)', 'leave, welcome')
+                .addField(':pleading_face:Help', 'Type b!help (command) to get information about a specific command')
+                .addField(':angry:Modertion Commands', 'ban, clear, help, info, invite, kick, mute, server, unmute, warn')
+                .addField(':blush:Self commands', 'avatar, blush, clap, cry, dance, facepalm, laugh, love, pout, purr, smile, smug, wag, yawn')
+                .addField(':hugging_face:Interactive commands (@someone)', 'boop, cuddle, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
+                .addField(':smiley:Fun commands', '8ball, math, meme')
+                .addField(':wave:Events (no prefix)', 'leave, welcome')
                 .setColor(0x4AEFBA)
             message.channel.send(embed);
         }
