@@ -8,7 +8,8 @@ module.exports = {
         if(!args[0]) {
             const embed = new Discord.MessageEmbed()
 
-                .addField(':pleading_face:Help', 'Type b!help (command) to get information about a specific command')
+                .setTitle(':pleading_face:Help')
+                .setDescription('Type b!help (command) to get information about a specific command')
                 .addField(':angry:Modertion Commands', 'ban, clear, help, info, invite, kick, mute, server, unmute, warn')
                 .addField(':blush:Self commands', 'avatar, blush, clap, cry, dance, facepalm, laugh, love, pout, purr, smile, smug, wag, yawn')
                 .addField(':hugging_face:Interactive commands (@someone)', 'boop, cuddle, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
