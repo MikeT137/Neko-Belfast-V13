@@ -43,7 +43,7 @@ module.exports = {
             break;
 
             case 'mute':
-                message.channel.send('It mutes a user temporarily: b!mute (number) (time: s, m, h, d)')
+                message.channel.send('It mutes a user temporarily: b!mute (number) (time: s, m, h, d), BUT you need to have a role called \"Bmuted\", its the only way it\'ll work')
             break;
 
             case 'server':
@@ -51,7 +51,7 @@ module.exports = {
             break;
 
             case 'unmute':
-                message.channel.send('It unmutes a user that is muted: b!unmute (number)')
+                message.channel.send('It unmutes a user that is muted: b!unmute (number), BUT you need to have a role called \"Bmuted\", its the only way it\'ll work')
             break;
 
             case 'warn':
