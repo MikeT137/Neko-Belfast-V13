@@ -47,6 +47,35 @@ bot.on('message', async message => {
     if(cmd.length == 0) return;
     if(!command) command = bot.commands.get(bot.aliases.get(cmd));
     if(command) command.run(bot, message, args);
+
+    //Rock paper scissors
+    if (command === 'rps') {
+        const acceptedReplies = ['rock', 'paper', 'scissors'];
+        const random = Math.floor((Math.random() * acceptedReplies.length));
+        const result = acceptedReplies[random];
+
+        const choice = args[0];
+        if (!choice) return message.channel.send(`Pls say what you want to play with: rock, paper, scissors`);
+        if (!acceptedReplies.includes(choice)) return;
+        
+        console.log('Bot Result:', result);
+        if (result === choice) return message.reply("It's a tie! We had the same choice.");
+        
+        switch (choice) {
+            case 'rock': {
+                if (result === 'paper') return message.reply('I won!');
+                else return message.reply('You won!');
+            }
+            case 'paper': {
+                if (result === 'scissors') return message.reply('I won!');
+                else return message.reply('You won!');        
+            }
+            case 'scissors': {
+                if (result === 'rock') return message.reply('I won!');
+                else return message.reply('You won!');
+            }
+        }
+    }
 });
 
 //Token
