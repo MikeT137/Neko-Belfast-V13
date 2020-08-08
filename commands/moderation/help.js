@@ -201,6 +201,10 @@ module.exports = {
                 message.channel.send('It sends a meme from a subreddit: b!meme (...)\n(nothing) -> random\ndank -> dankmemes\nmemes -> memes\nanime -> Animemes\nwholesome -> wholesomememes\nwholesomeanime / wanime -> wholesomeaniememes')
             break;
 
+            case 'rps':
+                message.channel.send('Its just a command that lets you play rock paper scissors with the bot: b!rps (rock/paper/scissors)')
+            break;
+
             //Events (no prefix)
             case 'leave':
                 message.channel.send('The bot sends a message when someone leaves the server. For it to work, youll have to name a chat: welcome, Welcome, welcome-goodbye, Welcome-Goodbye, 👋┊welcome-goodbye, 👋┊Welcome-Goodbye')
