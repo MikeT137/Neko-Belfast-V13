@@ -111,7 +111,7 @@ module.exports = {
                 message.channel.send('It sends a smuging gif: b!smug')
             break;
 
-            case 'smug':
+            case 'think':
                 message.channel.send('It sends a thinking gif: b!think')
             break;
                         
