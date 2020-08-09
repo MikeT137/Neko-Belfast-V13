@@ -13,7 +13,7 @@ module.exports = {
                 .addField(':angry:Moderation Commands', 'ban, clear, help, info, invite, kick, mute, server, unmute, warn')
                 .addField(':blush:Self commands', 'avatar, blush, clap, cry, dance, facepalm, laugh, love, pout, purr, smile, smug, think, wag, yawn')
                 .addField(':hugging_face:Interactive commands (@someone)', 'boop, cuddle, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
-                .addField(':smiley:Fun commands', '8ball, coinflip, math, meme, rps')
+                .addField(':smiley:Fun commands', '8ball, coinflip, diceroll, math, meme, rps')
                 .addField(':wave:Events (no prefix)', 'leave, welcome')
                 .setThumbnail('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                 .setColor(0x4AEFBA)
@@ -195,6 +195,10 @@ module.exports = {
 
             case 'coinflip':
                 message.channel.send('It flips a coin')
+            break;
+
+            case 'diceroll':
+                message.channel.send('It rolls a dice')
             break;
 
             case 'math':

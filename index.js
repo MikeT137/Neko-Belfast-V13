@@ -51,42 +51,6 @@ bot.on('message', async message => {
     
 });
 
-//Rock Paper Scissors
-bot.on('message', message => {
-
-    if (message.author.bot) return;
-    if (message.content.indexOf(prefix) !== 0) return;
-
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
-
-    if (command === 'rps') {
-        const acceptedReplies = ['rock', 'paper', 'scissors'];
-        const random = [Math.floor(Math.random() * acceptedReplies.length)];
-        const result = acceptedReplies[random];
-        const choice = args[0];
-
-        if (!choice) return message.channel.send(`How to play: \`${prefix}rps <rock|paper|scissors>\``);
-        if (!acceptedReplies.includes(choice)) return message.channel.send(`Only these responses are accepted: \`${acceptedReplies.join(', ')}\``);
-        if (result === choice) return message.channel.send(`I played ${result}. It's a tie!`);
-        
-        switch (choice) {
-            case 'rock': {
-                if (result === 'paper') return message.channel.send(`I played ${result}. I won!`);
-                else return message.channel.send(`I played ${result}. You won!`);
-            }
-            case 'paper': {
-                if (result === 'scissors') return message.channel.send(`I played ${result}. I won!`);
-                else return message.channel.send(`I played ${result}. You won!`);        
-            }
-            case 'scissors': {
-                if (result === 'rock') return message.channel.send(`I played ${result}. I won!`);
-                else return message.channel.send(`I played ${result}. You won!`);
-            }
-        }
-    }
-});
-
 //Token
 bot.login(process.env.token);
 //bot.login(token);
