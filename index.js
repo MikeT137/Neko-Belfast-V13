@@ -70,23 +70,20 @@ bot.on('message', async message => {
         if (!acceptedReplies.includes(choice)) return message.channel.send(`Only these responses are accepted: \`${acceptedReplies.join(', ')}\``);
         
         console.log('Bot Result:', result);
-        if (result === choice) return message.reply("It's a tie! We had the same choice.");
+        if (result === choice) return message.channel.send(`I played ${result}. It's a tie! We had the same choice.`);
         
         switch (choice) {
             case 'rock': {
-                if (result === 'paper') return message.reply('I won!');
-                else return message.reply('You won!');
+                if (result === 'paper') return message.channel.send(`I played ${result}. I won!`);
+                else return message.channel.send(`I played ${result}. You won!`);
             }
             case 'paper': {
-                if (result === 'scissors') return message.reply('I won!');
-                else return message.reply('You won!');        
+                if (result === 'scissors') return message.channel.send(`I played ${result}. I won!`);
+                else return message.channel.send(`I played ${result}. You won!`);        
             }
             case 'scissors': {
-                if (result === 'rock') return message.reply('I won!');
-                else return message.reply('You won!');
-            }
-            default: {
-                return message.channel.send(`Only these responses are accepted: \`${acceptedReplies.join(', ')}\``);
+                if (result === 'rock') return message.channel.send(`I played ${result}. I won!`);
+                else return message.channel.send(`I played ${result}. You won!`);
             }
         }
     }
