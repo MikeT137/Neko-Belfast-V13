@@ -62,7 +62,7 @@ bot.on('message', message => {
 
     if (command === 'rps') {
         const acceptedReplies = ['rock', 'paper', 'scissors'];
-        const random = acceptedReplies[Math.floor(Math.random() * acceptedReplies.length)];
+        const random = [Math.floor(Math.random() * acceptedReplies.length)];
         const result = acceptedReplies[random];
         const choice = args[0];
 
