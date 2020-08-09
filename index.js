@@ -34,7 +34,7 @@ bot.on('guildMemberRemove', member => {
 })
 
 //Commands
-bot.on('message', message => {
+bot.on('message', async message => {
     if(message.author.bot) return;
     if(!message.content.startsWith(prefix)) return;
     if(!message.guild) return;
@@ -52,7 +52,7 @@ bot.on('message', message => {
 });
 
 //Rock Paper Scissors
-bot.on('message', async message => {
+bot.on('message', message => {
 
     if (message.author.bot) return;
     if (message.content.indexOf(prefix) !== 0) return;
