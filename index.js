@@ -51,6 +51,7 @@ bot.on('message', async message => {
     
 });
 
+//Rock Paper Scissors
 bot.on('message', async message => {
 
     if (message.author.bot) return;
@@ -89,6 +90,7 @@ bot.on('message', async message => {
             }
         }
     }
+});
 
 //Token
 bot.login(process.env.token);
