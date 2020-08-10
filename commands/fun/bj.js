@@ -7,6 +7,8 @@ module.exports = {
         let playercard = [Math.floor(Math.random()*11) + 2];
         let playercard2 = [Math.floor(Math.random()*11) + 2];
         let playerTotal = playercard + playercard2;
+        let playerArray = [];
+        let botArray = [];
         let botcard = [Math.floor(Math.random()*11) + 2];
         let botcard2 = [Math.floor(Math.random()*11) + 2];
         
