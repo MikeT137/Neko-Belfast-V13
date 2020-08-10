@@ -14,7 +14,6 @@ module.exports = {
                 .addField(':blush:Self commands', 'avatar, blush, clap, cry, dance, facepalm, laugh, love, pout, purr, smile, smug, think, wag, yawn')
                 .addField(':hugging_face:Interactive commands (@someone)', 'boop, cuddle, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
                 .addField(':smiley:Fun commands', '8ball, blackjack, coinflip, diceroll, math, meme, rps')
-                .addField(':wave:Events (no prefix)', 'leave, welcome')
                 .setThumbnail('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                 .setColor(0x4AEFBA)
             message.channel.send(embed);
@@ -215,15 +214,6 @@ module.exports = {
 
             case 'rps':
                 message.channel.send('Its just a command that lets you play rock paper scissors with the bot: b!rps (rock/paper/scissors)')
-            break;
-
-            //Events (no prefix)
-            case 'leave':
-                message.channel.send('The bot sends a message when someone leaves the server. For it to work, youll have to name a chat: welcome, Welcome, welcome-goodbye, Welcome-Goodbye, 👋┊welcome-goodbye, 👋┊Welcome-Goodbye')
-            break;
-
-            case 'welcome':
-                message.channel.send('The bot sends a message when someone joins the server. For it to work, youll have to name a chat: welcome, Welcome, welcome-goodbye, Welcome-Goodbye, 👋┊welcome-goodbye, 👋┊Welcome-Goodbye')
             break;
         }
     }
