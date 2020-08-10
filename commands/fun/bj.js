@@ -8,14 +8,15 @@ module.exports = {
         const c2 = [Math.floor(Math.random()*card.length)];
         const b1 = card[c1];
         const b2 = card[c2];
-
+        const m1 = card[c1];
+        const m2 = card[c2];
 
         if(!args[0]){
             const embed = new Discord.MessageEmbed()
 
             .setTitle('BlackJack')
             .addField('My Cards:', `${b1}, :red_square:`)
-            .addField('Your Cards', `${b1}, ${b2}`)
+            .addField('Your Cards', `${m1}, ${m2}`)
             .setColor(0x4AEFBA)
             message.channel.send(embed);
         }
