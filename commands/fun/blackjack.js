@@ -85,7 +85,7 @@ module.exports = {
                     let playercount;
                     playercount = sum;
 
-                    if(playercount >= 21 && botcount >= 21){
+                    if(playercount > 21 && botcount >= 21){
                         embed.setDescription(`Bot\'s Cards: ${botArray}: ${botcount}\nYour Cards: ${playerArray}: ${playercount}\nI won!`)
                         .setColor("RED")
                         msg.edit(embed)
@@ -140,7 +140,7 @@ module.exports = {
                     let playercount;
                     playercount = sum;
 
-                    if(playercount >= 21 && botcount >= 21){
+                    if(playercount > 21 && botcount >= 21){
                         embed.setDescription(`Bot\'s Cards: ${botArray}: ${botcount}\nYour Cards: ${playerArray}: ${playercount}\nI won!`)
                         .setColor("RED")
                         msg.edit(embed)
