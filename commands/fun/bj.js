@@ -11,7 +11,7 @@ module.exports = {
 
 
         if(!args[0]){
-            const embed = Discord.MessageEmbed()
+            const embed = new Discord.MessageEmbed()
 
             .setTitle('BlackJack')
             .addField('My Cards:', `${b1}, :red_square:`)
