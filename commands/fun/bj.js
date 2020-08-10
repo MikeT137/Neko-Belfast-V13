@@ -115,7 +115,7 @@ module.exports = {
                         msg.edit(embed)
                         hit.stop()
                         stand.stop()
-                    }else if(botcount > playercount && 21 >= botcount) {
+                    }else if(21 >= botcount && botcount > playercount) {
                         embed.setDescription(`Bot\'s Cards: ${botArray}: ${botcount}\nYour Cards: ${playerArray}: ${playercount}\nI won!`)
                         .setColor("RED")
                         msg.edit(embed)
