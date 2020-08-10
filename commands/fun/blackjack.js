@@ -30,7 +30,7 @@ module.exports = {
                 const hitFilter = (reaction, user) => 
                     reaction.emoji.name === '✅' && user.id === message.author.id;
                 const stand = msg.createReactionCollector(standFilter, {
-                    time: 400
+                    time: 4000
                 });
                 const hit = msg.createReactionCollector(hitFilter, {
                     time: 4000
