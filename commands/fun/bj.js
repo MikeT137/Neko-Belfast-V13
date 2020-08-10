@@ -12,7 +12,7 @@ module.exports = {
         
         player.Array.push(playercard)
         player.Array.push(playercard2)
-        bot.Array.push(botrcard)
+        bot.Array.push(botcard)
         bot.Array.push(botcard2)
 
         if(!args[0]){
