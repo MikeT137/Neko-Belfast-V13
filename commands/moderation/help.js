@@ -13,7 +13,7 @@ module.exports = {
                 .addField(':angry:Moderation Commands', 'ban, clear, help, info, invite, kick, mute, server, unmute, warn')
                 .addField(':blush:Self commands', 'avatar, blush, clap, cry, dance, facepalm, laugh, love, pout, purr, smile, smug, think, wag, yawn')
                 .addField(':hugging_face:Interactive commands (@someone)', 'boop, cuddle, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
-                .addField(':smiley:Fun commands', '8ball, bj, coinflip, diceroll, math, meme, rps')
+                .addField(':smiley:Fun commands', '8ball, blackjack, coinflip, diceroll, math, meme, rps')
                 .addField(':wave:Events (no prefix)', 'leave, welcome')
                 .setThumbnail('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                 .setColor(0x4AEFBA)
@@ -193,7 +193,7 @@ module.exports = {
                 message.channel.send('It sends a random response to your question: b!8ball (question)')
             break;
 
-            case 'bj':
+            case 'blackjack':
                 message.channel.send('Its a command that lets you play blackjack with the bot. In blackjack your goal is to get as close as possible to the number 21. You cant see the bot\'s 2nd card, and you have to have higher point than the bot. If you more than 21 points, the bot wins and if you have the same points as the bot has, the bot wins.\nYou have 2 options:\n:white_check_mark: - hit = draw another card\n:x: - stand = stand and not draw any cards')
             break;
 

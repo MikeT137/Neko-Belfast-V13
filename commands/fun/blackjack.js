@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'bj',
+    name: 'blackjack',
     description: 'The user plays blackjack with the job',
     run: async (bot, message, args) => {
         if(!message.guild.me.hasPermission("ADD_REACTIONS")) return message.channel.send('I dont have the permission \"add reactions\", to do this command')
