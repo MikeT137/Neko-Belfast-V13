@@ -14,8 +14,8 @@ module.exports = {
         
         playerArray.push(playercard)
         playerArray.push(playercard2)
-        bot.Array.push(botcard)
-        bot.Array.push(botcard2)
+        botArray.push(botcard)
+        botArray.push(botcard2)
 
         if(!args[0]){
             const embed = new Discord.MessageEmbed()
