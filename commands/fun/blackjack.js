@@ -30,10 +30,10 @@ module.exports = {
                 const hitFilter = (reaction, user) => 
                     reaction.emoji.name === '✅' && user.id === message.author.id;
                 const stand = msg.createReactionCollector(standFilter, {
-                    time: 60000
+                    time: 400
                 });
                 const hit = msg.createReactionCollector(hitFilter, {
-                    time: 60000
+                    time: 4000
                 });
                 let sum2 = botArray.reduce(function(a, b){
                     return a + b;
