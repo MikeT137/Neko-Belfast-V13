@@ -3,6 +3,7 @@ module.exports = {
     description: 'The user plays blackjack with the job',
     run: async (bot, message, args) => {
         if(!message.guild.me.hasPermission("ADD_REACTIONS")) return message.channel.send('I dont have the permission \"add reactions\", to do this command')
+        const player = message.author;
         const Discord = require('discord.js');
         let playercard = [Math.floor(Math.random()*11) + 2];
         let playercard2 = [Math.floor(Math.random()*11) + 2];
