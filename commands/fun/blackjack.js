@@ -20,7 +20,7 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
 
         .setTitle('BlackJack')
-        .setDescription(`Bot\'s Cards: ${botcard}, ?? Total: ??\nYour Cards: ${playercard}, ${playercard2} Total: ${playerTotal}`)
+        .setDescription(`Bot\'s Cards: ${botcard}, ?? Total: ??\nYour Cards: ${playercard}, ${playercard2}: ${playerTotal}`)
         .setColor(0x4AEFBA)
         message.channel.send(embed).then(msg => {
             msg.react('✅').then(r => {
