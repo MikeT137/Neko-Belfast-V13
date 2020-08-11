@@ -4,13 +4,13 @@ module.exports = {
     run: async (bot, message, args) => {
         if(!message.guild.me.hasPermission("ADD_REACTIONS")) return message.channel.send('I dont have the permission \"add reactions\", to do this command')
         const Discord = require('discord.js');
-        let playercard = Math.floor(Math.random()*11) + 1
-        let playercard2 = Math.floor(Math.random()*11) + 1
+        let playercard = Math.floor(Math.random()*10) + 2
+        let playercard2 = Math.floor(Math.random()*10) + 2
+        let botcard = Math.floor(Math.random()*10) + 2
+        let botcard2 = Math.floor(Math.random()*10) + 2
         let playerTotal = playercard + playercard2;
         let playerArray = [];
         let botArray = [];
-        let botcard = Math.floor(Math.random()*11) + 1
-        let botcard2 = Math.floor(Math.random()*11) + 1
         
         playerArray.push(playercard)
         playerArray.push(playercard2)
