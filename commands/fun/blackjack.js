@@ -4,10 +4,10 @@ module.exports = {
     run: async (bot, message, args) => {
         if(!message.guild.me.hasPermission("ADD_REACTIONS")) return message.channel.send('I dont have the permission \"add reactions\", to do this command')
         const Discord = require('discord.js');
-        let playercard = Math.floor(Math.random()*11) + 2
-        let playercard2 = Math.floor(Math.random()*11) + 2
-        let botcard = Math.floor(Math.random()*11) + 2
-        let botcard2 = Math.floor(Math.random()*11) + 2
+        let playercard = Math.floor(Math.random()*9) + 2
+        let playercard2 = Math.floor(Math.random()*9) + 2
+        let botcard = Math.floor(Math.random()*9) + 2
+        let botcard2 = Math.floor(Math.random()*9) + 2
         let playerTotal = playercard + playercard2;
         let playerArray = [];
         let botArray = [];
@@ -140,8 +140,8 @@ module.exports = {
                     }
                 })
                 hit.on("collect", r => {
-                    let playercard3 = Math.floor(Math.random()*11) + 2;
-                    let botcard3 = Math.floor(Math.random()*11) + 2;
+                    let playercard3 = Math.floor(Math.random()*9) + 2;
+                    let botcard3 = Math.floor(Math.random()*9) + 2;
                     playerArray.push(playercard3)
                     botArray.push(botcard3)
                     let sum2 = botArray.reduce(function(a, b){
