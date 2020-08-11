@@ -121,6 +121,10 @@ module.exports = {
                         msg.edit(embed)
                         hit.stop()
                         stand.stop()
+                    }else{
+                        embed.setDescription(`Bot\'s Cards: ${botcard}, ?? Total: ??\nYour Cards: ${playerArray} Total: ${playercount}`)
+                        embed.setColor(0x4AEFBA)
+                        msg.edit(embed);
                     }
                 })
                 hit.on("collect", r => {
