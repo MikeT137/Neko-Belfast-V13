@@ -6,7 +6,7 @@ module.exports = {
         const random = [Math.floor(Math.random() * acceptedReplies.length)];
         const result = acceptedReplies[random];
 
-        if (!args[0]) return message.channel.send('You have to \"choose you\'r weapon\"');
+        if (!args[0]) return message.channel.send('You have to \"choose your weapon\"');
         if (!acceptedReplies.includes(args[0])) return message.channel.send(`Only these responses are accepted: \`${acceptedReplies.join(', ')}\``);
         if (result === args[0]) return message.channel.send(`I played ${result}. It's a tie!`);
         
