@@ -48,25 +48,25 @@ module.exports = {
                 playercount = sum;
 
                 if(playercount > 21 && botcount >= 21){
-                    embed.setDescription(`Bot\'s Cards: ${botArray}: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nI won!`)
+                    embed.setDescription(`Bot\'s Cards: ${botArray} Total: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nI won!`)
                     .setColor("RED")
                     msg.edit(embed)
                     hit.stop()
                     stand.stop()
                 }else if(playercount === 21 && botcount < 21) {
-                    embed.setDescription(`Bot\'s Cards: ${botArray}: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nYou won!`)
+                    embed.setDescription(`Bot\'s Cards: ${botArray} Total: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nYou won!`)
                     .setColor("GREEN")
                     msg.edit(embed)
                     hit.stop()
                     stand.stop()
                 }else if(botcount === 21 && playercount < 21) {
-                    embed.setDescription(`Bot\'s Cards: ${botArray}: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nI won!`)
+                    embed.setDescription(`Bot\'s Cards: ${botArray} Total: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nI won!`)
                     .setColor("RED")
                     msg.edit(embed)
                     hit.stop()
                     stand.stop()
                 }else if(playercount === 21 && botcount > 21) {
-                    embed.setDescription(`Bot\'s Cards: ${botArray}: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nYou won!`)
+                    embed.setDescription(`Bot\'s Cards: ${botArray} Total: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nYou won!`)
                     .setColor("GREEN")
                     msg.edit(embed)
                 hit.stop()
@@ -86,37 +86,37 @@ module.exports = {
                     playercount = sum;
 
                     if(playercount > 21 && botcount >= 21){
-                        embed.setDescription(`Bot\'s Cards: ${botArray}: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nI won!`)
+                        embed.setDescription(`Bot\'s Cards: ${botArray} Total: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nI won!`)
                         .setColor("RED")
                         msg.edit(embed)
                         hit.stop()
                         stand.stop()
                     }else if(playercount === 21 && botcount < 21) {
-                        embed.setDescription(`Bot\'s Cards: ${botArray}: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nYou won!`)
+                        embed.setDescription(`Bot\'s Cards: ${botArray} Total: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nYou won!`)
                         .setColor("GREEN")
                         msg.edit(embed)
                         hit.stop()
                         stand.stop()
                     }else if(botcount === 21 && playercount < 21) {
-                        embed.setDescription(`Bot\'s Cards: ${botArray}: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nI won!`)
+                        embed.setDescription(`Bot\'s Cards: ${botArray} Total: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nI won!`)
                         .setColor("RED")
                         msg.edit(embed)
                         hit.stop()
                         stand.stop()
                     }else if(playercount === 21 && botcount > 21) {
-                        embed.setDescription(`Bot\'s Cards: ${botArray}: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nYou won!`)
+                        embed.setDescription(`Bot\'s Cards: ${botArray} Total: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nYou won!`)
                         .setColor("GREEN")
                         msg.edit(embed)
                         hit.stop()
                         stand.stop()
                     }else if(21 >= playercount && playercount> botcount) {
-                        embed.setDescription(`Bot\'s Cards: ${botArray}: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nYou won!`)
+                        embed.setDescription(`Bot\'s Cards: ${botArray} Total: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nYou won!`)
                         .setColor("GREEN")
                         msg.edit(embed)
                         hit.stop()
                         stand.stop()
                     }else if(21 >= botcount && botcount > playercount) {
-                        embed.setDescription(`Bot\'s Cards: ${botArray}: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nI won!`)
+                        embed.setDescription(`Bot\'s Cards: ${botArray} Total: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nI won!`)
                         .setColor("RED")
                         msg.edit(embed)
                         hit.stop()
@@ -141,25 +141,25 @@ module.exports = {
                     playercount = sum;
 
                     if(playercount > 21 && botcount >= 21){
-                        embed.setDescription(`Bot\'s Cards: ${botArray}: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nI won!`)
+                        embed.setDescription(`Bot\'s Cards: ${botArray} Total: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nI won!`)
                         .setColor("RED")
                         msg.edit(embed)
                         hit.stop()
                         stand.stop()
                     }else if(playercount === 21 && botcount < 21) {
-                        embed.setDescription(`Bot\'s Cards: ${botArray}: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nYou won!`)
+                        embed.setDescription(`Bot\'s Cards: ${botArray} Total: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nYou won!`)
                         .setColor("GREEN")
                         msg.edit(embed)
                         hit.stop()
                         stand.stop()
                     }else if(botcount === 21 && playercount < 21) {
-                        embed.setDescription(`Bot\'s Cards: ${botArray}: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nI won!`)
+                        embed.setDescription(`Bot\'s Cards: ${botArray} Total: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nI won!`)
                         .setColor("RED")
                         msg.edit(embed)
                         hit.stop()
                         stand.stop()
                     }else if(playercount === 21 && botcount > 21) {
-                        embed.setDescription(`Bot\'s Cards: ${botArray}: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nYou won!`)
+                        embed.setDescription(`Bot\'s Cards: ${botArray} Total: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nYou won!`)
                         .setColor("GREEN")
                         msg.edit(embed)
                         hit.stop()
