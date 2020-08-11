@@ -7,6 +7,22 @@ module.exports = {
             msg.react('👍');
             msg.react('✊');
             msg.react('👎');
-        })
+            const filter = (reaction, user) => {
+                return ['👍', '✊', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
+            };
+            
+            msg.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                .then(collected => {
+                    const reaction = collected.first();
+            
+                    if(reaction.emoji.name === '👍') {
+                        msg.edit('skrrr');
+                    }else if(reaction.emoji.name === '✊') {
+                        msg.edit('awoo');
+                    }else {
+                        msg.edit('wew');
+                    }
+                })
+        });
     }
 }
