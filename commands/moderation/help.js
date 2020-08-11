@@ -11,7 +11,7 @@ module.exports = {
                 .setTitle(':pleading_face:Help')
                 .setDescription('Type b!help (command) to get information about a specific command')
                 .addField(':angry:Moderation Commands', 'ban, clear, help, info, invite, kick, mute, server, unmute, warn')
-                .addField(':blush:Self commands', 'avatar, blush, clap, cry, dance, facepalm, laugh, love, pout, purr, smile, smug, think, wag, yawn')
+                .addField(':blush:Self commands', 'avatar, blush, clap, cry, dance, facepalm, huh, laugh, love, pout, purr, smile, smug, think, wag, yawn')
                 .addField(':hugging_face:Interactive commands (@someone)', 'boop, cuddle, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
                 .addField(':smiley:Fun commands', '8ball, blackjack, coinflip, diceroll, math, meme, rps')
                 .setThumbnail('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
@@ -80,6 +80,10 @@ module.exports = {
                         
             case 'facepalm':
                 message.channel.send('It sends a facepalm gif: b!facepalm')
+            break;
+
+            case 'huh':
+                message.channel.send('It sends a confused gif: b!huh')
             break;
                         
             case 'laugh':
