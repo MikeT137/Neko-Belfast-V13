@@ -17,6 +17,9 @@ module.exports = {
             
                     if(reaction.emoji.name === '👍') {
                         msg.edit('You think to yourself that it was just an animal or something, so you decide to ignore it. You then finish chopping the wood, you grab all of it, and go towards your basement so you can leave it there. But then you hear that weird sound again, this time coming from your basement. You then:\n👍 - go in the basement\n👎 - leave the cabin\n\nSelect your choice');
+                        if(reaction.emoji.name === '👍') {
+                            msg.edit('wtf bro');
+                        }
                     }else if(reaction.emoji.name === '✊') {
                         msg.edit('The noises started to get louder and louder. And so because you were scared you tried to call for help, but there was no signal. And then a tall creature with a siren for a head gets closer to your cabin. You:\n👍 - go on bed and hide yourself with a blanket\n👎 - go outside and try to run away from the siren head\n\nSelect your choice');
                     }else {
