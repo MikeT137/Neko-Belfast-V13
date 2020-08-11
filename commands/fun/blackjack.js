@@ -53,6 +53,12 @@ module.exports = {
                     msg.edit(embed)
                     hit.stop()
                     stand.stop()
+                }else if(playercount > 21){
+                    embed.setDescription(`Bot\'s Cards: ${botArray} Total: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nI won!`)
+                    .setColor("RED")
+                    msg.edit(embed)
+                    hit.stop()
+                    stand.stop()
                 }else if(playercount === 21 && botcount < 21) {
                     embed.setDescription(`Bot\'s Cards: ${botArray} Total: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nYou won!`)
                     .setColor("GREEN")
@@ -157,6 +163,12 @@ module.exports = {
                     playercount = sum;
 
                     if(playercount > 21 && botcount >= 21){
+                        embed.setDescription(`Bot\'s Cards: ${botArray} Total: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nI won!`)
+                        .setColor("RED")
+                        msg.edit(embed)
+                        hit.stop()
+                        stand.stop()
+                    }else if(playercount > 21){
                         embed.setDescription(`Bot\'s Cards: ${botArray} Total: ${botcount}\nYour Cards: ${playerArray} Total: ${playercount}\nI won!`)
                         .setColor("RED")
                         msg.edit(embed)
