@@ -3,7 +3,7 @@ module.exports = {
     description: "Shows the bot's information",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        var version = '1.5';
+        var version = '1.4';
         const birthday = 'june 29th 2020';
         const creator = 'Miku Yoruka#0916';
         
