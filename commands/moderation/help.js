@@ -219,7 +219,7 @@ module.exports = {
             break;
 
             case 'say':
-                message.channel.send('Its a command that maes the bot say whatever you want and deleting youre message straight after: b.say (message)')
+                message.channel.send('Its a command that makes the bot say whatever you want and deleting your message straight after: b.say (message)')
             break;
         }
     }
