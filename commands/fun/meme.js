@@ -8,7 +8,7 @@ module.exports = {
             var subreddits = [
                 "dankmemes",
                 "memes",
-                "Animemes",
+                "goodanimemes",
                 "wholesomememes",
                 "wholesomeanimemes",
             ]
@@ -55,7 +55,7 @@ module.exports = {
 
         }else if(args[0] == 'anime') {
             const subreddits = [
-                "Animemes",
+                "goodanimemes",
             ]
             const random = subreddits[Math.floor(Math.random() * subreddits.length)];
             const img = await randomPuppy(random);

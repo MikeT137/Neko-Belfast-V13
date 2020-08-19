@@ -13,7 +13,7 @@ module.exports = {
                 .addField(':blush:Self commands', 'avatar, blush, clap, cry, dance, facepalm, huh, laugh, love, pout, purr, smile, smug, think, wag, yawn')
                 .addField(':hugging_face:Interactive commands (@someone)', 'boop, cuddle, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
                 .addField(':smiley:Fun commands', '8ball, blackjack, coinflip, diceroll, math, meme, rps')
-                .setThumbnail('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
+                .setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                 .setColor(0x4AEFBA)
             message.channel.send(embed);
         }
@@ -40,7 +40,7 @@ module.exports = {
             break;
 
             case 'mute':
-                message.channel.send('It mutes a user temporarily: b.mute (number) (time: s, m, h, d), BUT you need to have a role called \"BMuted\", its the only way it\'ll work')
+                message.channel.send('It mutes a user temporarily: b.mute (ping) (number) (time: s, m, h, d), BUT you need to have a role called \"BMuted\", its the only way it\'ll work')
             break;
 
             case 'server':
@@ -48,7 +48,7 @@ module.exports = {
             break;
 
             case 'unmute':
-                message.channel.send('It unmutes a user that is muted: b.unmute (number), BUT you need to have a role called \"BMuted\", its the only way it\'ll work')
+                message.channel.send('It unmutes a user that is muted: b.unmute (ping) (number), BUT you need to have a role called \"BMuted\", its the only way it\'ll work')
             break;
 
             case 'warn':
