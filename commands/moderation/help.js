@@ -12,7 +12,7 @@ module.exports = {
                 .addField(':angry:Moderation Commands', 'ban, clear, help, info, invite, kick, mute, server, unmute, warn')
                 .addField(':blush:Self commands', 'avatar, blush, clap, cry, dance, facepalm, huh, laugh, love, pout, purr, smile, smug, think, wag, yawn')
                 .addField(':hugging_face:Interactive commands (@someone)', 'boop, cuddle, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
-                .addField(':smiley:Fun commands', '8ball, blackjack, coinflip, diceroll, math, meme, rps')
+                .addField(':smiley:Fun commands', '8ball, blackjack, coinflip, diceroll, math, meme, rps, say')
                 .setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                 .setColor(0x4AEFBA)
             message.channel.send(embed);
@@ -216,6 +216,10 @@ module.exports = {
 
             case 'rps':
                 message.channel.send('Its just a command that lets you play rock paper scissors with the bot: b.rps (rock/paper/scissors)')
+            break;
+
+            case 'say':
+                message.channel.send('Its a command that maes the bot say whatever you want and deleting youre message straight after: b.say (message)')
             break;
         }
     }
