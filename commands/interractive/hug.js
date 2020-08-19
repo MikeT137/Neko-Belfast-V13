@@ -2,6 +2,7 @@ module.exports = {
     name:'hug',
     description: "Hugs a user",
     run: async (bot, message, args) => {
+        message.delete(100);
         const Discord = require('discord.js');
         const author = message.author;
         const person = message.mentions.users.first();
