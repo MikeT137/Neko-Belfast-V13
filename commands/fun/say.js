@@ -2,7 +2,7 @@ module.exports = {
     name: 'say',
     description: 'The bot says what you want',
     run: async (bot, message, args) => {
-        const say_msg = args;
+        const say_msg = args.join(" ");
         if(!args[0]){
             message.channel.send('You have to give me something to say')
         }else if(args[0]) {
