@@ -6,7 +6,7 @@ module.exports = {
             message.channel.send('You have to give me something to say')
         }else {
             if(message.deletable) {
-                message.channel.send(args.slice(1).join(""));
+                message.channel.send(`${args.slice(1).join("")}`);
                 message.delete();
             }else {
                 message.channel.send('I couldnt delete that message')
