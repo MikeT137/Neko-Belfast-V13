@@ -6,11 +6,11 @@ module.exports = {
         if(!args[0]){
             message.channel.send('You have to give me something to say')
         }else if(args[0]) {
-            if(message.deletable) {
+            if(message.author.hasPermission("MANAGE_MESSAGES")) {
                 message.channel.send(`${say_msg}`);
                 message.delete();
             }else {
-                message.channel.send('I couldnt say that because i cant delete messages')
+                message.channel.send('You dont have permission to use that command (permission needed: manage messages)')
             }
         }
     }
