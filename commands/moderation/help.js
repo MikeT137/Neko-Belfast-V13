@@ -203,7 +203,7 @@ module.exports = {
             break;
 
             case 'diceroll':
-                message.channel.send('It rolls a dice: b.diceroll')
+                message.channel.send('It rolls a specific type of dice: b.diceroll (type of dice)\nTypes of dice: 4, 6, 8, 10, 12, 20')
             break;
 
             case 'math':
