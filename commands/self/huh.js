@@ -15,7 +15,7 @@ module.exports = {
             'https://media3.giphy.com/media/fmXgCpO3IhesE/source.gif',
             'https://thumbs.gfycat.com/SoggyBlindKiwi-size_restricted.gif',
             'https://cdn140.picsart.com/314248817137201.gif',
-        ]
+        ] 
         if (!args[0]){
             const embed = new Discord.MessageEmbed()
 
