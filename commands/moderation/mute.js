@@ -22,7 +22,7 @@ module.exports = {
 
         setTimeout(function(){
             person.roles.remove(muterole.id);
-            message.channel.send(`@${person.user.tag} has been unmuted`);
+            message.channel.send(`@${person.user.tag}'s ${time} of being muted has ran out`);
 
         }, ms(time));
         }
