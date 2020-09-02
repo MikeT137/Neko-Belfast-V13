@@ -6,20 +6,22 @@ module.exports = {
     run: async(bot, message, args) => {
         if(!args[0]){
             message.channel.send('You didnt add a calculation')
-        }
+        }else{
         let resp;
 
         try{
             resp = math.evaluate(args.join(' '));
-        }catch(e){
-            message.channel.send('Sorry, please input a valid calculation')
-        }
-        const embed = new Discord.MessageEmbed()
 
-        .setTitle('Calculation')
-        .addField('Question', `${args.join(' ')} = ?`)
-        .addField('Answer', `${resp}`)
-        .setColor(0x4AEFBA)
+            const embed = new Discord.MessageEmbed()
+
+            .setTitle('Calculation')
+            .addField('Question', `${args.join(' ')} = ?`)
+            .addField('Answer', `${resp}`)
+            .setColor(0x4AEFBA)
         message.channel.send(embed);
+        }catch(e){
+            message.channel.send('Sorry, please input a valid calculation. Accepted math operations: \`+, -, *, /, %, ^, ()\`')
+        }
+        }
     }
 }

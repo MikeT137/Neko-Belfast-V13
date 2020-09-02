@@ -16,7 +16,7 @@ module.exports = {
         const number20 = d20[Math.floor(Math.random() * d20.length)];
 
         if(!args[0]){
-            message.channel.send('You have to specify what type of dice you want to roll. Accepted responses: 4, 6, 8, 10, 12, 20')
+            message.channel.send('You have to specify what type of dice you want to roll. Accepted responses: \`4, 6, 8, 10, 12, 20\`')
         }else switch(args[0]) {
             case '4':
                 message.channel.send(`${number4}`)
