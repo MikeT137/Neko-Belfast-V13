@@ -20,8 +20,6 @@ module.exports = {
             }else {
                 message.channel.send('That member isnt in the server')
             }
-        }else{
-            message.channel.send('Please specify a member');
         }
     }
 }
