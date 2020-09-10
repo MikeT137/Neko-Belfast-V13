@@ -4,7 +4,7 @@ module.exports = {
     run: async (bot, message, args) => {
         const member = message.mentions.members.first();
 
-        if(!message.member.hasPermission("MANAGE_ROLES") || !message.guild.owner) return message.channel.send('You dont have permissions to use this command');
+        if(!message.member.hasPermission(["BAN_MEMBERS", "ADMINISTRATOR"])) return message.channel.send('You dont have permissions to use this command');
         
         const person = message.mentions.users.first();
 
