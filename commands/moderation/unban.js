@@ -1,6 +1,6 @@
 module.exports = {
     name:'unban',
-    description: "Bans a user",
+    description: "Unbans a user",
     run: async (bot, message, args) => {
         const member = message.mentions.members.first();
 
