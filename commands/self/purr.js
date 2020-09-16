@@ -1,10 +1,10 @@
 module.exports = {
-    name:'pout',
-    description: "The user pouts",
+    name:'purr',
+    description: "The user purrs",
     run: async (bot, message, args) => {
         const author = message.author;
         const Discord = require('discord.js');
-        const random_pout = [
+        const random_purr = [
             'https://media.tenor.com/images/5347a0ac944a8656648d7c31335f3b68/tenor.gif',
             'https://thumbs.gfycat.com/CarefreeIdolizedAmethystgemclam-small.gif',
             'https://i.pinimg.com/originals/9c/93/24/9c93248d94cfc9fb4a6895f6f08c7b61.gif',
@@ -20,7 +20,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
 
             .setTitle(`${author.username} is purring, nyaa~`)
-            .setImage(random_pout[Math.floor(Math.random() * random_pout.length)])
+            .setImage(random_purr[Math.floor(Math.random() * random_purr.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
         }
