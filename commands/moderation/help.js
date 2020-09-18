@@ -9,10 +9,10 @@ module.exports = {
 
                 .setTitle(':pleading_face:Help')
                 .setDescription('Type b.help (command) to get information about a specific command')
-                .addField(':angry:Moderation Commands', 'ban, clear, help, info, invite, kick, mute, server, unmute, warn')
-                .addField(':blush:Self commands', 'blush, clap, cry, dance, facepalm, huh, laugh, love, pout, rage, smile, smug, think, wag, yawn')
+                .addField(':angry:Moderation Commands', 'ban, clear, help, info, invite, kick, mute, server, unmute')
+                .addField(':blush:Self commands', 'blush, clap, cry, dance, facepalm, huh, laugh, love, pout, purr, rage, smile, smug, think, wag, yawn')
                 .addField(':hugging_face:Interactive commands (@someone)', 'boop, cuddle, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
-                .addField(':smiley:Fun commands', '8ball, avatar, blackjack, coinflip, diceroll, math, meme, rps')
+                .addField(':smiley:Fun commands', '8ball, avatar, blackjack, coinflip, diceroll, math, meme, rps') //lovenick
                 .setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                 .setColor(0x4AEFBA)
             message.channel.send(embed);
@@ -51,10 +51,6 @@ module.exports = {
                 message.channel.send('It unmutes a user that is muted: b.unmute (ping) (number), BUT you need to have a role called \"BMuted\", its the only way it\'ll work')
             break;
 
-            case 'warn':
-                message.channel.send('It warns a user for a reason: b.warn (ping) (reason)')
-            break;
-
             //Self Commands
             case 'blush':
                 message.channel.send('It sends a blushing gif: b.blush')
@@ -90,6 +86,10 @@ module.exports = {
                         
             case 'pout':
                 message.channel.send('It sends a pouting gif: b.pout')
+            break;
+
+            case 'purr':
+                message.channel.send('It sends a neko gif: b.purr')
             break;
                         
             case 'rage':
@@ -213,6 +213,12 @@ module.exports = {
             case 'rps':
                 message.channel.send('Its just a command that lets you play rock paper scissors with the bot: b.rps (rock/paper/scissors)')
             break;
+
+            /*
+            case 'lovenick':
+                message.channel.send('It sends a special message for a cute trap :3')
+            break;
+            */
         }
     }
 }
