@@ -1,6 +1,6 @@
 module.exports ={
     name: "lovenick",
-    description: "My special gift for my lovely trap",
+    description: "My special gift for my gay trap",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         if(!args[0]) {
