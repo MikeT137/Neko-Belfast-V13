@@ -20,7 +20,7 @@ bot.on('ready', () => {
         `${message.guilds.cache.size} servers`
     ]
     let i = 0;
-    setInterval(() => message.user.setActivity(`${activities[i++ % activities.length]} | b.help`, {type: 'WATCHING'}), 15000;
+    setInterval(() => message.user.setActivity(`${activities[i++ % activities.length]} | b.help`, {type: 'WATCHING'}), 15000);
 });
 
 //Commands
