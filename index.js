@@ -16,11 +16,7 @@ bot.categories = fs.readdirSync("./commands/");
 
 bot.on('ready', () => {
     console.log('Belfast is online!');
-    const activities = [
-        `${bot.guilds.cache.size} servers`
-    ]
-    let i = 0;
-    setInterval(() => bot.user.setActivity(`${activities[i++ % activities.length]} | b.help`, {type: 'WATCHING'}), 15000);
+    bot.user.setActivity('Use b!help for commands', {type: 'PLAYING'}).catch(console.error);
 });
 
 //Commands
@@ -32,11 +28,12 @@ bot.on('message', async message => {
 
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const cmd = args.shift().toLowerCase();
-    const command = bot.commands.get(cmd || cmd2);
+    const command = bot.commands.get(cmd);
 
     if(cmd.length == 0) return;
     if(!command) command = bot.commands.get(bot.aliases.get(cmd));
     if(command) command.run(bot, message, args);
+    
 });
 
 //Token
