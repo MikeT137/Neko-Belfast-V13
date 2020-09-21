@@ -16,7 +16,9 @@ bot.categories = fs.readdirSync("./commands/");
 
 bot.on('ready', () => {
     console.log('Belfast is online!');
-    bot.user.setActivity('Use b!help for commands', {type: 'PLAYING'}).catch(console.error);
+    setInterval(function(){
+        bot.user.setActivity(`${bot.guild.size} servers | use b.help for commands`, {type: 'WATCHING'}).catch(console.error);
+    }, 10000)
 });
 
 //Commands
