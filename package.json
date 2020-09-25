@@ -12,6 +12,7 @@
     "-": "0.0.1",
     "ascii-table": "0.0.9",
     "cheerio": "^1.0.0-rc.3",
+    "dblapi.js": "^2.4.1",
     "discord.js": "^12.2.0",
     "math": "0.0.3",
     "mathjs": "^7.1.0",
