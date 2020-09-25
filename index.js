@@ -37,7 +37,7 @@ bot.on('message', async message => {
     if(command) command.run(bot, message, args);
     
 });
-
+//Top.gg (site) server count
 const DBL = require("dblapi.js");
 const topgglink = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcyNzA5MzIzNjk1NDQzMTQ4OCIsImJvdCI6dHJ1ZSwiaWF0IjoxNjAxMDIxNzQ2fQ.QCfXPZhovBGFszhJAtrdBTChuh92-xrtGRoGiCJnYnU';
 const dbl = new DBL(`${topgglink}`, bot);
@@ -52,5 +52,5 @@ dbl.on('error', e => {
 })
 
 //Token
-bot.login(process.env.token);
-//bot.login(token);
+//bot.login(process.env.token);
+bot.login(token);
