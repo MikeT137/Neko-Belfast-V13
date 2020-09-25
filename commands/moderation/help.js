@@ -9,7 +9,7 @@ module.exports = {
 
                 .setTitle(':pleading_face:Help')
                 .setDescription('Type b.help (command) to get information about a specific command')
-                .addField(':angry:Moderation Commands', 'ban, clear, help, info, invite, kick, mute, server, unmute')
+                .addField(':angry:Moderation Commands', 'ban, clear, help, info, invite, kick, mute, server, unmute, vote')
                 .addField(':blush:Self commands', 'blush, clap, cry, dance, facepalm, huh, laugh, love, pout, purr, rage, smile, smug, think, wag, yawn')
                 .addField(':hugging_face:Interactive commands (@someone)', 'boop, cuddle, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
                 .addField(':smiley:Fun commands', '8ball, avatar, blackjack, coinflip, diceroll, math, meme, rps')
@@ -49,6 +49,10 @@ module.exports = {
 
             case 'unmute':
                 message.channel.send('It unmutes a user that is muted: b.unmute (ping) (number), BUT you need to have a role called \"BMuted\", its the only way it\'ll work')
+            break;
+
+            case 'vote':
+                message.channel.send('It sends the link so the user can vote for the bot on the top.gg site')
             break;
 
             //Self Commands
