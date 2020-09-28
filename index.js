@@ -5,6 +5,8 @@ bot.prefix = 'my prefix';
 const prefix = config.prefix;
 const token = config.token;
 const fs = require('fs');
+const {ErelaClient, Utils} = require('erela.js');
+const nodes = require("././botconfig.json");
 
 //Command Handler
 bot.commands = new Collection();
@@ -15,6 +17,22 @@ bot.categories = fs.readdirSync("./commands/");
 });
 
 bot.on('ready', () => {
+    run: async(bot, message, args) => {
+        bot.music = new ErelaClient(bot, nodes)
+            .on("nodeError", console.log)
+            .on("nodeConnect", () => console.log('Successfully created a new node'))
+            .on("queueEnd", player => {
+                player.textChannel.send('Queue has ended')
+            })
+            .on("trackStart", ({textChannel}, {title, duration}) => textChannel.send(`Now playing: **${title}** -> ${Utils.formatTime(duration, true)}`));
+
+        bot.levels = new Map()
+            .set('none', 0.0)
+            .set('low', 0.10)
+            .set('medium', 0.50)
+            .set('high', 0.25);
+    }
+
     console.log('Belfast is online!');
     setInterval(function(){
         bot.user.setActivity(`${bot.guilds.cache.size} servers | use b.help for commands`, {type: 'WATCHING'}).catch(console.error);
