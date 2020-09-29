@@ -22,5 +22,6 @@ module.exports = {
             .setImage(random_run[Math.floor(Math.random() * random_run.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
+        }
     }
 }
