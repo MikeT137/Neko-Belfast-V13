@@ -19,7 +19,7 @@ module.exports = {
         if(message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
 
-            .setAuthor(`${message.author.username} gave ${person.username} a lick :flushed:`, message.author.displayAvatarURL({ dynamic: true }))
+            .setAuthor(`${message.author.username} gave ${person.username} a lick O///O`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_lick[Math.floor(Math.random() * random_lick.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);

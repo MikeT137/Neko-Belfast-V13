@@ -19,7 +19,7 @@ module.exports = {
         if(message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
 
-            .setAuthor(`${message.author.username} holds ${person.username}s hand...:flushed:`, message.author.displayAvatarURL({ dynamic: true }))
+            .setAuthor(`${message.author.username} holds ${person.username}s hand...O///O`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_hh[Math.floor(Math.random() * random_hh.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);

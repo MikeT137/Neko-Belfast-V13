@@ -19,7 +19,7 @@ module.exports = {
         if (!args[0]){
             const embed = new Discord.MessageEmbed()
 
-            .setAuthor(`Nyaa, i love you ${author.username}~:heart:`, message.author.displayAvatarURL({ dynamic: true }))
+            .setAuthor(`Nyaa~, i love you ${author.username}`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_snuggle[Math.floor(Math.random() * random_snuggle.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
