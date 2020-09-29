@@ -3,7 +3,6 @@ module.exports = {
     description: "Stares at a user",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        const author = message.author;
         const person = message.mentions.users.first();
         const random_stare = [
             'https://media1.tenor.com/images/3e53c38c053b68475a899ef7c6398a85/tenor.gif?itemid=14080506',
@@ -20,7 +19,7 @@ module.exports = {
         if(message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`${author.username} stares at ${person.username}`)
+            .setAuthor(`${message.author.username} stares at ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_stare[Math.floor(Math.random() * random_stare.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);

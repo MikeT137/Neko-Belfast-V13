@@ -3,7 +3,6 @@ module.exports = {
     description: "Boops a user's nose",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        const author = message.author;
         const person = message.mentions.users.first();
         const random_boop = [
             'https://media1.tenor.com/images/cbf38a2e97a348a621207c967a77628a/tenor.gif?itemid=6287077',
@@ -20,7 +19,7 @@ module.exports = {
         if(message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
     
-            .setTitle(`${author.username} booped ${person.username}'s nose !`)
+            .setAuthor(`${message.author.username} booped ${person.username}'s nose !`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_boop[Math.floor(Math.random() * random_boop.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);

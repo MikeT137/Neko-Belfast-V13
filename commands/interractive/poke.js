@@ -3,7 +3,6 @@ module.exports = {
     description: "Pokes a user",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        const author = message.author;
         const person = message.mentions.users.first();
         const random_poke = [
             'https://media.giphy.com/media/pWd3gD577gOqs/giphy.gif',
@@ -20,7 +19,7 @@ module.exports = {
         if(message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`${author.username} gave ${person.username} a poke`)
+            .setAuthor(`${message.author.username} gave ${person.username} a poke`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_poke[Math.floor(Math.random() * random_poke.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);

@@ -19,7 +19,7 @@ module.exports = {
         if (!args[0]){
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`Looks like ${author.username} is having fun`)
+            .setAuthor(`Looks like ${author.username} is having fun`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_dance[Math.floor(Math.random() * random_dance.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);

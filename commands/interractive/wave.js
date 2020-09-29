@@ -3,7 +3,6 @@ module.exports = {
     description: "Waves at a user",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        const author = message.author;
         const person = message.mentions.users.first();
         const random_wave = [
             'https://media.tenor.com/images/6870fd2f3f7be6bc6f08083a899c4889/tenor.gif',
@@ -20,7 +19,7 @@ module.exports = {
         if(message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`${author.username} waves at ${person.username}`)
+            .setAuthor(`${message.author.username} waves at ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_wave[Math.floor(Math.random() * random_wave.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);

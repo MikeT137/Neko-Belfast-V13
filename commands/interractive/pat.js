@@ -3,7 +3,6 @@ module.exports = {
     description: "Pats a user",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        const author = message.author;
         const person = message.mentions.users.first();
         const random_pat = [
             'https://media.giphy.com/media/osYdfUptPqV0s/giphy.gif',
@@ -20,7 +19,7 @@ module.exports = {
         if(message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`${author.username} gave ${person.username} a pat...adorable`)
+            .setAuthor(`${message.author.username} gave ${person.username} a pat...adorable`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_pat[Math.floor(Math.random() * random_pat.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);

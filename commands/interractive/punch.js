@@ -3,7 +3,6 @@ module.exports = {
     description: "Punchess a user",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        const author = message.author;
         const person = message.mentions.users.first();
         const random_punch = [
             'https://media1.tenor.com/images/31686440e805309d34e94219e4bedac1/tenor.gif?itemid=4790446',
@@ -20,7 +19,7 @@ module.exports = {
         if(message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`${author.username} gave ${person.username} a punch...awee`)
+            .setAuthor(`${message.author.username} gave ${person.username} a punch...awee`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_punch[Math.floor(Math.random() * random_punch.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);

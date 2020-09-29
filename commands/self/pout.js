@@ -19,7 +19,7 @@ module.exports = {
         if (!args[0]){
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`${author.username} is pouting, such a tsundere`)
+            .setAuthor(`${author.username} is pouting, such a tsundere`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_pout[Math.floor(Math.random() * random_pout.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);

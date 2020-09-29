@@ -3,7 +3,6 @@ module.exports = {
     description: "Cuddles a user",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        const author = message.author;
         const person = message.mentions.users.first();
         const random_cuddle = [
             'https://media.giphy.com/media/C4gbG94zAjyYE/giphy.gif',
@@ -20,7 +19,7 @@ module.exports = {
         if(message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`${author.username} gave ${person.username} a cuddle...so cute`)
+            .setAuthor(`${message.author.username} gave ${person.username} a cuddle...so cute`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_cuddle[Math.floor(Math.random() * random_cuddle.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);

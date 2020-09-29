@@ -3,7 +3,6 @@ module.exports = {
     description: "Slaps a user",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        const author = message.author;
         const person = message.mentions.users.first();
         const random_slap = [
             'https://media.tenor.com/images/9a2c17416b01df4363c05702a489425b/tenor.gif',
@@ -20,7 +19,7 @@ module.exports = {
         if(message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`${author.username} gave ${person.username} a slap...so violent`)
+            .setAuthor(`${message.author.username} gave ${person.username} a slap...so violent`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_slap[Math.floor(Math.random() * random_slap.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);

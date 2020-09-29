@@ -3,7 +3,6 @@ module.exports = {
     description: "Highfives a user",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        const author = message.author;
         const person = message.mentions.users.first();
         const random_hf = [
             'https://media1.tenor.com/images/7b1f06eac73c36721912edcaacddf666/tenor.gif?itemid=10559431',
@@ -20,7 +19,7 @@ module.exports = {
         if(message.mentions.members.size >= 1) {
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`${author.username} highfives ${person.username}`)
+            .setAuthor(`${message.author.username} highfives ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_hf[Math.floor(Math.random() * random_hf.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);

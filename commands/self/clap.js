@@ -19,7 +19,7 @@ module.exports = {
         if (!args[0]){
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`${author.username} claps their hands`)
+            .setAuthor(`${author.username} claps their hands`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_clap[Math.floor(Math.random() * random_clap.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);

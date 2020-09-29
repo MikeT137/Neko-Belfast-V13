@@ -19,7 +19,7 @@ module.exports = {
         if (!args[0]){
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`${author.username} is blushing`)
+            .setAuthor(`${author.username} is blushing`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_blush[Math.floor(Math.random() * random_blush.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
