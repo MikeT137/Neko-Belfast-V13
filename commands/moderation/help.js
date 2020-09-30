@@ -104,7 +104,7 @@ module.exports = {
                 message.channel.send('It sends a raging gif: b.rage')
             break;
 
-            case 'rage':
+            case 'run':
                 message.channel.send('It sends a running gif: b.run')
             break;
                         
