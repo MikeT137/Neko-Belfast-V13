@@ -219,7 +219,7 @@ module.exports = {
             break;
 
             case 'meme':
-                message.channel.send('It sends a meme from a subreddit: b.meme (...)\n(nothing) -> random\ndank -> dankmemes\nmemes -> memes\nanime -> Animemes\nwholesome -> wholesomememes\nwholesomeanime / wanime -> wholesomeaniememes')
+                message.channel.send('It sends a meme from a subreddit: b.meme (...)\n(nothing) -> random\ndank -> dankmemes\nmemes -> memes\nanime -> goodanimemes\nwholesome -> wholesomememes\nwholesomeanime / wanime -> wholesomeaniememes')
             break;
 
             case 'rps':
