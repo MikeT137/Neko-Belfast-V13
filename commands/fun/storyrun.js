@@ -12,7 +12,7 @@ module.exports = {
             return ['👍', '✊', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
         };
 
-        message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+        msg.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
             .then(collected => {
                 const reaction = collected.first();
                 if(reaction.emoji.name === '👍') {
