@@ -7,7 +7,13 @@ module.exports = {
         msg.react('👍'),
         msg.react('✊'),
         msg.react('👎')
-	        .then(collected => {
+
+        const filter = (reaction, user) => {
+            return ['👍', '✊', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
+        };
+
+        message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+            .then(collected => {
                 const reaction = collected.first();
                 if(reaction.emoji.name === '👍') {
                     msg.edit('*You think to yourself that it was just an animal or something, so you decide to ignore it. You then finish chopping the wood, you grab all of it, and go towards your basement so you can leave it there. But then you hear that weird sound again, this time coming from your basement. You then:\n\n👍 - go in the basement\n👎 - leave the cabin*\n\n**Select your choice:**')
