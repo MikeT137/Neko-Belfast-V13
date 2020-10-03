@@ -1,4 +1,4 @@
-module.exports = {
+/*module.exports = {
     name:'storyrun',
     description: "It tells the story of a helpless boy (RUN)",
     run: async (bot, message, args) => {
@@ -97,7 +97,7 @@ module.exports = {
             })
         })
     }
-}
+}*/
 
 /*module.exports = {
     name:'storyrun',
