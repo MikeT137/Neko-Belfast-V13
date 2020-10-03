@@ -2,7 +2,7 @@ module.exports = {
     name:'storyrun',
     description: "It tells the story of a helpless boy (RUN)",
     run: async (bot, message, args) => {
-        message.channel.send('*You\'re a 20 year old boy. You live in a small cabin inside a forest. You\'re there alone, no parents, no friends, no one. Its currently 17th of october. You thought that it would be really good if you chopped some wood with an axe so you can warm yourself when winter comes. You chop wood, doing your business. But suddenly you hear a weird sound coming from afar. In that moment you:\n\n👍 - still chop wood\n✊ - go inside your house\n?👎 - take your axe with you and investigate the zone*\n\n**Select your choice:**')
+        message.channel.send('*You\'re a 20 year old boy. You live in a small cabin inside a forest. You\'re there alone, no parents, no friends, no one. Its currently 17th of october. You thought that it would be really good if you chopped some wood with an axe so you can warm yourself when winter comes. You chop wood, doing your business. But suddenly you hear a weird sound coming from afar. In that moment you:\n\n👍 - still chop wood\n✊ - go inside your house\n👎 - take your axe with you and investigate the zone*\n\n**Select your choice:**')
         .then(msg => {
         msg.react('👍'),
         msg.react('✊'),
@@ -12,16 +12,26 @@ module.exports = {
             return ['👍', '✊', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
         };
 
-        msg.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+        msg.awaitReactions(filter, { max: 1 })
             .then(collected => {
                 const reaction = collected.first();
                 if(reaction.emoji.name === '👍') {
-                    msg.edit('*You think to yourself that it was just an animal or something, so you decide to ignore it. You then finish chopping the wood, you grab all of it, and go towards your basement so you can leave it there. But then you hear that weird sound again, this time coming from your basement. You then:\n\n👍 - go in the basement\n👎 - leave the cabin*\n\n**Select your choice:**')
+                    msg.edit('**Story - RUN**\n*You think to yourself that it was just an animal or something, so you decide to ignore it. You then finish chopping the wood, you grab all of it, and go towards your basement so you can leave it there. But then you hear that weird sound again, this time coming from your basement. You then:\n\n👍 - go in the basement\n👎 - leave the cabin*\n\n**Select your choice:**')
 
-                    msg.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                    msg.awaitReactions(filter, { max: 1 })
                     .then(collected => {
                         if(reaction.emoji.name === '👍') {
-                            msg.edit('awoo')
+                            msg.edit('*You decided to ignore that sound again, and you went in the basement. Everything seems fine, nothing out of place. You put all the logs in a corner, but when you turn around, a creature with very sharp claws starts to cut your throat and intestines open as you scream in torture.*\n\n**YOU DIED**\nEnding 1 out of 10: The fool')
+                        }
+                        if(reaction.emoji.name === '👎') {
+                            msg.edit('*You were too scared to go in the basement so you left the cabin because who knows what could be down there, it might come to the surface! So you decide to leave that place and walk in the forest. Surprisingly, the forest was very quiet, no animals, no birds, nothing. But suddenly, you hear some siren noises that aren\'t too far from where you are. You start hiding. And then a voice the that sounds like being on a radio says:* Can anyone hear me ? I\'m looking for a 20 year old boy, is anyone there ? *Hearing that, you then:\n\n👍 - run away\n👎 - get closer and say hi*\n\n**Select your choice:**')
+
+                            msg.awaitReactions(filter, { max: 1 })
+                            .then(collected => {
+                                if(reaction.emoji.name === '👍') {
+
+                                }
+                            })
                         }
                     })
                 }
