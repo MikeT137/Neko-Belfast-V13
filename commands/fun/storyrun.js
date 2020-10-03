@@ -11,25 +11,25 @@ module.exports = {
         const filter = (reaction, user) => {
             return ['👍', '✊', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
         };
-        const filter2 = (reaction, user) => {
+        const filter2 = (reaction2, user) => {
             return ['👍', '✊', '👎'].includes(reaction2.emoji.name) && user.id === message.author.id;
         };
-        const filter3 = (reaction, user) => {
+        const filter3 = (reaction3, user) => {
             return ['👍', '✊', '👎'].includes(reaction3.emoji.name) && user.id === message.author.id;
         };
-        const filter4 = (reaction, user) => {
+        const filter4 = (reaction4, user) => {
             return ['👍', '✊', '👎'].includes(reaction4.emoji.name) && user.id === message.author.id;
         };
-        const filter5 = (reaction, user) => {
+        const filter5 = (reaction5, user) => {
             return ['👍', '✊', '👎'].includes(reaction5.emoji.name) && user.id === message.author.id;
         };
-        const filter6 = (reaction, user) => {
+        const filter6 = (reaction6, user) => {
             return ['👍', '✊', '👎'].includes(reaction6.emoji.name) && user.id === message.author.id;
         };
-        const filter7 = (reaction, user) => {
+        const filter7 = (reaction7, user) => {
             return ['👍', '✊', '👎'].includes(reaction7.emoji.name) && user.id === message.author.id;
         };
-        const filter8 = (reaction, user) => {
+        const filter8 = (reaction8, user) => {
             return ['👍', '✊', '👎'].includes(reaction8.emoji.name) && user.id === message.author.id;
         };
 
