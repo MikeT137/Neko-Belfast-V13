@@ -19,7 +19,6 @@ module.exports = {
                     msg.edit('*You think to yourself that it was just an animal or something, so you decide to ignore it. You then finish chopping the wood, you grab all of it, and go towards your basement so you can leave it there. But then you hear that weird sound again, this time coming from your basement. You then:\n\n👍 - go in the basement\n👎 - leave the cabin*\n\n**Select your choice:**')
 
                     msg.awaitReactions(filter, { max: 1 })
-                    .then(collected => {
                         if(reaction.emoji.name === '👍') {
                             msg.edit('*You decided to ignore that sound again, and you went in the basement. Everything seems fine, nothing out of place. You put all the logs in a corner, but when you turn around, a creature with very sharp claws starts to cut your throat and intestines open as you scream in torture.*\n\n**YOU DIED**\nEnding 1 out of 10: The fool')
                         }
@@ -66,7 +65,7 @@ module.exports = {
                                 }
                             })
                         }
-                    })
+                    
                 }
                 if(reaction.emoji.name === '✊') {
                     msg.edit('*The noises started to get louder and louder. And so because you were scared you tried to call for help, but there was no signal. And then a tall creature with a siren for a head gets closer to your cabin. You:*\n\n👍 - go on bed and hide yourself with a blanket\n👎 - go outside and try to run away from the siren head*\n\n**Select your choice:**')
