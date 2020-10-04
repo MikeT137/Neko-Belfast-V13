@@ -52,7 +52,7 @@ module.exports = {
             break;
 
             case 'vote':
-                message.channel.send('It sends the link so the user can vote for the bot on the top.gg site')
+                message.channel.send('It sends the link so the user can vote for the bot or the bot\'s server on the top.gg site: b.vote (bot/server)')
             break;
 
             //Self Commands
