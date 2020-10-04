@@ -12,7 +12,7 @@ module.exports = {
                 .addField(':angry:Moderation Commands', 'ban, clear, help, info, invite, kick, mute, server, unmute, vote')
                 .addField(':blush:Self commands', 'blush, cheer, clap, cry, dab, dance, facepalm, huh, laugh, love, pout, purr, rage, sip, run, smile, smug, think, wag, yawn')
                 .addField(':hugging_face:Interactive commands (@someone)', 'boop, cuddle, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
-                .addField(':smiley:Fun commands', '8ball, avatar, blackjack, coinflip, diceroll, math, meme, rps')
+                .addField(':smiley:Fun commands', '8ball, avatar, blackjack, coinflip, diceroll, math, meme, rps, storyrun')
                 .setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                 .setColor(0x4AEFBA)
             message.channel.send(embed);
@@ -232,6 +232,10 @@ module.exports = {
 
             case 'rps':
                 message.channel.send('Its just a command that lets you play rock paper scissors with the bot: b.rps (rock/paper/scissors)')
+            break;
+
+            case 'storyrun':
+                message.channel.send('Its a choose your adventure type of story where you have to (read a lot) and react with emojis to make your choice, eventually you get an ending, now it depends if its good or bad, good luck: b.storyrun')
             break;
         }
     }
