@@ -43,9 +43,7 @@ module.exports = {
                     .then(collected2 => {
                         const reaction2 = collected2.first();
                         if(reaction2.emoji.name === '👍') {
-                            setTimeout(function(){
-                                msg.edit('*You decided to ignore that sound again, and you went in the basement. Everything seems fine, nothing out of place. You put all the logs in a corner, but when you turn around, a creature with very sharp claws starts to cut your throat and intestines open as you scream in torture.*\n\n**YOU DIED**\nEnding 1 out of 10: The fool')
-                            }, 45000)
+                            msg.edit('*You decided to ignore that sound again, and you went in the basement. Everything seems fine, nothing out of place. You put all the logs in a corner, but when you turn around, a creature with very sharp claws starts to cut your throat and intestines open as you scream in torture.*\n\n**YOU DIED**\nEnding 1 out of 10: The fool')
                         }
                         if(reaction2.emoji.name === '👎') {
                             msg.edit('*You were too scared to go in the basement so you left the cabin because who knows what could be down there, it might come to the surface! So you decide to leave that place and walk in the forest. Surprisingly, the forest was very quiet, no animals, no birds, nothing. But suddenly, you hear some siren noises that aren\'t too far from where you are. You start hiding. And then a voice the that sounds like being on a radio says:* Can anyone hear me ? I\'m looking for a 20 year old boy, is anyone there ? *Hearing that, you then:\n\n👍 - run away\n👎 - get closer and say hi*\n\n**Select your choice:**')
@@ -60,9 +58,7 @@ module.exports = {
                                     .then(collected4 => {
                                         const reaction4 = collected4.first();
                                         if(reaction4.emoji.name === '👍') {
-                                            setTimeout(function(){
                                             msg.edit('*You thought to yourself that the creature can\'t be that tough so it can survive multiple bullets. The creature breaks the door, you and the girl start shooting at it. But that only slowed him down, and since both of you we\'re so close to the door, the creature grabbed you with it\'s long hands and suffocated you both.*\n\n**YOU DIED**\nEnding 2 out of 10: The slaughter')
-                                            }, 45000)
                                         }
                                         if(reaction4.emoji.name === '👎') {
                                             msg.edit('*You and the girl got through the back door and ran away in the woods. Fortunately, the creature didn\'t see in what direction you went, so you run and run and run, until eventually you take a break. The night came. You make a fire so you can warm yourselves. But the night in the forest is never to be trusted. So both you and the girl stay awake in case the creature finds you. At last, you fall asleep, but the girl stays awake. She then hears a branch breaking.* Who\'s there ? *she said. But of course there was no response. And then the girl hears weird noises like static as she could see the creature from afar.*\n\ngirl: You gotta get up RIGHT NOW\nyou: Why? let me sleep a little more..\ngirl: Because the creature is coming to get us, idiot!\n\n*She then grabs you and you both start running more from the creature. An hour later, you escape from the creature. But you then started to get hungry. So you both kill a deer and eat it.*\n\ngirl: We have to do something about this, we cant just keep running forever\nyou:\n\n👍 - We could try to kill it from a distance.\n👎 - Let\'s try to \"tank it\", we have 2 guns and 1 axe, can\'t be that hard.\n\n**Select your choice:**')
@@ -78,23 +74,14 @@ module.exports = {
                                                         const reaction6 = collected6.first();
                                                         if(reaction6.emoji.name === '👍') {
                                                             msg.edit('*You picked up the sniper and you had more than enough ammo, so its time to take this freak down. Because the creature is very tall you were able to see its head, and you could\'ve already detected where its body is too. You shoot his legs first so you make sure he wont come quickly at you, then you shoot his head 2 times, just so you make sure he wont break your ears with its siren sounds. And you shoot him 3 times in the chest. You then say:* Take that bitch! *After that you take the sniper with you just in case and go back to your cabin.*\n\n**YOU SURVIVED**\nEnding 3 out of 10: The last survivor')
-                                                            .then(msg.delete(45000))
                                                         }
                                                         if(reaction6.emoji.name === '👎') {
                                                             msg.edit('*You try to call for help but the radio is broken. Unfortunately siren head hears the static the the radio gives and finds out that you\'re in the watch tower and demolishes it. By falling from that much high up, you crack your skull open.*\n\n**YOU DIED**\nEnding 4 out of 10: Failed reinforcement')
-                                                            
-                                                            setTimeout(function(){
-                                                                message.channel.bulkDelete(msg);
-                                                            }, 45000)
                                                         }
                                                     })
                                                 }
                                                 if(reaction5.emoji.name === '👎') {
                                                     msg.edit('*You and the girl get ready to attack, at last siren head arrives and the fight begins. You throw the axe on his neck, and then both you and the girl start to shoot at siren head with all of your bullets. Eventually, he is finally defeated. You and the girl then get back to your cabins and live happily ever after.*\n\n**YOU SURVIVED**\nEnding 5 out of 10: The team')
-                                                    
-                                                    setTimeout(function(){
-                                                        message.channel.bulkDelete(msg);
-                                                    }, 45000)
                                                 }
                                             })
                                         }
@@ -102,10 +89,6 @@ module.exports = {
                                 }
                                 if(reaction3.emoji.name === '👎') {
                                     msg.edit('*You became very brave and got closer to the voice and said hi, but then the voice was actually coming from a weird and tall creature with a siren for its head. Then the creature started making very loud siren noises that exploded your eardrums. And then the creature grabs your neck and kills you.*\n\n**YOU DIED**\nEnding 6 out of 10: the brave dead soldier')
-                                    
-                                    setTimeout(function(){
-                                        message.channel.bulkDelete(msg);
-                                    }, 45000)
                                 }
                             })
                         }
@@ -119,17 +102,9 @@ module.exports = {
                         const reaction7 = collected7.first();
                         if(reaction7.emoji.name === '👍') {
                             msg.edit('*You knew that if you went outside you couldn\'t make it out alive, so you decide to stay hidden. But then there are some different sounds coming from beneath your bed. And then a creature with sharp claws comes from underneath your bed and you couldn\'t move because you were in shock and the creature quickly starts to cut your whole body until it eventually kills you.*\n\n**YOU DIED**\nEnding 7 out of 10: The fearful hider')
-                            
-                            setTimeout(function(){
-                                message.channel.bulkDelete(msg);
-                            }, 45000)
                         }
                         if(reaction7.emoji.name === '👎') {
                             msg.edit('*You thought that you could eventually escape from him if you run quickly. But when you try to, siren head gets to you very rapidly and it catches you.*\n\n**YOU DIED**\nEnding 8 out of 10: The runner')
-                            
-                            setTimeout(function(){
-                                message.channel.bulkDelete(msg);
-                            }, 45000)
                         }
                     })
                 }
@@ -141,17 +116,9 @@ module.exports = {
                         const reaction8 = collected8.first();
                         if(reaction8.emoji.name === '👍') {
                             msg.edit('*You wake up and try to fight him, but he had 2 weapons and you had none, so as you try to stop him, he stabs the fork to your belly, and the knife to your chest.*\n\n**YOU DIED**\nEnding 9 out of 10: The betrayed')
-                            
-                            setTimeout(function(){
-                                message.channel.bulkDelete(msg);
-                            }, 45000)
                         }
                         if(reaction8.emoji.name === '👎') {
                             msg.edit('*You throw the axe at the hunter and kill him. And then you go back to sleep. The next day you take the double barrel shotgun and the axe, and go to kill the creature. You then finally find siren head and you throwing the axe and then you start shooting siren head. And you finally killed it and then you go back to your cabin living your life peacefully.*\n\n**YOU SURVIVED**\nEnding 10 out of 10: The betrayed winner')
-                            
-                            setTimeout(function(){
-                                message.channel.bulkDelete(msg);
-                            }, 45000)
                         }
                     })
                 }
