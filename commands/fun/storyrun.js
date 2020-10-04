@@ -99,7 +99,7 @@
     }
 }*/
 
-/*module.exports = {
+module.exports = {
     name:'storyrun',
     description: "It tells the story of a helpless boy (RUN)",
     run: async (bot, message, args) => {
@@ -142,7 +142,7 @@
 
                     msg.awaitReactions(filter2, { max: 1 })
                     .then(collected2 => {
-                        const reaction2 = collected.first();
+                        const reaction2 = collected2.first();
                         if(reaction2.emoji.name === '👍') {
                             msg.edit('*You decided to ignore that sound again, and you went in the basement. Everything seems fine, nothing out of place. You put all the logs in a corner, but when you turn around, a creature with very sharp claws starts to cut your throat and intestines open as you scream in torture.*\n\n**YOU DIED**\nEnding 1 out of 10: The fool')
                         }
@@ -151,13 +151,13 @@
 
                             msg.awaitReactions(filter3, { max: 1 })
                             .then(collected3 => {
-                                const reaction3 = collected.first();
+                                const reaction3 = collected3.first();
                                 if(reaction3.emoji.name === '👍') {
                                     msg.edit('*You thought that something was a little fishy so you instead run away from the voice. But as you run, you then see a weird and tall creature with a siren for its head walking through the forest, the creature sees you and it starts to run straight at you doing some siren noises. You immediately get scared and you run for your life as fast as you could, until suddenly you see another cabin. And you go inside the cabin and close the door behind you without knowing who\'s cabin it was. And the you see a girl that starts to point a gun at you.*\n\ngirl: Who are you and why did you come in my house?\nyou: I was chased by that siren headed thing. Sorry for intruding in your house\ngirl: Its alright, you can stay, but dont touch me okay?\nyou: I wasn\'t going to but okay\n\n*Suddenly you hear something bashing on the door really hard like they were trying to break it. Than the girl says:* We need to get you covered. Here, take this gun. *In that moment you:\n\n👍 - try both of you to kill the creature by shooting at it\n👎 - exit the house through the backdoor and run away*\n\n**Select your choice:**')
                                     
                                     msg.awaitReactions(filter4, { max: 1 })
                                     .then(collected4 => {
-                                        const reaction4 = collected.first();
+                                        const reaction4 = collected4.first();
                                         if(reaction4.emoji.name === '👍') {
                                             msg.edit('*You thought to yourself that the creature can\'t be that tough so it can survive multiple bullets. The creature breaks the door, you and the girl start shooting at it. But that only slowed him down, and since both of you we\'re so close to the door, the creature grabbed you with it\'s long hands and suffocated you both.*\n\n**YOU DIED**\nEnding 2 out of 10: The slaughter')
                                         }
@@ -166,13 +166,13 @@
 
                                             msg.awaitReactions(filter5, { max: 1 })
                                             .then(collected5 => {
-                                                const reaction5 = collected.first();
+                                                const reaction5 = collected5.first();
                                                 if(reaction5.emoji.name === '👍') {
                                                     msg.edit('*You and the girl separate each other, as she watches you getting ready with her gun. And then you loudly say:* Siren head, i\'m here! *You then hear the siren noises, but it was coming from a little far then where you\'re at. And then you hear a girl\'s scream as she craves for help while being killed. You then run again, but eventually you find a lake, with a very deep fog that you can barely see through it. You go in the fog, and you throw a rock very far from you to your left. The creature goes to that sound, meanwhile you walk quietly through the fog until eventually you see a watch tower. You decided to go inside the watch tower. Once you got up there you see a sniper and a radio. You:\n\n👍 - you get the sniper and destroy that siren head\n👎 - get the radio and call for help*\n\n**Select your choice:**')
 
                                                     msg.awaitReactions(filter6, { max: 1 })
                                                     .then(collected6 => {
-                                                        const reaction6 = collected.first();
+                                                        const reaction6 = collected6.first();
                                                         if(reaction6.emoji.name === '👍') {
                                                             msg.edit('*You picked up the sniper and you had more than enough ammo, so its time to take this freak down. Because the creature is very tall you were able to see its head, and you could\'ve already detected where its body is too. You shoot his legs first so you make sure he wont come quickly at you, then you shoot his head 2 times, just so you make sure he wont break your ears with its siren sounds. And you shoot him 3 times in the chest. You then say:* Take that bitch! *After that you take the sniper with you just in case and go back to your cabin.*\n\n**YOU SURVIVED**\nEnding 3 out of 10: The last survivor')
                                                         }
@@ -200,7 +200,7 @@
 
                     msg.awaitReactions(filter7, { max: 1 })
                     .then(collected7 => {
-                        const reaction6 = collected.first();
+                        const reaction7 = collected7.first();
                         if(reaction7.emoji.name === '👍') {
                             msg.edit('*You knew that if you went outside you couldn\'t make it out alive, so you decide to stay hidden. But then there are some different sounds coming from beneath your bed. And then a creature with sharp claws comes from underneath your bed and you couldn\'t move because you were in shock and the creature quickly starts to cut your whole body until it eventually kills you.*\n\n**YOU DIED**\nEnding 7 out of 10: The fearful hider')
                         }
@@ -214,7 +214,7 @@
 
                     msg.awaitReactions(filter8, { max: 1 })
                     .then(collected8 => {
-                        const reaction8 = collected.first();
+                        const reaction8 = collected8.first();
                         if(reaction8.emoji.name === '👍') {
                             msg.edit('*You wake up and try to fight him, but he had 2 weapons and you had none, so as you try to stop him, he stabs the fork to your belly, and the knife to your chest.*\n\n**YOU DIED**\nEnding 9 out of 10: The betrayed')
                         }
@@ -226,4 +226,4 @@
             })
         })
     }
-}*/
+}
