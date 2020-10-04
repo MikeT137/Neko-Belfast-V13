@@ -78,10 +78,7 @@ module.exports = {
                                                         const reaction6 = collected6.first();
                                                         if(reaction6.emoji.name === '👍') {
                                                             msg.edit('*You picked up the sniper and you had more than enough ammo, so its time to take this freak down. Because the creature is very tall you were able to see its head, and you could\'ve already detected where its body is too. You shoot his legs first so you make sure he wont come quickly at you, then you shoot his head 2 times, just so you make sure he wont break your ears with its siren sounds. And you shoot him 3 times in the chest. You then say:* Take that bitch! *After that you take the sniper with you just in case and go back to your cabin.*\n\n**YOU SURVIVED**\nEnding 3 out of 10: The last survivor')
-
-                                                            setTimeout(function(){
-                                                                message.channel.bulkDelete(msg);
-                                                            }, 45000)
+                                                            .then(msg.delete(45000))
                                                         }
                                                         if(reaction6.emoji.name === '👎') {
                                                             msg.edit('*You try to call for help but the radio is broken. Unfortunately siren head hears the static the the radio gives and finds out that you\'re in the watch tower and demolishes it. By falling from that much high up, you crack your skull open.*\n\n**YOU DIED**\nEnding 4 out of 10: Failed reinforcement')
