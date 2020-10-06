@@ -12,7 +12,7 @@ module.exports = {
                 .addField(':angry:Moderation Commands', 'ban, clear, help, info, invite, kick, mute, server, unban, unmute, vote')
                 .addField(':blush:Self commands', 'blush, cheer, clap, cry, dab, dance, facepalm, huh, laugh, love, pout, purr, rage, sip, run, smile, smug, think, wag, yawn')
                 .addField(':hugging_face:Interactive commands (@someone)', 'boop, cuddle, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
-                .addField(':smiley:Fun commands', '8ball, avatar, blackjack, coinflip, diceroll, math, meme, rps, storyrun')
+                .addField(':smiley:Fun commands', '8ball, avatar, blackjack, coinflip, math, meme, random, rps, storyrun')
                 .setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                 .setColor(0x4AEFBA)
             message.channel.send(embed);
@@ -222,16 +222,16 @@ module.exports = {
                 message.channel.send('It flips a coin: b.coinflip')
             break;
 
-            case 'diceroll':
-                message.channel.send('It rolls a specific type of dice: b.diceroll (type of dice)\nTypes of dice: 4, 6, 8, 10, 12, 20')
-            break;
-
             case 'math':
                 message.channel.send('It solves a your math equation: b.math x(operator)y\noperator: +  -  *  /  %  ^')
             break;
 
             case 'meme':
                 message.channel.send('It sends a meme from a subreddit: b.meme (...)\n(nothing) -> random\ndank -> dankmemes\nmemes -> memes\nanime -> goodanimemes\nwholesome -> wholesomememes\nwholesomeanime / wanime -> wholesomeaniememes')
+            break;
+
+            case 'random':
+                message.channel.send('It gives you a random number but you have to specify the maximum outcome: b.random (maximum number you want)')
             break;
 
             case 'rps':
