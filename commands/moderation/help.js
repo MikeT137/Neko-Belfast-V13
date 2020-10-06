@@ -9,7 +9,7 @@ module.exports = {
 
                 .setTitle(':pleading_face:Help')
                 .setDescription('Type b.help (command) to get information about a specific command')
-                .addField(':angry:Moderation Commands', 'ban, clear, help, info, invite, kick, mute, server, unmute, vote')
+                .addField(':angry:Moderation Commands', 'ban, clear, help, info, invite, kick, mute, server, unban, unmute, vote')
                 .addField(':blush:Self commands', 'blush, cheer, clap, cry, dab, dance, facepalm, huh, laugh, love, pout, purr, rage, sip, run, smile, smug, think, wag, yawn')
                 .addField(':hugging_face:Interactive commands (@someone)', 'boop, cuddle, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
                 .addField(':smiley:Fun commands', '8ball, avatar, blackjack, coinflip, diceroll, math, meme, rps, storyrun')
@@ -45,6 +45,10 @@ module.exports = {
 
             case 'server':
                 message.channel.send('It send the link of the bot\'s official server: b.server')
+            break;
+
+            case 'unban':
+                message.channel.send('It unbans a user: b.unban (user\'s ID)')
             break;
 
             case 'unmute':
