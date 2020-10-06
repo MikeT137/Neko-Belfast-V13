@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'random',
+    name: 'rng',
     description: 'It gives a random number',
     run: async (bot, message, args) => {
         if(!args[0]){
