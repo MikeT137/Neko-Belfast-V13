@@ -44,6 +44,9 @@ module.exports = {
                         const reaction2 = collected2.first();
                         if(reaction2.emoji.name === '👍') {
                             msg.edit('*You decided to ignore that sound again, and you went in the basement. Everything seems fine, nothing out of place. You put all the logs in a corner, but when you turn around, a creature with very sharp claws starts to cut your throat and intestines open as you scream in torture.*\n\n**YOU DIED**\nEnding 1 out of 10: The fool')
+                            setTimeout(function(){
+                                msg.edit('you did it')
+                            }, 3000);
                         }
                         if(reaction2.emoji.name === '👎') {
                             msg.edit('*You were too scared to go in the basement so you left the cabin because who knows what could be down there, it might come to the surface! So you decide to leave that place and walk in the forest. Surprisingly, the forest was very quiet, no animals, no birds, nothing. But suddenly, you hear some siren noises that aren\'t too far from where you are. You start hiding. And then a voice the that sounds like being on a radio says:* Can anyone hear me ? I\'m looking for a 20 year old boy, is anyone there ? *Hearing that, you then:\n\n👍 - run away\n👎 - get closer and say hi*\n\n**Select your choice:**')
