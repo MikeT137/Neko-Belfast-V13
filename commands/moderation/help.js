@@ -231,7 +231,7 @@ module.exports = {
             break;
 
             case 'rng':
-                message.channel.send('It gives you a random number but you have to specify the maximum value: b.rng (biggest possible outcome you want)\nSidenote: your value has to be higher than 1, or lower than -1')
+                message.channel.send('It gives you a random number but you have to specify the maximum value: b.rng (biggest possible outcome you want)\nSidenote: your value has to be higher than 1')
             break;
 
             case 'rps':
