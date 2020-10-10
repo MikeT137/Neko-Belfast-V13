@@ -5,6 +5,26 @@ module.exports = {
         const Discord = require('discord.js');
         
         if(!args[0]) {
+            const embed = new Discord.MessageEmbedEmbed()
+
+                .setTitle('Help')
+                .setDescription('React with an emoji to show all the commands of a specific category')
+                .addFields(
+                    {value: ':tools: Moderation Commands'},
+                    {value: ':performing_arts: RolePlay Commands'},
+                    {value: ':smiley: Fun Commands'},
+                )
+                //.setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
+                .setColor(0x4AEFBA)
+                .setFooter('Page 1/1')
+            message.channel.send(embed)
+            .then(msg => {
+                msg.react(':tools:'),
+                msg.react(':performing_arts:'),
+                msg.react(':smiley:')
+            })
+        }
+        /*if(!args[0]) {
             const embed = new Discord.MessageEmbed()
 
                 .setTitle(':pleading_face:Help')
@@ -16,7 +36,7 @@ module.exports = {
                 .setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                 .setColor(0x4AEFBA)
             message.channel.send(embed);
-        }
+        }*/
         switch (args[0]){
             //Moderation Commands
             case 'ban':
