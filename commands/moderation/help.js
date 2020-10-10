@@ -26,9 +26,9 @@ module.exports = {
                     return ['🛠️', '🎭', '😃'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
 
-                msg.awaitReactions(filter, { max: 1 })
+                msg.awaitReactions(filter)
                 .then(collected => {
-                    const reaction = collected();
+                    const reaction = collected.first();
                     if(reaction.emoji.name === '🛠️') {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
@@ -41,10 +41,36 @@ module.exports = {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
                             .setDescription('Use b.help (command) to get info for a specific command!')
-                            .addField('Self Commands:', 'sdfg')
+                            .addField('Roleplay Commands - Self', '-blush\n-cheer\n-clap\n-cry\n-dab\n-dance\n-facepalm\n-huh\n-laugh\n-love\n-pout\n-purr\n-rage\n-sip\n-run\nsmile\n-smug\n-think\n-wag\n-yawn')
                             .setColor(0x4AEFBA)
+                            .addField('React with :arrow_left: or :arrow_right: to see all the roleplay commands')
                             .setFooter('Page 1/2')
-                        msg.edit(embed)
+                        msg.edit(embed);
+                        
+                        msg.react('⬅️'),
+                        msg.react('➡️');
+
+                        const filter2 = (reaction2, user) => {
+                            return ['⬅️', '➡️'].includes(reaction2.emoji.name) && user.id === message.author.id;
+                        };
+
+                        msg.awaitReactions(filter)
+                        .then(collected2 => {
+                            const reaction2 = collected2.first();
+
+                            if(reaction2.emoji.name === '⬅️') {
+                                return;
+                            }else if(reaction2.emoji.name === '➡️') {
+                                let embed = new Discord.MessageEmbed()
+                                    .setTitle('Help')
+                                    .setDescription('Use b.help (command) to get info for a specific command!')
+                                    .addField('Roleplay Commands - Interactive', '')
+                                    .setColor(0x4AEFBA)
+                                    .addField('React with :arrow_left: or :arrow_right: to see all the roleplay commands')
+                                    .setFooter('Page 2/2')
+                                msg.edit(embed);
+                            }
+                        })
                     } else if(reaction.emoji.name === '') {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
