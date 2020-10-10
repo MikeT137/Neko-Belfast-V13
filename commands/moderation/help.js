@@ -5,7 +5,7 @@ module.exports = {
         const Discord = require('discord.js');
         
         if(!args[0]) {
-            const embed = new Discord.MessageEmbed()
+            let embed = new Discord.MessageEmbed()
 
                 .setTitle('Help')
                 .addFields(
@@ -21,6 +21,40 @@ module.exports = {
                 msg.react('🛠️'),
                 msg.react('🎭'),
                 msg.react('😃')
+            })
+
+            const filter = (reaction, user) => {
+                return ['🛠️', '🎭', '😃'].includes(reaction.emoji.name) && user.id === message.author.id;
+            };
+
+            msg.awaitReactions(filter, { max: 1 })
+            .then(collected => {
+                const reaction = collected.first();
+                if(reaction.emoji.name === '🛠️') {
+                    let embed = new Discord.MessageEmbed()
+                        .setTitle('Moderation Commands')
+                        .setDescription('Use b.help (command) to get info for a specific command!')
+                        .addField('-ban\n-bot\n-clear\nhelp\n-info\n-kick\n-mute\n-server\n-unban\n-vote')
+                        .setColor(0x4AEFBA)
+                        .setFooter('Page 1/1')
+                    msg.edit(embed)
+                } else if(reaction.emoji.name === '🎭') {
+                    let embed = new Discord.MessageEmbed()
+                        .setTitle('RolePlay Commands')
+                        .setDescription('Use b.help (command) to get info for a specific command!')
+                        .addField('Self Commands:')
+                        .setColor(0x4AEFBA)
+                        .setFooter('Page 1/2')
+                    msg.edit(embed)
+                } else if(reaction.emoji.name === '') {
+                    let embed = new Discord.MessageEmbed()
+                        .setTitle('Fun Commands')
+                        .setDescription('Use b.help (command) to get info for a specific command!')
+                        .addField('-8ball\n-avatar\n-blackjack\n-coinflip\n-math\n-meme\n-rng\n-rps\n-storyrun')
+                        .setColor(0x4AEFBA)
+                        .setFooter('Page 1/1')
+                    msg.edit(embed)
+                }
             })
         }
         /*if(!args[0]) {
