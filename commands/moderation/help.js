@@ -8,7 +8,6 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
 
                 .setTitle('Help')
-                .setDescription('React with an emoji to show all the commands of a specific category')
                 .addFields(
                     {name: 'Moderation Commands', value: 'React with :tools: to get all the moderation commands'},
                     {name: 'RolePlay Commands', value: 'React with :performing_arts: to get all the roleplay commands', inline: true},
