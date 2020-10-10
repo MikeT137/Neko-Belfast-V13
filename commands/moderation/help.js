@@ -5,7 +5,7 @@ module.exports = {
         const Discord = require('discord.js');
         
         if(!args[0]) {
-            const embed = new Discord.MessageEmbedEmbed()
+            const embed = new Discord.MessageEmbed()
 
                 .setTitle('Help')
                 .setDescription('React with an emoji to show all the commands of a specific category')
