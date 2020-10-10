@@ -34,7 +34,8 @@ module.exports = {
                             .setDescription('Use b.help (command) to get info for a specific command!')
                             .addField('Moderation Commands:', '-ban\n-bot\n-clear\nhelp\n-info\n-kick\n-mute\n-server\n-unban\n-vote')
                             .setColor(0x4AEFBA)
-                        msg.edit(embed)
+                        msg.edit(embed);
+                        continue;
                     } else if(reaction.emoji.name === '🎭') {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
@@ -43,13 +44,15 @@ module.exports = {
                             .addField('Roleplay Commands - Interactive', '-boop\n-cuddle\n-handhold\n-highfive\n-hug\n-kiss\n-lick\n-nom\n-pat\n-poke\n-punch\n-slap\n-snuggle\nstare\n-wave')
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
+                        continue;
                     } else if(reaction.emoji.name === '😃') {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
                             .setDescription('Use b.help (command) to get info for a specific command!')
                             .addField('Fun Commands', '-8ball\n-avatar\n-blackjack\n-coinflip\n-math\n-meme\n-rng\n-rps\n-storyrun')
                             .setColor(0x4AEFBA)
-                        msg.edit(embed)
+                        msg.edit(embed);
+                        continue;
                     }
                 })
             })
