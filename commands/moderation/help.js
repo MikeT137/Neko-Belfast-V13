@@ -5,7 +5,7 @@ module.exports = {
         const Discord = require('discord.js');
         
         if(!args[0]) {
-            const embed = new Discord.MessageEmbed()
+            let embed = new Discord.MessageEmbed()
 
                 .setTitle('Help')
                 .addFields(
@@ -25,18 +25,18 @@ module.exports = {
                     return ['🛠️', '🎭', '😃'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
 
-                msg.awaitReactions(filter)
+                msg.awaitReactions(filter, { max: 1 })
                 .then(collected => {
                     const reaction = collected.first();
                     if(reaction.emoji.name === '🛠️') {
-                        const embed = new Discord.MessageEmbed()
+                        let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
                             .setDescription('Use b.help (command) to get info for a specific command!')
                             .addField('Moderation Commands:', '-ban\n-bot\n-clear\nhelp\n-info\n-kick\n-mute\n-server\n-unban\n-vote')
                             .setColor(0x4AEFBA)
                         msg.edit(embed)
                     } else if(reaction.emoji.name === '🎭') {
-                        const embed = new Discord.MessageEmbed()
+                        let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
                             .setDescription('Use b.help (command) to get info for a specific command!')
                             .addField('Roleplay Commands - Self', '-blush\n-cheer\n-clap\n-cry\n-dab\n-dance\n-facepalm\n-huh\n-laugh\n-love\n-pout\n-purr\n-rage\n-sip\n-run\nsmile\n-smug\n-think\n-wag\n-yawn')
@@ -44,7 +44,7 @@ module.exports = {
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
                     } else if(reaction.emoji.name === '😃') {
-                        const embed = new Discord.MessageEmbed()
+                        let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
                             .setDescription('Use b.help (command) to get info for a specific command!')
                             .addField('Fun Commands', '-8ball\n-avatar\n-blackjack\n-coinflip\n-math\n-meme\n-rng\n-rps\n-storyrun')
