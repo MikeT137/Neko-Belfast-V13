@@ -10,8 +10,8 @@ module.exports = {
                 .setTitle('Help')
                 .addFields(
                     {name: 'Moderation Commands', value: 'React with :tools: to get all the moderation commands'},
-                    {name: 'RolePlay Commands', value: 'React with :performing_arts: to get all the roleplay commands', inline: true},
-                    {name: 'Fun Commands', value: 'React with :smiley: to get all the fun commands', inline: true},
+                    {name: 'RolePlay Commands', value: 'React with :performing_arts: to get all the roleplay commands'},
+                    {name: 'Fun Commands', value: 'React with :smiley: to get all the fun commands'},
                 )
                 .setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                 .setColor(0x4AEFBA)
@@ -28,7 +28,7 @@ module.exports = {
 
                 msg.awaitReactions(filter, { max: 1 })
                 .then(collected => {
-                    const reaction = collected.first();
+                    const reaction = collected();
                     if(reaction.emoji.name === '🛠️') {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
