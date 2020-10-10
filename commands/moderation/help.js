@@ -51,7 +51,6 @@ module.exports = {
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
                     }
-                    continue;
                 })
             })
         }
