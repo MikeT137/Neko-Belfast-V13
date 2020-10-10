@@ -15,7 +15,6 @@ module.exports = {
                 )
                 .setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                 .setColor(0x4AEFBA)
-                .setFooter('Page 1/1')
             message.channel.send(embed)
             .then(msg => {
                 msg.react('🛠️'),
@@ -44,7 +43,7 @@ module.exports = {
                             .addField('Roleplay Commands - Interactive', '-boop\n-cuddle\n-handhold\n-highfive\n-hug\n-kiss\n-lick\n-nom\n-pat\n-poke\n-punch\n-slap\n-snuggle\nstare\n-wave')
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
-                    } else if(reaction.emoji.name === '') {
+                    } else if(reaction.emoji.name === '😃') {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
                             .setDescription('Use b.help (command) to get info for a specific command!')
