@@ -11,10 +11,10 @@ module.exports = {
                 .setDescription('React with an emoji to show all the commands of a specific category')
                 .addFields(
                     {name: 'Moderation Commands', value: 'React with :tools: to get all the moderation commands'},
-                    {name: 'RolePlay Commands', value: 'React with :performing_arts: to get all the roleplay commands'},
+                    {name: 'RolePlay Commands', value: 'React with :performing_arts: to get all the roleplay commands', inline: true},
                     {name: 'Fun Commands', value: 'React with :smiley: to get all the fun commands', inline: true},
                 )
-                //.setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
+                .setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                 .setColor(0x4AEFBA)
                 .setFooter('Page 1/1')
             message.channel.send(embed)
