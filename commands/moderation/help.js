@@ -10,18 +10,18 @@ module.exports = {
                 .setTitle('Help')
                 .setDescription('React with an emoji to show all the commands of a specific category')
                 .addFields(
-                    {name: ':tools: Moderation Commands', value: ' '},
-                    {name: ':performing_arts: RolePlay Commands', value: ' '},
-                    {name: ':smiley: Fun Commands', value: ' ', inline: true},
+                    {name: 'Moderation Commands', value: 'React with :tools: to get all the moderation commands'},
+                    {name: 'RolePlay Commands', value: 'React with :performing_arts: to get all the roleplay commands'},
+                    {name: 'Fun Commands', value: 'React with :smiley: to get all the fun commands', inline: true},
                 )
                 //.setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                 .setColor(0x4AEFBA)
                 .setFooter('Page 1/1')
             message.channel.send(embed)
             .then(msg => {
-                msg.react(':tools:'),
-                msg.react(':performing_arts:'),
-                msg.react(':smiley:')
+                msg.react('🛠️'),
+                msg.react('🎭'),
+                msg.react('😃')
             })
         }
         /*if(!args[0]) {
