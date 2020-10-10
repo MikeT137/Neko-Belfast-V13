@@ -10,9 +10,9 @@ module.exports = {
                 .setTitle('Help')
                 .setDescription('React with an emoji to show all the commands of a specific category')
                 .addFields(
-                    {value: ':tools: Moderation Commands'},
-                    {value: ':performing_arts: RolePlay Commands'},
-                    {value: ':smiley: Fun Commands'},
+                    {name: ':tools: Moderation Commands'},
+                    {name: ':performing_arts: RolePlay Commands'},
+                    {name: ':smiley: Fun Commands', inline: true},
                 )
                 //.setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                 .setColor(0x4AEFBA)
