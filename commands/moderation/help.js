@@ -36,7 +36,7 @@ module.exports = {
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
                     } else if(reaction.emoji.name === '🎭') {
-                        msg.reaction.removeAll();
+                        msg.ReactionRemoveAll();
                         msg.react('⬅️'),
                         msg.react('➡️');
 
@@ -55,14 +55,14 @@ module.exports = {
                         .then(collected2 => {
                             const reaction2 = collected2.first();
 
-                            if(reaction.emoji.name === '⬅️') {
+                            if(reaction2.emoji.name === '⬅️') {
                                 let embed = new Discord.MessageEmbed()
                                     .setTitle('Help')
                                     .setDescription('Use b.help (command) to get info for a specific command!')
                                     .addField('Roleplay Commands - Self', '-blush\n-cheer\n-clap\n-cry\n-dab\n-dance\n-facepalm\n-huh\n-laugh\n-love\n-pout\n-purr\n-rage\n-sip\n-run\nsmile\n-smug\n-think\n-wag\n-yawn')
                                     .setColor(0x4AEFBA)
                                 msg.edit(embed);
-                            }else if(reaction.emoji.name === '➡️') {
+                            }else if(reaction2.emoji.name === '➡️') {
                                 let embed = new Discord.MessageEmbed()
                                     .setTitle('Help')
                                     .setDescription('Use b.help (command) to get info for a specific command!')
