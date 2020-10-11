@@ -25,7 +25,7 @@ module.exports = {
                     return ['🛠️', '🎭', '😃'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
 
-                msg.awaitReactions(filter, { max: 1 })
+                msg.awaitReactions(filter, { max: 3 })
                 .then(collected => {
                     const reaction = collected.first();
                     if(reaction.emoji.name === '🛠️') {
@@ -36,6 +36,10 @@ module.exports = {
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
                     } else if(reaction.emoji.name === '🎭') {
+                        msg.reaction.removeAll();
+                        await msg.react('⬅️'),
+                              msg.react('➡️');
+
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
                             .setDescription('Use b.help (command) to get info for a specific command!')
@@ -43,6 +47,31 @@ module.exports = {
                             .addField('Roleplay Commands - Interactive', '-boop\n-cuddle\n-handhold\n-highfive\n-hug\n-kiss\n-lick\n-nom\n-pat\n-poke\n-punch\n-slap\n-snuggle\nstare\n-wave')
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
+
+                        const filter2 = (reaction2, user) => {
+                            return ['⬅️', '➡️'].includes(reaction2.emoji.name) && user.id === message.author.id;
+                        };
+
+                        msg.awaitReactions(filter2, { max: 2 })
+                        .then(collected2 => {
+                            const reaction2 = collected2.first();
+
+                            if(reaction.emoji.name === '⬅️') {
+                                let embed = new Discord.MessageEmbed()
+                                    .setTitle('Help')
+                                    .setDescription('Use b.help (command) to get info for a specific command!')
+                                    .addField('Roleplay Commands - Self', '-blush\n-cheer\n-clap\n-cry\n-dab\n-dance\n-facepalm\n-huh\n-laugh\n-love\n-pout\n-purr\n-rage\n-sip\n-run\nsmile\n-smug\n-think\n-wag\n-yawn')
+                                    .setColor(0x4AEFBA)
+                                msg.edit(embed);
+                            }else if(reaction.emoji.name === '➡️') {
+                                let embed = new Discord.MessageEmbed()
+                                    .setTitle('Help')
+                                    .setDescription('Use b.help (command) to get info for a specific command!')
+                                    .addField('Roleplay Commands - Interactive', '-boop\n-cuddle\n-handhold\n-highfive\n-hug\n-kiss\n-lick\n-nom\n-pat\n-poke\n-punch\n-slap\n-snuggle\nstare\n-wave')
+                                    .setColor(0x4AEFBA)
+                                msg.edit(embed);
+                            }
+                        })
                     } else if(reaction.emoji.name === '😃') {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
