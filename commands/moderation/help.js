@@ -23,9 +23,23 @@ module.exports = {
                 msg.react('🎭'),
                 msg.react('😃')
 
-                const filter = (reaction, user) => {
+                const modFilter = (reaction, user) => 
+                    reaction.emoji.name === '🛠️' && user.id === message.author.id;
+                const selfFilter = (reaction, user) => 
+                    reaction.emoji.name === '🤡' && user.id === message.author.id;
+                const interFilter = (reaction, user) => 
+                    reaction.emoji.name === '🎭' && user.id === message.author.id;
+                const funFilter = (reaction, user) => 
+                    reaction.emoji.name === '😃' && user.id === message.author.id;
+
+                const mod = msg.createReactionCollector(modFilter);
+                const self = msg.createReactionCollector(selfFilter);
+                const inter = msg.createReactionCollector(interFilter);
+                const fun = msg.createReactionCollector(funFilter);
+
+                /*const filter = (reaction, user) => {
                     return ['🛠️', '🤡', '🎭', '😃'].includes(reaction.emoji.name) && user.id === message.author.id;
-                };
+                };*/
 
                 msg.awaitReactions(filter, { max: 1 })
                 .then(collected => {
@@ -37,6 +51,7 @@ module.exports = {
                             .addField(':tools: Moderation Commands:', '-ban\n-bot\n-clear\nhelp\n-info\n-kick\n-mute\n-server\n-unban\n-vote')
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
+                        mod.stop()
                     }else if(reaction.emoji.name === '🤡') {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
@@ -44,6 +59,7 @@ module.exports = {
                             .addField(':clown: Roleplay Commands - Self', '-blush\n-cheer\n-clap\n-cry\n-dab\n-dance\n-facepalm\n-huh\n-laugh\n-love\n-pout\n-purr\n-rage\n-sip\n-run\nsmile\n-smug\n-think\n-wag\n-yawn')
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
+                        self.stop()
                     }else if(reaction.emoji.name === '🎭') {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
@@ -51,6 +67,7 @@ module.exports = {
                             .addField(':performing_arts: Roleplay Commands - Interactive', '-boop\n-cuddle\n-handhold\n-highfive\n-hug\n-kiss\n-lick\n-nom\n-pat\n-poke\n-punch\n-slap\n-snuggle\nstare\n-wave')
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
+                        inter.stop()
                     }else if(reaction.emoji.name === '😃') {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
@@ -58,6 +75,7 @@ module.exports = {
                             .addField(':smiley: Fun Commands', '-8ball\n-avatar\n-blackjack\n-coinflip\n-math\n-meme\n-rng\n-rps\n-storyrun')
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
+                        fun.stop()
                     }
                 })
             })
