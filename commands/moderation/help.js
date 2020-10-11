@@ -42,8 +42,8 @@ module.exports = {
                 };*/
 
                 /*msg.awaitReactions(filter, { max: 1 })
-                .then(collected => {*/
-                    const reaction = collected.first();
+                .then(collected => {
+                    const reaction = collected.first();*/
                     if(reaction.emoji.name === '🛠️') {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
