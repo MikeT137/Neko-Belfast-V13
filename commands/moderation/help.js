@@ -41,8 +41,8 @@ module.exports = {
                     return ['🛠️', '🤡', '🎭', '😃'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };*/
 
-                msg.awaitReactions(filter, { max: 1 })
-                .then(collected => {
+                /*msg.awaitReactions(filter, { max: 1 })
+                .then(collected => {*/
                     const reaction = collected.first();
                     if(reaction.emoji.name === '🛠️') {
                         let embed = new Discord.MessageEmbed()
@@ -77,7 +77,7 @@ module.exports = {
                         msg.edit(embed);
                         fun.stop()
                     }
-                })
+                //})
             })
         }
         /*if(!args[0]) {
