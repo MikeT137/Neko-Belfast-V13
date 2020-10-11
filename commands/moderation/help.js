@@ -36,7 +36,6 @@ module.exports = {
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
                     } else if(reaction.emoji.name === '🎭') {
-                        msg.ReactionRemoveAll();
                         msg.react('⬅️'),
                         msg.react('➡️');
 
