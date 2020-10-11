@@ -4,7 +4,7 @@ module.exports = {
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         
-        if(!args[0]) {
+        /*if(!args[0]) {
             let embed = new Discord.MessageEmbed()
 
                 .setTitle('Help')
@@ -65,20 +65,20 @@ module.exports = {
                     }
                 })
             })
-        }
-        /*if(!args[0]) {
+        }*/
+        if(!args[0]) {
             const embed = new Discord.MessageEmbed()
 
-                .setTitle(':pleading_face:Help')
-                .setDescription('Type b.help (command) to get information about a specific command')
-                .addField(':tools:Moderation Commands', 'ban, bot, clear, help, info, kick, mute, server, unban, unmute, vote')
-                .addField(':blush:Self commands', 'blush, cheer, clap, cry, dab, dance, facepalm, huh, laugh, love, pout, purr, rage, sip, run, smile, smug, think, wag, yawn')
-                .addField(':hugging_face:Interactive commands (@someone)', 'boop, cuddle, handhold, highfive, hug, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, wave')
-                .addField(':smiley:Fun commands', '8ball, avatar, blackjack, coinflip, math, meme, rng, rps, storyrun')
-                .setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
+                .setTitle('Help')
+                .setDescription('Type \`b.help (command)\` to get information about a specific command')
+                .addField(':tools: - Moderation Commands', '\`ban\`, \`bot\`, \`clear\`, \`help\`, \`info\`, \`kick\`, \`mute\`, \`server\`, \`unban\`, \`unmute\`, \`vote\`')
+                .addField(':clown: - Self commands', '\`blush\`, \`cheer\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`huh\`, \`laugh\`, \`love\`, \`pout\`, \`purr\`, \`rage\`, \`sip\`, \`run\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`yawn\`')
+                .addField(':performing_arts:Interactive commands (@someone)', '\`boop\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`pat\`, \`poke\`, \`punch\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`')
+                .addField(':smiley:Fun commands', '\`8ball\`, \`avatar\`, \`blackjack\`, \`coinflip\`, \`math\`, \`meme\`, \`rng\`, \`rps\`, \`storyrun\`')
+                .setThumbnail(bot.user.displayAvatarURL())
                 .setColor(0x4AEFBA)
             message.channel.send(embed);
-        }*/
+        }
         switch (args[0]){
             //Moderation Commands
             case 'ban':
