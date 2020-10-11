@@ -10,19 +10,21 @@ module.exports = {
                 .setTitle('Help')
                 .addFields(
                     {name: 'Moderation Commands', value: 'React with :tools: to get all the moderation commands'},
-                    {name: 'RolePlay Commands', value: 'React with :performing_arts: to get all the roleplay commands'},
-                    {name: 'Fun Commands', value: 'React with :smiley: to get all the fun commands'},
+                    {name: 'RolePlay - Self Commands', value: 'React with :clown: to get all the self commands', inline: true },
+                    {name: 'RolePlay - Interactive Commands', value: 'React with :performing_arts: to get all the interactive commands', inline: true },
+                    {name: 'Fun Commands', value: 'React with :smiley: to get all the fun commands', inline: true },
                 )
                 .setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                 .setColor(0x4AEFBA)
             message.channel.send(embed)
             .then(msg => {
                 msg.react('🛠️'),
+                msg.react('🤡'),
                 msg.react('🎭'),
                 msg.react('😃')
 
                 const filter = (reaction, user) => {
-                    return ['🛠️', '🎭', '😃'].includes(reaction.emoji.name) && user.id === message.author.id;
+                    return ['🛠️', '🤡', '🎭', '😃'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
 
                 msg.awaitReactions(filter, { max: 1 })
@@ -32,49 +34,28 @@ module.exports = {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
                             .setDescription('Use b.help (command) to get info for a specific command!')
-                            .addField('Moderation Commands:', '-ban\n-bot\n-clear\nhelp\n-info\n-kick\n-mute\n-server\n-unban\n-vote')
+                            .addField(':tools:) Moderation Commands:', '-ban\n-bot\n-clear\nhelp\n-info\n-kick\n-mute\n-server\n-unban\n-vote')
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
-                    } else if(reaction.emoji.name === '🎭') {
-                        msg.react('⬅️'),
-                        msg.react('➡️');
-
+                    }else if(reaction.emoji.name === '🤡') {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
                             .setDescription('Use b.help (command) to get info for a specific command!')
-                            .addField('Roleplay Commands - Self', '-blush\n-cheer\n-clap\n-cry\n-dab\n-dance\n-facepalm\n-huh\n-laugh\n-love\n-pout\n-purr\n-rage\n-sip\n-run\nsmile\n-smug\n-think\n-wag\n-yawn')
+                            .addField(':clown:) Roleplay Commands - Self', '-blush\n-cheer\n-clap\n-cry\n-dab\n-dance\n-facepalm\n-huh\n-laugh\n-love\n-pout\n-purr\n-rage\n-sip\n-run\nsmile\n-smug\n-think\n-wag\n-yawn')
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
-
-                        const filter2 = (reaction2, user) => {
-                            return ['⬅️', '➡️'].includes(reaction2.emoji.name) && user.id === message.author.id;
-                        };
-
-                        msg.awaitReactions(filter2, { max: 1 })
-                        .then(collected2 => {
-                            const reaction2 = collected2.first();
-
-                            if(reaction2.emoji.name === '⬅️') {
-                                let embed = new Discord.MessageEmbed()
-                                    .setTitle('Help')
-                                    .setDescription('Use b.help (command) to get info for a specific command!')
-                                    .addField('Roleplay Commands - Self', '-blush\n-cheer\n-clap\n-cry\n-dab\n-dance\n-facepalm\n-huh\n-laugh\n-love\n-pout\n-purr\n-rage\n-sip\n-run\nsmile\n-smug\n-think\n-wag\n-yawn')
-                                    .setColor(0x4AEFBA)
-                                msg.edit(embed);
-                            }else if(reaction2.emoji.name === '➡️') {
-                                let embed = new Discord.MessageEmbed()
-                                    .setTitle('Help')
-                                    .setDescription('Use b.help (command) to get info for a specific command!')
-                                    .addField('Roleplay Commands - Interactive', '-boop\n-cuddle\n-handhold\n-highfive\n-hug\n-kiss\n-lick\n-nom\n-pat\n-poke\n-punch\n-slap\n-snuggle\nstare\n-wave')
-                                    .setColor(0x4AEFBA)
-                                msg.edit(embed);
-                            }
-                        })
-                    } else if(reaction.emoji.name === '😃') {
+                    }else if(reaction2.emoji.name === '🎭') {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
                             .setDescription('Use b.help (command) to get info for a specific command!')
-                            .addField('Fun Commands', '-8ball\n-avatar\n-blackjack\n-coinflip\n-math\n-meme\n-rng\n-rps\n-storyrun')
+                            .addField(':performing_arts:) Roleplay Commands - Interactive', '-boop\n-cuddle\n-handhold\n-highfive\n-hug\n-kiss\n-lick\n-nom\n-pat\n-poke\n-punch\n-slap\n-snuggle\nstare\n-wave')
+                            .setColor(0x4AEFBA)
+                        msg.edit(embed);
+                    }else if(reaction.emoji.name === '😃') {
+                        let embed = new Discord.MessageEmbed()
+                            .setTitle('Help')
+                            .setDescription('Use b.help (command) to get info for a specific command!')
+                            .addField(':smiley:) Fun Commands', '-8ball\n-avatar\n-blackjack\n-coinflip\n-math\n-meme\n-rng\n-rps\n-storyrun')
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
                     }
