@@ -37,8 +37,8 @@ module.exports = {
                         msg.edit(embed);
                     } else if(reaction.emoji.name === '🎭') {
                         msg.reaction.removeAll();
-                        await msg.react('⬅️'),
-                              msg.react('➡️');
+                        msg.react('⬅️'),
+                        msg.react('➡️');
 
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
