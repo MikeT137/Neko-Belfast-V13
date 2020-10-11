@@ -23,61 +23,47 @@ module.exports = {
                 msg.react('🎭'),
                 msg.react('😃')
 
-                const modFilter = (reaction, user) => 
-                    reaction.emoji.name === '🛠️' && user.id === message.author.id;
-                const selfFilter = (reaction, user) => 
-                    reaction.emoji.name === '🤡' && user.id === message.author.id;
-                const interFilter = (reaction, user) => 
-                    reaction.emoji.name === '🎭' && user.id === message.author.id;
-                const funFilter = (reaction, user) => 
-                    reaction.emoji.name === '😃' && user.id === message.author.id;
-
-                const mod = msg.createReactionCollector(modFilter);
-                const self = msg.createReactionCollector(selfFilter);
-                const inter = msg.createReactionCollector(interFilter);
-                const fun = msg.createReactionCollector(funFilter);
-
-                /*const filter = (reaction, user) => {
+                const filter = (reaction, user) => {
                     return ['🛠️', '🤡', '🎭', '😃'].includes(reaction.emoji.name) && user.id === message.author.id;
-                };*/
+                };
 
-                /*msg.awaitReactions(filter, { max: 1 })
+                msg.awaitReactions(filter, { max: 1 })
                 .then(collected => {
-                    const reaction = collected.first();*/
+                    const reaction = collected.first();
                     if(reaction.emoji.name === '🛠️') {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
                             .setDescription('Use b.help (command) to get info for a specific command!')
                             .addField(':tools: Moderation Commands:', '-ban\n-bot\n-clear\nhelp\n-info\n-kick\n-mute\n-server\n-unban\n-vote')
+                            .setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
-                        mod.stop()
                     }else if(reaction.emoji.name === '🤡') {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
                             .setDescription('Use b.help (command) to get info for a specific command!')
                             .addField(':clown: Roleplay Commands - Self', '-blush\n-cheer\n-clap\n-cry\n-dab\n-dance\n-facepalm\n-huh\n-laugh\n-love\n-pout\n-purr\n-rage\n-sip\n-run\nsmile\n-smug\n-think\n-wag\n-yawn')
+                            .setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
-                        self.stop()
                     }else if(reaction.emoji.name === '🎭') {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
                             .setDescription('Use b.help (command) to get info for a specific command!')
                             .addField(':performing_arts: Roleplay Commands - Interactive', '-boop\n-cuddle\n-handhold\n-highfive\n-hug\n-kiss\n-lick\n-nom\n-pat\n-poke\n-punch\n-slap\n-snuggle\nstare\n-wave')
+                            .setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
-                        inter.stop()
                     }else if(reaction.emoji.name === '😃') {
                         let embed = new Discord.MessageEmbed()
                             .setTitle('Help')
                             .setDescription('Use b.help (command) to get info for a specific command!')
                             .addField(':smiley: Fun Commands', '-8ball\n-avatar\n-blackjack\n-coinflip\n-math\n-meme\n-rng\n-rps\n-storyrun')
+                            .setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
-                        fun.stop()
                     }
-                //})
+                })
             })
         }
         /*if(!args[0]) {
