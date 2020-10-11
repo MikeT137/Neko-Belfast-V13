@@ -10,7 +10,7 @@ module.exports = {
         if (!args[0]){
             const embed = new Discord.MessageEmbed()
             .setTitle('Information')
-            .addField('Bot Description', 'Im Belfast:heart:, your lovely maid that will be happy to serve you in any way you want, but have patience with me since i learn new things very slowly.')
+            .addField('Bot Description', 'Im Belfast:heart:, your lovely neko maid that will be happy to serve you in any way you want, but have patience with me since i learn new things very slowly.')
             .addField('Version', version)
             .addField('Birthday', birthday)
             .addField('Creator', creator + ':flag_td:')
