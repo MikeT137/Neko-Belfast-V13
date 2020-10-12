@@ -10,7 +10,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
 
             .setTitle('Tic Tac Toe')
-            .addField(`${message.author.username} - :x: **VS** NekoBelfast - :o:`, ':black_large_square:')
+            .addField(`${message.author.username} - :regional_indicator_x: **VS** NekoBelfast - :regional_indicator_o:`, ':blue_square::blue_square::blue_square:\n:blue_square::blue_square::blue_square:\n:blue_square::blue_square::blue_square:')
             .setColor(0x4AEFBA)
             message.channel.send(embed);
         }
