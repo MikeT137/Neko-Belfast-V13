@@ -8,8 +8,8 @@ module.exports = {
             return;
         }else if (!args[0]) {
             const ttt = require("discord.js-tictactoe")
-            const prefix = "b."
-            const embed_color = "#0x4AEFBA"
+            const prefix = "!"
+            const embed_color = "0x4AEFBA"
             const start_cmd = "ttt"
             ttt.run(bot, prefix, embed_color, start_cmd)
             /*const embed = new Discord.MessageEmbed()
