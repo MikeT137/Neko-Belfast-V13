@@ -1,6 +1,6 @@
 module.exports = {
-    name:'storyrun',
-    description: "It tells the story of a helpless boy (RUN)",
+    name:'ttt',
+    description: "The player plays tic tac toe with the bot",
     run: async (bot, message, args) => {
         const Discord = require('discord.js')
 
