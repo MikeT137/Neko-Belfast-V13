@@ -43,7 +43,7 @@ bot.on('message', async message => {
     if(!message.member) message.member = await message.guild.forEach(message);
 
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    let cmd = args.shift().toLowerCase();
+    const cmd = args.shift().toLowerCase();
     const command = bot.commands.get(cmd);
 
     if(cmd.length == 0) return;
