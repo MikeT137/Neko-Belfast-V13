@@ -1,6 +1,6 @@
 module.exports = {
     name: 'q',
-    description: 'Gives the user a quote of a specific feeling',
+    description: "Gives the user a quote of a specific feeling",
     run: async (bot, message, args) => {
         if(!args[0]) {
             message.channel.send('You have to specify what kind of quote you want. Available options: \`happy\`, \`sad\`, \`angry\`, \`bored\`')
