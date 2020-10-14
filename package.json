@@ -2,6 +2,10 @@
   "name": "discord-bot",
   "version": "1.4",
   "description": "My first attempt into making a discord bot",
+  "engines": {
+    "node": "12.x",
+    "npm": "6.14.8"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
