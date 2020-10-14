@@ -14,7 +14,6 @@
     "cheerio": "^1.0.0-rc.3",
     "dblapi.js": "^2.4.1",
     "discord.js": "^12.2.0",
-    "discord.js-tictactoe": "^1.0.2",
     "erela.js": "^2.0.1",
     "math": "0.0.3",
     "mathjs": "^7.1.0",
@@ -22,6 +21,5 @@
     "random-puppy": "^1.1.0",
     "request": "^2.88.2",
     "save": "^2.4.0",
-    "tictactoe": "^0.1.0"
   }
 }
