@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'q',
+    name: 'quote',
     description: "Gives the user a quote of a specific feeling",
     run: async (bot, message, args) => {
         if(!args[0]) {
