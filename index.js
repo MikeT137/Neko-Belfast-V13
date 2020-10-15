@@ -14,7 +14,7 @@ bot.categories = fs.readdirSync("./commands/");
     require(`./handlers/${handler}`)(bot);
 });
 
-//Ready command + custom status
+//Ready command + custom status(server counting)
 bot.on('ready', () => {
     console.log('Belfast is online!');
     setInterval(function(){
