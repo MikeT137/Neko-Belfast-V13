@@ -2,6 +2,7 @@ module.exports = {
     name: 'quote',
     description: "Gives the user a quote of a specific feeling",
     run: async (bot, message, args) => {
+        const Discord = require('discord.js');
         if(!args[0]) {
             const happy_q = [
                 '\"Happiness is a directoin, not a place\"\nSydney J. Harris',
