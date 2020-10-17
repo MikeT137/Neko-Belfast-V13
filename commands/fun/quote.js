@@ -134,14 +134,7 @@ module.exports = {
                         const embed = new Discord.MessageEmbed()
 
                             .setTitle('Quote')
-                            .addField('Angry:', `${angry_q[Math.floor(Math.random() * angrys_q.length)]}`)
-                            .setColor(0x4AEFBA)
-                        msg.edit(embed);
-                    }else if(reaction.emoji.name === '😡') {
-                        const embed = new Discord.MessageEmbed()
-
-                            .setTitle('Quote')
-                            .addField('Angry:', `${angry_q[Math.floor(Math.random() * angrys_q.length)]}`)
+                            .addField('Angry:', `${angry_q[Math.floor(Math.random() * angry_q.length)]}`)
                             .setColor(0x4AEFBA)
                         msg.edit(embed);
                     }else if(reaction.emoji.name === '🥱') {
