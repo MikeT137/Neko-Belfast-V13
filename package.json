@@ -3,7 +3,7 @@
   "version": "1.4",
   "description": "My first attempt into making a discord bot",
   "engines": {
-    "node": "12.x"
+    "node": "12.x",
   }
   "main": "index.js",
   "scripts": {
