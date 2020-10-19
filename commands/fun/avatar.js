@@ -7,6 +7,7 @@ module.exports = {
         const person = message.mentions.users.first();
 
         if (!args[0]){
+            //Your avatar
             const embed = new Discord.MessageEmbed()
 
             .setTitle(`${author.username}'s avatar:`)
@@ -14,8 +15,9 @@ module.exports = {
             .setColor(0x4AEFBA)
             message.channel.send(embed);
         }else if (!args[1] && message.mentions.members.size == 1) {
+            //Someone eles's avatar
             const embed = new Discord.MessageEmbed()
-
+            
             .setTitle(`${person.username}'s avatar:`)
             .setImage(`${person.displayAvatarURL({ dynamic: true })}`)
             .setColor(0x4AEFBA)

@@ -7,6 +7,7 @@ module.exports = {
         if(!question){
             message.channel.send('You must ask a question to use that command');
         }else{
+            //Answers (yes or no)
             let rr = [
                 'Absolutely',
                 'No',
