@@ -15,13 +15,13 @@ module.exports = {
             'https://media.giphy.com/media/hnNyVPIXgLdle/giphy.gif',
             'https://i.gifer.com/QPB7.gif',
         ]
-        if(!args[0]) {
+        if(args[0] == 'mwa') {
             const embed = new Discord.MessageEmbed()
 
             .setAuthor('Hey Choc :3 Im really grateful for accepting me in your life, and i love the good memories we\'ve had so far, and i cant wait to make even more god memoriesI LOVE YOU <3')
             .setImage(random_kiss[Math.floor(Math.random() * random_kiss.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
-        }
+        }else return;
     }
 }
