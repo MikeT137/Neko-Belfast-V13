@@ -2,7 +2,7 @@ const {Collection, Client, Discord} = require('discord.js');
 const bot = new Client();
 const config = require('./config.json');
 bot.prefix = 'my prefix';
-const prefix = config.prefix;
+const prefix = config.prefix && config.prefix2;
 const token = config.token;
 const fs = require('fs');
 
