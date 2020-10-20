@@ -3,6 +3,7 @@ const bot = new Client();
 const config = require('./config.json');
 bot.prefix = 'my prefix';
 const prefix = config.prefix;
+const prefix2 = config.prefix2;
 const token = config.token;
 const fs = require('fs');
 
@@ -38,12 +39,12 @@ dbl.on('error', e => {
 //Commands
 bot.on('message', async message => {
     if(message.author.bot) return;
-    if(!message.content.startsWith(prefix)) return;
+    if(!message.content.startsWith(prefix) || !message.content.startsWith(prefix2)) return;
     if(!message.guild) return;
     if(!message.member) message.member = await message.guild.forEach(message);
 
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    const cmd = args.shift().toLowerCase();
+    const args = message.content.slice(prefix.length && prefix2.length).trim().split(/ +/g);
+    const cmd = args.shift();
     const command = bot.commands.get(cmd);
 
     if(cmd.length == 0) return;
