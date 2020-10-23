@@ -9,7 +9,7 @@ module.exports = {
 
                 .setTitle('Help')
                 .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                .addField(':tools: - Moderation Commands', '\`ban\`, \`bot\`, \`clear\`, \`help\`, \`info\`, \`kick\`, \`mute\`, \`muterole\`, \`server\`, \`unban\`, \`unmute\`, \`vote\`')
+                .addField(':tools: - Moderation Commands', '\`ban\`, \`bot\`, \`clear\`, \`help\`, \`info\`, \`kick\`, \`mute\`, \`server\`, \`unban\`, \`unmute\`, \`vote\`')
                 .addField(':clown: - Self commands', '\`blush\`, \`cheer\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`huh\`, \`laugh\`, \`love\`, \`pout\`, \`purr\`, \`rage\`, \`sip\`, \`run\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`yawn\`')
                 .addField(':performing_arts: - Interactive commands (@someone)', '\`boop\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`pat\`, \`poke\`, \`punch\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`')
                 .addField(':smiley: - Fun commands', '\`8ball\`, \`avatar\`, \`blackjack\`, \`coinflip\`, \`math\`, \`meme\`, \`quote\`, \`rng\`, \`rps\`, \`storyrun\`') //choc mwa
@@ -44,9 +44,9 @@ module.exports = {
                 message.channel.send('It mutes a user temporarily: \`b.mute (ping) (number + time: s, m, h, d)\`, BUT you need to either type \`b.muterole\` OR create a role called \"BMuted\", its the only way it\'ll work: \`b.mute @(someone) 12s\`')
             break;
 
-            case 'muterole':
-                message.channel.send('It creates the muted role that is required for the mute command')
-            break;
+            /*case 'role':
+                message.channel.send('It creates a role')
+            break;*/
 
             case 'server':
                 message.channel.send('It send the link of the bot\'s official server: \`b.server\`')
