@@ -5,7 +5,7 @@ module.exports = {
         const Discord = require('discord.js');
         var version = '1.4';
         const birthday = 'june 29th 2020';
-        const creator = '❄Miku Yoruka❄#6107';
+        const creator = 'Miku Yoruka#6107';
         
         if (!args[0]){
             const embed = new Discord.MessageEmbed()
