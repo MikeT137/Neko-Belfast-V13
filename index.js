@@ -38,7 +38,7 @@ dbl.on('error', e => {
 //Command Handler
 bot.on('message', async message => {
     if(message.author.bot) return;
-    if(!message.content.startsWith(prefix)) return;
+    if(!message.content.toLowerCase().startsWith(prefix)) return;
     if(!message.guild) return;
     if(!message.member) message.member = await message.guild.forEach(message);
 
