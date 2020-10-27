@@ -2,7 +2,8 @@ const {Collection, Client, Discord} = require('discord.js');
 const bot = new Client();
 const config = require('./config.json');
 bot.prefix = 'my prefix';
-const prefix = ['b.', 'B.']
+//const prefix = config.prefix;
+const prefix = ['b.', 'B.'];
 const token = config.token;
 const fs = require('fs');
 
@@ -16,7 +17,7 @@ bot.categories = fs.readdirSync("./commands/");
 
 //Ready command + custom status(server counting)
 bot.on('ready', () => {
-    console.log('Belfast is online!');
+    console.log('Neok Belfast is online!');
     setInterval(function(){
         bot.user.setActivity(`${bot.guilds.cache.size} servers | use b.help for commands`, {type: 'WATCHING'}).catch(console.error);
     }, 10000)
@@ -43,7 +44,7 @@ bot.on('message', async message => {
     if(!message.member) message.member = await message.guild.forEach(message);
 
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    const cmd = args.shift();
+    const cmd = args.shift().toLowerCase();
     const command = bot.commands.get(cmd);
 
     if(cmd.length == 0) return;
