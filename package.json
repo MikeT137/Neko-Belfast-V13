@@ -2,9 +2,9 @@
   "name": "discord-bot",
   "version": "1.4",
   "description": "My first attempt into making a discord bot",
-   "engines" : { 
-     "node" : "14.4"
-    },
+  "engines": {
+    "node": "14.4"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,7 @@
     "cheerio": "^1.0.0-rc.3",
     "dblapi.js": "^2.4.1",
     "discord.js": "^12.2.0",
+    "discord.js-tictactoe": "^1.0.2",
     "erela.js": "^2.0.1",
     "math": "0.0.3",
     "mathjs": "^7.1.0",
