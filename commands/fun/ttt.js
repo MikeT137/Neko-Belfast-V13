@@ -8,7 +8,7 @@ module.exports = {
             const ttt = require("discord.js-tictactoe")
             const embed_color = "0x4AEFBA"
             const start_cmd = "ttt"
-            ttt.run(bot, prefix, embed_color, start_cmd)
+            ttt.run(bot, embed_color, start_cmd)
             /*const embed = new Discord.MessageEmbed()
 
             .setTitle('Tic Tac Toe')
