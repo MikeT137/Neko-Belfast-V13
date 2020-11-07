@@ -101,10 +101,6 @@ module.exports = {
                 message.channel.send('It sends a laughing gif: \`b.laugh\`')
             break;
                         
-            case 'love':
-                message.channel.send('It sends a hug gif to gain some love from belfast: \`b.love\`')
-            break;
-                        
             case 'pout':
                 message.channel.send('It sends a pouting gif: \`b.pout\`')
             break;
@@ -229,6 +225,10 @@ module.exports = {
 
             case 'coinflip':
                 message.channel.send('It flips a coin: \`b.coinflip\`')
+            break;
+
+            case 'love':
+                message.channel.send('It sends a hug gif to gain some love from belfast: \`b.love\`\nOR You can show some love to someone else \`b.love (ping)\`')
             break;
 
             case 'math':
