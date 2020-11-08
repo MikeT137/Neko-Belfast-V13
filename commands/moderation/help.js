@@ -41,12 +41,8 @@ module.exports = {
             break;
 
             case 'mute':
-                message.channel.send('It mutes a user temporarily: \`b.mute (ping) (number + time: s, m, h, d)\`, BUT you need to either type \`b.muterole\` OR create a role called \"BMuted\", its the only way it\'ll work: \`b.mute @(someone) 12s\`')
+                message.channel.send('It mutes a user temporarily: \`b.mute (ping) (number + time: s, m, h, d)\`, BUT you need to create a role called \"BMuted\", its the only way it\'ll work: \`b.mute @(someone) 12s\`')
             break;
-
-            /*case 'role':
-                message.channel.send('It creates a role')
-            break;*/
 
             case 'server':
                 message.channel.send('It send the link of the bot\'s official server: \`b.server\`')
