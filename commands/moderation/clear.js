@@ -6,22 +6,27 @@ module.exports = {
 
         if(message.deletable) {
             message.delete();
-        }else if(!message.member.hasPermission("MANAGE_MESSAGES")) {
-            message.channel.send('You cant delete messages')
-        }else if(isNaN(args[0]) || parseInt(args[0]) <= 0) {
-            message.channel.send('You didn\'t tell me how many messages to delete')
-        }else if(!message.guild.me.hasPermission("MANAGE_MESSAGES ")) {
-            message.channel.send('I can\'t delete messages')
-        }else {
-            if(parseInt(args[0]) > 100) {
-                amount = 100;
-            }else {
-                amount = parseInt(args[0]);
-            }
-            message.channel.bulkDelete(amount, true)
-            .then(deleted => message.channel.send(`I deleted \`${deleted.size}\` messages`))
-            .catch(err => message.channel.send(`Something went wrong...\n${err}`));
         }
 
+        if(!message.member.hasPermission("MANAGE_MESSAGES")) {
+            message.channel.send('You cant delete messages')
+        }
+
+        if(isNaN(args[0]) || parseInt(args[0]) <= 0) {
+            message.channel.send('You didn\'t tell me how many messages to delete')
+        }
+
+        if(!message.guild.me.hasPermission("MANAGE_MESSAGES ")) {
+            message.channel.send('I can\'t delete messages')
+        }
+        
+        if(parseInt(args[0]) > 100) {
+            amount = 100;
+        }else {
+            amount = parseInt(args[0]);
+        }
+        message.channel.bulkDelete(amount, true)
+        .then(deleted => message.channel.send(`I deleted \`${deleted.size}\` messages`))
+        .catch(err => message.channel.send(`Something went wrong...\n${err}`));
     }
 }
