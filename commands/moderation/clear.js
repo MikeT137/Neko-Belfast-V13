@@ -8,7 +8,7 @@ module.exports = {
             message.delete();*/
         if(!message.member.hasPermission("MANAGE_MESSAGES")) {
             message.channel.send('You cant delete messages')
-        }else if(isNaN(args[0] || parseInt(args[0])) <= 0) {
+        }else if(isNaN(args[0]) || parseInt(args[0]) <= 0) {
             message.channel.send('You didn\'t tell me how many messages to delete')
         }else if(!message.guild.me.hasPermission("MANAGE_MESSAGES ")) {
             message.channel.send('I can\'t delete messages')
