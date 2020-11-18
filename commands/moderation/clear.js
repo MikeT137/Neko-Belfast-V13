@@ -4,14 +4,11 @@ module.exports = {
     run: async (bot, message, args) => {
         if(message.deletable) {
             message.delete();
-        }
-        if(!message.member.hasPermission("MANAGE_MESSAGES")) {
+        }if(!message.member.hasPermission("MANAGE_MESSAGES")) {
             message.channel.send('You cant delete messages')
-        }
-        if(isNaN(args[0] || parseInt(args[0])) <= 0) {
+        }else if(isNaN(args[0] || parseInt(args[0])) <= 0) {
             message.channel.send('You didn\'t tell me how many messages to delete')
-        }
-        if(!message.guild.me.hasPermission("MANAGE_MESSAGES ")) {
+        }else if(!message.guild.me.hasPermission("MANAGE_MESSAGES ")) {
             message.channel.send('I can\'t delete messages')
         }
 
