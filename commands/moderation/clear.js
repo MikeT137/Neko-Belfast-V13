@@ -2,16 +2,29 @@ module.exports = {
     name:'clear',
     description: "Clears the ammount of message you want",
     run: async (bot, message, args) => {
-        const amount = args.join(' '); // Amount of messages which should be deleted
+        if(message.deletable) {
+            message.delete();
+        }
+        if(!message.member.hasPermission("MANAGE_MESSAGES")) {
+            message.channel.send('You cant delete messages')
+        }
+        if(isNaN(args[0] || parseInt(args[0])) <= 0) {
+            message.channel.send('You didn\'t tell me how many messages to delete')
+        }
+        if(!message.guild.me.hasPermission("MANAGE_MESSAGES ")) {
+            message.channel.send('I can\'t delete messages')
+        }
 
-        if (!amount) return message.channel.send('You haven\'t given an amount of messages which should be deleted!');
-        if (isNaN(amount)) return message.reply('The amount parameter isn`t a number!');
+        let amount;
 
-        if (amount > 100) return message.channel.send('You can`t delete more than 100 messages at once!');
-        if (amount < 1) return message.channel.send('You have to delete at least 1 message!');
+        if(parseInt(args[0]) > 100) {
+            amount = 100;
+        }else {
+            amount = parseInt(args[0]);
+        }
+        message.channel.bulkDelete(amount, true)
+        .then(deleted => message.channel.send(`I deleted \`${deleted.size}\` messages`))
+        .catch(err => message.channel.send(`Something went wrong...\n${err}`));
 
-        await message.channel.messages.fetch({ limit: amount }).then(messages => {
-            message.channel.bulkDelete(messages);
-        });
     }
 }
