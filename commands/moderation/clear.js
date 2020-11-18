@@ -16,10 +16,10 @@ module.exports = {
             amount = 100;
         }else {
             amount = parseInt(args[0]);
-            message.channel.bulkDelete(amount, true)
-            .then(deleted => message.channel.send(`I deleted \`${deleted.size}\` messages`))
-            .catch(err => message.channel.send(`Something went wrong...\n${err}`));
         }
+        message.channel.bulkDelete(amount, true)
+        .then(deleted => message.channel.send(`I deleted \`${deleted.size}\` messages`))
+        .catch(err => message.channel.send(`Something went wrong...\n${err}`));
 
     }
 }
