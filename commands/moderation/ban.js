@@ -9,12 +9,14 @@ module.exports = {
         const person = message.mentions.users.first();
 
         if(person) {
-            const user = member.guild.member(person);
+            const user = message.guild.member(person);
 
             if(user) {
                 user.ban().then(() => {
                     message.channel.send(`Successfullky banned ${person.tag}`);
-                })
+                }).catch(err => {
+                    message.channel.send('I was unnable to ban that member');
+                });
             }else {
                 message.channel.send('That member isnt in the server')
             }
