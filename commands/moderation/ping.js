@@ -4,11 +4,11 @@ module.exports = {
     name: 'ping',
     description: "Says the latency of the bot",
     run: async (bot, message, args) => {
-        message.channel.send('Calculatting ping...')
+        message.channel.send('Calculating ping...')
         .then((result) => {
             const ping = result.createdTimestamp - message.createdTimestamp;
 
-            result.edit(`Bot latency: \`${ping}\``);
+            result.edit(`Bot latency: \`${ping}ms\``);
         })
     }
 }
