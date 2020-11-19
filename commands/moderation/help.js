@@ -21,7 +21,7 @@ module.exports = {
         switch (args[0]){
             //Moderation Commands
             case 'ban':
-                message.channel.send('It bans a user: \`b.ban (ping)\`')
+                message.channel.send('It bans someone out of a server \`b.ban (ping)\`. Keep in mind:\n-the bot needs admin\n-you need admin as well\n-you can\'t ban someone that has admin')
             break;
 
             case 'clear':
@@ -37,7 +37,7 @@ module.exports = {
             break;
 
             case 'kick':
-                message.channel.send('It kicks someone out of a server: \`b.kick (number)\`')
+                message.channel.send('It kicks someone out of a server \`b.kick (ping)\`. Keep in mind:\n-the bot needs admin\n-you need admin as well\n-you can\'t kick someone that has admin')
             break;
 
             case 'mute':
@@ -57,7 +57,7 @@ module.exports = {
             break;
 
             case 'unmute':
-                message.channel.send('It unmutes a user that is muted: \`b.unmute (ping) (number)\`, BUT you need to have a role called \"BMuted\", its the only way it\'ll work')
+                message.channel.send('It unmutes a user that is muted: \`b.unmute (ping)\`, BUT you need to have a role called \"BMuted\", its the only way it\'ll work')
             break;
 
             case 'vote':
