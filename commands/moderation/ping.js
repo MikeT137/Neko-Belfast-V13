@@ -5,10 +5,10 @@ module.exports = {
     description: "Says the latency of the bot",
     run: async (bot, message, args) => {
         message.channel.send('Calculatting ping...')
-        .then(result => {
-            const ping = result.createdTimeStamp - message.createdTimeStamp;
+        .then((result) => {
+            const ping = result.createdTimestamp - message.createdTimestamp;
 
-            result.edit(`Bot latency: ${ping}`);
+            result.edit(`Bot latency: \`${ping}\``);
         })
     }
 }
