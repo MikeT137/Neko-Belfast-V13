@@ -228,7 +228,7 @@ module.exports = {
             break;
 
             case 'math':
-                message.channel.send('It solves a  math equation: \`b.math x(operator)y\noperators:\`\n\`+\` = addition\n\`-\` = subtraction\n\`*\` = multiplication\n\`/\` = division\n\`%\` = remainder after division\n\`^\` = multiplication of a number with itself y times')
+                message.channel.send('It solves a  math equation: \`b.math x(operator)y\`\noperators:\n\`+\` = addition\n\`-\` = subtraction\n\`*\` = multiplication\n\`/\` = division\n\`%\` = remainder after division\n\`^\` = multiplication of a number with itself y times')
             break;
 
             case 'meme':
