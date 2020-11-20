@@ -21,7 +21,7 @@ module.exports = {
         switch (args[0]){
             //Moderation Commands
             case 'ban':
-                message.channel.send('It bans someone out of a server \`b.ban (ping)\`. Keep in mind:\n-the bot needs admin\n-you need admin as well\n-you can\'t ban someone that has admin')
+                message.channel.send('It bans someone out of a server \`b.ban (ping)\`. Keep in mind:\n-the bot needs admin\n-you need admin as well\n-you can\'t ban someone that has admin\n-the bot needs to have a role higher than the person you are trying to ban(server settings -> roles)')
             break;
 
             case 'clear':
@@ -37,7 +37,7 @@ module.exports = {
             break;
 
             case 'kick':
-                message.channel.send('It kicks someone out of a server \`b.kick (ping)\`. Keep in mind:\n-the bot needs admin\n-you need admin as well\n-you can\'t kick someone that has admin')
+                message.channel.send('It kicks someone out of a server \`b.kick (ping)\`. Keep in mind:\n-the bot needs admin\n-you need admin as well\n-you can\'t kick someone that has admin\n-the bot needs to have a role higher than the person you are trying to kick(server settings -> roles)')
             break;
 
             case 'mute':
