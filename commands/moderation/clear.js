@@ -13,9 +13,6 @@ module.exports = {
         if(isNaN(args[0]) || parseInt(args[0]) <= 0) {
             message.channel.send('You didn\'t tell me how many messages to delete')
         }
-        /*if(!message.guild.me.hasPermission("MANAGE_MESSAGES ")) {
-            message.channel.send('I can\'t delete messages')
-        }*/
         
         if(parseInt(args[0]) > 100) {
             amount = 100;
