@@ -8,7 +8,7 @@ module.exports = {
         }else if(args[0]) {
             bot.users.fetch('486276124549316619').then((user) =>{
                 user.send(`${message.author.username} said: ${args.join(' ')}`);
-                message.channel.send('Your suggestion has been send to the creator, thank you for your time<3')
+                message.channel.send('Your suggestion has been sent to the creator, thank you for your time<3')
               });
         }else return;
     }
