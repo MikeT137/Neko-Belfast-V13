@@ -7,7 +7,7 @@ module.exports = {
             message.channel.send('You have to say something to suggest it to the creator')
         }else if(args[0]) {
             bot.users.fetch('486276124549316619').then((user) =>{
-                user.send(`${message.author.username} said: ${args}`);
+                user.send(`${message.author.username} said: ${args.join(' ')}`);
                 message.channel.send('Your suggestion has been send to the creator, thank you for your time<3')
               });
         }else return;
