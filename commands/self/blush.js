@@ -15,6 +15,7 @@ module.exports = {
             'https://media.tenor.com/images/b4be3af320d6bff5196e627f9964c38d/tenor.gif',
             'https://66.media.tumblr.com/781762f9605c7b31edceb9c454677d20/tumblr_niqngeUn2K1u55xnmo5_500.gifv',
             'https://media.giphy.com/media/ulWUgCk4F1GGA/giphy.gif',
+            'https://media1.tenor.com/images/15906d3886ab1e14afa1da583cc63953/tenor.gif?itemid=14495463',
         ]
         if (!args[0]){
             const embed = new Discord.MessageEmbed()
