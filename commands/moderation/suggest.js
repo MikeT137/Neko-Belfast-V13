@@ -6,7 +6,7 @@ module.exports = {
         if(!args[0]) {
             message.channel.send('You have to say something to suggest it to the creator')
         }else if(args[0]) {
-            message.bot.send(`${args[0]}`)
+            MikuYoruka.send(`${args[0]}`)
         }else return;
     }
 }
