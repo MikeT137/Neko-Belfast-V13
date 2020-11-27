@@ -9,7 +9,7 @@ module.exports = {
 
                 .setTitle('Help')
                 .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                .addField(':tools: - Moderation Commands', '\`ban\`, \`bot\`, \`clear\`, \`help\`, \`info\`, \`kick\`, \`mute\`, \`ping\`, \`server\`, \`suggest\`, \`unban\`, \`unmute\`, \`vote\`')
+                .addField(':tools: - Moderation Commands', '\`ban\`, \`bot\`, \`clear\`, \`help\`, \`info\`, \`kick\`, \`mute\`, \`ping\`, \`server\`, \`suggest\`, \`unban\`, \`unmute\`, \`vote\`') //donate
                 .addField(':clown: - Self commands', '\`blush\`, \`cheer\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`sip\`, \`run\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`yawn\`')
                 .addField(':performing_arts: - Interactive commands (@someone)', '\`boop\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`')
                 .addField(':smiley: - Fun commands', '\`8ball\`, \`avatar\`, \`blackjack\`, \`coinflip\`, \`love\`, \`math\`, \`meme\`, \`quote\`, \`rng\`, \`rps\`, \`storyrun\`')
@@ -27,6 +27,10 @@ module.exports = {
             case 'clear':
                 message.channel.send('It deletes how many messages you want: \`b.clear (number)\`')
             break;
+
+            /*case 'donate':
+                message.channel.send('It sends a link of the patreon page where you can support the creator (by becoming a patreon ofc)')
+            break;*/
 
             case 'info':
                 message.channel.send('It shows some information about the bot: \`b.info\`')
