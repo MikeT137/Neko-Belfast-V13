@@ -3,26 +3,12 @@ module.exports = {
     description: "Shows you the commands",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        
-        /*if(!args[0]) {
-            const embed = new Discord.MessageEmbed()
 
-                .setTitle('Help')
-                .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                .addField(':tools: - Moderation Commands', '\`ban\`, \`bot\`, \`clear\`, \`donate\`, \`help\`, \`info\`, \`kick\`, \`mute\`, \`ping\`, \`server\`, \`suggest\`, \`unban\`, \`unmute\`, \`vote\`')
-                .addField(':clown: - Self commands', '\`blush\`, \`cheer\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`sip\`, \`run\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`yawn\`')
-                .addField(':performing_arts: - Interactive commands (@someone)', '\`boop\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`')
-                .addField(':smiley: - Fun commands', '\`8ball\`, \`avatar\`, \`blackjack\`, \`coinflip\`, \`love\`, \`math\`, \`meme\`, \`quote\`, \`rng\`, \`rps\`, \`storyrun\`')
-                .setThumbnail(bot.user.displayAvatarURL())
-                .setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
-                .setColor(0x4AEFBA)
-            message.channel.send(embed);
-        }*/
         if(!args[0]) {
             let embed = new Discord.MessageEmbed()
 
                 .setTitle('Help')
-                .setDescription('Type \`b.help (category)\` to get the commands of that category!')
+                .setDescription('React with an emoji to get the commands of that specific category!')
                 .addField(':tools: - Moderation', 'This category has moderation commands that help admins on different aspects')
                 .addField(':clown: - Self', 'This category has roleplaying commands that work only without pinging')
                 .addField(':performing_arts: - Interactive (@someone)', 'This category has roleplaying commands that work only with pinging')
@@ -44,34 +30,46 @@ module.exports = {
 
                     if(reaction.emoji.name === '🛠️') {
                         let embedM = new Discord.MessageEmbed()
+
                             .setTitle('Help - Moderation')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', '\`ban\`, \`bot\`, \`clear\`, \`donate\`, \`help\`, \`info\`, \`kick\`, \`mute\`, \`ping\`, \`server\`, \`suggest\`, \`unban\`, \`unmute\`, \`vote\`')
+                            .setThumbnail(bot.user.displayAvatarURL())
+                            .setColor(0x4AEFBA)
                         msg.edit(embedM);
                     }else if(reaction.emoji.name === '🤡') {
                         let embedS = new Discord.MessageEmbed()
+
                             .setTitle('Help - Self')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', '\`blush\`, \`cheer\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`sip\`, \`run\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`yawn\`')
+                            .setThumbnail(bot.user.displayAvatarURL())
+                            .setColor(0x4AEFBA)
                         msg.edit(embedS);
                     }else if(reaction.emoji.name === '🎭') {
                         let embedI = new Discord.MessageEmbed()
+
                             .setTitle('Help - Interactive (@someone)')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', '\`boop\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`')
+                            .setThumbnail(bot.user.displayAvatarURL())
+                            .setColor(0x4AEFBA)
                         msg.edit(embedI);
                     }else if(reaction.emoji.name === '😃') {
                         let embedF = new Discord.MessageEmbed()
+                        
                             .setTitle('Help - Fun')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', '\`8ball\`, \`avatar\`, \`blackjack\`, \`coinflip\`, \`love\`, \`math\`, \`meme\`, \`quote\`, \`rng\`, \`rps\`, \`storyrun\`')
+                            .setThumbnail(bot.user.displayAvatarURL())
+                            .setColor(0x4AEFBA)
                         msg.edit(embedF);
                     }
                 })
             })
         }
         switch (args[0]){
-            //Moderation Commands
+            //Moderation
             case 'ban':
                 message.channel.send('It bans someone out of a server \`b.ban (ping)\`. Keep in mind:\n-the bot needs admin\n-you need admin as well\n-you can\'t ban someone that has admin\n-the bot needs to have a role higher than the person you are trying to ban(server settings -> roles)')
             break;
@@ -124,7 +122,7 @@ module.exports = {
                 message.channel.send('It sends the link so the user can vote for the bot or the bot\'s server on the top.gg site: \`b.vote (bot/server)\`')
             break;
 
-            //Self Commands
+            //Self
             case 'blush':
                 message.channel.send('It sends a blushing gif: \`b.blush\`')
             break;
@@ -205,7 +203,7 @@ module.exports = {
                 message.channel.send('It sends a crying gif: \`b.cry\`')
             break;
             
-            //Interactive commands (@someone)
+            //Interactive (@someone)
             case 'boop':
                 message.channel.send('It sends a boop gif: \`b.boop (ping)\`')
             break;
@@ -270,7 +268,7 @@ module.exports = {
                 message.channel.send('It sends a waving gif: \`b.wave (ping)\`')
             break;
   
-            //Fun commands
+            //Fun
             case '8ball':
                 message.channel.send('It sends a random response to your question: \`b.8ball (question)\`')
             break;
