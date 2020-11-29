@@ -4,7 +4,7 @@ module.exports = {
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         
-        if(!args[0]) {
+        /*if(!args[0]) {
             const embed = new Discord.MessageEmbed()
 
                 .setTitle('Help')
@@ -17,6 +17,42 @@ module.exports = {
                 .setImage('https://media.tenor.com/images/2ab5635c3ca5d3c2891666347e44e587/tenor.gif')
                 .setColor(0x4AEFBA)
             message.channel.send(embed);
+        }*/
+        if(!args[0]) {
+            const embed = new Discord.MessageEmbed()
+
+                .setTitle('Help')
+                .setDescription('Type \`b.help (category)\` to get the commands of tha category!')
+                .addField(':tools: - Moderation Commands')
+                .addField(':clown: - Self commands')
+                .addField(':performing_arts: - Interactive commands (@someone)')
+                .addField(':smiley: - Fun commands')
+                .setThumbnail(bot.user.displayAvatarURL())
+                .setColor(0x4AEFBA)
+            message.channel.send(embed).then(msg => {
+                msg.react('🛠️'),
+                msg.react('🤡'),
+                msg.react('🎭'),
+                msg.react('😃')
+
+                const filter = (reaction, user) => {
+                    return ['🛠️', '🤡', '🎭', '😃'].includes(reaction.emoji.name) && user.id === message.author.id;
+                };
+
+                msg.awaitReactions(filter, { max: 1 }).then(collected => {
+                    const reaction = collected.first();
+
+                    if(reaction.emoji.name === '🛠️') {
+                        msg.edit('moderation wew')
+                    }else if(reaction.emoji.name === '🤡') {
+                        msg.edit('selfie')
+                    }else if(reaction.emoji.name === '🎭') {
+                        msg.edit('interactive pog')
+                    }else if(reaction.emoji.name === '😃') {
+                        msg.edit('funny')
+                    }
+                })
+            })
         }
         switch (args[0]){
             //Moderation Commands
