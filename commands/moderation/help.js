@@ -45,18 +45,22 @@ module.exports = {
                     if(reaction.emoji.name === '🛠️') {
                         embed.setTitle('Help - Moderation')
                         embed.setDescription('Type \`b.help (command)\` to get information about a specific command')
+                        embed.addField('Commands:', '\`ban\`, \`bot\`, \`clear\`, \`donate\`, \`help\`, \`info\`, \`kick\`, \`mute\`, \`ping\`, \`server\`, \`suggest\`, \`unban\`, \`unmute\`, \`vote\`')
                         msg.edit(embed);
                     }else if(reaction.emoji.name === '🤡') {
                         embed.setTitle('Help - Self')
                         embed.setDescription('Type \`b.help (command)\` to get information about a specific command')
+                        embed.addField('Commands:', '\`blush\`, \`cheer\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`sip\`, \`run\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`yawn\`')
                         msg.edit(embed);
                     }else if(reaction.emoji.name === '🎭') {
                         embed.setTitle('Help - Interactive (@someone)')
                         embed.setDescription('Type \`b.help (command)\` to get information about a specific command')
+                        embed.addField('Commands:', '\`boop\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`')
                         msg.edit(embed);
                     }else if(reaction.emoji.name === '😃') {
                         embed.setTitle('Help - Fun')
                         embed.setDescription('Type \`b.help (command)\` to get information about a specific command')
+                        embed.addField('Commands:', '\`8ball\`, \`avatar\`, \`blackjack\`, \`coinflip\`, \`love\`, \`math\`, \`meme\`, \`quote\`, \`rng\`, \`rps\`, \`storyrun\`')
                         msg.edit(embed);
                     }
                 })
