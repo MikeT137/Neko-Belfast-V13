@@ -22,11 +22,11 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
 
                 .setTitle('Help')
-                .setDescription('Type \`b.help (category)\` to get the commands of tha category!')
-                .addField(':tools: - Moderation Commands')
-                .addField(':clown: - Self commands')
-                .addField(':performing_arts: - Interactive commands (@someone)')
-                .addField(':smiley: - Fun commands')
+                .setDescription('Type \`b.help (category)\` to get the commands of that category!')
+                .addField(':tools: - Moderation', 'This category has moderation commands that help admins on different aspects')
+                .addField(':clown: - Self', 'This category has roleplaying commands that work only without pinging')
+                .addField(':performing_arts: - Interactive (@someone)', 'This category has roleplaying commands that work only with pinging')
+                .addField(':smiley: - Fun', 'This category has fun commands that everyone can use if they\'re bored')
                 .setThumbnail(bot.user.displayAvatarURL())
                 .setColor(0x4AEFBA)
             message.channel.send(embed).then(msg => {
@@ -43,13 +43,21 @@ module.exports = {
                     const reaction = collected.first();
 
                     if(reaction.emoji.name === '🛠️') {
-                        msg.edit('moderation wew')
+                        embed.setTitle('Help - Moderation')
+                        embed.setDescription('Type \`b.help (command)\` to get information about a specific command')
+                        msg.edit(embed);
                     }else if(reaction.emoji.name === '🤡') {
-                        msg.edit('selfie')
+                        embed.setTitle('Help - Self')
+                        embed.setDescription('Type \`b.help (command)\` to get information about a specific command')
+                        msg.edit(embed);
                     }else if(reaction.emoji.name === '🎭') {
-                        msg.edit('interactive pog')
+                        embed.setTitle('Help - Interactive (@someone)')
+                        embed.setDescription('Type \`b.help (command)\` to get information about a specific command')
+                        msg.edit(embed);
                     }else if(reaction.emoji.name === '😃') {
-                        msg.edit('funny')
+                        embed.setTitle('Help - Fun')
+                        embed.setDescription('Type \`b.help (command)\` to get information about a specific command')
+                        msg.edit(embed);
                     }
                 })
             })
