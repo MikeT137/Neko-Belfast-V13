@@ -5,7 +5,7 @@ module.exports = {
         const votebot = 'https://top.gg/bot/727093236954431488/vote';
         const voteserver = 'https://top.gg/servers/597109214707580940/vote';
         if(!args[0]) {
-            message.channel.send('Tell me what vote link you want, \`bot\` or \`server\` ?')
+            message.channel.send('You have to tell me which vote link you want. \`b.vote bot\` or \`b.vote server\` ?')
         } else if(args[0] == 'bot') {
             message.channel.send(`You can vote for this bot here: ${votebot}`)
         } else if(args[0] == 'server') {
