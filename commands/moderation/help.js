@@ -10,8 +10,8 @@ module.exports = {
                 .setTitle('Help')
                 .setDescription('React with an emoji to get the commands of that specific category!')
                 .addField(':tools: - Moderation', 'This category has moderation commands that help admins on different aspects')
-                .addField(':clown: - Self', 'This category has roleplaying commands that work only without pinging')
-                .addField(':performing_arts: - Interactive (@someone)', 'This category has roleplaying commands that work only with pinging')
+                .addField(':clown: - Self Roleplay', 'This category has roleplaying commands that only work without pinging')
+                .addField(':performing_arts: - Interactive Roleplay (@someone)', 'This category has roleplaying commands that only work with pinging')
                 .addField(':smiley: - Fun', 'This category has fun commands that everyone can use if they\'re bored')
                 .setThumbnail(bot.user.displayAvatarURL())
                 .setColor(0x4AEFBA)
@@ -40,7 +40,7 @@ module.exports = {
                     }else if(reaction.emoji.name === '🤡') {
                         let embedS = new Discord.MessageEmbed()
 
-                            .setTitle('Help - Self')
+                            .setTitle('Help - Self Roleplay')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', '\`blush\`, \`cheer\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`sip\`, \`run\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`yawn\`')
                             .setThumbnail(bot.user.displayAvatarURL())
@@ -49,7 +49,7 @@ module.exports = {
                     }else if(reaction.emoji.name === '🎭') {
                         let embedI = new Discord.MessageEmbed()
 
-                            .setTitle('Help - Interactive (@someone)')
+                            .setTitle('Help - Interactive Roleplay (@someone)')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', '\`boop\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`')
                             .setThumbnail(bot.user.displayAvatarURL())
