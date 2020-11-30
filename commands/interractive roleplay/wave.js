@@ -26,6 +26,7 @@ module.exports = {
             .setImage(random_wave[Math.floor(Math.random() * random_wave.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
+            }
         }else {
             message.channel.send('You have to ping someone to wave at them')
         }
