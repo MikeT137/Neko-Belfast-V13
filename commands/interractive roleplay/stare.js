@@ -17,12 +17,18 @@ module.exports = {
             'https://media1.tenor.com/images/e5ccc1cb4489b244e02c7999669328ae/tenor.gif?itemid=12242945',
         ]
         if(message.mentions.members.size >= 1) {
-            const embed = new Discord.MessageEmbed()
+            if(person.id == message.author.id) {
+                message.channel.send('I don\`t blame you for staring at yourself, you\`re pretty beautiful nya~')
+            }else {
+                const embed = new Discord.MessageEmbed()
 
-            .setAuthor(`${message.author.username} stares at ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
-            .setImage(random_stare[Math.floor(Math.random() * random_stare.length)])
-            .setColor(0x4AEFBA)
-            message.channel.send(embed);
+                .setAuthor(`${message.author.username} stares at ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
+                .setImage(random_stare[Math.floor(Math.random() * random_stare.length)])
+                .setColor(0x4AEFBA)
+                message.channel.send(embed);
+            }
+        }else {
+            message.channel.send('You have to ping someone to stare at them')
         }
     }
 }

@@ -17,12 +17,18 @@ module.exports = {
             'https://data.whicdn.com/images/330723767/original.gif',
         ]
         if(message.mentions.members.size >= 1) {
-            const embed = new Discord.MessageEmbed()
+            if(person.id == message.author.id) {
+                message.channel.send('That looks more like clapping, but still, good job nya!')
+            }else {
+                const embed = new Discord.MessageEmbed()
 
-            .setAuthor(`${message.author.username} highfives ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
-            .setImage(random_hf[Math.floor(Math.random() * random_hf.length)])
-            .setColor(0x4AEFBA)
-            message.channel.send(embed);
+                .setAuthor(`${message.author.username} highfives ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
+                .setImage(random_hf[Math.floor(Math.random() * random_hf.length)])
+                .setColor(0x4AEFBA)
+                message.channel.send(embed);
+            }
+        }else {
+            message.channel.send('You have to ping someone to highfive them')
         }
     }
 }

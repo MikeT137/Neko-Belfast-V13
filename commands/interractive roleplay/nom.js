@@ -17,12 +17,18 @@ module.exports = {
             'https://i.gifer.com/EQn9.gif',
         ]
         if(message.mentions.members.size >= 1) {
-            const embed = new Discord.MessageEmbed()
-    
-            .setAuthor(`${message.author.username} noms ${person.username}!`, message.author.displayAvatarURL({ dynamic: true }))
-            .setImage(random_nom[Math.floor(Math.random() * random_nom.length)])
-            .setColor(0x4AEFBA)
-            message.channel.send(embed);
+            if(person.id == message.author.id) {
+                message.channel.send('NYAA! Dont do that!')
+            }else {
+                const embed = new Discord.MessageEmbed()
+        
+                .setAuthor(`${message.author.username} noms ${person.username}!`, message.author.displayAvatarURL({ dynamic: true }))
+                .setImage(random_nom[Math.floor(Math.random() * random_nom.length)])
+                .setColor(0x4AEFBA)
+                message.channel.send(embed);
+            }
+        }else {
+            message.channel.send('You have to ping someone to nom them')
         }
     }
 }

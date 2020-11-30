@@ -17,12 +17,18 @@ module.exports = {
             'https://68.media.tumblr.com/ff60ce6b4ae9fde3267537faf5b56578/tumblr_omijznkrLe1rmzw91o1_500.gif',
         ]
         if(message.mentions.members.size >= 1) {
-            const embed = new Discord.MessageEmbed()
+            if(person.id == message.author.id) {
+                message.channel.send('Just like a kitty aren\` you? I\`m proud of you nya~')
+            }else {
+                const embed = new Discord.MessageEmbed()
 
-            .setAuthor(`${message.author.username} gave ${person.username} a lick O///O`, message.author.displayAvatarURL({ dynamic: true }))
-            .setImage(random_lick[Math.floor(Math.random() * random_lick.length)])
-            .setColor(0x4AEFBA)
-            message.channel.send(embed);
+                .setAuthor(`${message.author.username} gave ${person.username} a lick O///O`, message.author.displayAvatarURL({ dynamic: true }))
+                .setImage(random_lick[Math.floor(Math.random() * random_lick.length)])
+                .setColor(0x4AEFBA)
+                message.channel.send(embed);
+            }
+        }else {
+            message.channel.send('You have to ping someone to lick them')
         }
     }
 }

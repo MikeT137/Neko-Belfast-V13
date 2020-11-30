@@ -17,12 +17,23 @@ module.exports = {
             'https://thumbs.gfycat.com/ShowyObedientCrane-max-1mb.gif',
         ]
         if(message.mentions.members.size >= 1) {
-            const embed = new Discord.MessageEmbed()
+            if(person.id == message.author.id) {
+                const embed = new Discord.MessageEmbed()
 
-            .setAuthor(`${message.author.username} gave ${person.username} a snuggle...so cute`, message.author.displayAvatarURL({ dynamic: true }))
-            .setImage(random_snuggle[Math.floor(Math.random() * random_snuggle.length)])
-            .setColor(0x4AEFBA)
-            message.channel.send(embed);
+                .setAuthor(`Aww, its okay, belfast will give you some snuggles nya~`, message.author.displayAvatarURL({ dynamic: true }))
+                .setImage(random_snuggle[Math.floor(Math.random() * random_snuggle.length)])
+                .setColor(0x4AEFBA)
+                message.channel.send(embed);
+            }else {
+                const embed = new Discord.MessageEmbed()
+
+                .setAuthor(`${message.author.username} gave ${person.username} a snuggle...so cute`, message.author.displayAvatarURL({ dynamic: true }))
+                .setImage(random_snuggle[Math.floor(Math.random() * random_snuggle.length)])
+                .setColor(0x4AEFBA)
+                message.channel.send(embed);
+            }
+        }else {
+            message.channel.send('You have to ping someone to snuggle them')
         }
     }
 }

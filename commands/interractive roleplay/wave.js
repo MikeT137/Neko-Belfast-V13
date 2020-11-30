@@ -17,12 +17,17 @@ module.exports = {
             'https://thumbs.gfycat.com/FaroffEmbarrassedHerald-size_restricted.gif',
         ]
         if(message.mentions.members.size >= 1) {
+            if(person.id == message.author.id) {
+                message.channel.send('Look at you, you\`re beautiful nya~')
+            }else {
             const embed = new Discord.MessageEmbed()
 
             .setAuthor(`${message.author.username} waves at ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_wave[Math.floor(Math.random() * random_wave.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
+        }else {
+            message.channel.send('You have to ping someone to wave at them')
         }
     }
 }

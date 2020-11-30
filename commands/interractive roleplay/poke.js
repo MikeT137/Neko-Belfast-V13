@@ -17,12 +17,18 @@ module.exports = {
             'https://steamuserimages-a.akamaihd.net/ugc/957465844206544934/F541AE935C936C3BAF5250F8D2606CFECE17A2DA/',
         ]
         if(message.mentions.members.size >= 1) {
-            const embed = new Discord.MessageEmbed()
+            if(person.id == message.author.id) {
+                message.channel.send('Eh? Why did you poke yourself?')
+            }else {
+                const embed = new Discord.MessageEmbed()
 
-            .setAuthor(`${message.author.username} gave ${person.username} a poke`, message.author.displayAvatarURL({ dynamic: true }))
-            .setImage(random_poke[Math.floor(Math.random() * random_poke.length)])
-            .setColor(0x4AEFBA)
-            message.channel.send(embed);
+                .setAuthor(`${message.author.username} gave ${person.username} a poke`, message.author.displayAvatarURL({ dynamic: true }))
+                .setImage(random_poke[Math.floor(Math.random() * random_poke.length)])
+                .setColor(0x4AEFBA)
+                message.channel.send(embed);
+            }
+        }else {
+            message.channel.send('You have to ping someone to poke them')
         }
     }
 }

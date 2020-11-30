@@ -17,12 +17,23 @@ module.exports = {
             'https://thumbs.gfycat.com/AgileHeavyGecko-max-1mb.gif',
         ]
         if(message.mentions.members.size >= 1) {
-            const embed = new Discord.MessageEmbed()
+            if(person.id == message.author.id) {
+                const embed = new Discord.MessageEmbed()
 
-            .setAuthor(`${message.author.username} gave ${person.username} a pat...adorable`, message.author.displayAvatarURL({ dynamic: true }))
-            .setImage(random_pat[Math.floor(Math.random() * random_pat.length)])
-            .setColor(0x4AEFBA)
-            message.channel.send(embed);
+                .setAuthor(`Aww, its okay, belfast will give you some pats nya~`, message.author.displayAvatarURL({ dynamic: true }))
+                .setImage(random_pat[Math.floor(Math.random() * random_pat.length)])
+                .setColor(0x4AEFBA)
+                message.channel.send(embed);
+            }else {
+                const embed = new Discord.MessageEmbed()
+
+                .setAuthor(`${message.author.username} gave ${person.username} a pat...adorable`, message.author.displayAvatarURL({ dynamic: true }))
+                .setImage(random_pat[Math.floor(Math.random() * random_pat.length)])
+                .setColor(0x4AEFBA)
+                message.channel.send(embed);
+            }
+        }else {
+            message.channel.send('You have to ping someone to pat them')
         }
     }
 }

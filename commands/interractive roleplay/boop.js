@@ -17,12 +17,18 @@ module.exports = {
             'https://media.tenor.com/images/d07762ab2f5fc5d1d43525d2b3db7de8/tenor.gif',
         ]
         if(message.mentions.members.size >= 1) {
-            const embed = new Discord.MessageEmbed()
-    
-            .setAuthor(`${message.author.username} booped ${person.username}'s nose !`, message.author.displayAvatarURL({ dynamic: true }))
-            .setImage(random_boop[Math.floor(Math.random() * random_boop.length)])
-            .setColor(0x4AEFBA)
-            message.channel.send(embed);
+            if(person.id == message.author.id) {
+                message.channel.send('Eh? Why did you boop yourself?')
+            }else {
+                const embed = new Discord.MessageEmbed()
+        
+                .setAuthor(`${message.author.username} booped ${person.username}'s nose !`, message.author.displayAvatarURL({ dynamic: true }))
+                .setImage(random_boop[Math.floor(Math.random() * random_boop.length)])
+                .setColor(0x4AEFBA)
+                message.channel.send(embed);
+            }
+        }else {
+            message.channel.send('You have to ping someone to boop them')
         }
     }
 }
