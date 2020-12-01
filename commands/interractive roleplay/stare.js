@@ -18,7 +18,7 @@ module.exports = {
         ]
         if(message.mentions.members.size >= 1) {
             if(person.id == message.author.id) {
-                message.channel.send('I don\`t blame you for staring at yourself, you\`re pretty beautiful nya~')
+                message.channel.send('I don\'t blame you for staring at yourself, you\'re pretty beautiful nya~')
             }else {
                 const embed = new Discord.MessageEmbed()
 
