@@ -24,12 +24,16 @@ module.exports = {
                 .setColor(0x4AEFBA)
             message.channel.send(embed);
         }else if (args[0] || message.mentions.members.size >= 1) {
-            const embed = new Discord.MessageEmbed()
+            if(person.id == message.author.id) {
+                message.channel.send('Yay! Always give appreciation and love to yourself nya~')
+            }else {
+                const embed = new Discord.MessageEmbed()
 
-                .setAuthor(`${message.author.username} loves you ${person.username}!`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(random_snuggle[Math.floor(Math.random() * random_snuggle.length)])
-                .setColor(0x4AEFBA)
-            message.channel.send(embed);
+                    .setAuthor(`${message.author.username} loves you ${person.username}!`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setImage(random_snuggle[Math.floor(Math.random() * random_snuggle.length)])
+                    .setColor(0x4AEFBA)
+                message.channel.send(embed);
+            }
         }else return;
     }
 }
