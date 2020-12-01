@@ -9,7 +9,7 @@ module.exports = {
 
                 .setTitle('Help')
                 .setDescription('React with an emoji to get the commands of that specific category!')
-                .addField(':tools: - Moderation', 'This category has moderation commands that help admins on different aspects')
+                .addField(':tools: - Moderation', 'This category has moderation commands that help admins to moderate their own servers')
                 .addField(':clown: - Self Roleplay', 'This category has roleplaying commands that only work without pinging')
                 .addField(':performing_arts: - Interactive Roleplay (@someone)', 'This category has roleplaying commands that only work with pinging')
                 .addField(':smiley: - Fun', 'This category has fun commands that everyone can use if they\'re bored')
