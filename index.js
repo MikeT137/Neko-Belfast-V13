@@ -1,6 +1,5 @@
-const {Collection, Client, Discord} = require('discord.js');
+const {Collection, Client} = require('discord.js');
 const bot = new Client();
-const config = require('./config.json');
 const fs = require('fs');
 
 //Handlers
