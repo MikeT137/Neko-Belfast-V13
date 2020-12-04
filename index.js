@@ -10,16 +10,8 @@ const fs = require('fs');
 bot.commands = new Collection();
 bot.aliases = new Collection();
 bot.categories = fs.readdirSync("./commands/");
-["command"].forEach(handler => {
+["command", "event"].forEach(handler => {
     require(`./handlers/${handler}`)(bot);
-});
-
-//Ready command + custom status(server counting)
-bot.on('ready', () => {
-    console.log('Neko Belfast is online!');
-    setInterval(function(){
-        bot.user.setActivity(`${bot.guilds.cache.size} servers | use b.help for commands`, {type: 'WATCHING'}).catch(console.error);
-    }, 10000)
 });
 
 //Top.gg (site) server count
