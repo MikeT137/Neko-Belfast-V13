@@ -1,3 +1,5 @@
+const {prefix} = require ('../../config.json')
+
 module.exports = bot => {
     console.log('Neko Belfast is online!');
     setInterval(function(){

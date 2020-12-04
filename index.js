@@ -6,7 +6,7 @@ const prefix = config.prefix;
 const token = config.token;
 const fs = require('fs');
 
-//Command Handler
+//Handlers
 bot.commands = new Collection();
 bot.aliases = new Collection();
 bot.categories = fs.readdirSync("./commands/");
@@ -25,23 +25,6 @@ dbl.on('posted', () => {
 
 dbl.on('error', e => {
  console.log(`Oops! ${e}`);
-});
-
-//Command Handler
-bot.on('message', async message => {
-    if(message.author.bot) return;
-    if(!message.content.toLowerCase().startsWith(prefix)) return;
-    if(!message.guild) return;
-    if(!message.member) message.member = await message.guild.forEach(message);
-
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    const cmd = args.shift().toLowerCase();
-    const command = bot.commands.get(cmd);
-
-    if(cmd.length == 0) return;
-    if(!command) command = bot.commands.get(bot.aliases.get(cmd));
-    if(command) command.run(bot, message, args);
-    
 });
 
 //Token
