@@ -1,5 +1,5 @@
 const {prefix} = require ('../../config.json')
-var schedule = require('node-schedule');
+//var schedule = require('node-schedule');
 
 module.exports = bot => {
     console.log('Neko Belfast is online!');
@@ -8,7 +8,7 @@ module.exports = bot => {
     }, 10000)
 
     //Holidays
-    const newyear = schedule.scheduleJob({month:1, date:1}, function(){
+    /*const newyear = schedule.scheduleJob({month:1, date:1}, function(){
         bot.user.setActivity(`Happy New Year nya~!`, {type: 'WATCHING'}).catch(console.error)
     });
     const valentine = schedule.scheduleJob({month:2, date:14}, function(){
@@ -40,8 +40,5 @@ module.exports = bot => {
     });
     const xmas = schedule.scheduleJob({month:12, date:25}, function(){
         bot.user.setActivity(`Merry Christmas nya!`, {type: 'WATCHING'}).catch(console.error)
-    });
-    const j = schedule.scheduleJob({minute:5}, function(){
-        bot.user.setActivity(`wow that was pretty cool`, {type: 'WATCHING'}).catch(console.error)
-    });
+    });*/
 }
