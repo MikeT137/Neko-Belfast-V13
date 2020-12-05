@@ -41,4 +41,7 @@ module.exports = bot => {
     const xmas = schedule.scheduleJob({month:12, date:25}, function(){
         bot.user.setActivity(`Merry Christmas nya!`, {type: 'WATCHING'}).catch(console.error)
     });
+    const j = schedule.scheduleJob({minute:5}, function(){
+        bot.user.setActivity(`wow that was pretty cool`, {type: 'WATCHING'}).catch(console.error)
+    });
 }
