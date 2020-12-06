@@ -5,7 +5,7 @@ module.exports = {
         const author = message.author;
         const Discord = require('discord.js');
         const random_dance = [
-            'https://media1.tenor.com/images/c925511d32350cc04411756d623ebad6/tenor.gif?itemid=13462237',
+            /*'https://media1.tenor.com/images/c925511d32350cc04411756d623ebad6/tenor.gif?itemid=13462237',
             'https://i.pinimg.com/originals/4b/34/c2/4b34c2fd473942b7fbd25c443b8ed8a2.gif',
             'https://i.ya-webdesign.com/images/anime-dance-gif-png.gif',
             'https://bestanimations.com/Music/Dancers/anime-dancing-girls/anime-girl-dancing-animated-gif.gif',
@@ -14,7 +14,8 @@ module.exports = {
             'https://media.tenor.com/images/279bf22997edc0703cee75385645d7f8/tenor.gif',
             'https://pa1.narvii.com/6243/5eb4849659aa14f4d80310a9a1810893de7374fc_hq.gif',
             'https://cdn.lowgif.com/small/f6fc2c15b2c49c8b-dance-gif-anime-tumblr.gif',
-            'https://i.gifer.com/Afdv.gif',
+            'https://i.gifer.com/Afdv.gif',*/
+            'https://static.wikia.nocookie.net/mudae/images/9/9b/BelfastG1.gif/revision/latest?cb=20191122143023'
         ]
         if (!args[0]){
             const embed = new Discord.MessageEmbed()
