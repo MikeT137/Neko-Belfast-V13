@@ -19,5 +19,5 @@ module.exports = bot => {
     October 31st - `Have a spooky Halloween! Tee hee`
     November 25th - `Happy Thanksgiving nya~!`
     December 25th - `Merry Christmas nya!`
-    Every other day - `${bot.guilds.cache.size} servers | use b.help for commands`*/
+    Every other day - `${bot.guilds.cache.size} servers`*/
 }
