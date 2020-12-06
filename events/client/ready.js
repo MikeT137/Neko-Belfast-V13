@@ -3,12 +3,9 @@ const {prefix} = require ('../../config.json')
 
 module.exports = bot => {
     console.log('Neko Belfast is online!');
-    setInterval(function(){
-        bot.user.setActivity(`${bot.guilds.cache.size} servers | use b.help for commands`, {type: 'WATCHING'}).catch(console.error);
-    }, 10000)
 
     //Holidays
-    /*const newyear = schedule.scheduleJob({month:1, date:1}, function(){
+    const newyear = schedule.scheduleJob({month:1, date:1}, function(){
         bot.user.setActivity(`Happy New Year nya~!`, {type: 'WATCHING'}).catch(console.error)
     });
     const valentine = schedule.scheduleJob({month:2, date:14}, function(){
@@ -40,5 +37,13 @@ module.exports = bot => {
     });
     const xmas = schedule.scheduleJob({month:12, date:25}, function(){
         bot.user.setActivity(`Merry Christmas nya!`, {type: 'WATCHING'}).catch(console.error)
-    });*/
+    });
+    const normal = schedule.scheduleJob('* * * * *', function(){
+        setInterval(function(){
+            bot.user.setActivity(`${bot.guilds.cache.size} servers | use b.help for commands`, {type: 'WATCHING'}).catch(console.error);
+        }, 10000)
+    });
+    const lol = schedule.scheduleJob({month:12, date:25}, function(){
+        bot.user.setActivity(`thats sick bro`, {type: 'WATCHING'}).catch(console.error)
+    });
 }
