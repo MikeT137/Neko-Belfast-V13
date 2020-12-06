@@ -1,5 +1,5 @@
 const {prefix} = require ('../../config.json')
-//var schedule = require('node-schedule');
+var schedule = require('node-schedule');
 
 module.exports = bot => {
     console.log('Neko Belfast is online!');
