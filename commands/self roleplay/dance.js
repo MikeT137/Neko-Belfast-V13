@@ -15,7 +15,7 @@ module.exports = {
             'https://pa1.narvii.com/6243/5eb4849659aa14f4d80310a9a1810893de7374fc_hq.gif',
             'https://cdn.lowgif.com/small/f6fc2c15b2c49c8b-dance-gif-anime-tumblr.gif',
             'https://i.gifer.com/Afdv.gif',*/
-            'https://static.wikia.nocookie.net/mudae/images/9/9b/BelfastG1.gif/revision/latest?cb=20191122143023'
+            'https://steamuserimages-a.akamaihd.net/ugc/786352494210252929/9FD751AFC29C80643E560041FEB862A2736128F4/?imw=512&imh=512&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true'
         ]
         if (!args[0]){
             const embed = new Discord.MessageEmbed()
