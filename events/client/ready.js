@@ -43,7 +43,7 @@ module.exports = bot => {
             bot.user.setActivity(`${bot.guilds.cache.size} servers | use b.help for commands`, {type: 'WATCHING'}).catch(console.error);
         }, 10000)
     });
-    const lol = schedule.scheduleJob({minute:35}, function(){
+    const lol = schedule.scheduleJob({minute:38}, function(){
         bot.user.setActivity(`thats sick bro`, {type: 'WATCHING'}).catch(console.error)
     });
 }
