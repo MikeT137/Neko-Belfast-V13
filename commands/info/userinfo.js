@@ -6,7 +6,7 @@ module.exports = {
         const moment = require('moment');
 
         const member = message.mentions.members.last() || message.guild.members.cache.get(args) || message.member;
-        const roles = members.roles.cache
+        const roles = member.roles.cache
             .sort((a, b) => b.position - a.position)
             .map(role => role.toString())
             .slice(0, -1);
