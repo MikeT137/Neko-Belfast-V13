@@ -29,7 +29,7 @@ module.exports = {
 
         if(!args[0]) {
             message.channel.send('Tell me which user you want the information of')
-        }else if(args[0] == member) {
+        }else if(args[0] && message.mentions.members.size == 1) {
             let embed = new Discord.MessageEmbed()
 
                 .setDescription(`**Guild information for:** ${message.guild.name}`)
