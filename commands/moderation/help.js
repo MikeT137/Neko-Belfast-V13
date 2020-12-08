@@ -325,7 +325,7 @@ module.exports = {
             break;
 
             case 'userinfo':
-                message.channel.send('It sends information about the server you do the command in: \`b.userinfo\`')
+                message.channel.send('It sends information about the server you do the command in: \`b.userinfo (ping)\`')
             break;
         }
     }

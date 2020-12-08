@@ -5,7 +5,7 @@ module.exports = {
         const Discord = require('discord.js');
         const moment = require('moment');
 
-        const member = message.mentions.members.last() || message.guild.members.cache.get(args) || message.member;
+        const member = message.mentions.members.first() || message.guild.members.cache.get(args) || message.member;
         const roles = member.roles.cache
             .sort((a, b) => b.position - a.position)
             .map(role => role.toString())
@@ -25,7 +25,7 @@ module.exports = {
             VERIFIED_BOT: 'Verified Bot',
             VERIFIED_DEVELOPER: 'Verified Bot Developer'
         };
-        const userflags = member.user.flags.toArray();
+        const userFlags = member.user.flags.toArray();
 
         if(!args[0]) {
             message.channel.send('Tell me which user you want the information of');
