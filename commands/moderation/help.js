@@ -13,16 +13,18 @@ module.exports = {
                 .addField(':clown: - Self Roleplay', 'This category has roleplaying commands that only work without pinging')
                 .addField(':performing_arts: - Interactive Roleplay (@someone)', 'This category has roleplaying commands that only work with pinging')
                 .addField(':smiley: - Fun', 'This category has fun commands that everyone can use if they\'re bored')
+                .addField(':face_with_monocle: - Info', 'This category has info commands that can help you get more detailed information about specific things')
                 .setThumbnail(bot.user.displayAvatarURL())
                 .setColor(0x4AEFBA)
             message.channel.send(embed).then(msg => {
                 msg.react('🛠️'),
                 msg.react('🤡'),
                 msg.react('🎭'),
-                msg.react('😃')
+                msg.react('😃'),
+                msg.react('🧐')
 
                 const filter = (reaction, user) => {
-                    return ['🛠️', '🤡', '🎭', '😃'].includes(reaction.emoji.name) && user.id === message.author.id;
+                    return ['🛠️', '🤡', '🎭', '😃', '🧐'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
 
                 msg.awaitReactions(filter, { max: 1 }).then(collected => {
@@ -33,7 +35,7 @@ module.exports = {
 
                             .setTitle('Help - Moderation')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', '\`ban\`, \`bot\`, \`clear\`, \`donate\`, \`help\`, \`info\`, \`kick\`, \`mute\`, \`ping\`, \`server\`, \`suggest\`, \`unban\`, \`unmute\`, \`vote\`')
+                            .addField('Commands:', '\`ban\`, \`clear\`, \`donate\`, \`help\`, \`invite\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`, \`vote\`')
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor(0x4AEFBA)
                         msg.edit(embedM);
@@ -64,6 +66,15 @@ module.exports = {
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor(0x4AEFBA)
                         msg.edit(embedF);
+                    }else if(reaction.emoji.name === '🧐') {
+                        let embedinfo = new Discord.MessageEmbed()
+                        
+                            .setTitle('Help - Info')
+                            .setDescription('Type \`b.help (command)\` to get information about a specific command')
+                            .addField('Commands:', '\`botinfo\`, \`serverinfo\`, \`userinfo\`')
+                            .setThumbnail(bot.user.displayAvatarURL())
+                            .setColor(0x4AEFBA)
+                        msg.edit(embedinfo);
                     }
                 })
             })
@@ -82,12 +93,8 @@ module.exports = {
                 message.channel.send('It sends a link of the patreon page where you can support the creator (by becoming a patreon ofc)')
             break;
 
-            case 'info':
-                message.channel.send('It shows some information about the bot: \`b.info\`')
-            break;
-
-            case 'bot':
-                message.channel.send('It gives the member an invite link of the bot: \`b.bot\`')
+            case 'invite':
+                message.channel.send('It sends an invite link to either the bot or the bot\'s server: \`b.invite (server/bot)\`')
             break;
 
             case 'kick':
@@ -100,10 +107,6 @@ module.exports = {
 
             case 'ping':
                 message.channel.send('It shows the latency of the bot AKA how fast the bot is responding to user input: \`b.ping\`')
-            break;
-
-            case 'server':
-                message.channel.send('It send the link of the bot\'s official server: \`b.server\`')
             break;
 
             case 'suggest':
@@ -311,6 +314,18 @@ module.exports = {
 
             case 'storyrun':
                 message.channel.send('Its a choose your adventure type of story where you have to (read a lot) and react with emojis to make your choice, eventually you get an ending, now it depends if its good or bad, good luck: \`b.storyrun\`')
+            break;
+
+            case 'botinfo':
+                message.channel.send('It sends information about the bot: \`b.botinfo\`')
+            break;
+
+            case 'serverinfo':
+                message.channel.send('It sends information about the server you do the command in: \`b.serverinfo\`')
+            break;
+
+            case 'userinfo':
+                message.channel.send('It sends information about the server you do the command in: \`b.userinfo\`')
             break;
         }
     }
