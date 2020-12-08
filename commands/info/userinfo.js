@@ -7,6 +7,7 @@ module.exports = {
 
         const member = message.mentions.members.first() || message.guild.members.cache.get(args) || message.member;
         const roles = member.roles.cache
+        const roles2 = message.author.roles.cache
             .sort((a, b) => b.position - a.position)
             .map(role => role.toString())
             .slice(0, -1);
@@ -42,9 +43,9 @@ module.exports = {
                     `**Game:** ${message.author.presence.game || 'Not Playing a game'}`
                 ])
                 .addField('Member', [
-                    `**Highest role:** ${message.author.user.roles.highest.id === message.guild.id ? 'None' : message.author.user.roles.highest.name}`,
+                    `**Highest role:** ${message.author.roles2.highest.id === message.guild.id ? 'None' : message.author.roles2.highest.name}`,
                     `**Server join date:** ${moment(message.author.joinedAt).format('LL LTS')}`,
-                    `**Roles:** ${roles.length}`
+                    `**Roles:** ${roles2.length}`
                 ])
                 .setColor(0x4AEFBA)
             message.channel.send(embed)
