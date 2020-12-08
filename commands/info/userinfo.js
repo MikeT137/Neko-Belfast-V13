@@ -39,8 +39,6 @@ module.exports = {
                     `**ID:** ${member.id}`,
                     `**Flags:** ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
                     `**Time Created:** ${moment(member.user.createdTimestamp).format('LT')} ${moment(member.user.createdTimestamp).format('LL')} ${moment(member.user.createdTimestamp).fromNow()}`,
-                    `**Status:** ${member.presence.status}`,
-                    `**Game:** ${member.presence.game || 'Not Playing a game'}`
                 ])
                 .addField('Member', [
                     `**Highest role:** ${member.roles.highest.id === message.guild.id ? 'None' : member.roles.highest.name}`,
