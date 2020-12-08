@@ -62,7 +62,7 @@ module.exports = {
                         
                             .setTitle('Help - Fun')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', '\`8ball\`, \`avatar\`, \`blackjack\`, \`coinflip\`, \`love\`, \`math\`, \`meme\`, \`quote\`, \`rng\`, \`rps\`, \`storyrun\`')
+                            .addField('Commands:', '\`8ball\`, \`blackjack\`, \`coinflip\`, \`love\`, \`math\`, \`meme\`, \`quote\`, \`rng\`, \`rps\`, \`storyrun\`')
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor(0x4AEFBA)
                         msg.edit(embedF);
@@ -71,7 +71,7 @@ module.exports = {
                         
                             .setTitle('Help - Info')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', '\`botinfo\`, \`serverinfo\`, \`userinfo\`')
+                            .addField('Commands:', '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`')
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor(0x4AEFBA)
                         msg.edit(embedinfo);
