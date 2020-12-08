@@ -25,14 +25,14 @@ module.exports = {
         };
 
         if(!args[0]) {
-            let embed = new Discord.MessageEmbed()
+            const embed = new Discord.MessageEmbed()
             
                 .setDescription(`**Guild information for:** ${message.guild.name}`)
                 .setThumbnail(message.guild.iconURL({dynamic: true}))
                 .addField('General', [
                     `\`Name:\` ${message.guild.name}`,
                     `\`ID:\` ${message.guild.id}`,
-                    `\`Owner:\` ${message.guild.owner.user.tag} ${message.guild.ownerID}`,
+                    `\`Owner:\` ${message.guild.owner.user.tag} (${message.guild.ownerID})`,
                     `\`Region:\` ${regions[message.guild.region]}`,
                     `\`Boost Tier:\` ${message.guild.premiumTier ? `Tier ${message.guild.premiumTier}`: 'None'}`,
                     `\`Time Created:\` ${moment(message.guild.createdTimestamp).format('LT')}; ${moment(message.guild.createdTimestamp).format('LL')}; ${moment(message.guild.createdTimestamp).fromNow()}`

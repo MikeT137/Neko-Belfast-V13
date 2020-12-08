@@ -1,6 +1,6 @@
 {
-  "name": "discord-bot",
-  "version": "1.4",
+  "name": "Neko Belfast",
+  "version": "1.5",
   "description": "My first attempt into making a discord bot",
   "engines": {
     "node": "14.4"
@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Mike137",
+  "author": "Miku Yoruka#6107",
   "license": "ISC",
   "dependencies": {
     "-": "0.0.1",
