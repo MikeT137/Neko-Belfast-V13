@@ -14,9 +14,9 @@ module.exports = {
                 .setThumbnail(bot.user.displayAvatarURL())
                 .setDescription('Information about this bot')
                 .addField('General', [
-                    `\`Name:\` ${client.user.tag} (${client.user.id})`,
-                    `\`Commands:\` ${client.commands.size}`,
-                    `\`Creation Date:\` ${moment(client.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
+                    `\`Name:\` ${bot.user.tag} (${bot.user.id})`,
+                    `\`Commands:\` ${bot.commands.size}`,
+                    `\`Creation Date:\` ${moment(bot.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
                     `\`Version:\` ${version}`,
                     `\`Bot developer:\` ${author}`
                 ])
