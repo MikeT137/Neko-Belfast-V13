@@ -20,7 +20,7 @@ module.exports = {
                     `\`Version:\` ${version}`,
                     `\`Bot developer:\` ${author} :flag_td:`
                 ])
-                .addField('Special Message', '*Hello, Miku here! Thank you for choosing to use this bot, and for being so supportive, i know that it takes a while to fix bugs, and it may not be the best bot out there but still, thank you for using my bot, it means everything. Hope you\'re enjoy the features on it so far in the meantime, stay safe and have a fluffy day :heart:*')
+                .addField('Special Message', '*Hello, Miku here! Thank you for choosing to use this bot, and for being so supportive with me, i know that it takes a while to fix bugs, and it may not be the best bot out there but still, thank you for using my bot, it means everything. Anyway, i hope you\'re enjoying the features of my bot so far, and in the meantime, stay safe and have a great day :heart:*')
                 .setColor(0x4AEFBA)
             message.channel.send(embed);
         }else return;
