@@ -12,15 +12,15 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
 
                 .setThumbnail(bot.user.displayAvatarURL())
-                .setDescription('Information about this bot')
+                .setDescription('**Information about this bot**')
                 .addField('General', [
                     `\`Name:\` ${bot.user.tag} (${bot.user.id})`,
                     `\`Commands:\` ${bot.commands.size}`,
                     `\`Creation Date:\` ${moment(bot.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
                     `\`Version:\` ${version}`,
-                    `\`Bot developer:\` ${author}`
+                    `\`Bot developer:\` ${author} :flag_td:`
                 ])
-                .addField('Special Message', 'Hello, Miku here! Thank you for choosing to use this bot, and for being so supportive, i know that it takes a while to fix bugs, and it may not be the best bot out there but still, thank you for using my bot, it means everything. Hope you\'re enjoy the features on it so far in the meantime, stay safe and have a fluffy day <3')
+                .addField('Special Message', '*Hello, Miku here! Thank you for choosing to use this bot, and for being so supportive, i know that it takes a while to fix bugs, and it may not be the best bot out there but still, thank you for using my bot, it means everything. Hope you\'re enjoy the features on it so far in the meantime, stay safe and have a fluffy day :heart:*')
                 .setColor(0x4AEFBA)
             message.channel.send(embed);
         }else return;
