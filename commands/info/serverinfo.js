@@ -30,19 +30,19 @@ module.exports = {
                 .setDescription(`**Guild information for:** ${message.guild.name}`)
                 .setThumbnail(message.guild.iconURL({dynamic: true}))
                 .addField('General', [
-                    `**Name:** ${message.guild.name}`,
-                    `**ID:** ${message.guild.id}`,
-                    `**Owner:** ${message.guild.owner.user.tag} ${message.guild.ownerID}`,
-                    `**Region:** ${regions[message.guild.region]}`,
-                    `**Boost Tier:** ${message.guild.premiumTier ? `Tier ${message.guild.premiumTier}`: 'None'}`,
-                    `**Time Created:** ${moment(message.guild.createdTimestamp).format('LT')} ${moment(message.guild.createdTimestamp).format('LL')} ${moment(message.guild.createdTimestamp).fromNow()}`
+                    `\`Name:\` ${message.guild.name}`,
+                    `\`ID:\` ${message.guild.id}`,
+                    `\`Owner:\` ${message.guild.owner.user.tag} ${message.guild.ownerID}`,
+                    `\`Region:\` ${regions[message.guild.region]}`,
+                    `\`Boost Tier:\` ${message.guild.premiumTier ? `Tier ${message.guild.premiumTier}`: 'None'}`,
+                    `\`Time Created:\` ${moment(message.guild.createdTimestamp).format('LT')}; ${moment(message.guild.createdTimestamp).format('LL')}; ${moment(message.guild.createdTimestamp).fromNow()}`
                 ])
                 .addField('Statistics', [
-                    `**Role Count:** ${roles.length}`,
-                    `**Emoji Count:** ${emojis.size}`,
-                    `**Member Count:** ${message.guild.memberCount}`,
-                    `**Text Channel Count:** ${channels.filter(channel => channel.type === 'text').size}`,
-                    `**Voice Channel Count:** ${channels.filter(channel => channel.type === 'voice').size}`
+                    `\`Role Count:\` ${roles.length}`,
+                    `\`Emoji Count:\` ${emojis.size}`,
+                    `\`Member Count:\` ${message.guild.memberCount}`,
+                    `\`Text Channel Count:\` ${channels.filter(channel => channel.type === 'text').size}`,
+                    `\`Voice Channel Count:\` ${channels.filter(channel => channel.type === 'voice').size}`
                 ])
                 .setColor(0x4AEFBA)
             message.channel.send(embed)

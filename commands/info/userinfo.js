@@ -35,17 +35,17 @@ module.exports = {
                 .setDescription(`**Guild information for:** ${message.guild.name}`)
                 .setThumbnail(member.user.displayAvatarURL({dynamic: true}))
                 .addField('User', [
-                    `**Username:** ${member.user.username}`,
-                    `**ID:** ${member.id}`,
-                    `**Flags:** ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
-                    `**Time Created:** ${moment(member.user.createdTimestamp).format('LT')} ${moment(member.user.createdTimestamp).format('LL')} ${moment(member.user.createdTimestamp).fromNow()}`,
-                    `**Status:** ${member.user.presence.status}`,
-                    `**Game Status:** ${member.user.presence.game || 'Not playing a game'}`
+                    `\`Username:\` ${member.user.username}`,
+                    `\`ID:\` ${member.id}`,
+                    `\`Flags:\` ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
+                    `\`Time Created:\` ${moment(member.user.createdTimestamp).format('LT')}; ${moment(member.user.createdTimestamp).format('LL')}; ${moment(member.user.createdTimestamp).fromNow()}`,
+                    `\`Status:\` ${member.user.presence.status}`,
+                    `\`Game Status:\` ${member.user.presence.game || 'Not playing a game'}`
                 ])
                 .addField('Member', [
-                    `**Highest role:** ${member.roles.highest.id === message.guild.id ? 'None' : member.roles.highest.name}`,
-                    `**Server join date:** ${moment(member.joinedAt).format('LL LTS')}`,
-                    `**Roles:** ${roles.length}`
+                    `\`Highest role:\` ${member.roles.highest.id === message.guild.id ? 'None' : member.roles.highest.name}`,
+                    `\`*Server join date:\` ${moment(member.joinedAt).format('LL\; LTS')}`,
+                    `\`Roles:\` ${roles.length}`
                 ])
                 .setColor(0x4AEFBA)
             message.channel.send(embed)
