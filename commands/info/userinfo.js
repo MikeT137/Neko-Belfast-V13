@@ -7,7 +7,10 @@ module.exports = {
 
         const member = message.mentions.members.first() || message.guild.members.cache.get(args) || message.member;
         const roles = member.roles.cache
-        const roles2 = message.author.roles
+            .sort((a, b) => b.position - a.position)
+            .map(role => role.toString())
+            .slice(0, -1);
+        const roles2 = member.roles.cache
             .sort((a, b) => b.position - a.position)
             .map(role => role.toString())
             .slice(0, -1);
