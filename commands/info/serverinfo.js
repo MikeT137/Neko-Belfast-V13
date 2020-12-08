@@ -39,8 +39,7 @@ module.exports = {
                 ])
                 .addField('Statistics', [
                     `**Role Count:** ${roles.length}`,
-                    `**Regular Emoji Count:** ${emojis.filter(emoji => !emoji.animated.size)}`,
-                    `**Animated Emoji Count:** ${emojis.filter(emoji => emoji.animated.size)}`,
+                    `**Emoji Count:** ${emojis.size}`,
                     `**Member Count:** ${message.guild.memberCount}`,
                     `**Text Channel Count:** ${channels.filter(channel => channel.type === 'text').size}`,
                     `**Voice Channel Count:** ${channels.filter(channel => channel.type === 'voice').size}`
