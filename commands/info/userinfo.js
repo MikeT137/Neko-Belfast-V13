@@ -10,7 +10,7 @@ module.exports = {
             .sort((a, b) => b.position - a.position)
             .map(role => role.toString())
             .slice(0, -1);
-        const roles2 = member.roles.cache
+        const roles2 = message.author.roles.cache
             .sort((a, b) => b.position - a.position)
             .map(role => role.toString())
             .slice(0, -1);
