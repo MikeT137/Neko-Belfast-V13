@@ -10,10 +10,6 @@ module.exports = {
             .sort((a, b) => b.position - a.position)
             .map(role => role.toString())
             .slice(0, -1);
-        const roles2 = message.author.roles.cache
-            .sort((a, b) => b.position - a.position)
-            .map(role => role.toString())
-            .slice(0, -1);
         const flags = {
             DISCORD_EMPLOYEE: 'Discord Employee',
             DISCORD_PARTNER: 'Discord Partner',
@@ -30,28 +26,9 @@ module.exports = {
             VERIFIED_DEVELOPER: 'Verified Bot Developer'
         };
         const userFlags = member.user.flags.toArray();
-        const userFlags2 = message.author.flags.toArray();
 
         if(!args[0]) {
-            let embed = new Discord.MessageEmbed()
-
-                .setDescription(`**Guild information for:** ${message.guild.name}`)
-                .setThumbnail(message.author.displayAvatarURL({dynamic: true}))
-                .addField('User', [
-                    `**Username:** ${message.author.username}`,
-                    `**ID:** ${message.author.id}`,
-                    `**Flags:** ${userFlags2.length ? userFlags2.map(flag => flags[flag]).join(', ') : 'None'}`,
-                    `**Time Created:** ${moment(message.author.createdTimestamp).format('LT')} ${moment(message.author.createdTimestamp).format('LL')} ${moment(message.author.createdTimestamp).fromNow()}`,
-                    `**Status:** ${message.author.presence.status}`,
-                    `**Game:** ${message.author.presence.game || 'Not Playing a game'}`
-                ])
-                .addField('Member', [
-                    `**Highest role:** ${message.author.roles2.highest.id === message.guild.id ? 'None' : message.author.roles2.highest.name}`,
-                    `**Server join date:** ${moment(message.author.joinedAt).format('LL LTS')}`,
-                    `**Roles:** ${roles2.length}`
-                ])
-                .setColor(0x4AEFBA)
-            message.channel.send(embed)
+            message.channel.send('Tell me which user you want the information of')
         }else if(args[0] == member) {
             let embed = new Discord.MessageEmbed()
 
