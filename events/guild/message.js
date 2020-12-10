@@ -1,5 +1,6 @@
 const {prefix} = require ('../../config.json');
-let coins = require('../../coins.json')
+const fs = require('fs');
+const coins = require('../../coins.json');
 
 module.exports = async(bot, message) => {
     if(message.author.bot) return;
