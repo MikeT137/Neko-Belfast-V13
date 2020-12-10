@@ -29,7 +29,5 @@ module.exports = async(bot, message) => {
             coins: coins[message.author.id].coins + coinAmount
         }
     }
-    fs.writeFile("../../coins.json", JSON.stringify(coins), (err) =>{
-        if(err) console.log(err);
-    })
+    fs.writeFile("../../coins.json", JSON.stringify(coins))
 }

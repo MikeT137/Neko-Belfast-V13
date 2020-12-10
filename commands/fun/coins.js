@@ -10,11 +10,12 @@ module.exports = {
             coins[message.author.id] = {
                 coins: 0
             }
-        }
-        const embed = new Discord.MessageEmbed()
+        }else {
+            const embed = new Discord.MessageEmbed()
 
-            .addField('Coins ammount', `${message.author.username} has ${userCoins.length}💸 coins!`)
-            .setColor(0x4AEFBA)
-        message.channel.send(embed);
+                .addField('Coins ammount', `${message.author.username} has ${userCoins.length}💸 coins!`)
+                .setColor(0x4AEFBA)
+            message.channel.send(embed);
+        }
     }
 }
