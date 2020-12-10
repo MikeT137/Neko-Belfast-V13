@@ -13,7 +13,7 @@ module.exports = {
         }
         const embed = new Discord.MessageEmbed()
 
-            .addField('Coins ammount', `${message.author.username} has ${userCoins}💸 coins!`)
+            .addField('Coins ammount', `${message.author.username} has ${userCoins.length}💸 coins!`)
             .setColor(0x4AEFBA)
         message.channel.send(embed);
     }
