@@ -8,7 +8,7 @@ module.exports = {
 
         if(!coins[message.author.id]) {
             coins[message.author.id] = {
-                coins: 0;
+                coins: 0
             }
         }
         const embed = new Discord.MessageEmbed()
