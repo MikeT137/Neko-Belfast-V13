@@ -14,7 +14,7 @@ module.exports = async(bot, message) => {
     if(!command) command = bot.commands.get(bot.aliases.get(cmd));
     if(command) command.run(bot, message, args);
     
-    const coins = require('./coins.json');
+    const coins = require('../coins.json');
 
     if(!coins[message.author.id]) {
         coins[message.author.id] = {
@@ -29,5 +29,5 @@ module.exports = async(bot, message) => {
             coins: coins[message.author.id].coins + coinAmount
         }
     }
-    fs.writeFile("./coins.json", JSON.stringify(coins))
+    fs.writeFile("../coins.json", JSON.stringify(coins))
 }
