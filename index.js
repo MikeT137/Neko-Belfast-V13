@@ -27,7 +27,7 @@ console.log(`Oops! ${e}`);
 });
 
 //Coin System
-const coins = require('../../coins.json');
+const coins = require('./coins.json');
 
 if(!coins[message.author.id]) {
     coins[message.author.id] = {
