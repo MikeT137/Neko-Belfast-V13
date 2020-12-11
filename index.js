@@ -42,7 +42,7 @@ if(coinAmount === baseAmount) {
         coins: coins[message.author.id].coins + coinAmount
     }
 }
-fs.writeFile("../../coins.json", JSON.stringify(coins))
+fs.writeFile("../coins.json", JSON.stringify(coins))
 
 //Token
 bot.login(process.env.token);
