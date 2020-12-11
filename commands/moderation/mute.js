@@ -3,7 +3,7 @@ module.exports = {
     description: "Mutes a user temporarily",
     run: async (bot, message, args) => {
         const ms = require('ms');
-        const person = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+        const person = message.guild.member(message.mentions.users.first());
         
         if(!message.member.hasPermission("MANAGE_MESSAGES") || !message.guild.owner) return message.channel.send('You dont have permissions to use this command');
         if(!person) return message.channel.send('Please specify a member');
