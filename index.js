@@ -1,7 +1,6 @@
 const {Collection, Client} = require('discord.js');
 const bot = new Client();
 
-
 //Handlers
 const fs = require('fs');
 
