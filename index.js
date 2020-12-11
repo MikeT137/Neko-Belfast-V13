@@ -1,6 +1,7 @@
 const {Collection, Client} = require('discord.js');
 const bot = new Client();
 
+
 //Handlers
 const fs = require('fs');
 
@@ -24,6 +25,24 @@ console.log('Server count posted!');
 dbl.on('error', e => {
 console.log(`Oops! ${e}`);
 });
+
+//Coin System
+const coins = require('../../coins.json');
+
+if(!coins[message.author.id]) {
+    coins[message.author.id] = {
+        coins: 0
+    };
+}
+let coinAmount = Math.floor(Math.random() * 15) + 1;
+let baseAmount = Math.floor(Math.random() * 15) + 1;
+
+if(coinAmount === baseAmount) {
+    coins[message.author.id] = {
+        coins: coins[message.author.id].coins + coinAmount
+    }
+}
+fs.writeFile("../../coins.json", JSON.stringify(coins))
 
 //Token
 bot.login(process.env.token);
