@@ -18,8 +18,8 @@ module.exports = async(bot, message) => {
 
     //XP System
     const xpAdd = Math.floor(Math.random() * 7) + 8;
-    const currentxp = xp[messahe.author.id].xp;
-    const currentLvl = xp[messahe.author.id].level;
+    const currentxp = xp[message.author.id].xp;
+    const currentLvl = xp[message.author.id].level;
     const nextLvl = xp[message.author.id].level * 250;
 
     if(!xp[message.author.id]) {
