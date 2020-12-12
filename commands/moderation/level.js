@@ -1,4 +1,4 @@
-module.exports = {
+/*module.exports = {
     name:'level',
     description: "Shows the user their current level and xp",
     run: async (bot, message, args) => {
@@ -26,4 +26,4 @@ module.exports = {
         }
         
     }
-}
+}*/

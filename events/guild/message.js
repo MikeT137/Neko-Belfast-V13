@@ -1,7 +1,7 @@
 module.exports = async(bot, message) => {
     const fs = require('fs');
     const {prefix} = require ('../../config.json');
-    const xp = require ('../../xp.json');
+    //const xp = require ('../../xp.json');
 
     if(message.author.bot) return;
     if(!message.content.toLowerCase().startsWith(prefix)) return;
@@ -17,7 +17,7 @@ module.exports = async(bot, message) => {
     if(command) command.run(bot, message, args);
 
     //XP System
-    const xpAdd = Math.floor(Math.random() * 7) + 8;
+    /*const xpAdd = Math.floor(Math.random() * 7) + 8;
     const currentxp = xp[message.author.id].xp;
     const currentLvl = xp[message.author.id].level;
     const nextLvl = xp[message.author.id].level * 250;
@@ -33,5 +33,5 @@ module.exports = async(bot, message) => {
     if(nextLvl <= xp[message.author.id].xp) {
         xp[message.author.id].level = currentLvl + 1;
     }
-    fs.writeFile('../../xp.json', JSON.stringify(xp))
+    fs.writeFile('../../xp.json', JSON.stringify(xp))*/
 }
