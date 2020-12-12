@@ -4,8 +4,8 @@ module.exports = {
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const xp = require('../../xp.json');
-        const currentxp = xp[messahe.author.id].xp;
-        const currentLvl = xp[messahe.author.id].level;
+        const currentxp = xp[message.author.id].xp;
+        const currentLvl = xp[message.author.id].level;
         const nextLvlxp = currentLvl * 250;
         const difference = nextLvlxp - currentxp
 
