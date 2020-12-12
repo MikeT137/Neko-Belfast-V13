@@ -10,7 +10,7 @@ module.exports = async(bot, message) => {
     const cmd = args.shift().toLowerCase();
     const command = bot.commands.get(cmd);
 
-    if(cmd.length == 0) return;
+    if(cmd.length === 0) return;
     if(!command) command = bot.commands.get(bot.aliases.get(cmd));
     if(command) command.run(bot, message, args);
 }
