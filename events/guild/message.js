@@ -1,8 +1,8 @@
-const fs = require('fs');
-const {prefix} = require ('../../config.json');
-const xp = require ('../../xp.json');
-
 module.exports = async(bot, message) => {
+    const fs = require('fs');
+    const {prefix} = require ('../../config.json');
+    const xp = require ('../../xp.json');
+
     if(message.author.bot) return;
     if(!message.content.toLowerCase().startsWith(prefix)) return;
     if(!message.guild) return;
