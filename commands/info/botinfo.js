@@ -15,6 +15,7 @@ module.exports = {
                 .addField('General', [
                     `\`Name:\` ${bot.user.tag} (${bot.user.id})`,
                     `\`Commands:\` ${bot.commands.size}`,
+                    `\`Servers: \` ${bot.guilds.cache.size}`,
                     `\`Creation Date:\` ${moment(bot.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
                     `\`Version:\` ${version}`,
                     `\`Bot developer:\` ${author} :flag_td:`
