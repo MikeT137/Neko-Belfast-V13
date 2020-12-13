@@ -53,7 +53,7 @@ module.exports = {
 
                             .setTitle('Help - Interactive Roleplay (@someone)')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', '\`boop\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`')
+                            .addField('Commands:', '\`boop\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`')
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor(0x4AEFBA)
                         msg.edit(embedI);
@@ -257,6 +257,10 @@ module.exports = {
                         
             case 'punch':
                 message.channel.send('It sends a punching gif: \`b.punch (ping)\`')
+            break;
+
+            case 'shoot':
+                message.channel.send('It sends a shooting gif: \`b.shoot (ping)\`')
             break;
                         
             case 'slap':
