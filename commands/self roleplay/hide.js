@@ -18,7 +18,7 @@ module.exports = {
         if(!args[0]) {
             const embed = new Discord.MessageEmbed()
 
-            .setAuthor(`${message.author.username} is dabbing ヽ(o⌣oヾ)`, message.author.displayAvatarURL({ dynamic: true }))
+            .setAuthor(`${message.author.username} is hiding`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_hide[Math.floor(Math.random() * random_hide.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
