@@ -44,7 +44,7 @@ module.exports = {
 
                             .setTitle('Help - Self Roleplay')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', '\`blush\`, \`cheer\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`hide\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`sip\`, \`run\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`yawn\`')
+                            .addField('Commands:', '\`blush\`, \`bored\`, \`cheer\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`hide\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`sip\`, \`run\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`yawn\`')
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor(0x4AEFBA)
                         msg.edit(embedS);
@@ -128,6 +128,10 @@ module.exports = {
             //Self
             case 'blush':
                 message.channel.send('It sends a blushing gif: \`b.blush\`')
+            break;
+
+            case 'bored':
+                message.channel.send('It sends a bored gif: \`b.bored\`')
             break;
 
             case 'cheer':
