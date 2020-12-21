@@ -27,7 +27,7 @@ module.exports = {
             }else {
                 const embed = new Discord.MessageEmbed()
 
-                .setAuthor(`${message.author.username} is cheering up`, message.author.displayAvatarURL({ dynamic: true }))
+                .setAuthor(`${message.author.username} is cheering up ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
                 .setImage(random_cheer[Math.floor(Math.random() * random_cheer.length)])
                 .setColor(0x4AEFBA)
                 message.channel.send(embed);
