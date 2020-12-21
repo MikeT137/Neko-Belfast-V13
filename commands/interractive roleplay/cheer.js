@@ -2,8 +2,8 @@ module.exports = {
     name:'cheer',
     description: "The user is cheering up",
     run: async (bot, message, args) => {
-        const author = message.author;
         const Discord = require('discord.js');
+        const person = message.mentions.users.first();
         const random_cheer = [
             'https://media.tenor.com/images/e09da28187e95c74d9a2a214f3bc28cb/tenor.gif',
             'https://media.tenor.com/images/3fcc1b897b5dccb2a5edda6fb0d78e59/tenor.gif',
@@ -20,14 +20,14 @@ module.exports = {
             if(person.id == message.author.id) {
                 const embed = new Discord.MessageEmbed()
 
-                .setAuthor(`${author.username} is cheering themselves up`, message.author.displayAvatarURL({ dynamic: true }))
+                .setAuthor(`${message.author.username} is cheering themselves up`, message.author.displayAvatarURL({ dynamic: true }))
                 .setImage(random_cheer[Math.floor(Math.random() * random_cheer.length)])
                 .setColor(0x4AEFBA)
                 message.channel.send(embed);
             }else {
                 const embed = new Discord.MessageEmbed()
 
-                .setAuthor(`${author.username} is cheering up`, message.author.displayAvatarURL({ dynamic: true }))
+                .setAuthor(`${message.authorauthor.username} is cheering up`, message.author.displayAvatarURL({ dynamic: true }))
                 .setImage(random_cheer[Math.floor(Math.random() * random_cheer.length)])
                 .setColor(0x4AEFBA)
                 message.channel.send(embed);
