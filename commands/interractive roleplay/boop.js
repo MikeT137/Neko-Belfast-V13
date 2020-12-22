@@ -59,8 +59,7 @@ module.exports = {
             var search_term = "anime boop";
         
             // using default locale of en_US
-            var search_url = "https://api.tenor.com/v1/search?q=" + search_term + "&key=" +
-                    apikey + "&limit=" + lmt;
+            var search_url = "https://api.tenor.com/v1/search?q=" + search_term + "&key=" + apikey + "&limit=" + lmt;
         
             httpGetAsync(search_url,tenorCallback_search);
         
