@@ -2,12 +2,14 @@ module.exports = {
     name:'boop',
     description: "Boops a user's nose",
     run: async (bot, message, args) => {
+        const Discord = require('discord.js');
+        const person = message.mentions.users.first();
 
         // url Async requesting function
         function httpGetAsync(theUrl, callback)
         {
             // create the request object
-            var xmlHttp = new XMLHttpRequest();
+            var xmlHttp = new Discord();
         
             // set the state change callback to capture when the response comes in
             xmlHttp.onreadystatechange = function()
@@ -72,9 +74,6 @@ module.exports = {
         
         // start the flow
         grab_data();
-
-        const Discord = require('discord.js');
-        const person = message.mentions.users.first();
 
         if(message.mentions.members.size >= 1) {
             if(person.id == message.author.id) {
