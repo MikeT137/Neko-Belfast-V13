@@ -6,7 +6,8 @@ module.exports = {
         const randomPuppy = require('random-puppy');
         const person = message.mentions.users.first();
         const boop = 'https://tenor.com/search/anime-boop-gifs';
-        const img = await randomPuppy(boop);
+        const random = boop[Math.floor(Math.random() * boop.length)];
+        const img = await randomPuppy(random);
         /*const random_boop = [
             'https://media1.tenor.com/images/cbf38a2e97a348a621207c967a77628a/tenor.gif?itemid=6287077',
             'https://media.tenor.com/images/9945480efe5179c227558769613ee275/tenor.gif',
