@@ -2,7 +2,6 @@ module.exports = {
     name:'blush',
     description: "The user blushes",
     run: async (bot, message, args) => {
-        const author = message.author;
         const Discord = require('discord.js');
         const random_blush = [
             'https://media.tenor.com/images/75936b8b93269bd293bd184eb209e358/tenor.gif',
@@ -20,7 +19,7 @@ module.exports = {
         if (!args[0]){
             const embed = new Discord.MessageEmbed()
 
-            .setAuthor(`${author.username} is blushing`, message.author.displayAvatarURL({ dynamic: true }))
+            .setAuthor(`${message.author.username} is blushing`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_blush[Math.floor(Math.random() * random_blush.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
