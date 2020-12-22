@@ -83,7 +83,7 @@ module.exports = {
                 const embed = new Discord.MessageEmbed()
         
                 .setAuthor(`${message.author.username} booped ${person.username}'s nose !`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(httpGetAsync(search_url,tenorCallback_search))
+                .setImage(search_url)
                 .setColor(0x4AEFBA)
                 message.channel.send(embed);
             }
