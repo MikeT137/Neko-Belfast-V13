@@ -2,14 +2,14 @@ module.exports = {
     name:'boop',
     description: "Boops a user's nose",
     run: async (bot, message, args) => {
-        const Discord = require('discord.js');
+        const {Collection, Client} = require('discord.js');
         const person = message.mentions.users.first();
 
         // url Async requesting function
         function httpGetAsync(theUrl, callback)
         {
             // create the request object
-            var xmlHttp = new Discord();
+            var xmlHttp = new Collection();
         
             // set the state change callback to capture when the response comes in
             xmlHttp.onreadystatechange = function()
@@ -78,7 +78,7 @@ module.exports = {
             if(person.id == message.author.id) {
                 message.channel.send('Eh? Why did you boop yourself?')
             }else {
-                const embed = new Discord.MessageEmbed()
+                const embed = new Client.MessageEmbed()
         
                 .setAuthor(`${message.author.username} booped ${person.username}'s nose !`, message.author.displayAvatarURL({ dynamic: true }))
                 .setImage(search_url)
