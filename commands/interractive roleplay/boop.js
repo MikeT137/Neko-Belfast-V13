@@ -21,7 +21,7 @@ module.exports = {
             }
         
             // open as a GET call, pass in the url and set async = True
-            xmlHttp.open("GET", theUrl, true);
+            xmlHttp.get("GET", theUrl, true);
         
             // call send with no params as they were passed in on the url string
             xmlHttp.send(null);
