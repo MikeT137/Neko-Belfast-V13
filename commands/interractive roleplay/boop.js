@@ -5,7 +5,7 @@ module.exports = {
         const Discord = require('discord.js');
         const randomPuppy = require('random-puppy');
         const person = message.mentions.users.first();
-        const boop = 'https://tenor.com/search/anime-boop-gifs';
+        const boop = 'anime-boop-gifs';
         const random = boop[Math.floor(Math.random() * boop.length)];
         const img = await randomPuppy(random);
         /*const random_boop = [
@@ -28,7 +28,7 @@ module.exports = {
         
                 .setAuthor(`${message.author.username} booped ${person.username}'s nose !`, message.author.displayAvatarURL({ dynamic: true }))
                 .setImage(img)
-                .setURL(random)
+                .setURL(`https://tenor.com/search/${boop}`)
                 .setColor(0x4AEFBA)
                 message.channel.send(embed);
             }
