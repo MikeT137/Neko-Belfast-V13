@@ -28,7 +28,7 @@ module.exports = {
         
                 .setAuthor(`${message.author.username} booped ${person.username}'s nose !`, message.author.displayAvatarURL({ dynamic: true }))
                 .setImage(img)
-                .setURL(boop)
+                .setURL(random)
                 .setColor(0x4AEFBA)
                 message.channel.send(embed);
             }
