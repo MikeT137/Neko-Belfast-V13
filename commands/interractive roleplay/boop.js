@@ -81,7 +81,7 @@ module.exports = {
                 const embed = new Client.MessageEmbed()
         
                 .setAuthor(`${message.author.username} booped ${person.username}'s nose !`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(search_url)
+                .setImage()
                 .setColor(0x4AEFBA)
                 message.channel.send(embed);
             }
