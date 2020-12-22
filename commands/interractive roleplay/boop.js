@@ -2,7 +2,7 @@ module.exports = {
     name:'boop',
     description: "Boops a user's nose",
     run: async (bot, message, args) => {
-        const {Collection, Client} = require('discord.js');
+        const Discord = require('discord.js');
         const person = message.mentions.users.first();
         /*
         // url Async requesting function
@@ -90,7 +90,7 @@ module.exports = {
             if(person.id == message.author.id) {
                 message.channel.send('Eh? Why did you boop yourself?')
             }else {
-                const embed = new Client.MessageEmbed()
+                const embed = new Discord.MessageEmbed()
         
                 .setAuthor(`${message.author.username} booped ${person.username}'s nose !`, message.author.displayAvatarURL({ dynamic: true }))
                 .setImage(random_boop[Math.floor(Math.random() * random_boop.length)])
