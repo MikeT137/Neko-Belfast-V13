@@ -134,10 +134,6 @@ module.exports = {
                     .setColor(0x4AEFBA)
                 message.channel.send(embed).then(xmas.cancel())
             });
-
-            const bruh = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 24 12 *'}, function(){
-                message.channel.send('nya, it works!').then(bruh.cancel())
-            });
         }else return;
     }
 }
