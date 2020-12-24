@@ -79,7 +79,10 @@ module.exports = {
         ]
 
         if (!args[0]){
-            var newyear = schedule.scheduleJob({month: 1, day: 1}, function(){
+            let startTime = new Date(Date.now() + 5000);
+            let endTime = new Date(startTime.getTime() + 5000);
+
+            /*var newyear = schedule.scheduleJob({month: 1, day: 1}, function(){
                 
                 const embed = new Discord.MessageEmbed()
 
@@ -149,6 +152,6 @@ module.exports = {
                 message.channel.send('good job, it works');
             });
         
-        }else return;
+        }else return;*/
     }
 }
