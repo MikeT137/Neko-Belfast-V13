@@ -341,7 +341,7 @@ module.exports = {
             break;
 
             case 'holiday':
-                message.channel.send('When there is a holiday, the bot will send a gif about that holiday:\`b.holiday\`\nHolidays:\n\nNew Year - january 1st\nValentine\'s Day - february 14th\nEaster - april 8th\nHalloween - october 31st\nThanksgiving - november 25th\nChristmas - december 25th')
+                message.channel.send('When there is a holiday, the bot will send a gif about that holiday: \`b.holiday\`\nHolidays:\n\nNew Year - january 1st\nValentine\'s Day - february 14th\nEaster - april 8th\nHalloween - october 31st\nThanksgiving - november 25th\nChristmas - december 25th')
             break;
 
             case 'love':
