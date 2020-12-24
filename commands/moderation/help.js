@@ -62,7 +62,7 @@ module.exports = {
                         
                             .setTitle('Help - Fun')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', '\`8ball\`, \`blackjack\`, \`coinflip\`, \`love\`, \`math\`, \`meme\`, \`quote\`, \`rng\`, \`rps\`, \`storyrun\`')
+                            .addField('Commands:', '\`8ball\`, \`blackjack\`, \`coinflip\`, \`holiday\`, \`love\`, \`math\`, \`meme\`, \`quote\`, \`rng\`, \`rps\`, \`storyrun\`')
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor(0x4AEFBA)
                         msg.edit(embedF);
@@ -81,6 +81,17 @@ module.exports = {
         }
         switch (args[0]){
             //Moderation
+            case 'moderation':
+                let embedM2 = new Discord.MessageEmbed()
+
+                    .setTitle('Help - Moderation')
+                    .setDescription('Type \`b.help (command)\` to get information about a specific command')
+                    .addField('Commands:', '\`ban\`, \`clear\`, \`donate\`, \`help\`, \`invite\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`, \`vote\`')
+                    .setThumbnail(bot.user.displayAvatarURL())
+                    .setColor(0x4AEFBA)
+                message.channel.send(embedM2);
+            break;
+
             case 'ban':
                 message.channel.send('It bans someone out of a server \`b.ban (ping)\`. Keep in mind:\n-the bot needs admin\n-you need admin as well\n-you can\'t ban someone that has admin\n-the bot needs to have a role higher than the person you are trying to ban(server settings -> roles)')
             break;
@@ -126,6 +137,17 @@ module.exports = {
             break;
 
             //Self
+            case 'self' || 'self roleplay':
+                let embedS2 = new Discord.MessageEmbed()
+
+                    .setTitle('Help - Self Roleplay')
+                    .setDescription('Type \`b.help (command)\` to get information about a specific command')
+                    .addField('Commands:', '\`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`hide\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`sip\`, \`run\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`yawn\`')
+                    .setThumbnail(bot.user.displayAvatarURL())
+                    .setColor(0x4AEFBA)
+                message.channel.send(embedS2);
+            break;
+
             case 'blush':
                 message.channel.send('It sends a blushing gif: \`b.blush\`')
             break;
@@ -211,6 +233,17 @@ module.exports = {
             break;
             
             //Interactive (@someone)
+            case 'interractive' || 'interractive roleplay':
+                let embedI2 = new Discord.MessageEmbed()
+
+                    .setTitle('Help - Interactive Roleplay (@someone)')
+                    .setDescription('Type \`b.help (command)\` to get information about a specific command')
+                    .addField('Commands:', '\`boop\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`')
+                    .setThumbnail(bot.user.displayAvatarURL())
+                    .setColor(0x4AEFBA)
+                message.channel.send(embedI2);
+            break;
+
             case 'boop':
                 message.channel.send('It sends a boop gif: \`b.boop (ping)\`')
             break;
@@ -284,12 +317,19 @@ module.exports = {
             break;
   
             //Fun
-            case '8ball':
-                message.channel.send('It sends a random response to your question: \`b.8ball (question)\`')
+            case 'fun':
+                let embedF2 = new Discord.MessageEmbed()
+                        
+                    .setTitle('Help - Fun')
+                    .setDescription('Type \`b.help (command)\` to get information about a specific command')
+                    .addField('Commands:', '\`8ball\`, \`blackjack\`, \`coinflip\`, \`holiday\`, \`love\`, \`math\`, \`meme\`, \`quote\`, \`rng\`, \`rps\`, \`storyrun\`')
+                    .setThumbnail(bot.user.displayAvatarURL())
+                    .setColor(0x4AEFBA)
+                message.channel.send(embedF2);
             break;
 
-            case 'avatar':
-                message.channel.send('It shows yours or someone elses avatar: \`b.avatar / b.avatar (ping)\`')
+            case '8ball':
+                message.channel.send('It sends a random response to your question: \`b.8ball (question)\`')
             break;
 
             case 'blackjack':
@@ -298,6 +338,10 @@ module.exports = {
 
             case 'coinflip':
                 message.channel.send('It flips a coin: \`b.coinflip\`')
+            break;
+
+            case 'holiday':
+                message.channel.send('When there is a holiday, the bot will send a gif about that holiday:\`b.holiday\`\nHolidays:\n\nNew Year - january 1st\nValentine\'s Day: february 14th\nEaster: april 8th\nHalloween: october 31st\nThanksgiving: november 25th\nChristmas: december 25th')
             break;
 
             case 'love':
@@ -326,6 +370,22 @@ module.exports = {
 
             case 'storyrun':
                 message.channel.send('Its a choose your adventure type of story where you have to (read a lot) and react with emojis to make your choice, eventually you get an ending, now it depends if its good or bad, good luck: \`b.storyrun\`')
+            break;
+
+            //Info
+            case 'info':
+                let embedinfo2 = new Discord.MessageEmbed()
+                        
+                    .setTitle('Help - Info')
+                    .setDescription('Type \`b.help (command)\` to get information about a specific command')
+                    .addField('Commands:', '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`')
+                    .setThumbnail(bot.user.displayAvatarURL())
+                    .setColor(0x4AEFBA)
+                message.channel.send(embedinfo2);
+            break;
+
+            case 'avatar':
+                message.channel.send('It shows yours or someone elses avatar: \`b.avatar / b.avatar (ping)\`')
             break;
 
             case 'botinfo':
