@@ -8,7 +8,7 @@ module.exports = {
             let embed = new Discord.MessageEmbed()
 
                 .setTitle('Help')
-                .setDescription('React with an emoji to get the commands of that specific category!')
+                .setDescription('React with an emoji, or type \`b.help (category)\` to get the commands of that specific category!')
                 .addField(':tools: - Moderation', 'This category has moderation commands that help admins to moderate their own servers')
                 .addField(':clown: - Self Roleplay', 'This category has roleplaying commands that only work without pinging')
                 .addField(':performing_arts: - Interactive Roleplay (@someone)', 'This category has roleplaying commands that only work with pinging')
@@ -341,7 +341,7 @@ module.exports = {
             break;
 
             case 'holiday':
-                message.channel.send('When there is a holiday, the bot will send a gif about that holiday:\`b.holiday\`\nHolidays:\n\nNew Year - january 1st\nValentine\'s Day: february 14th\nEaster: april 8th\nHalloween: october 31st\nThanksgiving: november 25th\nChristmas: december 25th')
+                message.channel.send('When there is a holiday, the bot will send a gif about that holiday:\`b.holiday\`\nHolidays:\n\nNew Year - january 1st\nValentine\'s Day - february 14th\nEaster - april 8th\nHalloween - october 31st\nThanksgiving - november 25th\nChristmas - december 25th')
             break;
 
             case 'love':
