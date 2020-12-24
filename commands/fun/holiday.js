@@ -79,10 +79,10 @@ module.exports = {
         ]
 
         if (!args[0]){
-            let startTime = new Date(Date.now() + 5000);
-            let endTime = new Date(startTime.getTime() + 5000);
+            let startTime = new Date('1 0 * * *');
+            let endTime = new Date('59 23 * * *');
 
-            /*var newyear = schedule.scheduleJob({month: 1, day: 1}, function(){
+            var newyear = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 1 1 *'}, function(){
                 
                 const embed = new Discord.MessageEmbed()
 
@@ -92,7 +92,7 @@ module.exports = {
                 message.channel.send(embed);
             });
 
-            var valentine = schedule.scheduleJob({month: 2, day: 14}, function(){
+            var valentine = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 14 2 *'}, function(){
                 
                 const embed = new Discord.MessageEmbed()
 
@@ -102,7 +102,7 @@ module.exports = {
                 message.channel.send(embed);
             });
 
-            var easter = schedule.scheduleJob({month: 4, day: 8}, function(){
+            var easter = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 8 4 *'}, function(){
                 
                 const embed = new Discord.MessageEmbed()
 
@@ -112,7 +112,7 @@ module.exports = {
                 message.channel.send(embed);
             });
 
-            var halloween = schedule.scheduleJob({month: 10, day: 31}, function(){
+            var halloween = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 31 10 *'}, function(){
                 
                 const embed = new Discord.MessageEmbed()
 
@@ -122,7 +122,7 @@ module.exports = {
                 message.channel.send(embed);
             });
 
-            var thanks = schedule.scheduleJob({month: 11, day: 25}, function(){
+            var thanks = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 11 *'}, function(){
                 
                 const embed = new Discord.MessageEmbed()
 
@@ -132,7 +132,7 @@ module.exports = {
                 message.channel.send(embed);
             });
 
-            var xmas = schedule.scheduleJob({month: 12, day: 25}, function(){
+            var xmas = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 12 *'}, function(){
                 
                 const embed = new Discord.MessageEmbed()
 
@@ -142,16 +142,11 @@ module.exports = {
                 message.channel.send(embed);
             });
 
-            var day = schedule.scheduleJob('* * * * *', function(){
-
-                message.channel.send('Uhh master, there\'s no holiday today');
-            });
-
-            var bruh = schedule.scheduleJob({month: 12, day: 24}, function(){
+            var bruh = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 24 12 *'}, function(){
 
                 message.channel.send('good job, it works');
             });
         
-        }else return;*/
+        }else return;
     }
 }
