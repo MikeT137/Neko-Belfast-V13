@@ -77,79 +77,67 @@ module.exports = {
             'https://cdn62.picsart.com/188752053001202.gif?to=min&r=640',
             'https://data.whicdn.com/images/264113355/original.gif'
         ]
-        //, function(){
         if (!args[0]){
             let startTime = new Date('1 0 * * *');
             let endTime = new Date('59 23 * * *');
 
-            const newyear = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 1 1 *'})
-            const valentine = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 14 2 *'})
-            const easter = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 8 4 *'})
-            const halloween = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 31 10 *'})
-            const thanks = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 11 *'})
-            const xmas = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 12 *'})
-            const bruh = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 24 12 *'})
-
-            if(newyear) {
+            const newyear = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 1 1 *'}, function(){
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`Happy New Year everyone!!`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_newyear[Math.floor(Math.random() * random_newyear.length)])
                     .setColor(0x4AEFBA)
-                message.channel.send(embed).then(
-                newyear.cancel()
-                )
-            }else if (valentine) {
+                message.channel.send(embed).then(newyear.cancel())
+            });
+
+            const valentine = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 14 2 *'}, function(){
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`Happy Valentine's Day!!`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_valentine[Math.floor(Math.random() * random_valentine.length)])
                     .setColor(0x4AEFBA)
-                message.channel.send(embed).then(
-                valentine.cancel()
-                )
-            }else if (easter) {
+                message.channel.send(embed).then(valentine.cancel())
+            });
+
+            const easter = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 8 4 *'}, function(){
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`Happy Easter!!`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_easter[Math.floor(Math.random() * random_easter.length)])
                     .setColor(0x4AEFBA)
-                message.channel.send(embed).then(
-                easter.cancel()
-                )
-            }else if (halloween) {
+                message.channel.send(embed).then(easter.cancel())
+            });
+
+            const halloween = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 31 10 *'}, function(){
                 const embed = new Discord.MessageEmbed()
 
-                    .setAuthor(`Happy Halloween!`, message.author.displayAvatarURL({ dynamic: true }))
-                    .setImage(random_halloween[Math.floor(Math.random() * random_halloween.length)])
-                    .setColor(0x4AEFBA)
-                message.channel.send(embed).then(
-                    halloween.cancel()
-                )
-            }else if (thanks) {
+                .setAuthor(`Happy Halloween!`, message.author.displayAvatarURL({ dynamic: true }))
+                .setImage(random_halloween[Math.floor(Math.random() * random_halloween.length)])
+                .setColor(0x4AEFBA)
+            message.channel.send(embed).then(halloween.cancel())
+            });
+
+            const thanks = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 11 *'}, function(){
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`Happy Thanksgiving! With this occasion I\'ll say: thanks for threating me well master~`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_thanks[Math.floor(Math.random() * random_thanks.length)])
                     .setColor(0x4AEFBA)
-                message.channel.send(embed).then(
-                thanks.cancel()
-                )
-            }else if (xmas) {
+                message.channel.send(embed).then(thanks.cancel())
+            });
+
+            const xmas = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 12 *'}, function(){
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`Merry Christmas!!`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_xmas[Math.floor(Math.random() * random_xmas.length)])
                     .setColor(0x4AEFBA)
-                message.channel.send(embed).then(
-                xmas.cancel()
-                )
-            }else if (bruh) {
-                message.channel.send('great job nya')
-            }else {
-                message.channel.send('Uhh master, there\'s no holiday today')
-            }
-        
+                message.channel.send(embed).then(xmas.cancel())
+            });
+
+            const bruh = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 24 12 *'}, function(){
+                message.channel.send('nya, it works!').then(bruh.cancel())
+            });
         }else return;
     }
 }
