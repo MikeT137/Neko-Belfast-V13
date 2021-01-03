@@ -5,11 +5,10 @@ module.exports = {
         const Discord = require('discord.js');
 
         var gifs = {
-            url: 'https://api.otakugifs.xyz/gif/',
+            url: 'https://api.otakugifs.xyz/gif/blush',
             method: 'GET',
             headers: {
                 'X-API-KEY': 'pj7g9seujJByserio0awmvx66W8fFtrboW9kVVNeu13yHbBgE3IsgNBS3rUuD8321l2CH3tST900dhEyd0qH9P2',
-                ':action': 'blush'
             }
         }
 
