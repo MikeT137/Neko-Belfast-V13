@@ -3,10 +3,8 @@ module.exports = {
     description: "The user blushes",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        const cheerio = require('cheerio');
-        const request = require('request');
 
-        var option = {
+        var gifs = {
             url: 'https://api.otakugifs.xyz/gif/',
             method: 'GET',
             headers: {
@@ -15,28 +13,14 @@ module.exports = {
             }
         }
 
-        request(option, function(error, response, responseBody) {
-            if(error) {
-                return;
-            }
+        if (!args[0]){
+            const embed = new Discord.MessageEmbed()
 
-            $ = cheerio.load(responseBody);
-            var links = $('.image a.link');
-            var urls = new Array(links.length).fill(0).map((v, i) => links.eq(i).attr('href'));
-
-            if(!urls.length) {
-                return;
-            }
-
-            if (!args[0]){
-                const embed = new Discord.MessageEmbed()
-
-                .setAuthor(`${message.author.username} is blushing`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(urls[Math.floor(Math.random() * urls.length)])
-                .setFooter('powered by otakugifs.xyz')
-                .setColor(0x4AEFBA)
-                message.channel.send(embed);
-            }
-        })
+            .setAuthor(`${message.author.username} is blushing`, message.author.displayAvatarURL({ dynamic: true }))
+            .setImage(gifs[Math.floor(Math.random() * gifs.length)])
+            .setFooter('powered by otakugifs.xyz')
+            .setColor(0x4AEFBA)
+            message.channel.send(embed);
+        }
     }
 }
