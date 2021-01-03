@@ -3,6 +3,7 @@ module.exports = {
     description: "The user blushes",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
+        const request = require('request');
 
         var gifs = {
             url: 'https://api.otakugifs.xyz/gif/blush',
@@ -11,15 +12,21 @@ module.exports = {
                 'X-API-KEY': 'pj7g9seujJByserio0awmvx66W8fFtrboW9kVVNeu13yHbBgE3IsgNBS3rUuD8321l2CH3tST900dhEyd0qH9P2',
             }
         }
+        const key = 'pj7g9seujJByserio0awmvx66W8fFtrboW9kVVNeu13yHbBgE3IsgNBS3rUuD8321l2CH3tST900dhEyd0qH9P2';
+        var URL = "https://api.otakugifs.xyz/gif/blush" + "&key=" + key;
 
-        if (!args[0]){
-            const embed = new Discord.MessageEmbed()
 
-            .setAuthor(`${message.author.username} is blushing`, message.author.displayAvatarURL({ dynamic: true }))
-            .setImage(gifs[Math.floor(Math.random() * gifs.length)])
-            .setFooter('powered by otakugifs.xyz')
-            .setColor(0x4AEFBA)
-            message.channel.send(embed);
-        }
+        request(gifs, function(URL, key) {
+            if (!args[0]){
+                const embed = new Discord.MessageEmbed()
+    
+                .setAuthor(`${message.author.username} is blushing`, message.author.displayAvatarURL({ dynamic: true }))
+                .setImage(URL[Math.floor(Math.random() * URL.length)])
+                .setFooter('powered by otakugifs.xyz')
+                .setColor(0x4AEFBA)
+                message.channel.send(embed)
+                
+            }
+        })
     }
 }
