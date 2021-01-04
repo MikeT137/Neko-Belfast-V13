@@ -23,9 +23,8 @@ module.exports = {
                 .setFooter('powered by otakugifs.xyz')
                 .setColor(0x4AEFBA)
                 message.channel.send(embed)
-
-                console.log(json);
             }
+            console.log(json)
         })
         /*const random_blush = [
             'https://media.tenor.com/images/75936b8b93269bd293bd184eb209e358/tenor.gif',
