@@ -16,11 +16,12 @@ module.exports = {
                 const embed = new Discord.MessageEmbed()
         
                 .setAuthor(`${message.author.username} is blushing`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(res[Math.floor(Math.random() * res.length)])
+                .setImage(res.url[Math.floor(Math.random() * res.url.length)])
                 .setFooter('powered by otakugifs.xyz')
                 .setColor(0x4AEFBA)
                 message.channel.send(embed)
             }
+            console.log(res)
             res.json()
         })
         /*const random_blush = [
