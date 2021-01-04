@@ -4,36 +4,38 @@ module.exports = {
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const person = message.mentions.users.first();
-        const random_pat = [
-            'https://media.giphy.com/media/osYdfUptPqV0s/giphy.gif',
-            'https://media.giphy.com/media/L2z7dnOduqEow/giphy.gif',
-            'https://media.giphy.com/media/4HP0ddZnNVvKU/giphy.gif',
-            'https://media.giphy.com/media/109ltuoSQT212w/giphy.gif',
-            'https://media.giphy.com/media/ye7OTQgwmVuVy/giphy.gif',
-            'https://media.tenor.com/images/a671268253717ff877474fd019ef73e9/tenor.gif',
-            'https://i.pinimg.com/originals/2e/62/cd/2e62cd7491be4ec9f0ec210d648b80fd.gif',
-            'https://thumbs.gfycat.com/FlimsyDeafeningGrassspider-size_restricted.gif',
-            'https://em.wattpad.com/7eb08d93b3a97f02bc611f78d8608d4fabe79951/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f4f4876343146766e4a7136665a773d3d2d3635313034303939312e31353634663135626330663632636161363839393833333730382e676966',
-            'https://thumbs.gfycat.com/AgileHeavyGecko-max-1mb.gif',
-        ]
-        if(message.mentions.members.size >= 1) {
-            if(person.id == message.author.id) {
-                const embed = new Discord.MessageEmbed()
+        const fetch = require('node-fetch');
+        const url = 'https://api.otakugifs.xyz/gif/pat';
 
-                .setAuthor(`Aww, its okay, belfast will give you some pats nya~`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(random_pat[Math.floor(Math.random() * random_pat.length)])
-                .setColor(0x4AEFBA)
-                message.channel.send(embed);
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'X-API-KEY': 'pj7g9seujJByserio0awmvx66W8fFtrboW9kVVNeu13yHbBgE3IsgNBS3rUuD8321l2CH3tST900dhEyd0qH9P2',
+            },
+        }).then((res) =>
+            res.json()
+        ).then((json) => {
+            if(message.mentions.members.size >= 1) {
+                if(person.id == message.author.id) {
+                    const embed = new Discord.MessageEmbed()
+    
+                    .setAuthor('Aww, its okay, belfast will give you some pats nya~', message.author.displayAvatarURL({ dynamic: true }))
+                    .setImage(json.url)
+                    .setFooter('Powered by otakugifs.xyz')
+                    .setColor(0x4AEFBA)
+                    message.channel.send(embed);
+                }else {
+                    const embed = new Discord.MessageEmbed()
+    
+                    .setAuthor(`${message.author.username} is patting ${person.username}, so cute`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setImage(json.url)
+                    .setFooter('Powered by otakugifs.xyz')
+                    .setColor(0x4AEFBA)
+                    message.channel.send(embed);
+                }
             }else {
-                const embed = new Discord.MessageEmbed()
-
-                .setAuthor(`${message.author.username} gave ${person.username} a pat...adorable`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(random_pat[Math.floor(Math.random() * random_pat.length)])
-                .setColor(0x4AEFBA)
-                message.channel.send(embed);
+                message.channel.send('You have to ping someone to pat them')
             }
-        }else {
-            message.channel.send('You have to ping someone to pat them')
-        }
+        })
     }
 }
