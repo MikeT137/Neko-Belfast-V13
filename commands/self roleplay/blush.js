@@ -19,7 +19,7 @@ module.exports = {
                 const embed = new Discord.MessageEmbed()
         
                 .setAuthor(`${message.author.username} is blushing`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(json.url[Math.floor(Math.random() * json.url.length)])
+                .setImage(url[Math.floor(Math.random() * url.length)])
                 .setFooter('powered by otakugifs.xyz')
                 .setColor(0x4AEFBA)
                 message.channel.send(embed)
