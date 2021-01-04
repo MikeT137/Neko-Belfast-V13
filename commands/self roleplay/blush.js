@@ -14,12 +14,12 @@ module.exports = {
         }).then((res) => {
             console.log(res);
             res.json();
-        }).then((json) => {
+        }).then(json => {
             if (!args[0]) {
                 const embed = new Discord.MessageEmbed()
         
                 .setAuthor(`${message.author.username} is blushing`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(url[Math.floor(Math.random() * url.length)])
+                .setImage(json.url[Math.floor(Math.random() * json.url.length)])
                 .setFooter('powered by otakugifs.xyz')
                 .setColor(0x4AEFBA)
                 message.channel.send(embed)
