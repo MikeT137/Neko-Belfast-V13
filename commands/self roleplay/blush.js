@@ -4,7 +4,7 @@ module.exports = {
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const fetch = require('node-fetch');
-        const url = 'https://api.otakugifs.xyz/gif/blush';
+        const URL = 'https://api.otakugifs.xyz/gif/blush';
 
         fetch(url, {
             method: 'GET',
@@ -19,7 +19,7 @@ module.exports = {
                 const embed = new Discord.MessageEmbed()
         
                 .setAuthor(`${message.author.username} is blushing`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(json.url) //[Math.floor(Math.random() * json.url.length)]
+                .setImage(json.URL) //[Math.floor(Math.random() * json.URL.length)]
                 .setFooter('powered by otakugifs.xyz')
                 .setColor(0x4AEFBA)
                 message.channel.send(embed)
