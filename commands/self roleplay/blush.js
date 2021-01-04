@@ -3,28 +3,27 @@ module.exports = {
     description: "The user blushes",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        /*const fetch = require('node-fetch');
+        const fetch = require('node-fetch');
         blush = 'https://api.otakugifs.xyz/gif/blush';
 
-        fetch('https://api.otakugifs.xyz/gif/blush', {
+        fetch(blush, {
             method: 'GET',
             headers: {
                 'X-API-KEY': 'pj7g9seujJByserio0awmvx66W8fFtrboW9kVVNeu13yHbBgE3IsgNBS3rUuD8321l2CH3tST900dhEyd0qH9P2',
             },
-        }).then(res=> 
+        }).then((res) => {
             if (!args[0]) {
                 const embed = new Discord.MessageEmbed()
         
                 .setAuthor(`${message.author.username} is blushing`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(URL[Math.floor(Math.random() * URL.length)])
+                .setImage(blush[Math.floor(Math.random() * blush.length)])
                 .setFooter('powered by otakugifs.xyz')
                 .setColor(0x4AEFBA)
                 message.channel.send(embed)
-
-                console.log(res)
             }
-        )*/
-        const random_blush = [
+            res.json()
+        })
+        /*const random_blush = [
             'https://media.tenor.com/images/75936b8b93269bd293bd184eb209e358/tenor.gif',
             'https://media.tenor.com/images/f45f5c5fd72dd7c9ff50976e2bc7133c/tenor.gif',
             'https://i.pinimg.com/originals/b7/4a/5b/b74a5b128b5d65ea1fdb9090c0b3f295.gif',
@@ -44,6 +43,6 @@ module.exports = {
             .setImage(random_blush[Math.floor(Math.random() * random_blush.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
-        }
+        }*/
     }
 }
