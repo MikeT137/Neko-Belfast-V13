@@ -8,7 +8,7 @@ module.exports = {
         const url = 'https://api.otakugifs.xyz/gif/cry';
         const url2 = 'https://api.otakugifs.xyz/gif/slap';
 
-        fetch(url, url2, {
+        fetch({url, url2}, {
             method: 'GET',
             headers: {
                 'X-API-KEY': 'pj7g9seujJByserio0awmvx66W8fFtrboW9kVVNeu13yHbBgE3IsgNBS3rUuD8321l2CH3tST900dhEyd0qH9P2',
