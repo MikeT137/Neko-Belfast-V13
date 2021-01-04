@@ -5,7 +5,7 @@ module.exports = {
         const Discord = require('discord.js');
         const fetch = require('node-fetch');
 
-        fetch(blush, {
+        fetch(url, {
             method: 'GET',
             url: 'https://api.otakugifs.xyz/gif/blush',
             headers: {
