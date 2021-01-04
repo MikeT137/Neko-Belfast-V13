@@ -12,6 +12,9 @@ module.exports = {
                 'X-API-KEY': 'pj7g9seujJByserio0awmvx66W8fFtrboW9kVVNeu13yHbBgE3IsgNBS3rUuD8321l2CH3tST900dhEyd0qH9P2',
             },
         }).then((res) => {
+            console.log(res);
+            res.json();
+        }).then(() => {
             if (!args[0]) {
                 const embed = new Discord.MessageEmbed()
         
@@ -21,8 +24,6 @@ module.exports = {
                 .setColor(0x4AEFBA)
                 message.channel.send(embed)
             }
-            console.log(res)
-            res.json()
         })
         /*const random_blush = [
             'https://media.tenor.com/images/75936b8b93269bd293bd184eb209e358/tenor.gif',
