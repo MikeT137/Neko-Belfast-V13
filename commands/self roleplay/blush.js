@@ -4,10 +4,10 @@ module.exports = {
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const fetch = require('node-fetch');
-        blush = 'https://api.otakugifs.xyz/gif/blush';
 
         fetch(blush, {
             method: 'GET',
+            url: 'https://api.otakugifs.xyz/gif/blush',
             headers: {
                 'X-API-KEY': 'pj7g9seujJByserio0awmvx66W8fFtrboW9kVVNeu13yHbBgE3IsgNBS3rUuD8321l2CH3tST900dhEyd0qH9P2',
             },
