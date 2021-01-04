@@ -14,7 +14,7 @@ module.exports = {
         }).then((res) => {
             console.log(res);
             res.json();
-        }).then(json => {
+        }).then((json) => {
             if (!args[0]) {
                 const embed = new Discord.MessageEmbed()
         
@@ -23,6 +23,8 @@ module.exports = {
                 .setFooter('powered by otakugifs.xyz')
                 .setColor(0x4AEFBA)
                 message.channel.send(embed)
+
+                console.log(json);
             }
         })
         /*const random_blush = [
