@@ -18,7 +18,7 @@ module.exports = {
         if (!args[0]){
             const embed = new Discord.MessageEmbed()
 
-            .setAuthor(`${author.username} is making a facepalm`, message.author.displayAvatarURL({ dynamic: true }))
+            .setAuthor(`${message.author.username} is making a facepalm`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_fp[Math.floor(Math.random() * random_fp.length)])
             .setColor(0x4AEFBA)
             message.channel.send(embed);
