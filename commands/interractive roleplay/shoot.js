@@ -5,7 +5,7 @@ module.exports = {
         const Discord = require('discord.js');
         const person = message.mentions.users.first();
         const fetch = require('node-fetch');
-        const url = 'https://api.otakugifs.xyz/gif/shoot';
+        const url = 'https://api.otakugifs.xyz/gif/gun';
 
         fetch(url, {
             method: 'GET',
