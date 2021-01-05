@@ -35,15 +35,15 @@ module.exports = {
             headers: {
                 'X-API-KEY': 'pj7g9seujJByserio0awmvx66W8fFtrboW9kVVNeu13yHbBgE3IsgNBS3rUuD8321l2CH3tST900dhEyd0qH9P2',
             },
-        }).then((res) =>
-            res.json()
-        ).then((json) => {
+        }).then((res2) =>
+            res2.json()
+        ).then((json2) => {
             if(message.mentions.members.size >= 1) {
                 if(person.id != message.author.id) {
                     const embed = new Discord.MessageEmbed()
         
                     .setAuthor(`${message.author.username} is punching ${person.username}...auch`, message.author.displayAvatarURL({ dynamic: true }))
-                    .setImage(json.url2)
+                    .setImage(json2.url2)
                     .setFooter('Powered by otakugifs.xyz')
                     .setColor(0x4AEFBA)
                     message.channel.send(embed);
