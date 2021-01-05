@@ -4,7 +4,7 @@ module.exports = {
     run: async(bot, message, args) => {
         const Discord = require('discord.js');
         const fetch = require('node-fetch');
-        const url = 'https://api.otakugifs.xyz/gif/hide';
+        const url = 'https://api.otakugifs.xyz/gif/lurk';
 
         fetch(url, {
             method: 'GET',
