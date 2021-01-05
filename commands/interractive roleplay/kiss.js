@@ -17,7 +17,7 @@ module.exports = {
         ).then((json) => {
             if(message.mentions.members.size >= 1) {
                 if(person.id == message.author.id) {
-                    message.channel.send(`It\' oay ${message.author.username}! I\'m sure you\'ll get someone to be by your sied! Stay strong nya~`)
+                    message.channel.send(`It\'s okay ${message.author.username}! I\'m sure you\'ll get someone to be by your side! Stay strong nya~`)
                 }else {
                     const embed = new Discord.MessageEmbed()
             
