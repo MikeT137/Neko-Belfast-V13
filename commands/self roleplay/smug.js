@@ -1,6 +1,6 @@
 module.exports = {
-    name:'smirk',
-    description: "The user smirking",
+    name:'smug',
+    description: "The user smugs",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const fetch = require('node-fetch');
