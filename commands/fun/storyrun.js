@@ -33,7 +33,10 @@ module.exports = {
                 return ['👍', '👎'].includes(reaction7.emoji.name) && user.id === message.author.id;
             };
             const filter8 = (reaction8, user) => {
-                return ['👍', '👎'].includes(reaction8.emoji.name) && user.id === message.author.id;
+                return ['👍', '✊', '👎'].includes(reaction8.emoji.name) && user.id === message.author.id;
+            };
+            const filter9 = (reaction9, user) => {
+                return ['👍', '👎'].includes(reaction9.emoji.name) && user.id === message.author.id;
             };
 
             msg.awaitReactions(filter, { max: 1 })
@@ -46,7 +49,7 @@ module.exports = {
                         .then(collected2 => {
                             const reaction2 = collected2.first();
                             if(reaction2.emoji.name === '👍') {
-                                msg.edit('*You decided to ignore that sound again, and you went in the basement. Everything seems fine, nothing out of place. You put all the logs in a corner, but when you turn around, a creature with very sharp claws starts to cut your throat and intestines open as you scream in torture.*\n\n**YOU DIED**\nEnding 1 out of 10: The fool')
+                                msg.edit('*You decided to ignore that sound again, and you went in the basement. Everything seems fine, nothing out of place. You put all the logs in a corner, but when you turn around, a creature with very sharp claws starts to cut your throat and intestines open as you scream in torture.*\n\n**YOU DIED**\nEnding 1 out of 11: The fool')
 
                                 setTimeout(function(){
                                     msg.edit('**YOU DIED**')
@@ -84,7 +87,7 @@ module.exports = {
                                                         .then(collected6 => {
                                                             const reaction6 = collected6.first();
                                                             if(reaction6.emoji.name === '👍') {
-                                                                msg.edit('*You picked up the sniper and you had more than enough ammo, so its time to take this freak down. Because the creature is very tall you were able to see its head, and you could\'ve already detected where its body is too. You shoot his legs first so you make sure he wont come quickly at you, then you shoot his head 2 times, just so you make sure he wont break your ears with its siren sounds. And you shoot him 3 times in the chest. You then say:* Take that bitch! *After that you take the sniper with you just in case and go back to your cabin.*\n\n**YOU SURVIVED**\nEnding 3 out of 10: The last survivor')
+                                                                msg.edit('*You picked up the sniper and you had more than enough ammo, so its time to take this freak down. Because the creature is very tall you were able to see its head, and you could\'ve already detected where its body is too. You shoot his legs first so you make sure he wont come quickly at you, then you shoot his head 2 times, just so you make sure he wont break your ears with its siren sounds. And you shoot him 3 times in the chest. You then say:* Take that bitch! *After that you take the sniper with you just in case and go back to your cabin.*\n\n**YOU SURVIVED**\nEnding 3 out of 11: The last survivor')
 
                                                                 setTimeout(function(){
                                                                     msg.edit('**YOU SURVIVED**')
@@ -100,7 +103,7 @@ module.exports = {
                                                         })
                                                     }
                                                     if(reaction5.emoji.name === '👎') {
-                                                        msg.edit('*You and the girl get ready to attack, at last siren head arrives and the fight begins. You throw the axe on his neck, and then both you and the girl start to shoot at siren head with all of your bullets. Eventually, he is finally defeated. You and the girl then get back to your cabins and live happily ever after.*\n\n**YOU SURVIVED**\nEnding 5 out of 10: The team')
+                                                        msg.edit('*You and the girl get ready to attack, at last siren head arrives and the fight begins. You throw the axe on his neck, and then both you and the girl start to shoot at siren head with all of your bullets. Eventually, he is finally defeated. You and the girl then get back to your cabins and live happily ever after.*\n\n**YOU SURVIVED**\nEnding 5 out of 11: The team')
 
                                                         setTimeout(function(){
                                                             msg.edit('**YOU SURVIVED**')
@@ -122,20 +125,37 @@ module.exports = {
                         })
                     }
                     if(reaction.emoji.name === '✊') {
-                        msg.edit('*The noises started to get louder and louder. And so because you were scared you tried to call for help, but there was no signal. And then a tall creature with a siren for a head gets closer to your cabin. You:*\n\n👍 - go on bed and hide yourself with a blanket\n👎 - go outside and try to run away from the siren head*\n\n**Select your choice:**')
+                        msg.edit('*The noises started to get louder and louder. And so because you were scared you tried to call for help, but there was no signal. And then a tall creature with a siren for a head gets closer to your cabin. You:*\n\n👍 - go on bed and hide yourself with a blanket\n✊ - wait untill siren head gets inside to have a 1v1\n👎 - go outside and try to run away from the siren head*\n\n**Select your choice:**')
 
                         msg.awaitReactions(filter7, { max: 1 })
                         .then(collected7 => {
                             const reaction7 = collected7.first();
                             if(reaction7.emoji.name === '👍') {
-                                msg.edit('*You knew that if you went outside you couldn\'t make it out alive, so you decide to stay hidden. But then there are some different sounds coming from beneath your bed. And then a creature with sharp claws comes from underneath your bed and you couldn\'t move because you were in shock and the creature quickly starts to cut your whole body until it eventually kills you.*\n\n**YOU DIED**\nEnding 7 out of 10: The fearful hider')
+                                msg.edit('*You knew that if you went outside you couldn\'t make it out alive, so you decide to stay hidden. But then there are some different sounds coming from beneath your bed. And then a creature with sharp claws comes from underneath your bed and you couldn\'t move because you were in shock and the creature quickly starts to cut your whole body until it eventually kills you.*\n\n**YOU DIED**\nEnding 7 out of 11: The fearful hider')
 
                                 setTimeout(function(){
                                     msg.edit('**YOU DIED**')
                                 }, 45000);
                             }
+                            if(reaction7.emoji.name === '✊') {
+                                msg.edit('*You thought that even if you escape from the creature, other people might run into it eventually and cause even more problems, then suddenly, you hear a car near your place that throws a bottle of gasoline and drives off, the car was red, but then you say:* That\'s odd, whatever, i need to keep my focus, i can use this gasoline to my advantage!\n*Then suddenly you pour all that gasoline around the inside of the house, you leave the axe by your side, after that you realize that the gas cooker you sometimes cook with (aside from the grill) is powered with a gas tank, you put the gas tank in the middle of the house, and with the axe on your hand, and a lighter in the other, you wait for siren head.\nSiren head eventually gets inside, you throw the axe at his chest to slow him down, then you get outside the house through the backdoor, then you say:* Let the show begin! *You use the lighter and the house starts to go on fire, you suddenly get some distance, and the gas tank explodes, and after you relax a bit, you say:* (sigh) Well that was really crazy, and all the work i put into this house is gone now, but at least i got rid of him for good.\n*You suddenly hear the same weird siren noises, this time interrupted by a bit of silence, then siren head starts to crawl towards you, because most likely the explosing ripped his legs off, you then:\n\n👍 - get angry and try to kill siren head\n✊ - wait for a miracle to happen\n👎 - run away*\n\n**Select your choice:**')
+
+                                msg.awaitReactions(filter8, { max: 1 })
+                                .then(collected8 => {
+                                    const reaction8 = collected8.first();
+                                    if(reaction8.emoji.name === '👍') {
+                                        msg.edit('How is he still alive? *you say to yourself, and because of anger, you try to kill siren head with your own hands, then you say:* If i somehow rip those sirens off of him then he might not be such a pain in the butt\n*That was the plan...but, sometimes things dont go as planned. You try to get closer to siren head, but as you do so, the sirens start to get louder and louder, and so you back off. You try to run away, until you suddenly reach a bit pit that leads to a waterfall, and behind you there was siren head. You got cornered, and so your only solution was to jump in the water. While you fall, there was siren head, in fire, \"looking\" at you (altough he doesn\'t have eyes) from a distance.\n You pass start to pass out, and some hours later, you wake up on a island, unfortunately there were no trees, no food, nothing. And after 3 days you die from hunger*\n\n**YOU DIED**\nEnding 8 out of 11: The hopeful fighter that lost it all')
+                                    }
+                                    if(reaction8.emoji.name === '✊') {
+                                        msg.edit('WIP')
+                                    }
+                                    if(reaction8.emoji.name === '👎') {
+                                        msg.edit('WIP')
+                                    }
+                                })
+                            }
                             if(reaction7.emoji.name === '👎') {
-                                msg.edit('*You thought that you could eventually escape from him if you run quickly. But when you try to, siren head gets to you very rapidly and it catches you.*\n\n**YOU DIED**\nEnding 8 out of 10: The runner')
+                                msg.edit('*You thought that you could eventually escape from him if you run quickly. But when you try to, siren head gets to you very rapidly and it catches you.*\n\n**YOU DIED**\nEnding 9 out of 11: The runner')
 
                                 setTimeout(function(){
                                     msg.edit('**YOU DIED**')
@@ -146,18 +166,18 @@ module.exports = {
                     if(reaction.emoji.name === '👎') {
                         msg.edit('*You then decide to investigate the zone. But then you see a tall creature with a siren for a head. The creature sees you and runs at you really fast, and then your reflexes starts to kick in and you hit his leg with your axe and then you quickly run away. And because you were very close to your cabin, you thought it wasn\'t the best idea to hide in your cabin. You then start running away from him and eventually you see a hunter with a double barrel shotgun driving near you. You then say:* Help! This creature is chasing me! *And then you get in the car and the hunter drives away from the monster. It was a long ride, but eventually you arrive at the hunter\'s cabin. You then sit down at the table with him and have a chat.*\n\nhunter: What was that creature?\nyou: I don\'t know, but it definitely wasn\'t friendly. I was just doing my thing, cutting wood and all, and then i heard some siren noises coming from the forest. Though it was my mistake that i went to check what it was. Thanks for saving me from that thing\nhunter: You\'re welcome. Come on, eat up, i imagine you\'re pretty hungry.\nyou: Ah, thanks.\n\n*You then start eating, but whatever it was, it had a weird flavour. After you\'re done eating. You then go to sleep. The hunter said he\'ll go to sleep too. But he lied. And he slowly walks in with a knife and a fork towards you. You then realise that the hunter was a cannibal. You then:\n\n👍 - try to fight him\n👎 - get your axe and throw it at him*\n\n**Select your choice:**')
 
-                        msg.awaitReactions(filter8, { max: 1 })
-                        .then(collected8 => {
-                            const reaction8 = collected8.first();
-                            if(reaction8.emoji.name === '👍') {
-                                msg.edit('*You wake up and try to fight him, but he had 2 weapons and you had none, so as you try to stop him, he stabs the fork to your belly, and the knife to your chest.*\n\n**YOU DIED**\nEnding 9 out of 10: The betrayed')
+                        msg.awaitReactions(filter9, { max: 1 })
+                        .then(collected9 => {
+                            const reaction9 = collected9.first();
+                            if(reaction9.emoji.name === '👍') {
+                                msg.edit('*You wake up and try to fight him, but he had 2 weapons and you had none, so as you try to stop him, he stabs the fork to your belly, and the knife to your chest.*\n\n**YOU DIED**\nEnding 10 out of 11: The betrayed')
 
                                 setTimeout(function(){
                                     msg.edit('**YOU DIED**')
                                 }, 45000);
                             }
-                            if(reaction8.emoji.name === '👎') {
-                                msg.edit('*You throw the axe at the hunter and kill him. And then you go back to sleep. The next day you take the double barrel shotgun and the axe, and go to kill the creature. You then finally find siren head and you throwing the axe and then you start shooting siren head. And you finally killed it and then you go back to your cabin living your life peacefully.*\n\n**YOU SURVIVED**\nEnding 10 out of 10: The betrayed winner')
+                            if(reaction9.emoji.name === '👎') {
+                                msg.edit('*You throw the axe at the hunter and kill him. And then you go back to sleep. The next day you take the double barrel shotgun and the axe, and go to kill the creature. You then finally find siren head and you throwing the axe and then you start shooting siren head. And you finally killed it and then you go back to your cabin living your life peacefully.*\n\n**YOU SURVIVED**\nEnding 11 out of 11: The betrayed winner')
 
                                 setTimeout(function(){
                                     msg.edit('**YOU SURVIVED**')
