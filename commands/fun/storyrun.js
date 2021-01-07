@@ -2,7 +2,7 @@ module.exports = {
     name:'storyrun',
     description: "It tells the story of a helpless boy (RUN)",
     run: async (bot, message, args) => {
-        const endings = '13';
+        const endings = '12';
 
         if(args[0]) {
             return;
@@ -40,6 +40,9 @@ module.exports = {
             const filter9 = (reaction9, user) => {
                 return ['👍', '👎'].includes(reaction9.emoji.name) && user.id === message.author.id;
             };
+            const filter10 = (reaction10, user) => {
+                return ['👍', '✊', '👎'].includes(reaction10.emoji.name) && user.id === message.author.id;
+            }
 
             msg.awaitReactions(filter, { max: 1 })
                 .then(collected => {
@@ -191,11 +194,21 @@ module.exports = {
                                 }, 45000);
                             }
                             if(reaction9.emoji.name === '👎') {
-                                msg.edit(`*You throw the axe at the hunter and kill him. And then you go back to sleep. The next day you take the double barrel shotgun and the axe, and go to kill the creature. You then finally find siren head and you throwing the axe and then you start shooting siren head. And you finally killed it and then you go back to your cabin living your life peacefully.*\n\n**YOU SURVIVED**\nEnding 13 out of ${endings}: The betrayed winner`)
+                                msg.edit('*You throw the axe at the hunter and kill him. And then you go back to sleep. The next day you start to hear the door opening, and there was a beautiful, yet odd woman in front of the door.*\n\nthe woman: W-Who are you? And where\'s the hunter?\nyou: Calm down, first of all, who are YOU?\nthe woman: Oh, excuse my manners, i\'m Belfast, a neko maid, and who are you?\nyou: My name is (͏͡y͝͡ơ͠u̶͘͟r̢͞ ͘͡҉̶n͠҉͟a҉m̷ȩ̀̕͜)̢̧̢͡҉, and i got chased by a tall creature with sirens on it\'s head, then i ran into the hunter and he picked me up, altough he then tried to eat me alive, so i had to \"put him to sleep\"\nbelfast: oh thank god, i\'ve been a slave to him for so long, it is a relief to finally be free nya~\nyou: anyway where did you come from?\nbelfast: well, in his basement, theres a cage and...that was my home for the past 2 years\nyou: anyway, that siren head really is a problem, can you help me take him down?\nbelfast: yes! i\'ll be at your service nya~!\nyou: great, but promise me you won\'t betray me like your master did to me\nbelfast: you have my word nyaa~!\n\n*After that, you and belfast start to get closer, and cooperate as a team to take down that creature. Then belfast says:* Alright, so since the noises that comes from his sirens are very loud and damaging, we need some long range weapons\n*As you craft more and more weapons, you decide to go with the spears, and belfast with the bow. As you search for siren head, you hunt for a bit more food to have a lot of energy for the battle.*\n\nbelfast: M-master, will everything be fine nya~?\nyou: (she called me master?) It will be fine, dont worry belfast, we\'ll take care of him for good\n\n*Shortly enough siren head arives, you and belfast run away towards the hunter\'s cabin to be a bit more prepared for his attacks. After you wait for siren head, you then:\n\n👍 - get the car and drive him over\n✊ - ||get in the car and lead siren head to the waterfall|| (you need to get the 8th ending for no spoilers)\n👎 - fight him with your weapons*')
 
-                                setTimeout(function(){
-                                    msg.edit('**YOU SURVIVED**')
-                                }, 45000);
+                                msg.awaitReactions(filter10, { max: 1 })
+                                .then(collected10 => {
+                                    const reaction10 = collected10.first();
+                                    if(reaction10.emoji.name === '👍') {
+                                        msg.edit('WIP')
+                                    }
+                                    if(reaction10.emoji.name === '✊') {
+                                        msg.edit('WIP')
+                                    }
+                                    if(reaction10.emoji.name === '👎') {
+                                        msg.edit('WIP')
+                                    }
+                                })
                             }
                         })
                     }
