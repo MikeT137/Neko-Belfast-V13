@@ -32,7 +32,7 @@ module.exports = {
                 return ['👍', '👎'].includes(reaction6.emoji.name) && user.id === message.author.id;
             };
             const filter7 = (reaction7, user) => {
-                return ['👍', '👎'].includes(reaction7.emoji.name) && user.id === message.author.id;
+                return ['👍', '✊', '👎'].includes(reaction7.emoji.name) && user.id === message.author.id;
             };
             const filter8 = (reaction8, user) => {
                 return ['👍', '✊', '👎'].includes(reaction8.emoji.name) && user.id === message.author.id;
@@ -130,7 +130,7 @@ module.exports = {
                         })
                     }
                     if(reaction.emoji.name === '✊') {
-                        msg.edit('*The noises started to get louder and louder. And so because you were scared you tried to call for help, but there was no signal. And then a tall creature with a siren for a head gets closer to your cabin. You:*\n\n👍 - go on bed and hide yourself with a blanket\n✊ - wait untill siren head gets inside to have a 1v1\n👎 - go outside and try to run away from the siren head*\n\n**Select your choice:**')
+                        msg.edit('*The noises started to get louder and louder. And so because you were scared you tried to call for help, but there was no signal. And then a tall creature with a siren for a head gets closer to your cabin. You:\n\n👍 - go on bed and hide yourself with a blanket\n✊ - wait untill siren head gets inside to have a 1v1\n👎 - go outside and try to run away from the siren head*\n\n**Select your choice:**')
 
                         msg.awaitReactions(filter7, { max: 1 })
                         .then(collected7 => {
