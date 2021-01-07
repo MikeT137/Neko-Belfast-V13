@@ -1,8 +1,8 @@
 module.exports = {
     name:'storyrun',
-    description: "It tells the story of a helpless boy (RUN)",
+    description: "It tells the story of a helpless boy (Story - RUN)",
     run: async (bot, message, args) => {
-        const endings = '12';
+        const endings = '15';
 
         if(args[0]) {
             return;
@@ -194,19 +194,31 @@ module.exports = {
                                 }, 45000);
                             }
                             if(reaction9.emoji.name === '👎') {
-                                msg.edit('*You throw the axe at the hunter and kill him. And then you go back to sleep. The next day you start to hear the door opening, and there was a beautiful, yet odd woman in front of the door.*\n\nthe woman: W-Who are you? And where\'s the hunter?\nyou: Calm down, first of all, who are YOU?\nthe woman: Oh, excuse my manners, i\'m Belfast, a neko maid, and who are you?\nyou: My name is (͏͡y͝͡ơ͠u̶͘͟r̢͞ ͘͡҉̶n͠҉͟a҉m̷ȩ̀̕͜)̢̧̢͡҉, and i got chased by a tall creature with sirens on it\'s head, then i ran into the hunter and he picked me up, altough he then tried to eat me alive, so i had to \"put him to sleep\"\nbelfast: oh thank god, i\'ve been a slave to him for so long, it is a relief to finally be free nya~\nyou: anyway where did you come from?\nbelfast: well, in his basement, theres a cage and...that was my home for the past 2 years\nyou: anyway, that siren head really is a problem, can you help me take him down?\nbelfast: yes! i\'ll be at your service nya~!\nyou: great, but promise me you won\'t betray me like your master did to me\nbelfast: you have my word nyaa~!\n\n*After that, you and belfast start to get closer, and cooperate as a team to take down that creature. Then belfast says:* Alright, so since the noises that comes from his sirens are very loud and damaging, we need some long range weapons\n*As you craft more and more weapons, you decide to go with the spears, and belfast with the bow. As you search for siren head, you hunt for a bit more food to have a lot of energy for the battle.*\n\nbelfast: M-master, will everything be fine nya~?\nyou: (she called me master?) It will be fine, dont worry belfast, we\'ll take care of him for good\n\n*Shortly enough siren head arives, you and belfast run away towards the hunter\'s cabin to be a bit more prepared for his attacks. After you wait for siren head, you then:\n\n👍 - get the car and drive him over\n✊ - ||get in the car and lead siren head to the waterfall|| (you need to get the 8th ending for no spoilers)\n👎 - fight him with your weapons*')
+                                msg.edit('*You throw the axe at the hunter and kill him. And then you go back to sleep. The next day you start to hear the door opening, and there was a beautiful, yet odd woman in front of the door.*\n\nthe woman: W-Who are you? And where\'s the hunter?\nyou: Calm down, first of all, who are YOU?\nthe woman: Oh, excuse my manners, i\'m Belfast, a neko maid, and who are you?\nyou: My name is (͏͡y͝͡ơ͠u̶͘͟r̢͞ ͘͡҉̶n͠҉͟a҉m̷ȩ̀̕͜)̢̧̢͡҉, and i got chased by a tall creature with sirens on it\'s head, then i ran into the hunter and he picked me up, altough he then tried to eat me alive, so i had to \"put him to sleep\"\nbelfast: oh thank god, i\'ve been a slave to him for so long, it is a relief to finally be free, thank you so much for saving me from this slavery nya~\nyou: you\'re welcome, anyway where did you come from?\nbelfast: well, in his basement, theres a cage and...that was my home for the past 2 years\nyou: alright then, but that siren head really is a problem, can you help me take him down?\nbelfast: yes! i\'ll be at your service nya~!\nyou: great, but promise me you won\'t betray me like your master did to me\nbelfast: you have my word nyaa~!\n\n*After that, you and belfast start to get closer, and cooperate as a team to take down that creature. Then belfast says:* Alright, so since the noises that comes from his sirens are very loud and damaging, we need some long range weapons\n*As you craft more and more weapons, you decide to go with the spears, and belfast with the bow. As you search for siren head, you hunt for a bit more food to have a lot of energy for the battle.*\n\nbelfast: M-master, will everything be fine nya~?\nyou: (she called me master?) It will be fine, dont worry belfast, we\'ll take care of him for good\n\n*Shortly enough siren head arives, you and belfast run away towards the hunter\'s cabin to be a bit more prepared for his attacks. After you wait for siren head, you then:\n\n👍 - get the car and drive him over\n✊ - ||get in the car and lead siren head to the waterfall|| (you need to get the 8th ending for no spoilers)\n👎 - fight him with your weapons*\n\n**Select your choice:**')
 
                                 msg.awaitReactions(filter10, { max: 1 })
                                 .then(collected10 => {
                                     const reaction10 = collected10.first();
                                     if(reaction10.emoji.name === '👍') {
-                                        msg.edit('WIP')
+                                        msg.edit(`*You and belfast get in the car and wait for siren head, After he arrives, you start the car, and drive straight to him, until you squish him between the car and a big boulder.*\n\nbelfast: Master we did it nya!\nyou: yes we did, thx for helping me\nbelfast: you\'re welcome, let\'s go back in the cabin\n\n*After that, you and belfast are reliefed that the hell is finally over, and you both live a happy life together*\n\n**YOU SURVIVED**\nEnding 13 out of ${endings}: Belfast\'s saviour`)
+
+                                        setTimeout(function(){
+                                            msg.edit('**YOU SURVIVED**')
+                                        }, 45000);
                                     }
                                     if(reaction10.emoji.name === '✊') {
-                                        msg.edit('WIP')
+                                        msg.edit(`*You and belfast make a plan, belfast drives over the waterfall pit, and ties a long rope above the ground, meanwhile, you get siren head\'s attention and to follow you to the waterfall, after that, you make the risky choice of jumping right for it, sirenhead trips over the rope and falls with you, but you actually catched onto the rocks of the land before falling into your death, and belfast got there quick to pull you up. And then you both get back to the cabin, a bit injured, but safely living a happy life once again*\n\n**YOU SURVIVED**\nEnding 14 out of ${endings}: Belfast\'s saviour`)
+
+                                        setTimeout(function(){
+                                            msg.edit('**YOU SURVIVED**')
+                                        }, 45000);
                                     }
                                     if(reaction10.emoji.name === '👎') {
-                                        msg.edit('WIP')
+                                        msg.edit(`*You wait till siren head appears, then you throw lots of spears towards him, belfast shoots her bow at siren head, but eventually, siren head gets pissed of running around, and does some very very loud static sounds that distract you both from concentrating, then he gets closer and closer, then he eventually kills you both*\n\n**YOU DIED**\nEnding 15 out of ${endings}: The ambitious loser`)
+
+                                        setTimeout(function(){
+                                            msg.edit('**YOU DIED**')
+                                        }, 45000);
                                     }
                                 })
                             }
