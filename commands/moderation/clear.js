@@ -7,7 +7,7 @@ module.exports = {
         if(message.deletable) {
             message.delete();
         }
-        if(!message.member.hasPermission("MANAGE_MESSAGES")) {
+        if(!message.member.hasPermission("ADMINISTRATOR")) {
             message.channel.send('You cant delete messages')
         }
         if(isNaN(args[0]) || parseInt(args[0]) <= 0) {
