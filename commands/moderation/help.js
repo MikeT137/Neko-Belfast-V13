@@ -53,7 +53,7 @@ module.exports = {
 
                             .setTitle('Help - Interactive Roleplay (@someone)')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', '\`boop\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`')
+                            .addField('Commands:', '\`boop\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lewd\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`')
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor(0x4AEFBA)
                         msg.edit(embedI);
@@ -234,7 +234,7 @@ module.exports = {
 
                     .setTitle('Help - Interactive Roleplay (@someone)')
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                    .addField('Commands:', '\`boop\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`')
+                    .addField('Commands:', '\`boop\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lewd\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`')
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setColor(0x4AEFBA)
                 message.channel.send(embedI2);
@@ -266,6 +266,10 @@ module.exports = {
                         
             case 'kiss':
                 message.channel.send('It sends a kissing gif: \`b.kiss (ping)\`')
+            break;
+
+            case 'lewd':
+                message.channel.send('It sends a blushing gif gif: \`b.lewd (ping)\`')
             break;
                         
             case 'lick':
