@@ -6,10 +6,8 @@ module.exports = {
     run: async (bot, message, args) => {
         if(!args[0]) {
             const subreddits = [
-                "Animemes",
                 "dankmemes",
                 "goodanimemes",
-                "goodanimememes",
                 "memes",
                 "wholesomememes",
                 "wholesomeanimemes",
@@ -56,12 +54,10 @@ module.exports = {
             message.channel.send(embed);
 
         }else if(args[0] == 'anime') {
-            const subreddits = [
-                "Animemes",
+            const subreddit = [
                 "goodanimemes",
-                "goodanimememes",
             ]
-            const random = subreddits[Math.floor(Math.random() * subreddits.length)];
+            const random = subreddit[Math.floor(Math.random() * subreddit.length)];
             const img = await randomPuppy(random);
 
             const embed = new Discord.MessageEmbed()
