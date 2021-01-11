@@ -6,7 +6,6 @@ module.exports = {
     run: async (bot, message, args) => {
         if(!args[0]) {
             var subreddits = [
-                "Animemes",
                 "dankmemes",
                 "goodanimemes",
                 "goodanimememes",
@@ -57,7 +56,6 @@ module.exports = {
 
         }else if(args[0] == 'anime') {
             var subreddits = [
-                "Animemes",
                 "goodanimemes",
                 "goodanimememes",
             ]
