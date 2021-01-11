@@ -5,7 +5,8 @@ module.exports = {
     description: "Gives the user a meme",
     run: async (bot, message, args) => {
         if(!args[0]) {
-            var subreddits = [
+            const subreddits = [
+                "Animemes",
                 "dankmemes",
                 "goodanimemes",
                 "goodanimememes",
@@ -16,7 +17,7 @@ module.exports = {
             const random = subreddits[Math.floor(Math.random() * subreddits.length)];
             const img = await randomPuppy(random);
 
-            var embed = new Discord.MessageEmbed()
+            const embed = new Discord.MessageEmbed()
 
                 .setTitle(`From r/${random}`)
                 .setImage(img)
@@ -31,7 +32,7 @@ module.exports = {
             const random = subreddit[Math.floor(Math.random() * subreddit.length)];
             const img = await randomPuppy(random);
 
-            var embed = new Discord.MessageEmbed()
+            const embed = new Discord.MessageEmbed()
 
                 .setTitle(`From r/${random}`)
                 .setImage(img)
@@ -39,14 +40,14 @@ module.exports = {
                 .setColor(0x4AEFBA)
             message.channel.send(embed);
 
-        }else if(args[0] == 'memes') {
+        }else if(args[0] == 'memes' || args[0] == 'meme') {
             const subreddit = [
                 "memes",
             ]
             const random = subreddit[Math.floor(Math.random() * subreddit.length)];
             const img = await randomPuppy(random);
 
-            var embed = new Discord.MessageEmbed()
+            const embed = new Discord.MessageEmbed()
 
                 .setTitle(`From r/${random}`)
                 .setImage(img)
@@ -55,14 +56,15 @@ module.exports = {
             message.channel.send(embed);
 
         }else if(args[0] == 'anime') {
-            var subreddits = [
+            const subreddits = [
+                "Animemes",
                 "goodanimemes",
                 "goodanimememes",
             ]
             const random = subreddits[Math.floor(Math.random() * subreddits.length)];
             const img = await randomPuppy(random);
 
-            var embed = new Discord.MessageEmbed()
+            const embed = new Discord.MessageEmbed()
 
                 .setTitle(`From r/${random}`)
                 .setImage(img)
@@ -77,7 +79,7 @@ module.exports = {
             const random = subreddit[Math.floor(Math.random() * subreddit.length)];
             const img = await randomPuppy(random);
 
-            var embed = new Discord.MessageEmbed()
+            const embed = new Discord.MessageEmbed()
 
                 .setTitle(`From r/${random}`)
                 .setImage(img)
@@ -92,7 +94,7 @@ module.exports = {
             const random = subreddit[Math.floor(Math.random() * subreddit.length)];
             const img = await randomPuppy(random);
 
-            var embed = new Discord.MessageEmbed()
+            const embed = new Discord.MessageEmbed()
 
                 .setTitle(`From r/${random}`)
                 .setImage(img)
