@@ -17,15 +17,39 @@ module.exports = {
             const random = subreddits[Math.floor(Math.random() * subreddits.length)];
             const img = await randomPuppy(random);
 
+            var embed = new Discord.MessageEmbed()
+
+                .setTitle(`From r/${random}`)
+                .setImage(img)
+                .setURL(`https://reddit.com/r/${random}/new`)
+                .setColor(0x4AEFBA)
+            message.channel.send(embed);
+
         }else if(args[0] == 'dank') {
             const subreddit = "dankmemes"
             const random = subreddit[Math.floor(Math.random() * subreddit.length)];
             const img = await randomPuppy(random);
 
+            var embed = new Discord.MessageEmbed()
+
+                .setTitle(`From r/${random}`)
+                .setImage(img)
+                .setURL(`https://reddit.com/r/${random}/new`)
+                .setColor(0x4AEFBA)
+            message.channel.send(embed);
+
         }else if(args[0] == 'memes' || args[0] == 'meme') {
             const subreddit = "memes"
             const random = subreddit[Math.floor(Math.random() * subreddit.length)];
             const img = await randomPuppy(random);
+
+            var embed = new Discord.MessageEmbed()
+
+                .setTitle(`From r/${random}`)
+                .setImage(img)
+                .setURL(`https://reddit.com/r/${random}/new`)
+                .setColor(0x4AEFBA)
+            message.channel.send(embed);
 
         }else if(args[0] == 'anime') {
             var subreddits = [
@@ -36,23 +60,39 @@ module.exports = {
             const random = subreddits[Math.floor(Math.random() * subreddits.length)];
             const img = await randomPuppy(random);
 
+            var embed = new Discord.MessageEmbed()
+
+                .setTitle(`From r/${random}`)
+                .setImage(img)
+                .setURL(`https://reddit.com/r/${random}/new`)
+                .setColor(0x4AEFBA)
+            message.channel.send(embed);
+
         }else if(args[0] == 'wholesome') {
             const subreddit = "wholesomememes"
             const random = subreddit[Math.floor(Math.random() * subreddit.length)];
             const img = await randomPuppy(random);
 
+            var embed = new Discord.MessageEmbed()
+
+                .setTitle(`From r/${random}`)
+                .setImage(img)
+                .setURL(`https://reddit.com/r/${random}/new`)
+                .setColor(0x4AEFBA)
+            message.channel.send(embed);
+
         }else if(args[0] == 'wholesomeanime' || args[0] == 'wanime') {
             const subreddit = "wholesomeanimemes"
             const random = subreddit[Math.floor(Math.random() * subreddit.length)];
             const img = await randomPuppy(random);
+
+            var embed = new Discord.MessageEmbed()
+
+                .setTitle(`From r/${random}`)
+                .setImage(img)
+                .setURL(`https://reddit.com/r/${random}/new`)
+                .setColor(0x4AEFBA)
+            message.channel.send(embed);
         }
-
-        var embed = new Discord.MessageEmbed()
-
-            .setTitle(`From r/${random}`)
-            .setImage(img)
-            .setURL(`https://reddit.com/r/${random}/new`)
-            .setColor(0x4AEFBA)
-        message.channel.send(embed);
     }
 }
