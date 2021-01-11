@@ -4,9 +4,6 @@ module.exports = {
     name:'meme',
     description: "Gives the user a meme",
     run: async (bot, message, args) => {
-        const img = await randomPuppy(random);
-        const img2 = await randomPuppy(subreddit);
-
         if(!args[0]) {
             var subreddits = [
                 "Animemes",
@@ -18,35 +15,38 @@ module.exports = {
                 "wholesomeanimemes"
             ]
             const random = subreddits[Math.floor(Math.random() * subreddits.length)];
+            const img = await randomPuppy(random);
 
             var embed = new Discord.MessageEmbed()
 
-            .setTitle(`From r/${random}`)
-            .setImage(img)
-            .setURL(`https://reddit.com/r/${random}/new`)
-            .setColor(0x4AEFBA)
+                .setTitle(`From r/${random}`)
+                .setImage(img)
+                .setURL(`https://reddit.com/r/${random}/new`)
+                .setColor(0x4AEFBA)
             message.channel.send(embed);
 
         }else if(args[0] == 'dank') {
             const subreddit = "dankmemes"
+            const img = await randomPuppy(subreddit);
 
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`From r/${subreddit}`)
-            .setImage(img2)
-            .setURL(`https://reddit.com/r/${subreddit}/new`)
-            .setColor(0x4AEFBA)
+                .setTitle(`From r/${subreddit}`)
+                .setImage(img)
+                .setURL(`https://reddit.com/r/${subreddit}/new`)
+                .setColor(0x4AEFBA)
             message.channel.send(embed);
 
         }else if(args[0] == 'memes' || args[0] == 'meme') {
             const subreddit = "memes"
+            const img = await randomPuppy(subreddit);
 
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`From r/${subreddit}`)
-            .setImage(img2)
-            .setURL(`https://reddit.com/r/${subreddit}/new`)
-            .setColor(0x4AEFBA)
+                .setTitle(`From r/${subreddit}`)
+                .setImage(img)
+                .setURL(`https://reddit.com/r/${subreddit}/new`)
+                .setColor(0x4AEFBA)
             message.channel.send(embed);
 
         }else if(args[0] == 'anime') {
@@ -56,35 +56,38 @@ module.exports = {
                 "goodanimememes"
             ]
             const random = subreddits[Math.floor(Math.random() * subreddits.length)];
+            const img = await randomPuppy(random);
 
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`From r/${random}`)
-            .setImage(img)
-            .setURL(`https://reddit.com/r/${random}/new`)
-            .setColor(0x4AEFBA)
+                .setTitle(`From r/${random}`)
+                .setImage(img)
+                .setURL(`https://reddit.com/r/${random}/new`)
+                .setColor(0x4AEFBA)
             message.channel.send(embed);
 
         }else if(args[0] == 'wholesome') {
             const subreddit = "wholesomememes"
+            const img = await randomPuppy(subreddit);
 
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`From r/${subreddit}`)
-            .setImage(img2)
-            .setURL(`https://reddit.com/r/${subreddit}/new`)
-            .setColor(0x4AEFBA)
+                .setTitle(`From r/${subreddit}`)
+                .setImage(img)
+                .setURL(`https://reddit.com/r/${subreddit}/new`)
+                .setColor(0x4AEFBA)
             message.channel.send(embed);
 
         }else if(args[0] == 'wholesomeanime' || args[0] == 'wanime') {
             const subreddit = "wholesomeanimemes"
+            const img = await randomPuppy(subreddit);
 
             const embed = new Discord.MessageEmbed()
 
-            .setTitle(`From r/${subreddit}`)
-            .setImage(img2)
-            .setURL(`https://reddit.com/r/${subreddit}/new`)
-            .setColor(0x4AEFBA)
+                .setTitle(`From r/${subreddit}`)
+                .setImage(img)
+                .setURL(`https://reddit.com/r/${subreddit}/new`)
+                .setColor(0x4AEFBA)
             message.channel.send(embed);
         }
     }
