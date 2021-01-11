@@ -4,7 +4,6 @@ module.exports = {
     name:'meme',
     description: "Gives the user a meme",
     run: async (bot, message, args) => {
-        const random = subreddits[Math.floor(Math.random() * subreddits.length)];
         const img = await randomPuppy(random);
         const img2 = await randomPuppy(subreddit);
 
@@ -18,6 +17,7 @@ module.exports = {
                 "wholesomememes",
                 "wholesomeanimemes"
             ]
+            const random = subreddits[Math.floor(Math.random() * subreddits.length)];
 
             var embed = new Discord.MessageEmbed()
 
@@ -56,7 +56,6 @@ module.exports = {
                 "goodanimememes"
             ]
             const random = subreddits[Math.floor(Math.random() * subreddits.length)];
-            const img = await randomPuppy(random);
 
             const embed = new Discord.MessageEmbed()
 
