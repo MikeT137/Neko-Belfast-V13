@@ -12,7 +12,7 @@ module.exports = {
                 "goodanimememes",
                 "memes",
                 "wholesomememes",
-                "wholesomeanimemes"
+                "wholesomeanimemes",
             ]
             const random = subreddits[Math.floor(Math.random() * subreddits.length)];
             const img = await randomPuppy(random);
@@ -26,7 +26,9 @@ module.exports = {
             message.channel.send(embed);
 
         }else if(args[0] == 'dank') {
-            const subreddit = "dankmemes"
+            const subreddit = [
+                "dankmemes",
+            ]
             const random = subreddit[Math.floor(Math.random() * subreddit.length)];
             const img = await randomPuppy(random);
 
@@ -38,8 +40,10 @@ module.exports = {
                 .setColor(0x4AEFBA)
             message.channel.send(embed);
 
-        }else if(args[0] == 'memes' || args[0] == 'meme') {
-            const subreddit = "memes"
+        }else if(args[0] == 'memes') {
+            const subreddit = [
+                "memes",
+            ]
             const random = subreddit[Math.floor(Math.random() * subreddit.length)];
             const img = await randomPuppy(random);
 
@@ -55,7 +59,7 @@ module.exports = {
             var subreddits = [
                 "Animemes",
                 "goodanimemes",
-                "goodanimememes"
+                "goodanimememes",
             ]
             const random = subreddits[Math.floor(Math.random() * subreddits.length)];
             const img = await randomPuppy(random);
@@ -69,7 +73,9 @@ module.exports = {
             message.channel.send(embed);
 
         }else if(args[0] == 'wholesome') {
-            const subreddit = "wholesomememes"
+            const subreddit = [
+                "wholesomememes",
+            ]
             const random = subreddit[Math.floor(Math.random() * subreddit.length)];
             const img = await randomPuppy(random);
 
@@ -82,7 +88,9 @@ module.exports = {
             message.channel.send(embed);
 
         }else if(args[0] == 'wholesomeanime' || args[0] == 'wanime') {
-            const subreddit = "wholesomeanimemes"
+            const subreddit = [
+                "wholesomeanimemes",
+            ]
             const random = subreddit[Math.floor(Math.random() * subreddit.length)];
             const img = await randomPuppy(random);
 
