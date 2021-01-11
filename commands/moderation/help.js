@@ -62,7 +62,7 @@ module.exports = {
                         
                             .setTitle('Help - Fun')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', '\`8ball\`, \`blackjack\`, \`coinflip\`, \`holiday\`, \`love\`, \`math\`, \`meme\`, \`quote\`, \`rng\`, \`rps\`, \`storyrun\`')
+                            .addField('Commands:', '\`8ball\`, \`blackjack\`, \`coinflip\`, \`holiday\`, \`love\`, \`math\`, \`quote\`, \`rng\`, \`rps\`, \`storyrun\`')
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor(0x4AEFBA)
                         msg.edit(embedF);
@@ -352,9 +352,9 @@ module.exports = {
                 message.channel.send('It solves a  math equation: \`b.math x(operator)y\`\noperators:\n\`+\` = addition\n\`-\` = subtraction\n\`*\` = multiplication\n\`/\` = division\n\`%\` = remainder after division\n\`^\` = multiplication of a number with itself y times')
             break;
 
-            case 'meme':
+            /*case 'meme':
                 message.channel.send('It sends a meme from a subreddit: \`b.meme (...)\`\n\`(nothing)\` -> random\n\`dank\` -> dankmemes\n\`memes\` -> memes\n\`anime\` -> goodanimemes\n\`wholesome\` -> wholesomememes\n\`wholesomeanime / wanime\` -> wholesomeaniememes')
-            break;
+            break;*/
 
             case 'quote':
                 message.channel.send('It sends a random quote of a specific feeling (added in the bot): b.quote')
