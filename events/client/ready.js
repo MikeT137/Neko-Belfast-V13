@@ -34,9 +34,6 @@ module.exports = bot => {
     const xmas = schedule.scheduleJob('* * 25 12 *', function() {
         bot.user.setActivity(`Merry Christmas nya! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
     })
-    const test = schedule.scheduleJob('54 * * * *', function() {
-        bot.user.setActivity(`just testing | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
-    })
 
     /*Holidays
     Every other day - over myaster
