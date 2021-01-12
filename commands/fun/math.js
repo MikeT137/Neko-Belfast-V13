@@ -17,7 +17,7 @@ module.exports = {
             .setTitle('Calculation')
             .addField('Question', `${args.join(' ')} = ?`)
             .addField('Answer', `${resp}`)
-            .setColor(0x4AEFBA)
+            .setColor('#7d77df')
         message.channel.send(embed);
         }catch(e){
             message.channel.send('Sorry, please input a valid calculation. Accepted math operations: \`+, -, *, /, %, ^, ()\`')

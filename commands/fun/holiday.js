@@ -86,7 +86,7 @@ module.exports = {
 
                     .setAuthor(`Happy New Year everyone!!`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_newyear[Math.floor(Math.random() * random_newyear.length)])
-                    .setColor(0x4AEFBA)
+                    .setColor('#7d77df')
                 message.channel.send(embed).then(newyear.cancel())
             });
 
@@ -95,7 +95,7 @@ module.exports = {
 
                     .setAuthor(`Happy Valentine's Day!!`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_valentine[Math.floor(Math.random() * random_valentine.length)])
-                    .setColor(0x4AEFBA)
+                    .setColor('#7d77df')
                 message.channel.send(embed).then(valentine.cancel())
             });
 
@@ -104,17 +104,17 @@ module.exports = {
 
                     .setAuthor(`Happy Easter!!`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_easter[Math.floor(Math.random() * random_easter.length)])
-                    .setColor(0x4AEFBA)
+                    .setColor('#7d77df')
                 message.channel.send(embed).then(easter.cancel())
             });
 
             const halloween = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 31 10 *'}, function(){
                 const embed = new Discord.MessageEmbed()
 
-                .setAuthor(`Happy Halloween!`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(random_halloween[Math.floor(Math.random() * random_halloween.length)])
-                .setColor(0x4AEFBA)
-            message.channel.send(embed).then(halloween.cancel())
+                    .setAuthor(`Happy Halloween!`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setImage(random_halloween[Math.floor(Math.random() * random_halloween.length)])
+                    .setColor('#7d77df')
+                message.channel.send(embed).then(halloween.cancel())
             });
 
             const thanks = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 11 *'}, function(){
@@ -122,7 +122,7 @@ module.exports = {
 
                     .setAuthor(`Happy Thanksgiving! With this occasion I\'ll say: thanks for threating me well master~`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_thanks[Math.floor(Math.random() * random_thanks.length)])
-                    .setColor(0x4AEFBA)
+                    .setColor('#7d77df')
                 message.channel.send(embed).then(thanks.cancel())
             });
 
@@ -131,7 +131,7 @@ module.exports = {
 
                     .setAuthor(`Merry Christmas!!`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_xmas[Math.floor(Math.random() * random_xmas.length)])
-                    .setColor(0x4AEFBA)
+                    .setColor('#7d77df')
                 message.channel.send(embed).then(xmas.cancel())
             });
         }else return;
