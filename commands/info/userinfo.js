@@ -42,9 +42,9 @@ module.exports = {
                     `\`Status:\` ${member.user.presence.status}`,
                     `\`Game Status:\` ${member.user.presence.game || 'Not playing a game'}`
                 ])
-                .addField('Member', [
+                .addField(`Stats in ${message.guild.name}`, [
                     `\`Highest role:\` ${member.roles.highest.id === message.guild.id ? 'None' : member.roles.highest.name}`,
-                    `\`*Server join date:\` ${moment(member.joinedAt).format('LL\; LTS')}`,
+                    `\`Server join date:\` ${moment(member.joinedAt).format('LL\; LTS')}`,
                     `\`Roles:\` ${roles.length}`
                 ])
                 .setColor('#7d77df')
