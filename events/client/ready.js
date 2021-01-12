@@ -16,7 +16,7 @@ module.exports = bot => {
     const halloween = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 31 10 *'})
     const thanks = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 11 *'})
     const xmas = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 12 *'})
-    const test = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 12 1 *'})
+    const test = schedule.scheduleJob('48 * 12 1 *')
 
     if(newyear) {
         bot.user.setActivity(`Happy New Year nya~! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
