@@ -1,4 +1,4 @@
-const {prefix} = require ('../../config.json')
+const {prefix} = require('../../config.json')
 var schedule = require('node-schedule');
 
 module.exports = bot => {
@@ -7,16 +7,16 @@ module.exports = bot => {
     let startTime = new Date('1 0 * * *');
     let endTime = new Date('59 23 * * *');
 
-    const newyear = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 1 1 *'})
-    const valentine = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 14 2 *'})
-    const patrick = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 17 3 *'})
-    const easter = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 8 4 *'})
-    const bday = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 29 6 *'})
-    const miku = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 16 9 *'})
-    const halloween = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 31 10 *'})
-    const thanks = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 11 *'})
-    const xmas = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 12 *'})
-    const test = schedule.scheduleJob('48 * 12 1 *')
+    const newyear = schedule.scheduleJob('* * 1 1 *')
+    const valentine = schedule.scheduleJob('* * 14 2 *')
+    const patrick = schedule.scheduleJob('* * 17 3 *')
+    const easter = schedule.scheduleJob('* * 8 4 *')
+    const bday = schedule.scheduleJob('* * 29 6 *')
+    const miku = schedule.scheduleJob('* * 16 9 *')
+    const halloween = schedule.scheduleJob('* * 31 10 *')
+    const thanks = schedule.scheduleJob('* * 25 11 *')
+    const xmas = schedule.scheduleJob('* * 25 12 *')
+    const test = schedule.scheduleJob('53 * 12 1 *')
 
     if(newyear) {
         bot.user.setActivity(`Happy New Year nya~! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
@@ -39,7 +39,7 @@ module.exports = bot => {
     }else if(test) {
         bot.user.setActivity(`just testing nya~ | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
     }else {
-        bot.user.setActivity(`over myaster | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
+        bot.user.setActivity(`over my myaster | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
     }
 
     /*Holidays
