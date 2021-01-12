@@ -4,7 +4,7 @@ module.exports = bot => {
     console.log('Neko Belfast is online!');
     
     setInterval(function(){
-        bot.user.setActivity(`${bot.guilds.cache.size} servers | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
+        bot.user.setActivity(`over myaster | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
     }, 10000)
     
     /*Holidays
@@ -19,5 +19,5 @@ module.exports = bot => {
     October 31st - `Have a spooky Halloween! Tee hee`
     November 25th - `Happy Thanksgiving nya~!`
     December 25th - `Merry Christmas nya!`
-    Every other day - `${bot.guilds.cache.size} servers`*/
+    Every other day - over myaster*/
 }
