@@ -4,37 +4,39 @@ var schedule = require('node-schedule');
 module.exports = bot => {
     console.log('Neko Belfast is online!');
 
-    const newyear = schedule.scheduleJob('* * 1 1 *')
-    const valentine = schedule.scheduleJob('* * 14 2 *')
-    const patrick = schedule.scheduleJob('* * 17 3 *')
-    const easter = schedule.scheduleJob('* * 8 4 *')
-    const bday = schedule.scheduleJob('* * 29 6 *')
-    const miku = schedule.scheduleJob('* * 16 9 *')
-    const halloween = schedule.scheduleJob('* * 31 10 *')
-    const thanks = schedule.scheduleJob('* * 25 11 *')
-    const xmas = schedule.scheduleJob('* * 25 12 *')
-
-    if(newyear) {
-        bot.user.setActivity(`Happy New Year nya~! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
-    }else if(valentine) {
-        bot.user.setActivity(`Will you be my Valentine nya~? | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
-    }else if(patrick) {
-        bot.user.setActivity(`Happy St. Patrick\'s Day nya~! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
-    }else if(easter) {
-        bot.user.setActivity(`Happy Easter nya~! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
-    }else if(bday) {
-        bot.user.setActivity(`It\'s my birthday nya~! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
-    }else if(miku) {
-        bot.user.setActivity(`Happy birthday Miku-senpai! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
-    }else if(halloween) {
-        bot.user.setActivity(`Have a spooky Halloween! Tee hee | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
-    }else if(thanks) {
-        bot.user.setActivity(`Happy Thanksgiving nya~! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
-    }else if(xmas) {
-        bot.user.setActivity(`Merry Christmas nya! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
-    }else {
+    const everyday = schedule.scheduleJob('* * * * *', function() {
         bot.user.setActivity(`over myaster | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
-    }
+    })
+    const newyear = schedule.scheduleJob('* * 1 1 *', function() {
+        bot.user.setActivity(`Happy New Year nya~! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
+    })
+    const valentine = schedule.scheduleJob('* * 14 2 *', function() {
+        bot.user.setActivity(`Will you be my Valentine nya~? | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
+    })
+    const patrick = schedule.scheduleJob('* * 17 3 *', function() {
+        bot.user.setActivity(`Happy St. Patrick\'s Day nya~! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
+    })
+    const easter = schedule.scheduleJob('* * 8 4 *', function() {
+        bot.user.setActivity(`Happy Easter nya~! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
+    })
+    const bday = schedule.scheduleJob('* * 29 6 *', function() {
+        bot.user.setActivity(`It\'s my birthday nya~! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
+    })
+    const miku = schedule.scheduleJob('* * 16 9 *', function() {
+        bot.user.setActivity(`Happy birthday Miku-senpai! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
+    })
+    const halloween = schedule.scheduleJob('* * 31 10 *', function() {
+        bot.user.setActivity(`Have a spooky Halloween! Tee hee | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
+    })
+    const thanks = schedule.scheduleJob('* * 25 11 *', function() {
+        bot.user.setActivity(`Happy Thanksgiving nya~! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
+    })
+    const xmas = schedule.scheduleJob('* * 25 12 *', function() {
+        bot.user.setActivity(`Merry Christmas nya! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
+    })
+    const everyday = schedule.scheduleJob('53 * * * *', function() {
+        bot.user.setActivity(`just testing | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
+    })
 
     /*Holidays
     Every other day - over myaster
