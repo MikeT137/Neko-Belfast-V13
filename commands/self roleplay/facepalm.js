@@ -20,7 +20,7 @@ module.exports = {
 
             .setAuthor(`${message.author.username} is making a facepalm`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_fp[Math.floor(Math.random() * random_fp.length)])
-            .setColor(0x4AEFBA)
+            .setColor('#7d77df')
             message.channel.send(embed);
         }
     }

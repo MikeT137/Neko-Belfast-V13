@@ -20,7 +20,7 @@ module.exports = {
 
             .setAuthor(`${message.author.username} is purring, nyaa~`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_purr[Math.floor(Math.random() * random_purr.length)])
-            .setColor(0x4AEFBA)
+            .setColor('#7d77df')
             message.channel.send(embed);
         }
     }

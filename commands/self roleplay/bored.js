@@ -20,7 +20,7 @@ module.exports = {
 
             .setAuthor(`${message.author.username} is bored`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_bored[Math.floor(Math.random() * random_bored.length)])
-            .setColor(0x4AEFBA)
+            .setColor('#7d77df')
             message.channel.send(embed);
         }
     }

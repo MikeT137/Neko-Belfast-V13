@@ -34,14 +34,14 @@ module.exports = {
 
                 .setAuthor(`Dont do that nya!! Dont hurt yourself please..`)
                 .setImage(random_cry[Math.floor(Math.random() * random_cry.length)])
-                .setColor(0x4AEFBA)
+                .setColor('#7d77df')
                 message.channel.send(embed);
             }else {
                 const embed = new Discord.MessageEmbed()
 
                 .setAuthor(`${message.author.username} gave ${person.username} a punch...awee`, message.author.displayAvatarURL({ dynamic: true }))
                 .setImage(random_punch[Math.floor(Math.random() * random_punch.length)])
-                .setColor(0x4AEFBA)
+                .setColor('#7d77df')
                 message.channel.send(embed);
             }
         }else {

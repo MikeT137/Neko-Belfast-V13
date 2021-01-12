@@ -24,7 +24,7 @@ module.exports = {
                     .setAuthor(`${message.author.username} is licking ${person.username} O///O`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(json.url)
                     .setFooter('Powered by otakugifs.xyz')
-                    .setColor(0x4AEFBA)
+                    .setColor('#7d77df')
                     message.channel.send(embed);
                 }
             }else {

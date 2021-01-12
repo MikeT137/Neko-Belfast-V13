@@ -20,7 +20,7 @@ module.exports = {
 
             .setAuthor(`${message.author.username} is getting really angry`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_rage[Math.floor(Math.random() * random_rage.length)])
-            .setColor(0x4AEFBA)
+            .setColor('#7d77df')
             message.channel.send(embed);
         }
     }

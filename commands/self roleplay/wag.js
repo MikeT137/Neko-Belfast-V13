@@ -20,7 +20,7 @@ module.exports = {
 
             .setAuthor(`${message.author.username} wags their tail ^^`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_wag[Math.floor(Math.random() * random_wag.length)])
-            .setColor(0x4AEFBA)
+            .setColor('#7d77df')
             message.channel.send(embed);
         }
     }

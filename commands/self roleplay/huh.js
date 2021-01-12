@@ -20,7 +20,7 @@ module.exports = {
 
             .setAuthor(`${message.author.username} is confused`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_huh[Math.floor(Math.random() * random_huh.length)])
-            .setColor(0x4AEFBA)
+            .setColor('#7d77df')
             message.channel.send(embed);
         }
     }

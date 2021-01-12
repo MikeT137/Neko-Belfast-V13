@@ -22,14 +22,14 @@ module.exports = {
 
                 .setAuthor(`${message.author.username} is cheering themselves up`, message.author.displayAvatarURL({ dynamic: true }))
                 .setImage(random_cheer[Math.floor(Math.random() * random_cheer.length)])
-                .setColor(0x4AEFBA)
+                .setColor('#7d77df')
                 message.channel.send(embed);
             }else {
                 const embed = new Discord.MessageEmbed()
 
                 .setAuthor(`${message.author.username} is cheering up ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
                 .setImage(random_cheer[Math.floor(Math.random() * random_cheer.length)])
-                .setColor(0x4AEFBA)
+                .setColor('#7d77df')
                 message.channel.send(embed);
             }
         }else {

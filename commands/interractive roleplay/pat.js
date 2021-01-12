@@ -22,7 +22,7 @@ module.exports = {
                     .setAuthor('Aww, its okay, belfast will give you some pats nya~', message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(json.url)
                     .setFooter('Powered by otakugifs.xyz')
-                    .setColor(0x4AEFBA)
+                    .setColor('#7d77df')
                     message.channel.send(embed);
                 }else {
                     const embed = new Discord.MessageEmbed()
@@ -30,7 +30,7 @@ module.exports = {
                     .setAuthor(`${message.author.username} is patting ${person.username}, so cute`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(json.url)
                     .setFooter('Powered by otakugifs.xyz')
-                    .setColor(0x4AEFBA)
+                    .setColor('#7d77df')
                     message.channel.send(embed);
                 }
             }else {

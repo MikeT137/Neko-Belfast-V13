@@ -20,7 +20,7 @@ module.exports = {
 
             .setAuthor(`${message.author.username} is hiding`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_hide[Math.floor(Math.random() * random_hide.length)])
-            .setColor(0x4AEFBA)
+            .setColor('#7d77df')
             message.channel.send(embed);
         }
     }

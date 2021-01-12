@@ -24,7 +24,7 @@ module.exports = {
                     .setAuthor(`${message.author.username} stares at ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(json.url)
                     .setFooter('Powered by otakugifs.xyz')
-                    .setColor(0x4AEFBA)
+                    .setColor('#7d77df')
                     message.channel.send(embed);
                 }
             }else {

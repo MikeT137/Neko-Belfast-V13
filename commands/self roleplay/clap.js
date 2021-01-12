@@ -20,7 +20,7 @@ module.exports = {
 
             .setAuthor(`${message.author.username} claps their hands`, message.author.displayAvatarURL({ dynamic: true }))
             .setImage(random_clap[Math.floor(Math.random() * random_clap.length)])
-            .setColor(0x4AEFBA)
+            .setColor('#7d77df')
             message.channel.send(embed);
         }
     }

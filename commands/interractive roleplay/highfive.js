@@ -24,7 +24,7 @@ module.exports = {
 
                 .setAuthor(`${message.author.username} highfives ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
                 .setImage(random_hf[Math.floor(Math.random() * random_hf.length)])
-                .setColor(0x4AEFBA)
+                .setColor('#7d77df')
                 message.channel.send(embed);
             }
         }else {
