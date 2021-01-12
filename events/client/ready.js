@@ -4,9 +4,6 @@ var schedule = require('node-schedule');
 module.exports = bot => {
     console.log('Neko Belfast is online!');
 
-    let startTime = new Date('1 0 * * *');
-    let endTime = new Date('59 23 * * *');
-
     const newyear = schedule.scheduleJob('* * 1 1 *')
     const valentine = schedule.scheduleJob('* * 14 2 *')
     const patrick = schedule.scheduleJob('* * 17 3 *')
