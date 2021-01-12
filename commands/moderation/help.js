@@ -62,7 +62,7 @@ module.exports = {
                         
                             .setTitle('Help - Fun')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', '\`8ball\`, \`blackjack\`, \`coinflip\`, \`holiday\`, \`love\`, \`math\`, \`quote\`, \`rng\`, \`rps\`, \`storyrun\`')
+                            .addField('Commands:', '\`8ball\`, \`blackjack\`, \`coinflip\`, \`holiday\`, \`love\`, \`math\`, \`rng\`, \`rps\`, \`storyrun\`')
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
                         msg.edit(embedF);
@@ -322,7 +322,7 @@ module.exports = {
                         
                     .setTitle('Help - Fun')
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                    .addField('Commands:', '\`8ball\`, \`blackjack\`, \`coinflip\`, \`holiday\`, \`love\`, \`math\`, \`quote\`, \`rng\`, \`rps\`, \`storyrun\`')
+                    .addField('Commands:', '\`8ball\`, \`blackjack\`, \`coinflip\`, \`holiday\`, \`love\`, \`math\`, \`rng\`, \`rps\`, \`storyrun\`')
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setColor('#7d77df')
                 message.channel.send(embedF2);
@@ -355,10 +355,6 @@ module.exports = {
             /*case 'meme':
                 message.channel.send('It sends a meme from a subreddit: \`b.meme (...)\`\n\`(nothing)\` -> random\n\`dank\` -> dankmemes\n\`memes\` -> memes\n\`anime\` -> goodanimemes\n\`wholesome\` -> wholesomememes\n\`wholesomeanime / wanime\` -> wholesomeaniememes')
             break;*/
-
-            case 'quote':
-                message.channel.send('It sends a random quote of a specific feeling (added in the bot): b.quote')
-            break;
 
             case 'rng':
                 message.channel.send('It gives you a random number but you have to specify the maximum value: \`b.rng (biggest possible outcome you want)\`\nSidenote: your value has to be higher than 1')
