@@ -36,9 +36,9 @@ module.exports = bot => {
         bot.user.setActivity(`Happy Thanksgiving nya~! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
     }else if(xmas) {
         bot.user.setActivity(`Merry Christmas nya! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
-    }/*else if(test) {
+    }else if(test) {
         bot.user.setActivity(`just testing nya~ | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
-    }*/else {
+    }else {
         bot.user.setActivity(`over myaster | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
     }
 
