@@ -4,7 +4,7 @@ var schedule = require('node-schedule');
 module.exports = bot => {
     console.log('Neko Belfast is online!');
 
-    const everyday = schedule.scheduleJob('* * * * *', function() {
+    const normalday = schedule.scheduleJob('* * * * *', function() {
         bot.user.setActivity(`over myaster | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
     })
     const newyear = schedule.scheduleJob('* * 1 1 *', function() {
@@ -34,7 +34,7 @@ module.exports = bot => {
     const xmas = schedule.scheduleJob('* * 25 12 *', function() {
         bot.user.setActivity(`Merry Christmas nya! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
     })
-    const everyday = schedule.scheduleJob('53 * * * *', function() {
+    const test = schedule.scheduleJob('54 * * * *', function() {
         bot.user.setActivity(`just testing | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
     })
 
