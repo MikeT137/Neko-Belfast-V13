@@ -47,7 +47,7 @@ module.exports = {
                     `\`*Server join date:\` ${moment(member.joinedAt).format('LL\; LTS')}`,
                     `\`Roles:\` ${roles.length}`
                 ])
-                .setColor(0x4AEFBA)
+                .setColor('#7d77df')
             message.channel.send(embed)
         }else return;
     }

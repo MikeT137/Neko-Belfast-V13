@@ -15,7 +15,7 @@ module.exports = {
                 .addField(':smiley: - Fun', 'This category has fun commands that everyone can use if they\'re bored')
                 .addField(':face_with_monocle: - Info', 'This category has info commands that can help you get more detailed information about specific things')
                 .setThumbnail(bot.user.displayAvatarURL())
-                .setColor(0x4AEFBA)
+                .setColor('#7d77df')
             message.channel.send(embed).then(msg => {
                 msg.react('🛠️'),
                 msg.react('🤡'),
@@ -37,7 +37,7 @@ module.exports = {
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', '\`ban\`, \`clear\`, \`donate\`, \`help\`, \`invite\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`, \`vote\`')
                             .setThumbnail(bot.user.displayAvatarURL())
-                            .setColor(0x4AEFBA)
+                            .setColor('#7d77df')
                         msg.edit(embedM);
                     }else if(reaction.emoji.name === '🤡') {
                         let embedS = new Discord.MessageEmbed()
@@ -46,7 +46,7 @@ module.exports = {
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', '\`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dance\`, \`facepalm\`, \`hide\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`yawn\`')
                             .setThumbnail(bot.user.displayAvatarURL())
-                            .setColor(0x4AEFBA)
+                            .setColor('#7d77df')
                         msg.edit(embedS);
                     }else if(reaction.emoji.name === '🎭') {
                         let embedI = new Discord.MessageEmbed()
@@ -55,7 +55,7 @@ module.exports = {
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', '\`boop\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lewd\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`')
                             .setThumbnail(bot.user.displayAvatarURL())
-                            .setColor(0x4AEFBA)
+                            .setColor('#7d77df')
                         msg.edit(embedI);
                     }else if(reaction.emoji.name === '😃') {
                         let embedF = new Discord.MessageEmbed()
@@ -64,7 +64,7 @@ module.exports = {
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', '\`8ball\`, \`blackjack\`, \`coinflip\`, \`holiday\`, \`love\`, \`math\`, \`quote\`, \`rng\`, \`rps\`, \`storyrun\`')
                             .setThumbnail(bot.user.displayAvatarURL())
-                            .setColor(0x4AEFBA)
+                            .setColor('#7d77df')
                         msg.edit(embedF);
                     }else if(reaction.emoji.name === '🧐') {
                         let embedinfo = new Discord.MessageEmbed()
@@ -73,7 +73,7 @@ module.exports = {
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`')
                             .setThumbnail(bot.user.displayAvatarURL())
-                            .setColor(0x4AEFBA)
+                            .setColor('#7d77df')
                         msg.edit(embedinfo);
                     }
                 })
@@ -88,7 +88,7 @@ module.exports = {
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
                     .addField('Commands:', '\`ban\`, \`clear\`, \`donate\`, \`help\`, \`invite\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`, \`vote\`')
                     .setThumbnail(bot.user.displayAvatarURL())
-                    .setColor(0x4AEFBA)
+                    .setColor('#7d77df')
                 message.channel.send(embedM2);
             break;
 
@@ -144,7 +144,7 @@ module.exports = {
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
                     .addField('Commands:', '\`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dance\`, \`facepalm\`, \`hide\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`yawn\`')
                     .setThumbnail(bot.user.displayAvatarURL())
-                    .setColor(0x4AEFBA)
+                    .setColor('#7d77df')
                 message.channel.send(embedS2);
             break;
 
@@ -236,7 +236,7 @@ module.exports = {
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
                     .addField('Commands:', '\`boop\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lewd\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`')
                     .setThumbnail(bot.user.displayAvatarURL())
-                    .setColor(0x4AEFBA)
+                    .setColor('#7d77df')
                 message.channel.send(embedI2);
             break;
 
@@ -324,7 +324,7 @@ module.exports = {
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
                     .addField('Commands:', '\`8ball\`, \`blackjack\`, \`coinflip\`, \`holiday\`, \`love\`, \`math\`, \`quote\`, \`rng\`, \`rps\`, \`storyrun\`')
                     .setThumbnail(bot.user.displayAvatarURL())
-                    .setColor(0x4AEFBA)
+                    .setColor('#7d77df')
                 message.channel.send(embedF2);
             break;
 
@@ -380,7 +380,7 @@ module.exports = {
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
                     .addField('Commands:', '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`')
                     .setThumbnail(bot.user.displayAvatarURL())
-                    .setColor(0x4AEFBA)
+                    .setColor('#7d77df')
                 message.channel.send(embedinfo2);
             break;
 

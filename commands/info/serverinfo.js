@@ -44,7 +44,7 @@ module.exports = {
                     `\`Text Channel Count:\` ${channels.filter(channel => channel.type === 'text').size}`,
                     `\`Voice Channel Count:\` ${channels.filter(channel => channel.type === 'voice').size}`
                 ])
-                .setColor(0x4AEFBA)
+                .setColor('#7d77df')
             message.channel.send(embed)
 
         }else return;
