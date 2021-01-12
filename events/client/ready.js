@@ -13,7 +13,6 @@ module.exports = bot => {
     const halloween = schedule.scheduleJob('* * 31 10 *')
     const thanks = schedule.scheduleJob('* * 25 11 *')
     const xmas = schedule.scheduleJob('* * 25 12 *')
-    const test = schedule.scheduleJob('53 * 12 1 *')
 
     if(newyear) {
         bot.user.setActivity(`Happy New Year nya~! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
@@ -33,10 +32,8 @@ module.exports = bot => {
         bot.user.setActivity(`Happy Thanksgiving nya~! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
     }else if(xmas) {
         bot.user.setActivity(`Merry Christmas nya! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
-    }else if(test) {
-        bot.user.setActivity(`just testing nya~ | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
     }else {
-        bot.user.setActivity(`over my myaster | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
+        bot.user.setActivity(`over myaster | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
     }
 
     /*Holidays
