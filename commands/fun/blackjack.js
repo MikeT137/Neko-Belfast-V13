@@ -21,6 +21,7 @@ module.exports = {
 
         .setTitle('BlackJack')
         .setDescription(`Bot\'s Cards: ${botcard}, ?? Total: ??\nYour Cards: ${playercard}, ${playercard2} Total: ${playerTotal}`)
+        .setColor('#7d77df')
         message.channel.send(embed).then(msg => {
             msg.react('✅').then(r => {
                 msg.react('❌')
