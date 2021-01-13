@@ -5,7 +5,7 @@ module.exports = bot => {
     console.log('Neko Belfast is online!');
 
     const normalday = schedule.scheduleJob('* * * * *', function() {
-        bot.user.setActivity(`over myaster | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
+        bot.user.setActivity(`over you nya~ | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
     })
     const newyear = schedule.scheduleJob('* * 1 1 *', function() {
         bot.user.setActivity(`Happy New Year nya~! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
