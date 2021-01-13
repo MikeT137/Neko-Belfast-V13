@@ -18,7 +18,11 @@ module.exports = {
                     `\`Servers: \` ${bot.guilds.cache.size}`,
                     `\`Creation Date:\` ${moment(bot.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
                     `\`Version:\` ${version}`,
-                    `\`Bot developer:\` ${author} :flag_td:`
+                    `\`Developer:\` ${author} :flag_td:`
+                ])
+                .addField('Profile picture', [
+                    `\`Original picture:\` https://www.reddit.com/r/AzureLane/comments/b2oc4c/neko_maid_belfast/`,
+                    `\`Artist\`: u/Linkool21`
                 ])
                 .addField('Special Message', '*Hello, Miku here! Thank you for choosing to use this bot, and for being so supportive with me, i know that it takes a while to fix bugs, and it may not be the best bot out there but still, thank you for using my bot, it means everything. Anyway, i hope you\'re enjoying the features of my bot so far, and in the meantime, stay safe and have a great day :heart:*')
                 .setColor('#7d77df')
