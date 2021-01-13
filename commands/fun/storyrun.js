@@ -3,6 +3,7 @@ module.exports = {
     description: "It tells the story of a helpless boy (Story - RUN)",
     run: async (bot, message, args) => {
         const endings = '15';
+        const artist = 'Creature created by: Trevor Henderson'
 
         if(args[0]) {
             return;
@@ -54,7 +55,7 @@ module.exports = {
                         .then(collected2 => {
                             const reaction2 = collected2.first();
                             if(reaction2.emoji.name === '👍') {
-                                msg.edit(`*You decided to ignore that sound again, and you went in the basement. Everything seems fine, nothing out of place. You put all the logs in a corner, but when you turn around, a creature with very sharp claws starts to cut your throat and intestines open as you scream in torture.*\n\n**YOU DIED**\nEnding 1 out of ${endings}: The fool`)
+                                msg.edit(`*You decided to ignore that sound again, and you went in the basement. Everything seems fine, nothing out of place. You put all the logs in a corner, but when you turn around, a creature with very sharp claws starts to cut your throat and intestines open as you scream in torture.*\n\n**YOU DIED**\nEnding 1 out of ${endings}: The fool\n${artist}`)
 
                                 setTimeout(function(){
                                     msg.edit('**YOU DIED**')
@@ -73,7 +74,7 @@ module.exports = {
                                         .then(collected4 => {
                                             const reaction4 = collected4.first();
                                             if(reaction4.emoji.name === '👍') {
-                                                msg.edit(`*You thought to yourself that the creature can\'t be that tough so it can survive multiple bullets. The creature breaks the door, you and the girl start shooting at it. But that only slowed him down, and since both of you we\'re so close to the door, the creature grabbed you with it\'s long hands and suffocated you both.*\n\n**YOU DIED**\nEnding 2 out of ${endings}: The slaughter`)
+                                                msg.edit(`*You thought to yourself that the creature can\'t be that tough so it can survive multiple bullets. The creature breaks the door, you and the girl start shooting at it. But that only slowed him down, and since both of you we\'re so close to the door, the creature grabbed you with it\'s long hands and suffocated you both.*\n\n**YOU DIED**\nEnding 2 out of ${endings}: The slaughter\n${artist}`)
                                                 
                                                 setTimeout(function(){
                                                     msg.edit('**YOU DIED**')
@@ -92,14 +93,14 @@ module.exports = {
                                                         .then(collected6 => {
                                                             const reaction6 = collected6.first();
                                                             if(reaction6.emoji.name === '👍') {
-                                                                msg.edit(`*You picked up the sniper and you had more than enough ammo, so its time to take this freak down. Because the creature is very tall you were able to see its head, and you could\'ve already detected where its body is too. You shoot his legs first so you make sure he wont come quickly at you, then you shoot his head 2 times, just so you make sure he wont break your ears with its siren sounds. And you shoot him 3 times in the chest. You then say:* Take that bitch! *After that you take the sniper with you just in case and go back to your cabin.*\n\n**YOU SURVIVED**\nEnding 3 out of ${endings}: The last survivor`)
+                                                                msg.edit(`*You picked up the sniper and you had more than enough ammo, so its time to take this freak down. Because the creature is very tall you were able to see its head, and you could\'ve already detected where its body is too. You shoot his legs first so you make sure he wont come quickly at you, then you shoot his head 2 times, just so you make sure he wont break your ears with its siren sounds. And you shoot him 3 times in the chest. You then say:* Take that bitch! *After that you take the sniper with you just in case and go back to your cabin.*\n\n**YOU SURVIVED**\nEnding 3 out of ${endings}: The last survivor\n${artist}`)
 
                                                                 setTimeout(function(){
                                                                     msg.edit('**YOU SURVIVED**')
                                                                 }, 45000);
                                                             }
                                                             if(reaction6.emoji.name === '👎') {
-                                                                msg.edit(`*You try to call for help but the radio is broken. Unfortunately siren head hears the static the the radio gives and finds out that you\'re in the watch tower and demolishes it. By falling from that much high up, you crack your skull open.*\n\n**YOU DIED**\nEnding 4 out of ${endings}: Failed reinforcement`)
+                                                                msg.edit(`*You try to call for help but the radio is broken. Unfortunately siren head hears the static the the radio gives and finds out that you\'re in the watch tower and demolishes it. By falling from that much high up, you crack your skull open.*\n\n**YOU DIED**\nEnding 4 out of ${endings}: Failed reinforcement\n${artist}`)
 
                                                                 setTimeout(function(){
                                                                     msg.edit('**YOU DIED**')
@@ -108,7 +109,7 @@ module.exports = {
                                                         })
                                                     }
                                                     if(reaction5.emoji.name === '👎') {
-                                                        msg.edit(`*You and the girl get ready to attack, at last siren head arrives and the fight begins. You throw the axe on his neck, and then both you and the girl start to shoot at siren head with all of your bullets. Eventually, he is finally defeated. You and the girl then get back to your cabins and live happily ever after.*\n\n**YOU SURVIVED**\nEnding 5 out of ${endings}: The team`)
+                                                        msg.edit(`*You and the girl get ready to attack, at last siren head arrives and the fight begins. You throw the axe on his neck, and then both you and the girl start to shoot at siren head with all of your bullets. Eventually, he is finally defeated. You and the girl then get back to your cabins and live happily ever after.*\n\n**YOU SURVIVED**\nEnding 5 out of ${endings}: The team\n${artist}`)
 
                                                         setTimeout(function(){
                                                             msg.edit('**YOU SURVIVED**')
@@ -119,7 +120,7 @@ module.exports = {
                                         })
                                     }
                                     if(reaction3.emoji.name === '👎') {
-                                        msg.edit(`*You became very brave and got closer to the voice and said hi, but then the voice was actually coming from a weird and tall creature with a siren for its head. Then the creature started making very loud siren noises that exploded your eardrums. And then the creature grabs your neck and kills you.*\n\n**YOU DIED**\nEnding 6 out of ${endings}: the brave dead soldier`)
+                                        msg.edit(`*You became very brave and got closer to the voice and said hi, but then the voice was actually coming from a weird and tall creature with a siren for its head. Then the creature started making very loud siren noises that exploded your eardrums. And then the creature grabs your neck and kills you.*\n\n**YOU DIED**\nEnding 6 out of ${endings}: the brave dead soldier\n${artist}`)
 
                                         setTimeout(function(){
                                             msg.edit('**YOU DIED**')
@@ -136,7 +137,7 @@ module.exports = {
                         .then(collected7 => {
                             const reaction7 = collected7.first();
                             if(reaction7.emoji.name === '👍') {
-                                msg.edit(`*You knew that if you went outside you couldn\'t make it out alive, so you decide to stay hidden. But then there are some different sounds coming from beneath your bed. And then a creature with sharp claws comes from underneath your bed and you couldn\'t move because you were in shock and the creature quickly starts to cut your whole body until it eventually kills you.*\n\n**YOU DIED**\nEnding 7 out of ${endings}: The fearful hider`)
+                                msg.edit(`*You knew that if you went outside you couldn\'t make it out alive, so you decide to stay hidden. But then there are some different sounds coming from beneath your bed. And then a creature with sharp claws comes from underneath your bed and you couldn\'t move because you were in shock and the creature quickly starts to cut your whole body until it eventually kills you.*\n\n**YOU DIED**\nEnding 7 out of ${endings}: The fearful hider\n${artist}`)
 
                                 setTimeout(function(){
                                     msg.edit('**YOU DIED**')
@@ -149,21 +150,21 @@ module.exports = {
                                 .then(collected8 => {
                                     const reaction8 = collected8.first();
                                     if(reaction8.emoji.name === '👍') {
-                                        msg.edit(`How is he still alive? *you say to yourself, and because of anger, you try to kill siren head with your own hands, then you say:* If i somehow rip those sirens off of him then he might not be such a pain in the butt\n*That was the plan...but, sometimes things dont go as planned. You try to get closer to siren head, but as you do so, the sirens start to get louder and louder, and so you back off. You try to run away, until you suddenly reach a bit pit that leads to a waterfall, and behind you there was siren head. You got cornered, and so your only solution was to jump in the water. While you fall, there was siren head, in fire, \"looking\" at you (altough he doesn\'t have eyes) from a distance.\n You pass start to pass out, and some hours later, you wake up on a island, unfortunately there were no trees, no food, nothing. And after 3 days you die from hunger*\n\n**YOU DIED**\nEnding 8 out of ${endings}: The hopeful fighter that lost it all`)
+                                        msg.edit(`How is he still alive? *you say to yourself, and because of anger, you try to kill siren head with your own hands, then you say:* If i somehow rip those sirens off of him then he might not be such a pain in the butt\n*That was the plan...but, sometimes things dont go as planned. You try to get closer to siren head, but as you do so, the sirens start to get louder and louder, and so you back off. You try to run away, until you suddenly reach a bit pit that leads to a waterfall, and behind you there was siren head. You got cornered, and so your only solution was to jump in the water. While you fall, there was siren head, in fire, \"looking\" at you (altough he doesn\'t have eyes) from a distance.\n You pass start to pass out, and some hours later, you wake up on a island, unfortunately there were no trees, no food, nothing. And after 3 days you die from hunger*\n\n**YOU DIED**\nEnding 8 out of ${endings}: The hopeful fighter that lost it all\n${artist}`)
 
                                         setTimeout(function(){
                                             msg.edit('**YOU DIED**')
                                         }, 45000);
                                     }
                                     if(reaction8.emoji.name === '✊') {
-                                        msg.edit(`*You wait for something to happend, and eventually, the same car that gave you the gasoline bottle, drives over siren head, and he finally dies. You look to see who was in the car, and it was a dude, looked like he had the age around 25 years old, you start to be friends with him, after that you get in his car and eventually survive together as a team.*\n\n**YOU SURVIVED**\nEnding 9 out of ${endings}: Beginner\'s luck`)
+                                        msg.edit(`*You wait for something to happend, and eventually, the same car that gave you the gasoline bottle, drives over siren head, and he finally dies. You look to see who was in the car, and it was a dude, looked like he had the age around 25 years old, you start to be friends with him, after that you get in his car and eventually survive together as a team.*\n\n**YOU SURVIVED**\nEnding 9 out of ${endings}: Beginner\'s luck\n${artist}`)
 
                                         setTimeout(function(){
                                             msg.edit('**YOU SURVIVED**')
                                         }, 45000);
                                     }
                                     if(reaction8.emoji.name === '👎') {
-                                        msg.edit(`*You start to run away, and you ran and ran, until eventually you decide that youre deep enough in the forest and siren head doesnt have his legs anymore, so you should be pretty far from him, but you say:* How do i kill him? *As you think of a plan, you make a small little shelter from a cave you found, you make few tools: spear, bow and an axe, then you say:* They might not be the best since they\'re hand-crafted but, better than nothing. *After that, you kill few animals for food, then you start making a plan\nAs you finally made prepared the plan, you wait until you hear siren head coming, and speak of the devil, there he was* You shall die siren head! *You say as you cut down a tree directly towards him, making the tree fall on him, you really qucikly rip off his sirens so he couldn\'t attack you anymore, and as the final hit, you stab him with your spear*\n\n**YOU SURVIVED**\nEnding 10 out of ${endings}: The new-born hunter`)
+                                        msg.edit(`*You start to run away, and you ran and ran, until eventually you decide that youre deep enough in the forest and siren head doesnt have his legs anymore, so you should be pretty far from him, but you say:* How do i kill him? *As you think of a plan, you make a small little shelter from a cave you found, you make few tools: spear, bow and an axe, then you say:* They might not be the best since they\'re hand-crafted but, better than nothing. *After that, you kill few animals for food, then you start making a plan\nAs you finally made prepared the plan, you wait until you hear siren head coming, and speak of the devil, there he was* You shall die siren head! *You say as you cut down a tree directly towards him, making the tree fall on him, you really qucikly rip off his sirens so he couldn\'t attack you anymore, and as the final hit, you stab him with your spear*\n\n**YOU SURVIVED**\nEnding 10 out of ${endings}: The new-born hunter\n${artist}`)
 
                                         setTimeout(function(){
                                             msg.edit('**YOU SURVIVED**')
@@ -172,7 +173,7 @@ module.exports = {
                                 })
                             }
                             if(reaction7.emoji.name === '👎') {
-                                msg.edit(`*You thought that you could eventually escape from him if you run quickly. But when you try to, siren head gets to you very rapidly and it catches you.*\n\n**YOU DIED**\nEnding 11 out of ${endings}: The runner`)
+                                msg.edit(`*You thought that you could eventually escape from him if you run quickly. But when you try to, siren head gets to you very rapidly and it catches you.*\n\n**YOU DIED**\nEnding 11 out of ${endings}: The runner\n${artist}`)
 
                                 setTimeout(function(){
                                     msg.edit('**YOU DIED**')
@@ -187,7 +188,7 @@ module.exports = {
                         .then(collected9 => {
                             const reaction9 = collected9.first();
                             if(reaction9.emoji.name === '👍') {
-                                msg.edit(`*You wake up and try to fight him, but he had 2 weapons and you had none, so as you try to stop him, he stabs the fork to your belly, and the knife to your chest.*\n\n**YOU DIED**\nEnding 12 out of ${endings}: The betrayed`)
+                                msg.edit(`*You wake up and try to fight him, but he had 2 weapons and you had none, so as you try to stop him, he stabs the fork to your belly, and the knife to your chest.*\n\n**YOU DIED**\nEnding 12 out of ${endings}: The betrayed\n${artist}`)
 
                                 setTimeout(function(){
                                     msg.edit('**YOU DIED**')
@@ -200,21 +201,21 @@ module.exports = {
                                 .then(collected10 => {
                                     const reaction10 = collected10.first();
                                     if(reaction10.emoji.name === '👍') {
-                                        msg.edit(`*You and belfast get in the car and wait for siren head, After he arrives, you start the car, and drive straight to him, until you squish him between the car and a big boulder.*\n\nbelfast: Master we did it nya!\nyou: yes we did, thx for helping me\nbelfast: you\'re welcome, let\'s go back in the cabin\n\n*After that, you and belfast are reliefed that the hell is finally over, and you both live a happy life together*\n\n**YOU SURVIVED**\nEnding 13 out of ${endings}: Belfast\'s saviour`)
+                                        msg.edit(`*You and belfast get in the car and wait for siren head, After he arrives, you start the car, and drive straight to him, until you squish him between the car and a big boulder.*\n\nbelfast: Master we did it nya!\nyou: yes we did, thx for helping me\nbelfast: you\'re welcome, let\'s go back in the cabin\n\n*After that, you and belfast are reliefed that the hell is finally over, and you both live a happy life together*\n\n**YOU SURVIVED**\nEnding 13 out of ${endings}: Belfast\'s saviour\n${artist}`)
 
                                         setTimeout(function(){
                                             msg.edit('**YOU SURVIVED**')
                                         }, 45000);
                                     }
                                     if(reaction10.emoji.name === '✊') {
-                                        msg.edit(`*You and belfast make a plan, belfast drives over the waterfall pit, and ties a long rope above the ground, meanwhile, you get siren head\'s attention and to follow you to the waterfall, after that, you make the risky choice of jumping right for it, sirenhead trips over the rope and falls with you, but you actually catched onto the rocks of the land before falling into your death, and belfast got there quick to pull you up. And then you both get back to the cabin, a bit injured, but safely living a happy life once again*\n\n**YOU SURVIVED**\nEnding 14 out of ${endings}: Belfast\'s saviour`)
+                                        msg.edit(`*You and belfast make a plan, belfast drives over the waterfall pit, and ties a long rope above the ground, meanwhile, you get siren head\'s attention and to follow you to the waterfall, after that, you make the risky choice of jumping right for it, sirenhead trips over the rope and falls with you, but you actually catched onto the rocks of the land before falling into your death, and belfast got there quick to pull you up. And then you both get back to the cabin, a bit injured, but safely living a happy life once again*\n\n**YOU SURVIVED**\nEnding 14 out of ${endings}: Belfast\'s saviour\n${artist}`)
 
                                         setTimeout(function(){
                                             msg.edit('**YOU SURVIVED**')
                                         }, 45000);
                                     }
                                     if(reaction10.emoji.name === '👎') {
-                                        msg.edit(`*You wait till siren head appears, then you throw lots of spears towards him, belfast shoots her bow at siren head, but eventually, siren head gets pissed of running around, and does some very very loud static sounds that distract you both from concentrating, then he gets closer and closer, then he eventually kills you both*\n\n**YOU DIED**\nEnding 15 out of ${endings}: The ambitious loser`)
+                                        msg.edit(`*You wait till siren head appears, then you throw lots of spears towards him, belfast shoots her bow at siren head, but eventually, siren head gets pissed of running around, and does some very very loud static sounds that distract you both from concentrating, then he gets closer and closer, then he eventually kills you both*\n\n**YOU DIED**\nEnding 15 out of ${endings}: The ambitious loser\n${artist}`)
 
                                         setTimeout(function(){
                                             msg.edit('**YOU DIED**')
