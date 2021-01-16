@@ -18,7 +18,7 @@ module.exports = {
             if (!args[0]){
                 const embed = new Discord.MessageEmbed()
     
-                    .setAuthor(`Nyaa~, i love you ${message.author}`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setAuthor(`Nyaa~, i love you ${message.author.username}`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(json.url)
                     .setFooter('Powered by otakugifs.xyz')
                     .setColor('#7d77df')
@@ -29,7 +29,7 @@ module.exports = {
                 }else {
                     const embed = new Discord.MessageEmbed()
             
-                    .setAuthor(`${message.author} loves ${person}!`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setAuthor(`${message.author.username} loves ${person.username}!`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(json.url)
                     .setFooter('Powered by otakugifs.xyz')
                     .setColor('#7d77df')
