@@ -5,7 +5,7 @@ module.exports = bot => {
     console.log('Neko Belfast is online!');
 
     const normalday = schedule.scheduleJob('* * * * *', function() {
-        bot.user.setActivity(`over you nya~ | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
+        bot.user.setActivity(`with my tail nya~ | use ${prefix}help for commands`, {type: 'PLAYING'}).catch(console.error);
     })
     const newyear = schedule.scheduleJob('* * 1 1 *', function() {
         bot.user.setActivity(`Happy New Year nya~! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
@@ -35,7 +35,10 @@ module.exports = bot => {
         bot.user.setActivity(`Merry Christmas nya! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
     })
 
-    /*Holidays
+    /*
+    Holidays
+
+    WATCHING:
     Every other day - over myaster
     January 1st - Happy New Year nya~!
     February 14th - Will you be my Valentine nya~?
@@ -45,5 +48,9 @@ module.exports = bot => {
     September 16th - Happy birthday Miku-senpai!
     October 31st - Have a spooky Halloween! Tee hee
     November 25th - Happy Thanksgiving nya~!
-    December 25th - Merry Christmas nya!*/
+    December 25th - Merry Christmas nya!
+
+    PLAYING:
+    Every other day - with my tail nya~
+    */
 }
