@@ -3,9 +3,15 @@ var schedule = require('node-schedule');
 
 module.exports = bot => {
     console.log('Neko Belfast is online!');
+    const status = [
+        `with my tail nya~ | use ${prefix}help for commands`, {type: 'PLAYING'},
+        `over you nya~ | use ${prefix}help for commands`, {type: 'WATCHING'},
+        `to your suggestions nya~ | use ${prefix}help for commands`, {type: 'LISTENING'}
+    ]
+    const random = status[Math.floor(Math.random() * status.length)];
 
     const normalday = schedule.scheduleJob('* * * * *', function() {
-        bot.user.setActivity(`with my tail nya~ | use ${prefix}help for commands`, {type: 'PLAYING'}).catch(console.error);
+        bot.user.setActivity(random).catch(console.error);
     })
     const newyear = schedule.scheduleJob('* * 1 1 *', function() {
         bot.user.setActivity(`Happy New Year nya~! | use ${prefix}help for commands`, {type: 'WATCHING'}).catch(console.error);
