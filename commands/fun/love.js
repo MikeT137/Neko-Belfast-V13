@@ -4,7 +4,26 @@ module.exports = {
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const person = message.mentions.users.first();
-        const fetch = require('node-fetch');
+        const love = Math.random() * 100;
+        const loveIndex = Math.floor(love / 10);
+        const loveLevel = "💖".repeat(loveIndex) + "💔".repeat(10 - loveIndex);
+
+        if(!args[0]) {
+            message.channel.send('You must ping someone to see the love-affinity level')
+        }else if(message.mentions.members.size == 1) {
+            if(person.id == message.author.id) {
+                message.channel.send('You can\'t do this command to yourself');
+            }else {
+                const embed = new Discord.MessageEmbed()
+
+                    .setAuthor(`${message.author.username} and ${person.username} love eachother this much:`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setThumbnail(person.displayAvatarURL({dynamic: true}))
+                    .addField(`💟 ${Math.floor(love)}%\n\n${loveLevel}`)
+                    .setColor('#7d77df')
+                message.channel.send(embed);
+            }
+        }
+        /*const fetch = require('node-fetch');
         const url = 'https://api.otakugifs.xyz/gif/cuddle';
 
         fetch(url, {
@@ -36,6 +55,6 @@ module.exports = {
                     message.channel.send(embed);
                 }
             }else return;
-        })
+        })*/
     }
 }
