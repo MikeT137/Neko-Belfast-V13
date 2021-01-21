@@ -100,7 +100,7 @@ module.exports = {
                     .addField('Commands:', '\`blackjack\`, \`holiday\`, \`math\`, \`rps\`, \`storyrun\`')
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setColor('#7d77df')
-                msg.edit(embedF2);
+                message.channel.send(embedF2);
             break;
 
             case 'blackjack':
@@ -322,7 +322,7 @@ module.exports = {
             case 'rng':
                 message.channel.send('It gives you a random number but you have to specify the maximum value: \`b.rng (biggest possible outcome you want)\`\nSidenote: your value has to be higher than 1')
             break;
-            
+
             //Self
             case 'self' || 'self roleplay':
                 let embedS2 = new Discord.MessageEmbed()
