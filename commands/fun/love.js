@@ -4,7 +4,7 @@ module.exports = {
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const person = message.mentions.users.first();
-        let person2 = message.guild.members.cache.filter(m => m.id !== message.author.id).random().user;
+        let person2 = message.guild.members.random();
         const love = Math.random() * 100;
         const loveIndex = Math.floor(love / 10);
         const loveLevel = "💖".repeat(loveIndex) + "💔".repeat(10 - loveIndex);
@@ -12,8 +12,8 @@ module.exports = {
         if(!args[0]) {
             const embed = new Discord.MessageEmbed()
 
-                .setAuthor(`${message.author.username} and ${person2.username} love eachother this much:`, message.author.displayAvatarURL({ dynamic: true }))
-                .setThumbnail(person2.displayAvatarURL({dynamic: true}))
+                .setAuthor(`${message.author.username} and ${person2.user.username} love eachother this much:`, message.author.displayAvatarURL({ dynamic: true }))
+                .setThumbnail(person2.user.displayAvatarURL({dynamic: true}))
                 .addField(`💟 ${Math.floor(love)}%`, `${loveLevel}`)
                 .setColor('#7d77df')
             message.channel.send(embed);
