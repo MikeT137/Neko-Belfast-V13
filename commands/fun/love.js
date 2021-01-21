@@ -4,7 +4,7 @@ module.exports = {
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const person = message.mentions.users.first();
-        let person2 = message.guild.members.filter(m => m.id !== message.author.id).random().user;
+        let person2 = message.guild.members.cache.filter(m => m.id !== message.author.id).random().user;
         const love = Math.random() * 100;
         const loveIndex = Math.floor(love / 10);
         const loveLevel = "💖".repeat(loveIndex) + "💔".repeat(10 - loveIndex);
