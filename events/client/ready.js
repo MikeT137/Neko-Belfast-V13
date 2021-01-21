@@ -5,34 +5,34 @@ module.exports = bot => {
     console.log('Neko Belfast is online!');
     
     const normalday = schedule.scheduleJob('* * * * *', function() {
-        bot.user.setActivity(`your suggestions nya~ | ${prefix}help`, {type: 'LISTENING'}).catch(console.error);
+        bot.user.setActivity(`with my tail nya~ | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
     const newyear = schedule.scheduleJob('* * 1 1 *', function() {
-        bot.user.setActivity(`Happy New Year nya~! | ${prefix}help`, {type: 'WATCHING'}).catch(console.error);
+        bot.user.setActivity(`Happy New Year nya~! | ${prefix}help`, {type: 'STREAMING'}).catch(console.error);
     })
     const valentine = schedule.scheduleJob('* * 14 2 *', function() {
-        bot.user.setActivity(`Will you be my Valentine nya~? | ${prefix}help`, {type: 'WATCHING'}).catch(console.error);
+        bot.user.setActivity(`Will you be my Valentine nya~? | ${prefix}help`, {type: 'STREAMING'}).catch(console.error);
     })
     const patrick = schedule.scheduleJob('* * 17 3 *', function() {
-        bot.user.setActivity(`Happy St. Patrick\'s Day nya~! | ${prefix}help`, {type: 'WATCHING'}).catch(console.error);
+        bot.user.setActivity(`Happy St. Patrick\'s Day nya~! | ${prefix}help`, {type: 'STREAMING'}).catch(console.error);
     })
     const easter = schedule.scheduleJob('* * 8 4 *', function() {
-        bot.user.setActivity(`Happy Easter nya~! | ${prefix}help`, {type: 'WATCHING'}).catch(console.error);
+        bot.user.setActivity(`Happy Easter nya~! | ${prefix}help`, {type: 'STREAMING'}).catch(console.error);
     })
     const bday = schedule.scheduleJob('* * 29 6 *', function() {
-        bot.user.setActivity(`It\'s my birthday nya~! | ${prefix}help`, {type: 'WATCHING'}).catch(console.error);
+        bot.user.setActivity(`It\'s my birthday nya~! | ${prefix}help`, {type: 'STREAMING'}).catch(console.error);
     })
     const miku = schedule.scheduleJob('* * 16 9 *', function() {
-        bot.user.setActivity(`Happy birthday Miku-senpai! | ${prefix}help`, {type: 'WATCHING'}).catch(console.error);
+        bot.user.setActivity(`Happy birthday Miku-senpai! | ${prefix}help`, {type: 'STREAMING'}).catch(console.error);
     })
     const halloween = schedule.scheduleJob('* * 31 10 *', function() {
-        bot.user.setActivity(`Have a spooky Halloween! Tee hee | ${prefix}help`, {type: 'WATCHING'}).catch(console.error);
+        bot.user.setActivity(`Have a spooky Halloween! Tee hee | ${prefix}help`, {type: 'STREAMING'}).catch(console.error);
     })
     const thanks = schedule.scheduleJob('* * 25 11 *', function() {
-        bot.user.setActivity(`Happy Thanksgiving nya~! | ${prefix}help`, {type: 'WATCHING'}).catch(console.error);
+        bot.user.setActivity(`Happy Thanksgiving nya~! | ${prefix}help`, {type: 'STREAMING'}).catch(console.error);
     })
     const xmas = schedule.scheduleJob('* * 25 12 *', function() {
-        bot.user.setActivity(`Merry Christmas nya! | ${prefix}help`, {type: 'WATCHING'}).catch(console.error);
+        bot.user.setActivity(`Merry Christmas nya! | ${prefix}help`, {type: 'STREAMING'}).catch(console.error);
     })
 
     /*
@@ -48,10 +48,6 @@ module.exports = bot => {
     November 25th - Happy Thanksgiving nya~!
     December 25th - Merry Christmas nya!
 
-    Every other day - [
-        with my tail nya~ , 'PLAYING'
-        over you nya~ , 'WATCHING'
-        your suggestions nya~ , 'LISTENING'
-    ]
+    Every other day - with my tail nya~
     */
 }
