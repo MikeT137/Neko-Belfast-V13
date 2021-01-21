@@ -12,8 +12,8 @@ module.exports = {
         if(!args[0]) {
             const embed = new Discord.MessageEmbed()
 
-                .setAuthor(`${message.author.username} and ${person2.user.username} love eachother this much:`, message.author.displayAvatarURL({ dynamic: true }))
-                .setThumbnail(person2.user.displayAvatarURL({dynamic: true}))
+                .setAuthor(`${message.author.username} and ${person2.username} love eachother this much:`, message.author.displayAvatarURL({ dynamic: true }))
+                .setThumbnail(person2.displayAvatarURL({dynamic: true}))
                 .addField(`💟 ${Math.floor(love)}%`, `${loveLevel}`)
                 .setColor('#7d77df')
             message.channel.send(embed);
