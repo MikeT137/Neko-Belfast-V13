@@ -16,9 +16,9 @@ module.exports = {
             }else {
                 const embed = new Discord.MessageEmbed()
 
-                    .setAuthor(message.author.displayAvatarURL({ dynamic: true }))
+                    .setAuthor(`${message.author.username} and ${person.username} love eachother this much:`, message.author.displayAvatarURL({ dynamic: true }))
                     .setThumbnail(person.displayAvatarURL({dynamic: true}))
-                    .addField(`${message.author.username} and ${person.username} love eachother this much:`, `💟 ${Math.floor(love)}%\n\n${loveLevel}`)
+                    .addField(`💟 ${Math.floor(love)}`, `%${loveLevel}`)
                     .setColor('#7d77df')
                 message.channel.send(embed);
             }
