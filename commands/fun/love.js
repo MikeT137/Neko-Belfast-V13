@@ -18,7 +18,7 @@ module.exports = {
 
                     .setAuthor(`${message.author.username} and ${person.username} love eachother this much:`, message.author.displayAvatarURL({ dynamic: true }))
                     .setThumbnail(person.displayAvatarURL({dynamic: true}))
-                    .addField(`💟 ${Math.floor(love)}`, `%${loveLevel}`)
+                    .addField(`💟 ${Math.floor(love)}%`, `${loveLevel}`)
                     .setColor('#7d77df')
                 message.channel.send(embed);
             }
