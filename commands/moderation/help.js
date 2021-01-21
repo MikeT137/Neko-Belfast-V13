@@ -304,7 +304,7 @@ module.exports = {
                     .addField('Commands:', '\`8ball\`, \`coinflip\`, \`love\`, \`rng\`')
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setColor('#7d77df')
-                msg.edit(embedR2);
+                message.channel.send(embedR2);
             break;
 
             case '8ball':
