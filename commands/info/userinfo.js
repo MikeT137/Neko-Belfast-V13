@@ -42,7 +42,7 @@ module.exports = {
                     `\`Game Status:\` ${message.author.presence.game || 'Not playing a game'}`
                 ])
                 .addField(`Stats in ${message.guild.name}`, [
-                    `\`Highest role:\` ${message.author.roles.highest.id === message.guild.id ? 'None' : member.roles.highest.name}`,
+                    `\`Highest role:\` ${member.roles.highest.id === message.guild.id ? 'None' : member.roles.highest.name}`,
                     `\`Server join date:\` ${moment(message.author.joinedAt).format('LL\; LTS')}`,
                     `\`Roles:\` ${roles.length}`
                 ])
