@@ -10,7 +10,7 @@ module.exports = {
                 .setTitle('Help')
                 .setDescription('React with an emoji, or type \`b.help (category)\` to get the commands of that specific category!')
                 .addField(':smiley: - Fun', 'Commands that everyone can use if they\'re bored')
-                .addField(':face_with_monocle: - Info', 'Commands that can help you get more detailed information about specific things')
+                .addField(':face_with_monocle: - Info', 'Commands that give more information about specific things')
                 .addField(':performing_arts: - Interactive Roleplay (@someone)', 'Commands that only work WITH pinging')
                 .addField(':tools: - Moderation', 'Commands that help admins to moderate their own servers')
                 .addField(':game_die: - Random', 'Commands that give a random output everytime')
