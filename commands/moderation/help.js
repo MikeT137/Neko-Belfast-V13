@@ -9,12 +9,14 @@ module.exports = {
             
                 .setTitle('Help')
                 .setDescription('React with an emoji, or type \`b.help (category)\` to get the commands of that specific category!')
-                .addField(':smiley: - Fun', 'Commands that everyone can use if they\'re bored')
-                .addField(':face_with_monocle: - Info', 'Commands that give more information about specific things')
-                .addField(':performing_arts: - Interactive Roleplay (@someone)', 'Commands that only work WITH pinging')
-                .addField(':tools: - Moderation', 'Commands that help admins to moderate their own servers')
-                .addField(':game_die: - Random', 'Commands that give a random output everytime')
-                .addField(':clown: - Self Roleplay', 'Commands that only work WITHOUT pinging')
+                .addFields(
+                    {name: ':smiley: - Fun', value: 'Commands that everyone can use if they\'re bored', inline: true },
+                    {name: ':face_with_monocle: - Info', value: 'Commands that give more information about specific things', inline: true },
+                    {name: ':performing_arts: - Interactive Roleplay (@someone)', value: 'Commands that only work WITH pinging', inline: true },
+                    {name: ':tools: - Moderation', value: 'Commands that help admins to moderate their own servers', inline: true },
+                    {name: ':game_die: - Random', value: 'Commands that give a random output everytime', inline: true },
+                    {name: ':clown: - Self Roleplay', value: 'Commands that only work WITHOUT pinging', inline: true }
+                )
                 .setThumbnail(bot.user.displayAvatarURL())
                 .setColor('#7d77df')
             message.channel.send(embed).then(msg => {
