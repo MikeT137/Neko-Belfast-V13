@@ -6,15 +6,15 @@ module.exports = {
 
         if(!args[0]) {
             let embed = new Discord.MessageEmbed()
-
+            
                 .setTitle('Help')
                 .setDescription('React with an emoji, or type \`b.help (category)\` to get the commands of that specific category!')
-                .addField(':smiley: - Fun', 'This category has fun commands that everyone can use if they\'re bored')
-                .addField(':face_with_monocle: - Info', 'This category has info commands that can help you get more detailed information about specific things')
-                .addField(':performing_arts: - Interactive Roleplay (@someone)', 'This category has roleplaying commands that only work with pinging')
-                .addField(':tools: - Moderation', 'This category has moderation commands that help admins to moderate their own servers')
-                .addField(':game_die: - Random', 'This category has randomizing commands that have a different output everytime')
-                .addField(':clown: - Self Roleplay', 'This category has roleplaying commands that only work without pinging')
+                .addField(':smiley: - Fun', 'Commands that everyone can use if they\'re bored')
+                .addField(':face_with_monocle: - Info', 'Commands that can help you get more detailed information about specific things')
+                .addField(':performing_arts: - Interactive Roleplay (@someone)', 'Commands that only work WITH pinging')
+                .addField(':tools: - Moderation', 'Commands that help admins to moderate their own servers')
+                .addField(':game_die: - Random', 'Commands that give a random output everytime')
+                .addField(':clown: - Self Roleplay', 'Commands that only work WITHOUT pinging')
                 .setThumbnail(bot.user.displayAvatarURL())
                 .setColor('#7d77df')
             message.channel.send(embed).then(msg => {
