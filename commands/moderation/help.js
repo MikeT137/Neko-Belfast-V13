@@ -17,7 +17,7 @@ module.exports = {
                     {name: ':game_die: - Random', value: 'Commands that give a random output everytime', inline: true },
                     {name: ':clown: - Self Roleplay', value: 'Commands that only work WITHOUT pinging', inline: true }
                 )
-                .setThumbnail(bot.user.displayAvatarURL())
+                //.setThumbnail(bot.user.displayAvatarURL())
                 .setColor('#7d77df')
             message.channel.send(embed).then(msg => {
                 msg.react('😃'),
