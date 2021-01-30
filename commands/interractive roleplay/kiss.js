@@ -20,7 +20,7 @@ module.exports = {
             if(message.mentions.members.size >= 1) {
                 if(person.id == message.author.id) {
                     message.channel.send(`It\'s okay ${message.author.username}! I\'m sure you\'ll get someone to be by your side! Stay strong nya~`)
-                /*}else if((message.author.id = miku) && (person.id = daisy)) {
+                }else if((message.author.id = miku) && (person.id = daisy)) {
                     const embed = new Discord.MessageEmbed()
             
                     .setAuthor(`Love you daisy X3, hope you like your little gift`, message.author.displayAvatarURL({ dynamic: true }))
@@ -35,7 +35,7 @@ module.exports = {
                     .setImage(json.url)
                     .setFooter('Powered by otakugifs.xyz')
                     .setColor('#7d77df')
-                    message.channel.send(embed);*/
+                    message.channel.send(embed);
                 }else {
                     const embed = new Discord.MessageEmbed()
             
