@@ -331,7 +331,7 @@ module.exports = {
 
                     .setTitle('Help - Self Roleplay')
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                    .addField('Commands:', '\`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dance\`, \`facepalm\`, \`hide\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`yawn\`')
+                    .addField('Commands:', '\`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`hide\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`yawn\`')
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setColor('#7d77df')
                 message.channel.send(embedS2);
@@ -351,6 +351,10 @@ module.exports = {
             
             case 'cry':
                 message.channel.send('It sends a crying gif: \`b.cry\`')
+            break;
+
+            case 'dab':
+                message.channel.send('It sends a dabing gif: \`b.dab\`')
             break;
                         
             case 'dance':
