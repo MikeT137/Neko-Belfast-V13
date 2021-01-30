@@ -23,7 +23,7 @@ module.exports = {
                 }else if((message.author.id = miku) && (person.id = daisy)) {
                     const embed = new Discord.MessageEmbed()
             
-                    .setAuthor(`Love you daisy X3, hope you like your little gift`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setAuthor(`I love you so much daisy X3, hope you like your little gift`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(json.url)
                     .setFooter('Powered by otakugifs.xyz')
                     .setColor('#7d77df')
