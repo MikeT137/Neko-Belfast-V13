@@ -21,14 +21,14 @@ module.exports = {
             if(person.id == message.author.id) {
                 const embed = new Discord.MessageEmbed()
         
-                    .setAuthor(`${message.author.username} just got a cookie :cookie:`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setAuthor(`${message.author.username} just got a cookie 🍪`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_cookie[Math.floor(Math.random() * random_cookie.length)])
                     .setColor('#7d77df')
                 message.channel.send(embed)
             }else {
                 const embed = new Discord.MessageEmbed()
         
-                    .setAuthor(`${message.author.username} gave a cookie to ${person.username}, how nice :cookie:`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setAuthor(`${message.author.username} gave a cookie to ${person.username}, how nice 🍪`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_cookie[Math.floor(Math.random() * random_cookie.length)])
                     .setColor('#7d77df')
                 message.channel.send(embed)
@@ -36,7 +36,7 @@ module.exports = {
         }else if (!args[0]) {
             const embed = new Discord.MessageEmbed()
         
-                .setAuthor(`${message.author.username} just got a cookie :cookie:`, message.author.displayAvatarURL({ dynamic: true }))
+                .setAuthor(`${message.author.username} just got a cookie 🍪`, message.author.displayAvatarURL({ dynamic: true }))
                 .setImage(random_cookie[Math.floor(Math.random() * random_cookie.length)])
                 .setColor('#7d77df')
             message.channel.send(embed)
