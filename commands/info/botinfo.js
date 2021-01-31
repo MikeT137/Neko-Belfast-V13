@@ -17,7 +17,7 @@ module.exports = {
                     `\`Servers: \` ${bot.guilds.cache.size}`,
                     `\`Creation Date:\` ${moment(bot.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
                     `\`Version:\` ${version}.${bot.commands.size}`,
-                    `\`Developer:\` ${author} :flag_td:`
+                    `\`Developer:\` ${author} :flag_ro:`
                 ])
                 .addField('Profile picture', [
                     `\`Original picture:\` https://www.reddit.com/r/AzureLane/comments/b2oc4c/neko_maid_belfast/`,
