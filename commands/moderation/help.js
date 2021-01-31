@@ -3,6 +3,13 @@ module.exports = {
     description: "Shows you the commands",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
+        
+        const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`rps\`, \`storyrun\`';
+        const info = '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`';
+        const interractive = '\`boop\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`';
+        const mod = '\`ban\`, \`clear\`, \`donate\`, \`help\`, \`invite\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`, \`vote\`';
+        const random = '\`8ball\`, \`coinflip\`, \`love\`, \`rng\`';
+        const self = '\`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`hide\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
 
         if(!args[0]) {
             let embed = new Discord.MessageEmbed()
@@ -39,7 +46,7 @@ module.exports = {
                         
                             .setTitle('Help - Fun')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', '\`blackjack\`, \`holiday\`, \`math\`, \`rps\`, \`storyrun\`')
+                            .addField('Commands:', `${fun}`)
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
                         msg.edit(embedF);
@@ -48,7 +55,7 @@ module.exports = {
                         
                             .setTitle('Help - Info')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`')
+                            .addField('Commands:', `${info}`)
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
                         msg.edit(embedi);
@@ -57,7 +64,7 @@ module.exports = {
 
                             .setTitle('Help - Interactive Roleplay (@someone)')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', '\`boop\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`')
+                            .addField('Commands:', `${interractive}`)
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
                         msg.edit(embedI);
@@ -66,7 +73,7 @@ module.exports = {
 
                             .setTitle('Help - Moderation')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', '\`ban\`, \`clear\`, \`donate\`, \`help\`, \`invite\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`, \`vote\`')
+                            .addField('Commands:', `${mod}`)
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
                         msg.edit(embedM);
@@ -75,7 +82,7 @@ module.exports = {
                         
                             .setTitle('Help - Random')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', '\`8ball\`, \`coinflip\`, \`love\`, \`rng\`')
+                            .addField('Commands:', `${random}`)
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
                         msg.edit(embedR);
@@ -84,7 +91,7 @@ module.exports = {
 
                             .setTitle('Help - Self Roleplay')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', '\`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`hide\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`')
+                            .addField('Commands:', `${self}`)
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
                         msg.edit(embedS);
@@ -99,7 +106,7 @@ module.exports = {
                         
                     .setTitle('Help - Fun')
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                    .addField('Commands:', '\`blackjack\`, \`holiday\`, \`math\`, \`rps\`, \`storyrun\`')
+                    .addField('Commands:', `${fun}`)
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setColor('#7d77df')
                 message.channel.send(embedF2);
@@ -107,6 +114,10 @@ module.exports = {
 
             case 'blackjack':
                 message.channel.send('It\'s a command that let\'s you play blackjack with the bot. In blackjack your goal is to get as close as possible to the number 21. You can\'t see the bot\'s 2nd card, and your total points should be higher than the bot\'s total points. If you have more than 21 points, the bot wins and if you have the same points as the bot, the bot wins: \`b.blackjack\`\nYou have 2 options:\n:white_check_mark: - hit = draw another card\n:x: - stand = not drawing any cards and waiting for next turn')
+            break;
+
+            case 'cookie':
+                message.channel.send('The user gets a cookie or gives a cookie to another user: \`b.cookie (no ping / ping)\`')
             break;
 
             case 'holiday':
@@ -135,7 +146,7 @@ module.exports = {
                         
                     .setTitle('Help - Info')
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                    .addField('Commands:', '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`')
+                    .addField('Commands:', `${info}`)
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setColor('#7d77df')
                 message.channel.send(embedi2);
@@ -163,7 +174,7 @@ module.exports = {
 
                     .setTitle('Help - Interactive Roleplay (@someone)')
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                    .addField('Commands:', '\`boop\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`')
+                    .addField('Commands:', `${interractive}`)
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setColor('#7d77df')
                 message.channel.send(embedI2);
@@ -247,7 +258,7 @@ module.exports = {
 
                     .setTitle('Help - Moderation')
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                    .addField('Commands:', '\`ban\`, \`clear\`, \`donate\`, \`help\`, \`invite\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`, \`vote\`')
+                    .addField('Commands:', `${mod}`)
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setColor('#7d77df')
                 message.channel.send(embedM2);
@@ -303,7 +314,7 @@ module.exports = {
                         
                     .setTitle('Help - Random')
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                    .addField('Commands:', '\`8ball\`, \`coinflip\`, \`love\`, \`rng\`')
+                    .addField('Commands:', `${random}`)
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setColor('#7d77df')
                 message.channel.send(embedR2);
@@ -331,7 +342,7 @@ module.exports = {
 
                     .setTitle('Help - Self Roleplay')
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                    .addField('Commands:', '\`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`hide\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`')
+                    .addField('Commands:', `${self}`)
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setColor('#7d77df')
                 message.channel.send(embedS2);
