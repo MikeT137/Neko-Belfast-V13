@@ -84,7 +84,7 @@ module.exports = {
 
                             .setTitle('Help - Self Roleplay')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', '\`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dance\`, \`facepalm\`, \`hide\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`yawn\`')
+                            .addField('Commands:', '\`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`hide\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`')
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
                         msg.edit(embedS);
@@ -331,7 +331,7 @@ module.exports = {
 
                     .setTitle('Help - Self Roleplay')
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                    .addField('Commands:', '\`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`hide\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`yawn\`')
+                    .addField('Commands:', '\`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`hide\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`')
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setColor('#7d77df')
                 message.channel.send(embedS2);
@@ -411,6 +411,10 @@ module.exports = {
                         
             case 'wag':
                 message.channel.send('It sends a waging gif: \`b.wag\`')
+            break;
+
+            case 'wink':
+                message.channel.send('It sends a winking gif: \`b.wink\`')
             break;
                         
             case 'yawn':

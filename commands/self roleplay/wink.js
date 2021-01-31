@@ -1,10 +1,10 @@
 module.exports = {
-    name:'smug',
-    description: "The user smugs",
+    name:'wink',
+    description: "The user winks",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const fetch = require('node-fetch');
-        const url = 'https://api.otakugifs.xyz/gif/smug';
+        const url = 'https://api.otakugifs.xyz/gif/wink';
 
         fetch(url, {
             method: 'GET',
@@ -17,7 +17,7 @@ module.exports = {
             if (!args[0]) {
                 const embed = new Discord.MessageEmbed()
         
-                    .setAuthor(`${message.author.username} smugs, hehe`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setAuthor(`${message.author.username} winks`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(json.url)
                     .setFooter('Powered by otakugifs.xyz')
                     .setColor('#7d77df')
