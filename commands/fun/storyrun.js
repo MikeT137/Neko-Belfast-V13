@@ -9,12 +9,11 @@ module.exports = {
             return;
         }else if (!args[0]) {
             message.channel.startTyping();
-            message.channel.send('**Story - RUN**\n*You\'re a 20 year old boy. You live in a small cabin inside a forest. You\'re there alone, no parents, no friends, no one. Its currently 17th of october. You thought that it would be really good if you chopped some wood with an axe so you can warm yourself when winter comes. You chop wood, doing your business. But suddenly you hear a weird sound coming from afar. In that moment you:\n\n👍 - still chop wood\n✊ - go inside your house\n👎 - take your axe with you and investigate the zone*\n\n**Select your choice:**')
+            await message.channel.send('**Story - RUN**\n*You\'re a 20 year old boy. You live in a small cabin inside a forest. You\'re there alone, no parents, no friends, no one. Its currently 17th of october. You thought that it would be really good if you chopped some wood with an axe so you can warm yourself when winter comes. You chop wood, doing your business. But suddenly you hear a weird sound coming from afar. In that moment you:\n\n👍 - still chop wood\n✊ - go inside your house\n👎 - take your axe with you and investigate the zone*\n\n**Select your choice:**')
             .then(msg => {
             msg.react('👍'),
             msg.react('✊'),
             msg.react('👎')
-            message.channel.stopTyping();
 
             const filter = (reaction, user) => {
                 return ['👍', '✊', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
@@ -58,6 +57,7 @@ module.exports = {
                             const reaction2 = collected2.first();
                             if(reaction2.emoji.name === '👍') {
                                 msg.edit(`*You decided to ignore that sound again, and you went in the basement. Everything seems fine, nothing out of place. You put all the logs in a corner, but when you turn around, a creature with very sharp claws starts to cut your throat and intestines open as you scream in torture.*\n\n**YOU DIED**\nEnding 1 out of ${endings}: The fool\n${artist}`)
+                                msg.stoptyping();
 
                                 setTimeout(function(){
                                     msg.edit('**YOU DIED**')
