@@ -14,11 +14,11 @@ module.exports = {
 
             const embed = new Discord.MessageEmbed()
 
-            .setTitle('Calculation')
-            .addField('Question', `${args.join(' ')} = ?`)
-            .addField('Answer', `${resp}`)
-            .setColor('#7d77df')
-        message.channel.send(embed);
+                .setTitle('Calculation')
+                .addField('Question', `${args.join(' ')} = ?`)
+                .addField('Answer', `${resp}`)
+                .setColor('#7d77df')
+            message.channel.send(embed);
         }catch(e){
             message.channel.send('Sorry, please input a valid calculation. Accepted math operations: \`+, -, *, /, %, ^, ()\`')
         }
