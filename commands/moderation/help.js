@@ -400,12 +400,12 @@ module.exports = {
                 message.channel.send('It sends a raging gif: \`b.rage\`')
             break;
 
-            case 'sip':
-                message.channel.send('It sends a sipping gif: \`b.sip\`')
-            break;
-
             case 'run':
                 message.channel.send('It sends a running gif: \`b.run\`')
+            break;
+
+            case 'sip':
+                message.channel.send('It sends a sipping gif: \`b.sip\`')
             break;
                         
             case 'smile':
@@ -430,10 +430,6 @@ module.exports = {
                         
             case 'yawn':
                 message.channel.send('It sends a yawning gif: \`b.yawn\`')
-            break;
-                        
-            case 'cry':
-                message.channel.send('It sends a crying gif: \`b.cry\`')
             break;
         }
     }
