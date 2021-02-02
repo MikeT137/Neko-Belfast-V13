@@ -49,7 +49,7 @@ module.exports = {
                             .setTitle('Help - Fun')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', `${fun}`)
-                            //.setFooter(`${footer}`)
+                            .setFooter('[Invite me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) [Vote me!](https://top.gg/bot/727093236954431488/vote) [Join my patreon!](https://www.patreon.com/user?u=10619598)')
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
                         msg.edit(embedF);
