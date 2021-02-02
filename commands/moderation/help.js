@@ -3,12 +3,12 @@ module.exports = {
     description: "Shows you the commands",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        const links = '[Inviting me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) [Voting me!](https://top.gg/bot/727093236954431488/vote) [Becoming my patreon!](https://www.patreon.com/user?u=10619598)'
+        const links = '[Inviting me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) [Joining my server!](https://discord.gg/xSkkeVf) [Voting me!](https://top.gg/bot/727093236954431488/vote) [Becoming my patreon!](https://www.patreon.com/user?u=10619598)'
         
         const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`rps\`, \`storyrun\`';
         const info = '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`';
         const interractive = '\`boop\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`';
-        const mod = '\`ban\`, \`clear\`, \`donate\`, \`help\`, \`invite\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`, \`vote\`';
+        const mod = '\`ban\`, \`clear\`, \`help\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`';
         const random = '\`8ball\`, \`coinflip\`, \`love\`, \`rng\`';
         const self = '\`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`hide\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
 
@@ -284,14 +284,6 @@ module.exports = {
                 message.channel.send('It deletes how many messages you want: \`b.clear (number)\`')
             break;
 
-            case 'donate':
-                message.channel.send('It sends a link of the patreon page where you can support the creator (by becoming a patreon ofc)')
-            break;
-
-            case 'invite':
-                message.channel.send('It sends an invite link to either the bot or the bot\'s server: \`b.invite (server/bot)\`')
-            break;
-
             case 'kick':
                 message.channel.send('It kicks someone out of a server \`b.kick (ping)\`. Keep in mind:\n-the bot needs admin\n-you need admin as well\n-you can\'t kick someone that has admin\n-the bot needs to have a role higher than the person you are trying to kick(server settings -> roles)')
             break;
@@ -314,10 +306,6 @@ module.exports = {
 
             case 'unmute':
                 message.channel.send('It unmutes a user that is muted: \`b.unmute (ping)\`, BUT you need to have a role called \"BMuted\", its the only way it\'ll work')
-            break;
-
-            case 'vote':
-                message.channel.send('It sends the link so the user can vote for the bot or the bot\'s server on the top.gg site: \`b.vote (bot/server)\`')
             break;
 
             //Random
