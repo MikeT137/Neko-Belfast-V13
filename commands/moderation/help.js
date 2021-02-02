@@ -25,7 +25,7 @@ module.exports = {
                     {name: ':game_die: - Random', value: 'Commands that give a random output everytime', inline: true },
                     {name: ':clown: - Self Roleplay', value: 'Commands that only work WITHOUT pinging', inline: true }
                 )
-                .setFooter(`${footer}`)
+                //.setFooter(`${footer}`)
                 .setThumbnail(bot.user.displayAvatarURL())
                 .setColor('#7d77df')
             message.channel.send(embed).then(msg => {
@@ -49,7 +49,7 @@ module.exports = {
                             .setTitle('Help - Fun')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', `${fun}`)
-                            .setFooter(`${footer}`)
+                            //.setFooter(`${footer}`)
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
                         msg.edit(embedF);
@@ -59,7 +59,7 @@ module.exports = {
                             .setTitle('Help - Info')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', `${info}`)
-                            .setFooter(`${footer}`)
+                            //.setFooter(`${footer}`)
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
                         msg.edit(embedi);
@@ -69,7 +69,7 @@ module.exports = {
                             .setTitle('Help - Interactive Roleplay (@someone)')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', `${interractive}`)
-                            .setFooter(`${footer}`)
+                            //.setFooter(`${footer}`)
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
                         msg.edit(embedI);
@@ -79,7 +79,7 @@ module.exports = {
                             .setTitle('Help - Moderation')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', `${mod}`)
-                            .setFooter(`${footer}`)
+                            //.setFooter(`${footer}`)
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
                         msg.edit(embedM);
@@ -89,7 +89,7 @@ module.exports = {
                             .setTitle('Help - Random')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', `${random}`)
-                            .setFooter(`${footer}`)
+                            //.setFooter(`${footer}`)
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
                         msg.edit(embedR);
@@ -99,7 +99,7 @@ module.exports = {
                             .setTitle('Help - Self Roleplay')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', `${self}`)
-                            .setFooter(`${footer}`)
+                            //.setFooter(`${footer}`)
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
                         msg.edit(embedS);
@@ -115,7 +115,7 @@ module.exports = {
                     .setTitle('Help - Fun')
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
                     .addField('Commands:', `${fun}`)
-                    .setFooter(`${footer}`)
+                    //.setFooter(`${footer}`)
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setColor('#7d77df')
                 message.channel.send(embedF2);
@@ -156,7 +156,7 @@ module.exports = {
                     .setTitle('Help - Info')
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
                     .addField('Commands:', `${info}`)
-                    .setFooter(`${footer}`)
+                    //.setFooter(`${footer}`)
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setColor('#7d77df')
                 message.channel.send(embedi2);
@@ -185,7 +185,7 @@ module.exports = {
                     .setTitle('Help - Interactive Roleplay (@someone)')
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
                     .addField('Commands:', `${interractive}`)
-                    .setFooter(`${footer}`)
+                    //.setFooter(`${footer}`)
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setColor('#7d77df')
                 message.channel.send(embedI2);
@@ -270,7 +270,7 @@ module.exports = {
                     .setTitle('Help - Moderation')
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
                     .addField('Commands:', `${mod}`)
-                    .setFooter(`${footer}`)
+                    //.setFooter(`${footer}`)
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setColor('#7d77df')
                 message.channel.send(embedM2);
@@ -327,7 +327,7 @@ module.exports = {
                     .setTitle('Help - Random')
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
                     .addField('Commands:', `${random}`)
-                    .setFooter(`${footer}`)
+                    //.setFooter(`${footer}`)
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setColor('#7d77df')
                 message.channel.send(embedR2);
@@ -356,7 +356,7 @@ module.exports = {
                     .setTitle('Help - Self Roleplay')
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
                     .addField('Commands:', `${self}`)
-                    .setFooter(`${footer}`)
+                    //.setFooter(`${footer}`)
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setColor('#7d77df')
                 message.channel.send(embedS2);
