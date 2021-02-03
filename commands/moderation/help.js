@@ -3,8 +3,8 @@ module.exports = {
     description: "Shows you the commands",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        const links = '[\`Inviting me!\`](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) [\`Joining my server!\`](https://discord.gg/xSkkeVf) [\`Voting me!\`](https://top.gg/bot/727093236954431488/vote) [\`Becoming my patreon!\`](https://www.patreon.com/user?u=10619598)'
-        
+        //const links = '[\`Inviting me!\`](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) [\`Joining my server!\`](https://discord.gg/xSkkeVf) [\`Voting me!\`](https://top.gg/bot/727093236954431488/vote) [\`Becoming my patreon!\`](https://www.patreon.com/user?u=10619598)'
+        const links = 'Inviting [me](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) to your servers, joining [my official server](https://discord.gg/xSkkeVf), [voting](https://top.gg/bot/727093236954431488/vote) me or becoming [my patreon](https://www.patreon.com/user?u=10619598)!'
         const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`rps\`, \`storyrun\`';
         const info = '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`';
         const interractive = '\`boop\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`';
