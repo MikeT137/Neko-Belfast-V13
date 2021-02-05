@@ -17,7 +17,7 @@ module.exports = {
             if (!args[0]) {
                 const embed = new Discord.MessageEmbed()
         
-                .setAuthor(`${message.author.username} shrugs ¯\_(ツ)_/¯`, message.author.displayAvatarURL({ dynamic: true }))
+                .setAuthor(`${message.author.username} shrugs ¯\\_(ツ)_/¯`, message.author.displayAvatarURL({ dynamic: true }))
                 .setImage(json.url)
                 .setFooter('Powered by otakugifs.xyz')
                 .setColor('#7d77df')
