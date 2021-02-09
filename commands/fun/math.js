@@ -5,7 +5,7 @@ module.exports = {
     description: "Solves a mathematic equation",
     run: async(bot, message, args) => {
         if(!args[0]){
-            message.channel.send('You didnt add a calculation')
+            message.channel.send('You didn\'t add a calculation')
         }else{
         let resp;
 
