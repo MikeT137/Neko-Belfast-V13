@@ -16,7 +16,7 @@ module.exports = {
                     `\`Servers: \` ${bot.guilds.cache.size}`,
                     `\`Creation Date:\` ${moment(bot.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
                     `\`Version:\` ${version}.${bot.commands.size}`,
-                    `\`Developer:\` [Miku](dsc.bio/mikuyoruka)`,
+                    `\`Developer:\` [Miku](https://discord.bio/p/mikuyoruka)`,
                     `\`Profile picture artist:\` [Linkool21](https://www.reddit.com/user/Linkool21/)`
                 ])
                 .addField('Want to support me?', '➤[Invite me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) ➤[Join my server!](https://discord.gg/xSkkeVf) ➤[Vote me!](https://top.gg/bot/727093236954431488/vote) ➤[Become my patreon!](https://www.patreon.com/user?u=10619598)')
