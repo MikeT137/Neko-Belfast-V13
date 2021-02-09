@@ -32,7 +32,7 @@ module.exports = {
             if(person.id == message.author.id) {
                 const embed = new Discord.MessageEmbed()
 
-                .setAuthor(`Dont do that nya!! Dont hurt yourself please..`)
+                .setAuthor(`Don\'t do that nya!! Don\'t hurt yourself please..`)
                 .setImage(random_cry[Math.floor(Math.random() * random_cry.length)])
                 .setColor('#7d77df')
                 message.channel.send(embed);

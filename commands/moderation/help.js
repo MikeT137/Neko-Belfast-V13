@@ -137,16 +137,12 @@ module.exports = {
                 message.channel.send('It solves a  math equation: \`b.math x(operator)y\`\noperators:\n\`+\` = addition\n\`-\` = subtraction\n\`*\` = multiplication\n\`/\` = division\n\`%\` = remainder after division\n\`^\` = multiplication of a number with itself y times')
             break;
 
-            /*case 'meme':
-                message.channel.send('It sends a meme from a subreddit: \`b.meme (...)\`\n\`(nothing)\` -> random\n\`dank\` -> dankmemes\n\`memes\` -> memes\n\`anime\` -> goodanimemes\n\`wholesome\` -> wholesomememes\n\`wholesomeanime / wanime\` -> wholesomeaniememes')
-            break;*/
-
             case 'rps':
-                message.channel.send('Its just a command that lets you play rock paper scissors with the bot: \`b.rps (rock/paper/scissors)\`')
+                message.channel.send('It\'s just a command that lets you play rock paper scissors with the bot: \`b.rps (rock/paper/scissors)\`')
             break;
 
             case 'storyrun':
-                message.channel.send('Its a choose your adventure type of story where you have to (read a lot) and react with emojis to make your choice, eventually you get an ending, now it depends if its good or bad, good luck: \`b.storyrun\`')
+                message.channel.send('It\'s a choose your adventure type of story where you have to (read a lot) and react with emojis to make your choice, eventually you get an ending, now it depends if it\'s good or bad, good luck: \`b.storyrun\`')
             break;
 
             //Info
@@ -163,7 +159,7 @@ module.exports = {
             break;
 
             case 'avatar':
-                message.channel.send('It shows yours or someone elses avatar: \`b.avatar / b.avatar (ping)\`')
+                message.channel.send('It shows yours or someone else\'s avatar: \`b.avatar / b.avatar (ping)\`')
             break;
 
             case 'botinfo':
@@ -175,7 +171,7 @@ module.exports = {
             break;
 
             case 'userinfo':
-                message.channel.send('It sends information about the server you do the command in: \`b.userinfo (ping)\`')
+                message.channel.send('It sends information about yourself, or the pinged user. The information is taken from the server you do the command in: \`b.userinfo (ping)\`')
             break;
 
             //Interactive (@someone)
@@ -281,7 +277,7 @@ module.exports = {
             break;
 
             case 'clear':
-                message.channel.send('It deletes how many messages you want: \`b.clear (number)\`')
+                message.channel.send('It deletes how many messages you want (as long as you\'re an admin): \`b.clear (number)\`')
             break;
 
             case 'kick':
@@ -289,7 +285,7 @@ module.exports = {
             break;
 
             case 'mute':
-                message.channel.send('It mutes a user temporarily: \`b.mute (ping) (number + time: s, m, h, d)\`, BUT you need to create a role called \"BMuted\", its the only way it\'ll work: \`b.mute @(someone) 12s\`')
+                message.channel.send('It mutes a user temporarily: \`b.mute (ping) (number + time: s, m, h, d)\`, BUT you need to create a role called \"BMuted\", it\'s the only way it\'ll work: \`b.mute @(someone) 12s\`')
             break;
 
             case 'ping':
@@ -297,7 +293,7 @@ module.exports = {
             break;
 
             case 'suggest':
-                message.channel.send('If you have any suggestions about the bot, you can say it to the creator by using: \`b.suggest (message)\`')
+                message.channel.send('If you have any suggestions about the bot, you can send it to the creator by using: \`b.suggest (message)\`')
             break;
 
             case 'unban':
@@ -305,7 +301,7 @@ module.exports = {
             break;
 
             case 'unmute':
-                message.channel.send('It unmutes a user that is muted: \`b.unmute (ping)\`, BUT you need to have a role called \"BMuted\", its the only way it\'ll work')
+                message.channel.send('It unmutes a user that is muted: \`b.unmute (ping)\`, BUT you need to have a role called \"BMuted\", it\'s the only way it\'ll work')
             break;
 
             //Random
@@ -330,11 +326,11 @@ module.exports = {
             break;
 
             case 'love':
-                message.channel.send('It sends a random level of love-affinity between 2 user: \`b.love (ping)\`')
+                message.channel.send('It sends a random level of love-affinity between 2 users: \`b.love (ping)\`')
             break;
 
             case 'rng':
-                message.channel.send('It gives you a random number but you have to specify the maximum value: \`b.rng (biggest possible outcome you want)\`\nSidenote: your value has to be higher than 1')
+                message.channel.send('It gives you a random number but you have to specify the maximum value: \`b.rng (number)\`\nSidenote: your value has to be higher than 1')
             break;
 
             //Self

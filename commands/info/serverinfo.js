@@ -27,7 +27,7 @@ module.exports = {
         if(!args[0]) {
             const embed = new Discord.MessageEmbed()
             
-                .setDescription(`**Guild information for:** ${message.guild.name}`)
+                .setDescription(`**Information about this server**`)
                 .setThumbnail(message.guild.iconURL({dynamic: true}))
                 .addField('General', [
                     `\`Name:\` ${message.guild.name}`,

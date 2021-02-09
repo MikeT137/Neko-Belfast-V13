@@ -5,7 +5,7 @@ module.exports = {
         let amount;
 
         if(!message.member.hasPermission("ADMINISTRATOR")) {
-            message.channel.send('You cant delete messages')
+            message.channel.send('You can\'t delete messages')
         }else if(isNaN(args[0]) || parseInt(args[0]) <= 0) {
             message.channel.send('You didn\'t tell me how many messages to delete')
         }else if(message.deletable) {

@@ -93,7 +93,7 @@ module.exports = {
             const valentine = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 14 2 *'}, function(){
                 const embed = new Discord.MessageEmbed()
 
-                    .setAuthor(`Happy Valentine's Day!!`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setAuthor(`Happy Valentine\'s Day!!`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_valentine[Math.floor(Math.random() * random_valentine.length)])
                     .setColor('#7d77df')
                 message.channel.send(embed).then(valentine.cancel())
@@ -102,7 +102,7 @@ module.exports = {
             const easter = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 8 4 *'}, function(){
                 const embed = new Discord.MessageEmbed()
 
-                    .setAuthor(`Happy Easter!!`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setAuthor(`Happy Easter!`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_easter[Math.floor(Math.random() * random_easter.length)])
                     .setColor('#7d77df')
                 message.channel.send(embed).then(easter.cancel())
@@ -120,7 +120,7 @@ module.exports = {
             const thanks = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 11 *'}, function(){
                 const embed = new Discord.MessageEmbed()
 
-                    .setAuthor(`Happy Thanksgiving! With this occasion I\'ll say: thanks for threating me well master~`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setAuthor(`Happy Thanksgiving! With this occasion I\'ll say: thanks for threating me well myaster~`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_thanks[Math.floor(Math.random() * random_thanks.length)])
                     .setColor('#7d77df')
                 message.channel.send(embed).then(thanks.cancel())
@@ -129,7 +129,7 @@ module.exports = {
             const xmas = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 12 *'}, function(){
                 const embed = new Discord.MessageEmbed()
 
-                    .setAuthor(`Merry Christmas!!`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setAuthor(`Merry Christmas!`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_xmas[Math.floor(Math.random() * random_xmas.length)])
                     .setColor('#7d77df')
                 message.channel.send(embed).then(xmas.cancel())
