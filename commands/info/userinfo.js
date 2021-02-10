@@ -31,7 +31,7 @@ module.exports = {
         if(!args[0]) {
             const embed = new Discord.MessageEmbed()
 
-                .setDescription(`**Information about ${message.author.username} from this server**`)
+                .setDescription(`**The information is taken from this server**`)
                 .setThumbnail(message.author.displayAvatarURL({dynamic: true}))
                 .addField('User', [
                     `\`Username:\` ${message.author.username}`,
@@ -51,7 +51,7 @@ module.exports = {
         }else if(args[0] && message.mentions.members.size == 1) {
             const embed = new Discord.MessageEmbed()
 
-                .setDescription(`**Information about ${message.user.username} from this server**`)
+                .setDescription(`**The information is taken from this server**`)
                 .setThumbnail(member.user.displayAvatarURL({dynamic: true}))
                 .addField('User', [
                     `\`Username:\` ${member.user.username}`,
