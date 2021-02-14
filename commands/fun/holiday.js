@@ -5,7 +5,7 @@ module.exports = {
         const Discord = require('discord.js');
         var schedule = require('node-schedule');
 
-        random_newyear = [
+        const random_newyear = [
             'https://i.gifer.com/2PHx.gif',
             'https://media.tenor.com/images/38d10b45aa8bdeefd8cde1d747381739/tenor.gif',
             'https://i.pinimg.com/originals/d5/12/f4/d512f444a90580f29f5394783fb03496.gif',
@@ -17,7 +17,7 @@ module.exports = {
             'https://img.wattpad.com/935d5c486f270b10b2c213dbb3858a170c77e695/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f4938426338746a72555a647232673d3d2d3637343930343231332e313537356135613038316466613766643232343932363136333237322e676966?s=fit&w=720&h=720',
             'https://pa1.narvii.com/5599/2fe890c431fc6d2d22337bc21234a1f66365b23f_hq.gif'
         ]
-        random_valentine = [
+        const random_valentine = [
             'https://imgur.com/vAcRVmu',
             'https://i.pinimg.com/originals/b2/00/b0/b200b095ceb6263efdff9d32466fb916.gif',
             'https://glasseschanneedsyou.files.wordpress.com/2015/02/anime-valentine.gif',
@@ -29,7 +29,7 @@ module.exports = {
             'https://cdn.lowgif.com/full/24240f6bc42382b3-crunchyroll-forum-valentines-day-is-coming.gif',
             'https://i.giphy.com/CaAQ3NZZWKb28.gif'
         ]
-        random_easter = [
+        const random_easter = [
             'https://steamuserimages-a.akamaihd.net/ugc/528418381444310685/12D9D83CADFF4368A6BE13704BE5BFA0D2C589E5/',
             'https://i.chzbgr.com/full/8526307584/hD3A71C19/not-the-bunny-girl-i-was-expecting',
             'https://data.whicdn.com/images/284442232/original.gif',
@@ -41,7 +41,7 @@ module.exports = {
             'https://i.gifer.com/377K.gif',
             'https://steamuserimages-a.akamaihd.net/ugc/949597907470465353/5553875CC0E8416ABB6D9C1DCFF5BB538B478CDD/'
         ]
-        random_halloween = [
+        const random_halloween = [
             'https://media1.tenor.com/images/a8681310fe7105955afe13292e9a97b9/tenor.gif?itemid=15224642',
             'https://i.pinimg.com/originals/94/fd/30/94fd303d72c77ffacc1c1ab513e2ea1f.gif',
             'https://data.whicdn.com/images/206684486/original.gif',
@@ -53,7 +53,7 @@ module.exports = {
             'https://64.media.tumblr.com/b67c576ce00d818d2c39f1cdf79c0070/tumblr_inline_ofkerdmVSF1s4hiq3_500.gifv',
             'https://i.pinimg.com/originals/af/fa/aa/affaaa1a8e2cc528abb8c751578a11eb.gif'
         ]
-        random_thanks = [
+        const random_thanks = [
             'https://i.pinimg.com/originals/e8/59/4b/e8594bf52e2999422d95b5672e0482e7.gif',
             'https://giphy.com/gifs/spiritedaway-3oz8xB06mHyoGE7ZoQ',
             'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2288deca-96d5-4f94-9bc2-a5ea3702d4d1/dbukjpw-0d09fc44-80ca-463e-99fd-073e60f0c889.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMjI4OGRlY2EtOTZkNS00Zjk0LTliYzItYTVlYTM3MDJkNGQxXC9kYnVranB3LTBkMDlmYzQ0LTgwY2EtNDYzZS05OWZkLTA3M2U2MGYwYzg4OS5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.cXhjkDT8nkKqYFCBjVAEGm9O6aEitzGKMit5hiP1YhE',
@@ -65,7 +65,7 @@ module.exports = {
             'https://thumbs.gfycat.com/ViciousAntiqueBackswimmer-small.gif',
             'https://i.gifer.com/CsgA.gif'
         ]
-        random_xmas = [
+        const random_xmas = [
             'https://i.pinimg.com/originals/63/28/8e/63288ec10cedbb9146627535d2711a7a.gif',
             'https://media.tenor.com/images/24194337243823d4166a9b4e6b71b354/tenor.gif',
             'https://i.pinimg.com/originals/36/46/9f/36469f591978bb66a41950e45b2df5d1.gif',

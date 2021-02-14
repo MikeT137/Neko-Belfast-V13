@@ -3,10 +3,10 @@ var schedule = require('node-schedule');
 
 module.exports = bot => {
     console.log('Neko Belfast is online!');
-    bot.user.setActivity(`with my tail | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
+    bot.user.setActivity(`with my tail nya~ | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
 
     const newyear = schedule.scheduleJob('* * 1 1 *', function() {
-        bot.user.setActivity(`Happy New Year! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
+        bot.user.setActivity(`Happy New Year nya~! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
     const valentine = schedule.scheduleJob('* * 14 2 *', function() {
         bot.user.setActivity(`Will you be my Valentine? | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
@@ -15,22 +15,22 @@ module.exports = bot => {
         bot.user.setActivity(`Happy Patrick\'s Day! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
     const easter = schedule.scheduleJob('* * 8 4 *', function() {
-        bot.user.setActivity(`Happy Easter! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
+        bot.user.setActivity(`Happy Easter nya~! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
     const bday = schedule.scheduleJob('* * 29 6 *', function() {
-        bot.user.setActivity(`It\'s my birthday! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
+        bot.user.setActivity(`It\'s my birthday nya~! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
     const miku = schedule.scheduleJob('* * 16 9 *', function() {
-        bot.user.setActivity(`Happy birthday Miku! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
+        bot.user.setActivity(`Happy birthday Miku-senpai! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
     const halloween = schedule.scheduleJob('* * 31 10 *', function() {
-        bot.user.setActivity(`Happy Halloween!| ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
+        bot.user.setActivity(`Have a spooky Halloween teehee | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
     const thanks = schedule.scheduleJob('* * 25 11 *', function() {
-        bot.user.setActivity(`Happy Thanksgiving! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
+        bot.user.setActivity(`Happy Thanksgiving nya~! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
     const xmas = schedule.scheduleJob('* * 25 12 *', function() {
-        bot.user.setActivity(`Merry Christmas! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
+        bot.user.setActivity(`Merry Xmas nya~! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
 
     /*
