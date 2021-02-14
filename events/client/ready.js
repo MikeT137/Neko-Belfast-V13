@@ -5,28 +5,31 @@ module.exports = bot => {
     console.log('Neko Belfast is online!');
     bot.user.setActivity(`with my tail nya~ | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
 
-    const newyear = schedule.scheduleJob('* * 1 1 *', function() {
+    const startTime = new Date('1 0 * * *');
+    const endTime = new Date('59 23 * * *');
+
+    const newyear = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 1 1 *'}, function() {
         bot.user.setActivity(`Happy New Year nya~! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
-    const valentine = schedule.scheduleJob('* * 14 2 *', function() {
+    const valentine = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 14 2 *'}, function() {
         bot.user.setActivity(`Will you be my Valentine? | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
-    const easter = schedule.scheduleJob('* * 8 4 *', function() {
+    const easter = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 8 4 *'}, function() {
         bot.user.setActivity(`Happy Easter nya~! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
-    const bel = schedule.scheduleJob('* * 29 6 *', function() {
+    const bel = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 29 6 *'}, function() {
         bot.user.setActivity(`It\'s my birthday nya~! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
-    const miku = schedule.scheduleJob('* * 16 9 *', function() {
+    const miku = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 16 9 *'}, function() {
         bot.user.setActivity(`Happy birthday Miku-senpai! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
-    const halloween = schedule.scheduleJob('* * 31 10 *', function() {
+    const halloween = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 31 10 *'}, function() {
         bot.user.setActivity(`Have a spooky Halloween teehee | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
-    const thanks = schedule.scheduleJob('* * 25 11 *', function() {
+    const thanks = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 11 *'}, function() {
         bot.user.setActivity(`Happy Thanksgiving nya~! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
-    const xmas = schedule.scheduleJob('* * 25 12 *', function() {
+    const xmas = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 12 *'}, function() {
         bot.user.setActivity(`Merry Xmas nya~! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
 
