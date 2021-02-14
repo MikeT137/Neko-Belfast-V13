@@ -9,29 +9,36 @@ module.exports = bot => {
     const endTime = new Date('59 23 * * *');
 
     const newyear = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 1 1 *'}, function() {
-        bot.user.setActivity(`Happy New Year nya~! | ${prefix}help`, {type: 'PLAYING'}).then(newyear.cancel()).catch(console.error);
-    })
+        bot.user.setActivity(`Happy New Year nya~! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
+    }).then(newyear.cancel())
+
     const valentine = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 14 2 *'}, function() {
-        bot.user.setActivity(`Will you be my Valentine? | ${prefix}help`, {type: 'PLAYING'}).then(valentine.cancel()).catch(console.error);
-    })
+        bot.user.setActivity(`Will you be my Valentine? | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
+    }).then(valentine.cancel())
+
     const easter = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 8 4 *'}, function() {
-        bot.user.setActivity(`Happy Easter nya~! | ${prefix}help`, {type: 'PLAYING'}).then(easter.cancel()).catch(console.error);
-    })
+        bot.user.setActivity(`Happy Easter nya~! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
+    }).then(easter.cancel())
+
     const bel = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 29 6 *'}, function() {
-        bot.user.setActivity(`It\'s my birthday nya~! | ${prefix}help`, {type: 'PLAYING'}).then(bel.cancel()).catch(console.error);
-    })
+        bot.user.setActivity(`It\'s my birthday nya~! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
+    }).then(bel.cancel())
+
     const miku = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 16 9 *'}, function() {
-        bot.user.setActivity(`Happy birthday Miku-senpai! | ${prefix}help`, {type: 'PLAYING'}).then(miku.cancel()).catch(console.error);
-    })
+        bot.user.setActivity(`Happy birthday Miku-senpai! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
+    }).then(miku.cancel())
+
     const halloween = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 31 10 *'}, function() {
-        bot.user.setActivity(`Have a spooky Halloween teehee | ${prefix}help`, {type: 'PLAYING'}).then(halloween.cancel()).catch(console.error);
-    })
+        bot.user.setActivity(`Have a spooky Halloween teehee | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
+    }).then(halloween.cancel())
+
     const thanks = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 11 *'}, function() {
-        bot.user.setActivity(`Happy Thanksgiving nya~! | ${prefix}help`, {type: 'PLAYING'}).then(thanks.cancel()).catch(console.error);
-    })
+        bot.user.setActivity(`Happy Thanksgiving nya~! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
+    }).then(thanks.cancel())
+    
     const xmas = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 12 *'}, function() {
-        bot.user.setActivity(`Merry Xmas nya~! | ${prefix}help`, {type: 'PLAYING'}).then(xmas.cancel()).catch(console.error);
-    })
+        bot.user.setActivity(`Merry Xmas nya~! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
+    }).then(xmas.cancel())
 
     /*
     Holidays
