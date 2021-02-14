@@ -3,10 +3,8 @@ var schedule = require('node-schedule');
 
 module.exports = bot => {
     console.log('Neko Belfast is online!');
-    
-    const normalday = schedule.scheduleJob('* * * * *', function() {
-        bot.user.setActivity(`with my tail | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
-    })
+    bot.user.setActivity(`with my tail | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
+
     const newyear = schedule.scheduleJob('* * 1 1 *', function() {
         bot.user.setActivity(`Happy New Year! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
