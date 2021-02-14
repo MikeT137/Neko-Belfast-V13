@@ -41,6 +41,18 @@ module.exports = {
             'https://i.gifer.com/377K.gif',
             'https://steamuserimages-a.akamaihd.net/ugc/949597907470465353/5553875CC0E8416ABB6D9C1DCFF5BB538B478CDD/'
         ]
+        const random_bday = [
+            'https://media.tenor.com/images/852a1b5e39337565710f904fcb828fe1/tenor.gif',
+            'https://ro.pinterest.com/pin/383650461992544329/',
+            'https://ro.pinterest.com/pin/669558669598740120/',
+            'https://gfycat.com/frayedgrimcolt-happy-birthday-sekaiichi-hatsukoi',
+            'https://www.pinterest.dk/pin/419186677801609314/',
+            'https://ro.pinterest.com/pin/415527503122772203/',
+            'https://ro.pinterest.com/pin/74239093844353842/',
+            'https://www.pinterest.co.kr/pin/417638565418441992/',
+            'https://i.gifer.com/QAvI.gif',
+            'https://ro.pinterest.com/pin/415527503122772203/'
+        ]
         const random_halloween = [
             'https://media1.tenor.com/images/a8681310fe7105955afe13292e9a97b9/tenor.gif?itemid=15224642',
             'https://i.pinimg.com/originals/94/fd/30/94fd303d72c77ffacc1c1ab513e2ea1f.gif',
@@ -102,16 +114,34 @@ module.exports = {
             const easter = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 8 4 *'}, function(){
                 const embed = new Discord.MessageEmbed()
 
-                    .setAuthor(`Happy Easter!`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setAuthor(`Happy Easter nya~!`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_easter[Math.floor(Math.random() * random_easter.length)])
                     .setColor('#7d77df')
                 message.channel.send(embed).then(easter.cancel())
             });
 
+            const bel = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 29 6 *'}, function() {
+                const embed = new Discord.MessageEmbed()
+
+                    .setAuthor(`M-Myaster, it\'s my birthday today!`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setImage(random_bday[Math.floor(Math.random() * random_bday.length)])
+                    .setColor('#7d77df')
+                message.channel.send(embed).then(bel.cancel())
+            });
+
+            const miku = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 29 6 *'}, function() {
+                const embed = new Discord.MessageEmbed()
+
+                    .setAuthor(`It\'s Miku-senpai\'s birthday nya~!`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setImage(random_bday[Math.floor(Math.random() * random_bday.length)])
+                    .setColor('#7d77df')
+                message.channel.send(embed).then(miku.cancel())
+            });
+
             const halloween = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 31 10 *'}, function(){
                 const embed = new Discord.MessageEmbed()
 
-                    .setAuthor(`Happy Halloween!`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setAuthor(`Happy Halloween everyone!`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_halloween[Math.floor(Math.random() * random_halloween.length)])
                     .setColor('#7d77df')
                 message.channel.send(embed).then(halloween.cancel())
@@ -129,7 +159,7 @@ module.exports = {
             const xmas = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 12 *'}, function(){
                 const embed = new Discord.MessageEmbed()
 
-                    .setAuthor(`Merry Christmas!`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setAuthor(`Merry Xmas nya~!`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(random_xmas[Math.floor(Math.random() * random_xmas.length)])
                     .setColor('#7d77df')
                 message.channel.send(embed).then(xmas.cancel())

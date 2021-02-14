@@ -11,13 +11,10 @@ module.exports = bot => {
     const valentine = schedule.scheduleJob('* * 14 2 *', function() {
         bot.user.setActivity(`Will you be my Valentine? | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
-    const patrick = schedule.scheduleJob('* * 17 3 *', function() {
-        bot.user.setActivity(`Happy Patrick\'s Day! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
-    })
     const easter = schedule.scheduleJob('* * 8 4 *', function() {
         bot.user.setActivity(`Happy Easter nya~! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
-    const bday = schedule.scheduleJob('* * 29 6 *', function() {
+    const bel = schedule.scheduleJob('* * 29 6 *', function() {
         bot.user.setActivity(`It\'s my birthday nya~! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
     const miku = schedule.scheduleJob('* * 16 9 *', function() {
