@@ -6,10 +6,10 @@ module.exports = bot => {
     bot.user.setActivity(`with my tail | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
 
     const newyear = schedule.scheduleJob('* * 1 1 *', function() {
-        bot.user.setActivity(`Happy New Year! | ${prefix}help`, {type: 'STREAMING'}).catch(console.error);
+        bot.user.setActivity(`Happy New Year! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
     const valentine = schedule.scheduleJob('* * 14 2 *', function() {
-        bot.user.setActivity(`Will you be my Valentine? | ${prefix}help`, {type: 'STREAMING'}).catch(console.error);
+        bot.user.setActivity(`Will you be my Valentine? | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
     })
     const patrick = schedule.scheduleJob('* * 17 3 *', function() {
         bot.user.setActivity(`Happy Patrick\'s Day! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
