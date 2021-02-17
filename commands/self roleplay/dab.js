@@ -17,7 +17,6 @@ module.exports = {
         
                 .setAuthor(`${message.author.username} is dabbing (づ￣ ³￣)づ`, message.author.displayAvatarURL({ dynamic: true }))
                 .setImage(random_dab[Math.floor(Math.random() * random_dab.length)])
-                .setFooter('Powered by otakugifs.xyz')
                 .setColor('#7d77df')
             message.channel.send(embed)
         }
