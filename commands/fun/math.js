@@ -20,7 +20,7 @@ module.exports = {
                 .setColor('#7d77df')
             message.channel.send(embed);
         }catch(e){
-            message.channel.send('Sorry, please input a valid calculation.')
+            message.channel.send('I can\'t solve that, please input a valid calculation.')
         }
         }
     }

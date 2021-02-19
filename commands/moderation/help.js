@@ -134,7 +134,7 @@ module.exports = {
             break;
 
             case 'math':
-                message.channel.send('It solves a  math equation: \`b.math (equation)\`\nOperations:\n\`+\` = addition\n\`-\` = subtraction\n\`*\` = multiplication\n\`/\` = division\n\`%\` = remainder after division\n\`^\` = exponentiation\n\`log(x, y)\` = inverse function to exponentiation\n\`sqrt()\` = square root')
+                message.channel.send('It solves a math equation: \`b.math (equation)\`\nOperations:\n\`+\` = addition\n\`-\` = subtraction\n\`*\` = multiplication\n\`/\` = division\n\`%\` = remainder after division\n\`^\` = exponentiation\n\`log(x, y)\` = inverse function to exponentiation\n\`sqrt()\` = square root')
             break;
 
             case 'rps':
