@@ -14,7 +14,7 @@ module.exports = {
             res.json()
         ).then((json) => {
             if (!args[0]) {
-                message.channel.send(`Reactions: ${json.reactions}`)
+                message.channel.send(`Reactions: ${json}`)
             }
         })
     }
