@@ -19,6 +19,7 @@ module.exports = {
 
                     .setAuthor(`${message.author.username} is peeking`, message.author.displayAvatarURL({ dynamic: true }))
                     .setImage(json.url)
+                    .setFooter('Powered by otakugifs.xyz')
                     .setColor('#7d77df')
                 message.channel.send(embed);
             }

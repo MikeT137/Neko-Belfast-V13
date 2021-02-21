@@ -2,7 +2,6 @@ module.exports = {
     name:'pout',
     description: "The user pouts",
     run: async (bot, message, args) => {
-        const author = message.author;
         const Discord = require('discord.js');
         const fetch = require('node-fetch');
         const url = 'https://api.otakugifs.xyz/gif/pout';
