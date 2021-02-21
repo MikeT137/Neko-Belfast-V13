@@ -2,7 +2,6 @@ module.exports = {
     name:'allreactions',
     description: "The author checks for new reactions on the otakugifs.xyz site",
     run: async (bot, message, args) => {
-        const Discord = require('discord.js');
         const fetch = require('node-fetch');
         const url = 'https://api.otakugifs.xyz/allreactions';
 
@@ -15,7 +14,7 @@ module.exports = {
             res.json()
         ).then((json) => {
             if (!args[0]) {
-                message.channel.send(`Reactions: ${json.url}`)
+                message.channel.send(`Reactions: ${json.url.reactions}`)
             }
         })
     }
