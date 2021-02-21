@@ -18,9 +18,9 @@ module.exports = {
         if (!args[0]){
             const embed = new Discord.MessageEmbed()
 
-            .setAuthor(`${message.author.username} is purring, nyaa~`, message.author.displayAvatarURL({ dynamic: true }))
-            .setImage(random_purr[Math.floor(Math.random() * random_purr.length)])
-            .setColor('#7d77df')
+                .setAuthor(`${message.author.username} is purring, nyaa~`, message.author.displayAvatarURL({ dynamic: true }))
+                .setImage(random_purr[Math.floor(Math.random() * random_purr.length)])
+                .setColor('#7d77df')
             message.channel.send(embed);
         }
     }

@@ -18,10 +18,10 @@ module.exports = {
             if (!args[0]) {
                 const embed = new Discord.MessageEmbed()
         
-                .setAuthor(`${message.author.username} starts laughing`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(json.url)
-                .setFooter('Powered by otakugifs.xyz')
-                .setColor('#7d77df')
+                    .setAuthor(`${message.author.username} starts laughing`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setImage(json.url)
+                    .setFooter('Powered by otakugifs.xyz')
+                    .setColor('#7d77df')
                 message.channel.send(embed)
             }
         })

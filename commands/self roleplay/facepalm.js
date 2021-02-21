@@ -18,9 +18,9 @@ module.exports = {
         if (!args[0]){
             const embed = new Discord.MessageEmbed()
 
-            .setAuthor(`${message.author.username} is making a facepalm`, message.author.displayAvatarURL({ dynamic: true }))
-            .setImage(random_fp[Math.floor(Math.random() * random_fp.length)])
-            .setColor('#7d77df')
+                .setAuthor(`${message.author.username} is making a facepalm`, message.author.displayAvatarURL({ dynamic: true }))
+                .setImage(random_fp[Math.floor(Math.random() * random_fp.length)])
+                .setColor('#7d77df')
             message.channel.send(embed);
         }
     }

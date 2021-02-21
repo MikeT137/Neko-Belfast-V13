@@ -18,9 +18,9 @@ module.exports = {
         if (!args[0]){
             const embed = new Discord.MessageEmbed()
 
-            .setAuthor(`${message.author.username} wags their tail ^^`, message.author.displayAvatarURL({ dynamic: true }))
-            .setImage(random_wag[Math.floor(Math.random() * random_wag.length)])
-            .setColor('#7d77df')
+                .setAuthor(`${message.author.username} wags their tail ^^`, message.author.displayAvatarURL({ dynamic: true }))
+                .setImage(random_wag[Math.floor(Math.random() * random_wag.length)])
+                .setColor('#7d77df')
             message.channel.send(embed);
         }
     }
