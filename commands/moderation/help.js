@@ -7,7 +7,7 @@ module.exports = {
         
         const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`rps\`, \`storyrun\`';
         const info = '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`';
-        const interractive = '\`boop\`, \`brofist\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`headbang\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`sorry\`, \`stare\`, \`tickle\`, \`wave\`';
+        const interractive = '\`boop\`, \`brofist\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`sorry\`, \`stare\`, \`tickle\`, \`wave\`';
         const mod = '\`ban\`, \`clear\`, \`help\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`';
         const random = '\`8ball\`, \`coinflip\`, \`love\`, \`rng\`';
         const self = '\`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`huh\`, \`laugh\`, \`peek\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`shrug\`, \`sigh\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
@@ -380,10 +380,6 @@ module.exports = {
                         
             case 'facepalm':
                 message.channel.send('It sends a facepalm gif: \`b.facepalm\`')
-            break;
-
-            case 'headbang':
-                message.channel.send('It sends a headbanging gif: \`b.headbang\`')
             break;
 
             case 'huh':
