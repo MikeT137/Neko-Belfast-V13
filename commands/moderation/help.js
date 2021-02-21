@@ -7,7 +7,7 @@ module.exports = {
         
         const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`rps\`, \`storyrun\`';
         const info = '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`';
-        const interractive = '\`boop\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`';
+        const interractive = '\`boop\`, \`brofist\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`';
         const mod = '\`ban\`, \`clear\`, \`help\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`';
         const random = '\`8ball\`, \`coinflip\`, \`love\`, \`rng\`';
         const self = '\`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`huh\`, \`laugh\`, \`peek\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`shrug\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
@@ -191,6 +191,10 @@ module.exports = {
                 message.channel.send('It sends a boop gif: \`b.boop (ping)\`')
             break;
 
+            case 'brofist':
+                message.channel.send('It sends a brofist gif: \`b.brofist (ping)\`')
+            break;
+
             case 'cheer':
                 message.channel.send('It sends a cheering up gif: \`b.cheer (ping)\`')
             break;
@@ -201,10 +205,6 @@ module.exports = {
                             
             case 'handhold':
                 message.channel.send('It sends a handholding gif: \`b.handhold (ping)\`')
-            break;
-                        
-            case 'highfive':
-                message.channel.send('It sends a highfive gif: \`b.highfive (ping)\`')
             break;
                         
             case 'hug':
