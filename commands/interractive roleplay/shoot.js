@@ -22,9 +22,9 @@ module.exports = {
             }else {
                 const embed = new Discord.MessageEmbed()
 
-                .setAuthor(`${message.author.username} just shot ${person.username}, so brutal`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(random_shot[Math.floor(Math.random() * random_shot.length)])
-                .setColor('#7d77df')
+                    .setAuthor(`${message.author.username} just shot ${person.username}, so brutal`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setImage(random_shot[Math.floor(Math.random() * random_shot.length)])
+                    .setColor('#7d77df')
                 message.channel.send(embed);
             }
         }else {

@@ -32,16 +32,16 @@ module.exports = {
             if(person.id == message.author.id) {
                 const embed = new Discord.MessageEmbed()
 
-                .setAuthor(`Don\'t do that nya!! Don\'t hurt yourself please..`)
-                .setImage(random_cry[Math.floor(Math.random() * random_cry.length)])
-                .setColor('#7d77df')
+                    .setAuthor(`Don\'t do that nya!! Don\'t hurt yourself please..`)
+                    .setImage(random_cry[Math.floor(Math.random() * random_cry.length)])
+                    .setColor('#7d77df')
                 message.channel.send(embed);
             }else {
                 const embed = new Discord.MessageEmbed()
 
-                .setAuthor(`${message.author.username} gave ${person.username} a slap...so violent`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(random_slap[Math.floor(Math.random() * random_slap.length)])
-                .setColor('#7d77df')
+                    .setAuthor(`${message.author.username} gave ${person.username} a slap...so violent`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setImage(random_slap[Math.floor(Math.random() * random_slap.length)])
+                    .setColor('#7d77df')
                 message.channel.send(embed);
             }
         }else {

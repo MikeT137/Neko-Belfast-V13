@@ -21,10 +21,10 @@ module.exports = {
                 }else {
                     const embed = new Discord.MessageEmbed()
             
-                    .setAuthor(`${message.author.username} noms ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
-                    .setImage(json.url)
-                    .setFooter('Powered by otakugifs.xyz')
-                    .setColor('#7d77df')
+                        .setAuthor(`${message.author.username} noms ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
+                        .setImage(json.url)
+                        .setFooter('Powered by otakugifs.xyz')
+                        .setColor('#7d77df')
                     message.channel.send(embed);
                 }
             }else {

@@ -19,18 +19,18 @@ module.exports = {
                 if(person.id == message.author.id) {
                     const embed = new Discord.MessageEmbed()
     
-                    .setAuthor('Aww, its okay, belfast will give you some cuddles nya~', message.author.displayAvatarURL({ dynamic: true }))
-                    .setImage(json.url)
-                    .setFooter('Powered by otakugifs.xyz')
-                    .setColor('#7d77df')
+                        .setAuthor('Aww, its okay, belfast will give you some cuddles nya~', message.author.displayAvatarURL({ dynamic: true }))
+                        .setImage(json.url)
+                        .setFooter('Powered by otakugifs.xyz')
+                        .setColor('#7d77df')
                     message.channel.send(embed);
                 }else {
                     const embed = new Discord.MessageEmbed()
     
-                    .setAuthor(`${message.author.username} is cuddling ${person.username}, so cute`, message.author.displayAvatarURL({ dynamic: true }))
-                    .setImage(json.url)
-                    .setFooter('Powered by otakugifs.xyz')
-                    .setColor('#7d77df')
+                        .setAuthor(`${message.author.username} is cuddling ${person.username}, so cute`, message.author.displayAvatarURL({ dynamic: true }))
+                        .setImage(json.url)
+                        .setFooter('Powered by otakugifs.xyz')
+                        .setColor('#7d77df')
                     message.channel.send(embed);
                 }
             }else {
