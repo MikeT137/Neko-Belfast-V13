@@ -14,7 +14,12 @@ module.exports = {
             res.json()
         ).then((json) => {
             if (!args[0]) {
-                message.channel.send(`Reactions: ${json.reactions}`)
+                const embed = new Discord.MessageEmbed()
+        
+                    .setAuthor('Reactions:')
+                    .setImage(json.url)
+                    .setColor('#7d77df')
+                message.channel.send(embed)
             }
         })
     }
