@@ -3,6 +3,7 @@ module.exports = {
     description: "The user apologises",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
+        const person = message.mentions.users.first();
         const fetch = require('node-fetch');
         const url = 'https://api.otakugifs.xyz/gif/sorry';
 
