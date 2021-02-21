@@ -22,7 +22,8 @@ module.exports = {
                     const embed = new Discord.MessageEmbed()
 
                         .setAuthor(`${message.author.username} brofists ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
-                        .setImage(random_hf[Math.floor(Math.random() * random_hf.length)])
+                        .setImage(json.url)
+                        .setFooter('Powered by otakugifs.xyz')
                         .setColor('#7d77df')
                     message.channel.send(embed);
                 }
