@@ -18,7 +18,7 @@ module.exports = {
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`${message.author.username} is getting really angry`, message.author.displayAvatarURL({ dynamic: true }))
-                    .setImage(random_rage[Math.floor(Math.random() * random_rage.length)])
+                    .setImage(json.url)
                     .setFooter('Powered by otakugifs.xyz')
                     .setColor('#7d77df')
                 message.channel.send(embed);

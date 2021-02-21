@@ -18,7 +18,7 @@ module.exports = {
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`${message.author.username} is confused`, message.author.displayAvatarURL({ dynamic: true }))
-                    .setImage(random_huh[Math.floor(Math.random() * random_huh.length)])
+                    .setImage(json.url)
                     .setFooter('Powered by otakugifs.xyz')
                     .setColor('#7d77df')
                 message.channel.send(embed);

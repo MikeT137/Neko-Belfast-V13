@@ -18,7 +18,7 @@ module.exports = {
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`${message.author.username} claps their hands`, message.author.displayAvatarURL({ dynamic: true }))
-                    .setImage(random_clap[Math.floor(Math.random() * random_clap.length)])
+                    .setImage(json.url)
                     .setFooter('Powered by otakugifs.xyz')
                     .setColor('#7d77df')
                 message.channel.send(embed);
