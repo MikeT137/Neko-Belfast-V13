@@ -8,13 +8,13 @@ module.exports = {
         fetch(url, {
             method: 'GET',
             headers: {
-                'X-API-KEY': 'pj7g9seujJByserio0awmvx66W8fFtrboW9kVVNeu13yHbBgE3IsgNBS3rUuD8321l2CH3tST900dhEyd0qH9P2',
-            },
+                'X-API-KEY': 'pj7g9seujJByserio0awmvx66W8fFtrboW9kVVNeu13yHbBgE3IsgNBS3rUuD8321l2CH3tST900dhEyd0qH9P2'
+            }
         }).then((res) =>
             res.json()
         ).then((json) => {
             if (!args[0]) {
-                message.channel.send(`Reactions: ${json.url.reactions}`)
+                message.channel.send(`Reactions: ${json.reactions}`)
             }
         })
     }
