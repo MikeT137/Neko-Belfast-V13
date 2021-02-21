@@ -10,7 +10,7 @@ module.exports = {
         const interractive = '\`boop\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`highfive\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`wave\`';
         const mod = '\`ban\`, \`clear\`, \`help\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`';
         const random = '\`8ball\`, \`coinflip\`, \`love\`, \`rng\`';
-        const self = '\`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`hide\`, \`huh\`, \`laugh\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`shrug\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
+        const self = '\`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`huh\`, \`laugh\`, \`peek\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`shrug\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
 
         if(!args[0]) {
             let embed = new Discord.MessageEmbed()
@@ -374,16 +374,16 @@ module.exports = {
                 message.channel.send('It sends a facepalm gif: \`b.facepalm\`')
             break;
 
-            case 'hide':
-                message.channel.send('It sends a hiding gif: \`b.hide\`')
-            break;
-
             case 'huh':
                 message.channel.send('It sends a confused gif: \`b.huh\`')
             break;
                         
             case 'laugh':
                 message.channel.send('It sends a laughing gif: \`b.laugh\`')
+            break;
+
+            case 'peek':
+                message.channel.send('It sends a peeking gif: \`b.peek\`')
             break;
                         
             case 'pout':
