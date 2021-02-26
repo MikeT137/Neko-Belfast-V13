@@ -103,7 +103,24 @@ module.exports = {
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
                         msg.edit(embedS);
-                    }else return;
+                    }else {
+                        let embed2 = new Discord.MessageEmbed()
+            
+                            .setTitle('Help')
+                            .setDescription('React with an emoji, or type \`b.help (category)\` to get the commands of that specific category!')
+                            .addFields(
+                                {name: ':smiley: - Fun', value: 'Commands that everyone can use if they\'re bored', inline: true },
+                                {name: ':face_with_monocle: - Info', value: 'Commands that give more information about specific things', inline: true },
+                                {name: ':performing_arts: - Interactive Roleplay (@someone)', value: 'Commands that only work WITH pinging', inline: true },
+                                {name: ':tools: - Moderation', value: 'Commands that help admins to moderate their own servers', inline: true },
+                                {name: ':game_die: - Random', value: 'Commands that give a random output everytime', inline: true },
+                                {name: ':clown: - Self Roleplay', value: 'Commands that only work WITHOUT pinging', inline: true }
+                            )
+                            .addField('Want to support me?', `${links}`)
+                            .setThumbnail(bot.user.displayAvatarURL())
+                            .setColor('#7d77df')
+                        msg.edit(embed2);
+                    }
                 })
             })
         }
