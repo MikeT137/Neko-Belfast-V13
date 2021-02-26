@@ -103,7 +103,7 @@ module.exports = {
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
                         msg.edit(embedS);
-                    }
+                    }else return;
                 })
             })
         }
