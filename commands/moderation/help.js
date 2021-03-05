@@ -187,11 +187,11 @@ module.exports = {
                 message.channel.send(embedI2);
             break;
 
-            case 'boop' || 'brofist' || 'cheer':
-                message.channel.send(`It sends a ${args[0]} gif: \`b.${args[0]} (ping)\``)
+            case 'boop':
+                message.channel.send('It sends a boop gif: \`b.boop (ping)\`')
             break;
 
-            /*case 'brofist':
+            case 'brofist':
                 message.channel.send('It sends a brofist gif: \`b.brofist (ping)\`')
             break;
 
@@ -265,7 +265,7 @@ module.exports = {
                         
             case 'wave':
                 message.channel.send('It sends a waving gif: \`b.wave (ping)\`')
-            break;*/
+            break;
 
             //Moderation
             case 'moderation':
