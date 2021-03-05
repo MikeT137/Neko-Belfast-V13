@@ -187,7 +187,7 @@ module.exports = {
                 message.channel.send(embedI2);
             break;
 
-            case ['boop' || 'brofist' || 'cheer']:
+            case ('boop' || 'brofist' || 'cheer'):
                 message.channel.send(`It sends a ${args[0]} gif: \`b.${args[0]} (ping)\``)
             break;
 
