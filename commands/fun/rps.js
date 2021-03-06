@@ -8,9 +8,11 @@ module.exports = {
 
         if (!args[0]) {
             message.channel.send(`You have to \"choose your weapon\": \`${acceptedReplies.join(', ')}\``);
-        }else if (!acceptedReplies.includes(args[0])) {
+        }
+        if (!acceptedReplies.includes(args[0])) {
             message.channel.send(`You can only use: \`${acceptedReplies.join(', ')}\``);
-        }else if (result === args[0]) {
+        }
+        if (result === args[0]) {
             message.channel.send(`I played ${result}. It's a tie!`);
         }
         switch (args[0]) {
