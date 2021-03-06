@@ -14,29 +14,29 @@ module.exports = {
             message.channel.send(`I played ${result}. It's a tie!`);
         }
         switch (args[0]) {
-            case 'rock':
+            case 'rock':{
                 if (result === 'paper') {
                     message.channel.send(`I played ${result}. I won!`);
                 }else {
                     message.channel.send(`I played ${result}. You won!`);
                 }
-            break;
+            }
             
-            case 'paper':
+            case 'paper':{
                 if (result === 'scissors') {
                     message.channel.send(`I played ${result}. I won!`);
                 }else {
                     message.channel.send(`I played ${result}. You won!`);  
                 }      
-            break;
+            }
 
-            case 'scissors':
+            case 'scissors':{
                 if (result === 'rock') {
                     message.channel.send(`I played ${result}. I won!`);
                 }else {
                     message.channel.send(`I played ${result}. You won!`);
                 }
-            break;
+            }
         }
     }
 }
