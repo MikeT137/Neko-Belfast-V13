@@ -3,7 +3,7 @@ module.exports = {
     description: 'The user plays rock paper scissors',
     run: async (bot, message, args) => {
         const acceptedReplies = ['rock', 'paper', 'scissors'];
-        const random = [Math.floor(Math.random() * acceptedReplies.length)];
+        const random = Math.floor(Math.random() * acceptedReplies.length);
         const result = acceptedReplies[random];
 
         if (!args[0]) {
