@@ -19,7 +19,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
         
                 .setAuthor(`${message.author.username} is howling, awoo`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(random_awoo[Math.floor(Math.random() * random_dab.length)])
+                .setImage(random_awoo[Math.floor(Math.random() * random_awoo.length)])
                 .setColor('#7d77df')
             message.channel.send(embed)
         }
