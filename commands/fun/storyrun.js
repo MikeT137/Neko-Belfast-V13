@@ -2,7 +2,7 @@ module.exports = {
     name:'storyrun',
     description: "It tells the story of a helpless boy (Story - RUN)",
     run: async (bot, message, args) => {
-        const endings = '17';
+        const endings = '20';
         const artist = 'Creature created by: Trevor Henderson'
 
         if(args[0]) {
@@ -58,6 +58,9 @@ module.exports = {
             }
             const filter13 = (reaction13, user) => {
                 return ['👍', '✊', '👎'].includes(reaction13.emoji.name) && user.id === message.author.id;
+            }
+            const filter14 = (reaction14, user) => {
+                return ['👍', '✊', '👎'].includes(reaction14.emoji.name) && user.id === message.author.id;
             }
 
             msg.awaitReactions(filter, { max: 1 })
@@ -260,36 +263,64 @@ module.exports = {
                                         })
                                     }
                                     if(reaction10.emoji.name === '👎') {
-                                        message.channel.stopTyping();
-                                        msg.edit('*W.I.P.*')
+                                        msg.edit('*You try to give the hunter a second chance, and you start driving, getting away from siren head as he chases after both of you. As you try to get away, you ask the hunter for a place they can hide. Both of you go for a long trip until you reach a big dome with a manshion inside it. The hunter tells a password to a guard and then the guard opens a path for us to drive through. You then go inside the mansion and you meet a very tall man with a sword worn on his right hip*\n\nyou: who are you?\nhim: hello i\'m Edward, the owner of this mansion, and you?\nyou: i\'m y̶͞͞o͜͠͏̛u̧͘͞r̡̀ ̵̛̕͜͞ń̷a̵̴m̷͏͏҉è̸̵͜,, me and the hunter were chased by this siren head and we want your help\nedward:and why should i help YOU? you\'re a complete stranger, and what will i get in return?\nyou: uhh...idk i-\nedward: *sigh* you know what? here, you see this red small ball? ill throw it in the air, and ill catch it with one of my hands, while youre not looking, and you have to guess which hand does have the ball. If you guess, then i\'ll help you out, if not, i\'ll kill you\nyou: alright\n\n*As Edward does his little "magic trick" You say the the ball is in:👍 - the left hand\n✊ - none\n👎 - right hand*\n\n**Select your choice:**')
+
+                                        msg.awaitReactions(filter13, { max: 1 })
+                                        .then(collected13 => {
+                                            const reaction13 = collected13.first();
+                                            if(reaction13.emoji.name === '👍') {
+                                                message.channel.stopTyping();
+                                                msg.edit(`*You chose the left hand, and you were correct: alright then, i will help you into killing the siren head! You then make a plan, and you, the hunter and Edward, start going after siren head: target spoted, charge on!! You throw your axe at siren head\'s chest, then the hunter shots siren head with his shotgun shells, then Edward gets his sword and...after all this trouble, siren head was defeated.*\n\n**YOU SURVIVED**\nEnding 16 out of ${endings}: The three musketeers\n${artist}`)
+
+                                                setTimeout(function(){
+                                                    msg.edit('**YOU SURVIVED**')
+                                                }, 45000);
+                                            }
+                                            if(reaction13.emoji.name === '✊') {
+                                                message.channel.stopTyping();
+                                                msg.edit(`*You thought that he might trick you, so you risk it for the biscuit and say that it\'s not in the left hand nor in the right hand. In this circumstance, you\'re both right and wrong, and so Edward decides to not kill you, but he doesn\'t help you either, so you get thrown out in the wild forest, with just your axe. You get very unlucky to find out that siren head was only 5 steps away from you, and since you were thrown out and the dome being locked...you get killed by siren head*\n\n**YOU DIED**\nEnding 17 out of ${endings}: The avoided risk\n${artist}`)
+
+                                                setTimeout(function(){
+                                                    msg.edit('**YOU DIED**')
+                                                }, 45000);
+                                            }
+                                            if(reaction13.emoji.name === '👎') {
+                                                message.channel.stopTyping();
+                                                msg.edit(`*You chose the right arm, and you were wrong. You try to run away but then Edward gets his sword out with his left hand and slices your head off*\n\n**YOU DIED**\nEnding 15 out of ${endings}: The lost bet\n${artist}`)
+
+                                                setTimeout(function(){
+                                                    msg.edit('**YOU DIED**')
+                                                }, 45000);
+                                            }
+                                        })
                                     }
                                 })
                             }
                             if(reaction9.emoji.name === '👎') {
                                 msg.edit('*You throw the axe at the hunter and kill him and go back to sleep. The next day you start to hear the door opening, and there was a beautiful woman in front of the door.*\n\nthe woman: Who are you? And where\'s the hunter?\nyou: Calm down, first of all, who are YOU?\nthe woman: Oh, excuse my manners, i\'m Belfast, a neko maid, and who are you?\nyou: My name is y̶͞͞o͜͠͏̛u̧͘͞r̡̀ ̵̛̕͜͞ń̷a̵̴m̷͏͏҉è̸̵͜, and i got chased by a siren headed creature, then i ran into the hunter and he picked me up, although he then tried to eat me alive, so i had to \"put him to sleep\"\nBelfast: oh god, i had to be his wife if i wanted to live, but it is a relief to finally be free, thank you for saving me nya~\nyou: you\'re welcome, anyway where did you come from?\nBelfast: he told me i should leave the cabin and come back in the morning\nyou: alright then, but that siren head really is a problem, can you help me take him down?\nBelfast: yes! i\'ll be at your service nya~!\n\n*After that, you and Belfast start to get closer, and cooperate as a team to take down siren head. Then Belfast says:* Alright, so since the noises that comes from his sirens are very loud and damaging, we need some long range weapons\n*As you craft more weapons, you decide to go with the spear, and Belfast with the bow. As you search for siren head, you hunt for food to have more of energy for the battle.\n\nShortly enough siren head arives, you and Belfast run away towards the hunter\'s cabin to be a bit more prepared for his attacks. After you wait for siren head, you then:\n\n👍 - get the car and drive him over\n✊ - ||get in the car and lead siren head to the waterfall|| (you need to get the 8th ending for no spoilers)\n👎 - fight him with your weapons*\n\n**Select your choice:**')
 
-                                msg.awaitReactions(filter12, { max: 1 })
-                                .then(collected13 => {
-                                    const reaction13 = collected13.first();
-                                    if(reaction13.emoji.name === '👍') {
+                                msg.awaitReactions(filter14, { max: 1 })
+                                .then(collected14 => {
+                                    const reaction14 = collected14.first();
+                                    if(reaction14.emoji.name === '👍') {
                                         message.channel.stopTyping();
-                                        msg.edit(`*You and Belfast get in the car and wait for siren head. After he arrives, you start the car, and drive straight to him, until you squish him between the car and a big boulder.*\n\nBelfast: master we did it nya!\nyou: yes we did, thx for helping me\nBelfast: you\'re welcome, let\'s go back in the cabin\n\n*After that, you and Belfast are reliefed that the hell is finally over, and you both live a happy life together*\n\n**YOU SURVIVED**\nEnding 15 out of ${endings}: Belfast\'s saviour\n${artist}`)
+                                        msg.edit(`*You and Belfast get in the car and wait for siren head. After he arrives, you start the car, and drive straight to him, until you squish him between the car and a big boulder.*\n\nBelfast: master we did it nya!\nyou: yes we did, thx for helping me\nBelfast: you\'re welcome, let\'s go back in the cabin\n\n*After that, you and Belfast are reliefed that the hell is finally over, and you both live a happy life together*\n\n**YOU SURVIVED**\nEnding 18 out of ${endings}: Belfast\'s saviour\n${artist}`)
 
                                         setTimeout(function(){
                                             msg.edit('**YOU SURVIVED**')
                                         }, 45000);
                                     }
-                                    if(reaction13.emoji.name === '✊') {
+                                    if(reaction14.emoji.name === '✊') {
                                         message.channel.stopTyping();
-                                        msg.edit(`*You and Belfast make a plan, Belfast drives over the waterfall pit, and ties a long rope above the ground, meanwhile, you get siren head\'s attention and to follow you to the waterfall, after that, you make the risky choice of jumping right for it, sirenhead trips over the rope and falls with you, but you actually catched onto the rocks of the land before falling into your death, and Belfast got there quick to pull you up. And then you both get back to the cabin, a bit injured, but safely living a happy life*\n\n**YOU SURVIVED**\nEnding 16 out of ${endings}: The risk\n${artist}`)
+                                        msg.edit(`*You and Belfast make a plan, Belfast drives over the waterfall pit, and ties a long rope above the ground, meanwhile, you get siren head\'s attention and to follow you to the waterfall, after that, you make the risky choice of jumping right for it, sirenhead trips over the rope and falls with you, but you actually catched onto the rocks of the land before falling into your death, and Belfast got there quick to pull you up. And then you both get back to the cabin, a bit injured, but safely living a happy life*\n\n**YOU SURVIVED**\nEnding 19 out of ${endings}: The risk\n${artist}`)
 
                                         setTimeout(function(){
                                             msg.edit('**YOU SURVIVED**')
                                         }, 45000);
                                     }
-                                    if(reaction13.emoji.name === '👎') {
+                                    if(reaction14.emoji.name === '👎') {
                                         message.channel.stopTyping();
-                                        msg.edit(`*You wait until siren head appears, then you throw lots of spears towards him, Belfast shoots her bow at siren head, but eventually, siren head gets pissed of running around, and does some very very loud static sounds that distract you both from concentrating, then he gets closer and closer, then he eventually kills you both*\n\n**YOU DIED**\nEnding 17 out of ${endings}: The ambitious loser\n${artist}`)
+                                        msg.edit(`*You wait until siren head appears, then you throw lots of spears towards him, Belfast shoots her bow at siren head, but eventually, siren head gets pissed of running around, and does some very very loud static sounds that distract you both from concentrating, then he gets closer and closer, then he eventually kills you both*\n\n**YOU DIED**\nEnding 20 out of ${endings}: The ambitious loser\n${artist}`)
 
                                         setTimeout(function(){
                                             msg.edit('**YOU DIED**')
