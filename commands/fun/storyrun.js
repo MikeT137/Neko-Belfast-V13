@@ -260,6 +260,7 @@ module.exports = {
                                         })
                                     }
                                     if(reaction10.emoji.name === '👎') {
+                                        message.channel.stopTyping();
                                         msg.edit('*W.I.P.*')
                                     }
                                 })
