@@ -2,7 +2,7 @@ module.exports = {
     name:'storyrun',
     description: "It tells the story of a helpless boy (Story - RUN)",
     run: async (bot, message, args) => {
-        const endings = '15';
+        const endings = '17';
         const artist = 'Creature created by: Trevor Henderson'
 
         if(args[0]) {
@@ -48,7 +48,16 @@ module.exports = {
                 return ['👍', '👎'].includes(reaction9.emoji.name) && user.id === message.author.id;
             };
             const filter10 = (reaction10, user) => {
-                return ['👍', '✊', '👎'].includes(reaction10.emoji.name) && user.id === message.author.id;
+                return ['👍', '👎'].includes(reaction10.emoji.name) && user.id === message.author.id;
+            }
+            const filter11 = (reaction11, user) => {
+                return ['👍', '👎'].includes(reaction11.emoji.name) && user.id === message.author.id;
+            }
+            const filter12 = (reaction12, user) => {
+                return ['👍', '👎'].includes(reaction12.emoji.name) && user.id === message.author.id;
+            }
+            const filter13 = (reaction13, user) => {
+                return ['👍', '✊', '👎'].includes(reaction13.emoji.name) && user.id === message.author.id;
             }
 
             msg.awaitReactions(filter, { max: 1 })
@@ -199,44 +208,87 @@ module.exports = {
                         })
                     }
                     if(reaction.emoji.name === '👎') {
-                        msg.edit('*You then decide to investigate the zone. But then you see a tall creature with a siren for a head. The creature sees you and runs at you really fast, and then your reflexes starts to kick in and you hit his leg with your axe and then you quickly run away. And because you were very close to your cabin, you thought it wasn\'t the best idea to go back to your cabin. You then start running away from him and eventually you see a hunter with a double barrel shotgun driving near you. You then say:* Help! This creature is chasing me! *And then you get in the car and the hunter drives away from the monster. It was a long ride, but eventually you arrive at the hunter\'s cabin. You then sit down at the table with him and have a chat.*\n\nhunter: What was that creature?\nyou: I don\'t know, but it definitely wasn\'t friendly. I was just doing my thing, cutting wood, and then i heard some siren noises coming from the forest. Though it was my mistake that i went to check what it was. Thanks for saving me from that thing\nhunter: You\'re welcome. Come on, eat up, i imagine you\'re pretty hungry. I sure am!\nyou: Ah, thanks.\n\n*You then start eating, but the food had a weird flavour and smell. After you\'re done eating, you then go to sleep. The hunter said he\'ll go to sleep too. But he lied. And he slowly walks in with a knife and a fork towards you. You then realise that the hunter was a cannibal. You then:\n\n👍 - try to fight him\n👎 - get your axe and throw it at him*\n\n**Select your choice:**')
+                        msg.edit('*You then decide to investigate the zone. But then you see a tall creature with a siren for a head. The creature sees you and runs at you really fast, and then your reflexes starts to kick in and you hit his leg with your axe and then you quickly run away. And because you were very close to your cabin, you thought it wasn\'t the best idea to go back to your cabin. You then start running away from him and eventually you see a hunter with a double barrel shotgun driving near you. You then say:* Help! This creature is chasing me! *And then you get in the car and the hunter drives away from the monster. It was a long ride, but eventually you arrive at the hunter\'s cabin. You then sit down at the table with him and have a chat.*\n\nhunter: What was that creature?\nyou: I don\'t know, but it definitely wasn\'t friendly. I was just doing my thing, cutting wood, and then i heard some siren noises coming from the forest. Though it was my mistake that i went to check what it was. Thanks for saving me from that thing\nhunter: You\'re welcome. Come on, eat up, i imagine you\'re pretty hungry. I sure am!\nyou: Ah, thanks.\n\n*You then start eating, but the food had a weird flavour and smell. After you\'re done eating, you then go to sleep. The hunter said he\'ll go to sleep too. But he lied. And he slowly walks in with a knife and a fork towards you. You then realise that the hunter was a cannibal. You then:\n\n👍 - get up and run away\n👎 - get your axe and throw it at him*\n\n**Select your choice:**')
 
                         msg.awaitReactions(filter9, { max: 1 })
                         .then(collected9 => {
                             const reaction9 = collected9.first();
                             if(reaction9.emoji.name === '👍') {
-                                message.channel.stopTyping();
-                                msg.edit(`*You wake up and try to fight him, but he had 2 weapons and you had none, so as you try to stop him, he stabs the fork to your belly, and the knife to your chest.*\n\n**YOU DIED**\nEnding 12 out of ${endings}: The betrayed\n${artist}`)
-
-                                setTimeout(function(){
-                                    msg.edit('**YOU DIED**')
-                                }, 45000);
-                            }
-                            if(reaction9.emoji.name === '👎') {
-                                msg.edit('*You throw the axe at the hunter and kill him and go back to sleep. The next day you start to hear the door opening, and there was a beautiful woman in front of the door.*\n\nthe woman: Who are you? And where\'s the hunter?\nyou: Calm down, first of all, who are YOU?\nthe woman: Oh, excuse my manners, i\'m Belfast, a neko maid, and who are you?\nyou: My name is y̶͞͞o͜͠͏̛u̧͘͞r̡̀ ̵̛̕͜͞ń̷a̵̴m̷͏͏҉è̸̵͜, and i got chased by a siren headed creature, then i ran into the hunter and he picked me up, although he then tried to eat me alive, so i had to \"put him to sleep\"\nBelfast: oh god, i had to be his wife if i wanted to live, but it is a relief to finally be free, thank you for saving me nya~\nyou: you\'re welcome, anyway where did you come from?\nBelfast: he told me i should leave the cabin and come back in the morning\nyou: alright then, but that siren head really is a problem, can you help me take him down?\nBelfast: yes! i\'ll be at your service nya~!\n\n*After that, you and Belfast start to get closer, and cooperate as a team to take down siren head. Then Belfast says:* Alright, so since the noises that comes from his sirens are very loud and damaging, we need some long range weapons\n*As you craft more weapons, you decide to go with the spear, and Belfast with the bow. As you search for siren head, you hunt for food to have more of energy for the battle.\n\nShortly enough siren head arives, you and Belfast run away towards the hunter\'s cabin to be a bit more prepared for his attacks. After you wait for siren head, you then:\n\n👍 - get the car and drive him over\n✊ - ||get in the car and lead siren head to the waterfall|| (you need to get the 8th ending for no spoilers)\n👎 - fight him with your weapons*\n\n**Select your choice:**')
+                                msg.edit('*You wake up and run away, because even if you had an axe, you chosed the pacifist route and ran away instead of killing him. After you have a bit of a race in the hunter\'s cabin, you eventually see his shotgun, and as you take it, you point it at the hunter, telling him to back off. He slowly backs off, but, because you and the hunter were very noisy, siren head heard you and let out very loud scream. You then get both the axe and shotgun in your inventory. And because you don\'t trust the hunter anymore, you get the car keys from him and get in the car. You then:\n\n👍 - escape and leave the hunter behind\n👎 - take the hunter with you*\n\n**Select your choice:**')
 
                                 msg.awaitReactions(filter10, { max: 1 })
                                 .then(collected10 => {
                                     const reaction10 = collected10.first();
                                     if(reaction10.emoji.name === '👍') {
-                                        message.channel.stopTyping();
-                                        msg.edit(`*You and Belfast get in the car and wait for siren head. After he arrives, you start the car, and drive straight to him, until you squish him between the car and a big boulder.*\n\nBelfast: master we did it nya!\nyou: yes we did, thx for helping me\nBelfast: you\'re welcome, let\'s go back in the cabin\n\n*After that, you and Belfast are reliefed that the hell is finally over, and you both live a happy life together*\n\n**YOU SURVIVED**\nEnding 13 out of ${endings}: Belfast\'s saviour\n${artist}`)
+                                        msg.edit('*You turn on the car and drive away, leaving the hunter behind. Siren head goes for the hunter, leaving you more time to escape. You drive away as far as you can, but since its night, you cant see very well and you were just sleeping some moments ago, so you accidentally crash your car on a tree. You were hurt pretty badly, and so you walked and walked until you got near a mountain and found a cave. It could be very dangerous but you had 2 weapons available so you thought you\'ll be fine. You suddenly hear a noise coming from the cave, it was like someone was moving objects. You go deeper in the cave and you see a dead end with a metal door. You knock on the door and it suddenly opens, as you go in, theres a big lab, with a female scientist waiting for you.*\n\nscientist: May i help you?\nyou: Y-yes, i uhh, i was driving away from this tall creature, but i had a car crash and now im very wounded.\nscientist: ahh, speak of the devil, i see him on the cameras right outside the cave\nyou: there\'s cameras?\nscientist: stop talking!\n*5 minutes later*\nscientist: alright, he\'s gone\nyou: thank god, anyway, can you heal my wounds please?\nscientist: yes, but first i\'ll need you to put your weapons on the table...good\n\n*As she heals your wounds, you talk with the scientist as to how could you defeat the creature. Then she starts making a weird potion and inserts it into a big canon-like gun: *have this gun, try to shoot that vase over.*You shoot the vase and it suddenly turns to dust. Then you knew what you had to do, you wait for dawn and then you:\n\n👍 - go after siren head\n👎 - ask for the scientist to come with you*\n\n**Select your choice:**')
 
-                                        setTimeout(function(){
-                                            msg.edit('**YOU SURVIVED**')
-                                        }, 45000);
-                                    }
-                                    if(reaction10.emoji.name === '✊') {
-                                        message.channel.stopTyping();
-                                        msg.edit(`*You and Belfast make a plan, Belfast drives over the waterfall pit, and ties a long rope above the ground, meanwhile, you get siren head\'s attention and to follow you to the waterfall, after that, you make the risky choice of jumping right for it, sirenhead trips over the rope and falls with you, but you actually catched onto the rocks of the land before falling into your death, and Belfast got there quick to pull you up. And then you both get back to the cabin, a bit injured, but safely living a happy life*\n\n**YOU SURVIVED**\nEnding 14 out of ${endings}: The risk\n${artist}`)
+                                        msg.awaitReactions(filter11, { max: 1 })
+                                        .then(collected11 => {
+                                            const reaction11 = collected11.first();
+                                            if(reaction11.emoji.name === '👍') {
+                                                message.channel.stopTyping();
+                                                msg.edit(`*You wait for siren head to arrive. He eventually arrives, you load the gun, and you shoot him, and you watch him as he slowly turns into dust*\n\n**YOU SURVIVED**\nEnding 12 out of ${endings}: The gun slinger\n${artist}`)
 
-                                        setTimeout(function(){
-                                            msg.edit('**YOU SURVIVED**')
-                                        }, 45000);
+                                                setTimeout(function(){
+                                                    msg.edit('**YOU SURVIVED**')
+                                                }, 45000);
+                                            }
+                                            if(reaction11.emoji.name === '👎') {
+                                                msg.edit('*You and the scientist wait for siren head to arrive. You hear a bit of suffling in the bushes, you check to see what it is, but there was nothing there. When you turn back, the scientist went missing. As you look up on the mountain there was siren head, holding the scientist. Siren head scratches the scientist as it emits more siren sounds, making the scientist\'s ears to bleed and maikng her unconscious. You shoot siren head, while siren head drops the scientist, and turns into dust.*\n\nyou: are you ok?, oh god, let me take you to the lab\nscientist: no, it\s too late, look, he scratched my leg, meaning i\'ll get infected and possible outcomes contain vomiting, headaches, visual and auditive illusions, and final stage becoming a siren head, so please *cough cough*...k-kill me...\nyou: n-no, i can\'t\nscientist: THEN RUN AWAY\n\n*Seeing the scientist like this you:\n\n👍 - get her in the lab\n👎 - kill the scientist*\n\n**Select your choice:**')
+
+                                                msg.awaitReactions(filter12, { max: 1 })
+                                                .then(collected12 => {
+                                                    const reaction12 = collected12.first();
+                                                    if(reaction12.emoji.name === '👍') {
+                                                        message.channel.stopTyping();
+                                                        msg.edit(`*You thought that there\'s still hope, and so you carried her into the lab. You ask the scientist what you need to heal her: *you need to chop my leg off *vomits* quickly, idk how much i can resist. *You get your axe and chop her head off, and at the last second, you make the antidote and heal her.*\n\n**YOU SURVIVED**\nEnding 13 out of ${endings}: The pandemic antidote\n${artist}`)
+
+                                                        setTimeout(function(){
+                                                            msg.edit('**YOU SURVIVED**')
+                                                        }, 45000);
+                                                    }
+                                                    if(reaction12.emoji.name === '👎') {
+                                                        message.channel.stopTyping();
+                                                        msg.edit(`*You decided to end the scientist\'s suffering, and you shot her with the gun: i\'m sorry. And now, there\'s nothing else that can threaten you*\n\n**YOU SURVIVED**\nEnding 14 out of ${endings}: The end of a horrible tradition\n${artist}`)
+
+                                                        setTimeout(function(){
+                                                            msg.edit('**YOU SURVIVED**')
+                                                        }, 45000);
+                                                    }
+                                                })
+                                            }
+                                        })
                                     }
                                     if(reaction10.emoji.name === '👎') {
+                                        msg.edit('*W.I.P.*')
+                                    }
+                                })
+                            }
+                            if(reaction9.emoji.name === '👎') {
+                                msg.edit('*You throw the axe at the hunter and kill him and go back to sleep. The next day you start to hear the door opening, and there was a beautiful woman in front of the door.*\n\nthe woman: Who are you? And where\'s the hunter?\nyou: Calm down, first of all, who are YOU?\nthe woman: Oh, excuse my manners, i\'m Belfast, a neko maid, and who are you?\nyou: My name is y̶͞͞o͜͠͏̛u̧͘͞r̡̀ ̵̛̕͜͞ń̷a̵̴m̷͏͏҉è̸̵͜, and i got chased by a siren headed creature, then i ran into the hunter and he picked me up, although he then tried to eat me alive, so i had to \"put him to sleep\"\nBelfast: oh god, i had to be his wife if i wanted to live, but it is a relief to finally be free, thank you for saving me nya~\nyou: you\'re welcome, anyway where did you come from?\nBelfast: he told me i should leave the cabin and come back in the morning\nyou: alright then, but that siren head really is a problem, can you help me take him down?\nBelfast: yes! i\'ll be at your service nya~!\n\n*After that, you and Belfast start to get closer, and cooperate as a team to take down siren head. Then Belfast says:* Alright, so since the noises that comes from his sirens are very loud and damaging, we need some long range weapons\n*As you craft more weapons, you decide to go with the spear, and Belfast with the bow. As you search for siren head, you hunt for food to have more of energy for the battle.\n\nShortly enough siren head arives, you and Belfast run away towards the hunter\'s cabin to be a bit more prepared for his attacks. After you wait for siren head, you then:\n\n👍 - get the car and drive him over\n✊ - ||get in the car and lead siren head to the waterfall|| (you need to get the 8th ending for no spoilers)\n👎 - fight him with your weapons*\n\n**Select your choice:**')
+
+                                msg.awaitReactions(filter12, { max: 1 })
+                                .then(collected13 => {
+                                    const reaction13 = collected13.first();
+                                    if(reaction13.emoji.name === '👍') {
                                         message.channel.stopTyping();
-                                        msg.edit(`*You wait until siren head appears, then you throw lots of spears towards him, Belfast shoots her bow at siren head, but eventually, siren head gets pissed of running around, and does some very very loud static sounds that distract you both from concentrating, then he gets closer and closer, then he eventually kills you both*\n\n**YOU DIED**\nEnding 15 out of ${endings}: The ambitious loser\n${artist}`)
+                                        msg.edit(`*You and Belfast get in the car and wait for siren head. After he arrives, you start the car, and drive straight to him, until you squish him between the car and a big boulder.*\n\nBelfast: master we did it nya!\nyou: yes we did, thx for helping me\nBelfast: you\'re welcome, let\'s go back in the cabin\n\n*After that, you and Belfast are reliefed that the hell is finally over, and you both live a happy life together*\n\n**YOU SURVIVED**\nEnding 15 out of ${endings}: Belfast\'s saviour\n${artist}`)
+
+                                        setTimeout(function(){
+                                            msg.edit('**YOU SURVIVED**')
+                                        }, 45000);
+                                    }
+                                    if(reaction13.emoji.name === '✊') {
+                                        message.channel.stopTyping();
+                                        msg.edit(`*You and Belfast make a plan, Belfast drives over the waterfall pit, and ties a long rope above the ground, meanwhile, you get siren head\'s attention and to follow you to the waterfall, after that, you make the risky choice of jumping right for it, sirenhead trips over the rope and falls with you, but you actually catched onto the rocks of the land before falling into your death, and Belfast got there quick to pull you up. And then you both get back to the cabin, a bit injured, but safely living a happy life*\n\n**YOU SURVIVED**\nEnding 16 out of ${endings}: The risk\n${artist}`)
+
+                                        setTimeout(function(){
+                                            msg.edit('**YOU SURVIVED**')
+                                        }, 45000);
+                                    }
+                                    if(reaction13.emoji.name === '👎') {
+                                        message.channel.stopTyping();
+                                        msg.edit(`*You wait until siren head appears, then you throw lots of spears towards him, Belfast shoots her bow at siren head, but eventually, siren head gets pissed of running around, and does some very very loud static sounds that distract you both from concentrating, then he gets closer and closer, then he eventually kills you both*\n\n**YOU DIED**\nEnding 17 out of ${endings}: The ambitious loser\n${artist}`)
 
                                         setTimeout(function(){
                                             msg.edit('**YOU DIED**')
