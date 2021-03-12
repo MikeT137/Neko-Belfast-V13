@@ -8,7 +8,7 @@ module.exports = {
         .then((result) => {
             const ping = result.createdTimestamp - message.createdTimestamp;
 
-            result.edit(`Bot latency: \`${ping}ms\``);
+            result.edit(`My response time: \`${ping}ms\``);
         })
     }
 }
