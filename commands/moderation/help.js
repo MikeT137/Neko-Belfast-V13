@@ -7,10 +7,10 @@ module.exports = {
         
         const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`rps\`, \`storyrun\`';
         const info = '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`';
-        const interractive = '\`boop\`, \`brofist\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`hug\`, \`kiss\`, \`lick\`, \`nom\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`sorry\`, \`stare\`, \`tickle\`, \`wave\`';
+        const interractive = '\`bite\`, \`boop\`, \`brofist\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`hug\`, \`kiss\`, \`lick\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`sorry\`, \`stare\`, \`tickle\`, \`wave\`';
         const mod = '\`ban\`, \`clear\`, \`help\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`';
         const random = '\`8ball\`, \`coinflip\`, \`love\`, \`rng\`';
-        const self = '\`awoo\`, \`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`huh\`, \`laugh\`, \`peek\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`shrug\`, \`sigh\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
+        const self = '\`awoo\`, \`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`huh\`, \`laugh\`, \`nom\`, \`peek\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`shrug\`, \`sigh\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
 
         if(!args[0]) {
             let embed = new Discord.MessageEmbed()
@@ -187,6 +187,10 @@ module.exports = {
                 message.channel.send(embedI2);
             break;
 
+            case 'bite':
+                message.channel.send('It sends a biting gif: \`b.bite (ping)\`')
+            break;
+
             case 'boop':
                 message.channel.send('It sends a boop gif: \`b.boop (ping)\`')
             break;
@@ -218,10 +222,6 @@ module.exports = {
             case 'lick':
                 message.channel.send('It sends a licking gif: \`b.lick (ping)\`')
             break; 
-
-            case 'nom':
-                message.channel.send('It sends a eating gif: \`b.nom (ping)\`')
-            break;
 
             case 'nuzzle':
                 message.channel.send('It sends a nuzzling gif: \`b.nuzzle (ping)\`')
@@ -392,6 +392,10 @@ module.exports = {
                         
             case 'laugh':
                 message.channel.send('It sends a laughing gif: \`b.laugh\`')
+            break;
+
+            case 'nom':
+                message.channel.send('It sends a eating gif: \`b.nom\`')
             break;
 
             case 'peek':
