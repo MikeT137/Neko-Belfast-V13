@@ -8,7 +8,6 @@ module.exports = {
             const emoji = bot.emojis.cache.get(args[0].id);
             await message.channel.send({files: [
             {
-                attachment: emoji.url,
                 name: `https://cdn.discordapp.com/emojis/${emoji.id}.png`
             }
             ]});
