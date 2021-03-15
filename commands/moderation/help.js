@@ -10,7 +10,7 @@ module.exports = {
         const interractive = '\`bite\`, \`boop\`, \`brofist\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`hug\`, \`kiss\`, \`lick\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`sorry\`, \`stare\`, \`tickle\`, \`wave\`';
         const mod = '\`ban\`, \`clear\`, \`help\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`';
         const random = '\`8ball\`, \`coinflip\`, \`love\`, \`rng\`';
-        const self = '\`awoo\`, \`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`huh\`, \`laugh\`, \`nom\`, \`peek\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`shrug\`, \`sigh\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
+        const self = '\`awoo\`, \`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`headbang\`, \`huh\`, \`laugh\`, \`nom\`, \`peek\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`shrug\`, \`sigh\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
 
         if(!args[0]) {
             let embed = new Discord.MessageEmbed()
@@ -384,6 +384,10 @@ module.exports = {
                         
             case 'facepalm':
                 message.channel.send('It sends a facepalm gif: \`b.facepalm\`')
+            break;
+
+            case 'headbang':
+                message.channel.send('It sends a headbanging gif: \`b.headbang\`')
             break;
 
             case 'huh':
