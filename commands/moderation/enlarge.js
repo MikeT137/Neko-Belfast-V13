@@ -3,7 +3,7 @@ module.exports = {
     description: "It sends a bigger pic of the emoji sent",
     run: async (bot, message, args) => {
         const Discord = require('discord.js')
-        const emojiID = new Discord.GuildEmoji().animated.id;
+        const emojiID = new Discord.GuildEmoji().animated;
         const emoji = bot.emojis.get(emojiID);
 
         if(!args[0]) {
