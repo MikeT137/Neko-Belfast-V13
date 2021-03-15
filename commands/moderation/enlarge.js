@@ -11,7 +11,7 @@ module.exports = {
             await message.channel.send({files: [
             {
                 attachment: emoji.url,
-                name: `https://cdn.discordapp.com/emojis/${emoji}./* extension of the emoji e.g: .png */`
+                name: `https://cdn.discordapp.com/emojis/${emoji}.png`
             }
             ]});
         }
