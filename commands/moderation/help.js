@@ -285,7 +285,7 @@ module.exports = {
             break;
 
             case 'clear':
-                message.channel.send('It deletes how many messages you want (as long as you\'re an admin): \`b.clear (number)\`')
+                message.channel.send('It deletes how many messages you want (as long as you\'re an admin), however you can\'t delete more than 100 messages: \`b.clear (number)\`')
             break;
 
             case 'kick':
