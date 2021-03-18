@@ -67,13 +67,13 @@ module.exports = {
                 .then(collected => {
                     const reaction = collected.first();
                     if(reaction.emoji.name === '👍') {
-                        message.reactions.removeAll();
                         msg.edit('*You think to yourself that it was just an animal or something, so you decide to ignore it. You then finish chopping the wood, you grab all of it, and go towards your basement so you can leave it there. But then you hear that weird sound again, this time coming from your basement. You then:\n\n👍 - go in the basement\n👎 - leave the cabin*\n\n**Select your choice:**')
 
                         msg.awaitReactions(filter2, { max: 1 })
                         .then(collected2 => {
                             const reaction2 = collected2.first();
                             if(reaction2.emoji.name === '👍') {
+                                message.reactions.removeAll();
                                 message.channel.stopTyping();
                                 msg.edit(`*You decided to ignore that sound again, and you went in the basement. Everything seems fine, nothing out of place. You put all the logs in a corner, but when you turn around, a creature with very long arms starts to squeeze your neck as you die from asphyxiation.*\n\n**YOU DIED**\nEnding 1 out of ${endings}: The fool\n${artist}`)
 
