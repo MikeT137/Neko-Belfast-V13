@@ -339,7 +339,7 @@ module.exports = {
                                     }
                                     if(reaction14.emoji.name === '👎') {
                                         message.channel.stopTyping();
-                                        message.reactions.removeAll();
+                                        message.reactions.removeAll()
                                         msg.edit(`*You wait until siren head appears, then you throw lots of spears towards him, Belfast shoots her bow at siren head, but eventually, siren head gets pissed of running around, and does some very very loud static sounds that distract you both from concentrating, then he gets closer and closer, then he eventually kills you both*\n\n**YOU DIED**\nEnding 20 out of ${endings}: The ambitious loser\n${artist}`)
 
                                         setTimeout(function(){
