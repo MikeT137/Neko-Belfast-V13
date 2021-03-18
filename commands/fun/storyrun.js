@@ -73,7 +73,7 @@ module.exports = {
                         .then(collected2 => {
                             const reaction2 = collected2.first();
                             if(reaction2.emoji.name === '👍') {
-                                msg.reactions.removeAll();
+                                message.reactions.removeAll();
                                 message.channel.stopTyping();
                                 msg.edit(`*You decided to ignore that sound again, and you went in the basement. Everything seems fine, nothing out of place. You put all the logs in a corner, but when you turn around, a creature with very long arms starts to squeeze your neck as you die from asphyxiation.*\n\n**YOU DIED**\nEnding 1 out of ${endings}: The fool\n${artist}`)
 
