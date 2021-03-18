@@ -74,7 +74,6 @@ module.exports = {
                             const reaction2 = collected2.first();
                             if(reaction2.emoji.name === '👍') {
                                 message.channel.stopTyping();
-                                message.reactions.removeAll();
                                 msg.edit(`*You decided to ignore that sound again, and you went in the basement. Everything seems fine, nothing out of place. You put all the logs in a corner, but when you turn around, a creature with very long arms starts to squeeze your neck as you die from asphyxiation.*\n\n**YOU DIED**\nEnding 1 out of ${endings}: The fool\n${artist}`)
 
                                 setTimeout(function(){
@@ -95,7 +94,6 @@ module.exports = {
                                             const reaction4 = collected4.first();
                                             if(reaction4.emoji.name === '👍') {
                                                 message.channel.stopTyping()
-                                                message.reactions.removeAll();
                                                 msg.edit(`*You thought to yourself that the creature can\'t be that tough so it can survive multiple bullets. The creature breaks the door, you and the girl start shooting at it. But that only slowed him down, and since both of you were so close to the door, the creature grabbed you with it\'s long hands and suffocated you both.*\n\n**YOU DIED**\nEnding 2 out of ${endings}: The slaughter\n${artist}`)
                                                 
                                                 setTimeout(function(){
@@ -116,7 +114,6 @@ module.exports = {
                                                             const reaction6 = collected6.first();
                                                             if(reaction6.emoji.name === '👍') {
                                                                 message.channel.stopTyping();
-                                                                message.reactions.removeAll();
                                                                 msg.edit(`*You picked up the sniper and you had more than enough ammo, so it\'s time to take this freak down. Because the creature is very tall you were able to see its head, and you could\'ve already detected where it\'s body is too. You shoot his legs first so you make sure he won\'t come quickly at you, then you shoot his head 2 times, just so you make sure he wont break your ears with its siren sounds. And you shoot him 3 times in the chest. You then say:* Take that b*tch! *After that you take the sniper with you just in case and go back to your cabin.*\n\n**YOU SURVIVED**\nEnding 3 out of ${endings}: The last survivor\n${artist}`)
 
                                                                 setTimeout(function(){
@@ -125,7 +122,6 @@ module.exports = {
                                                             }
                                                             if(reaction6.emoji.name === '👎') {
                                                                 message.channel.stopTyping();
-                                                                message.reactions.removeAll();
                                                                 msg.edit(`*You try to call for help but the radio is broken. Unfortunately siren head hears the static the the radio gives and finds out that you\'re in the watch tower and demolishes it. By falling from that much high up, you crack your skull open.*\n\n**YOU DIED**\nEnding 4 out of ${endings}: Failed reinforcement\n${artist}`)
 
                                                                 setTimeout(function(){
@@ -136,7 +132,6 @@ module.exports = {
                                                     }
                                                     if(reaction5.emoji.name === '👎') {
                                                         message.channel.stopTyping();
-                                                        message.reactions.removeAll();
                                                         msg.edit(`*You and the girl get ready to attack, at last siren head arrives and the fight begins. You throw the axe on his neck, and then both you and the girl start to shoot at siren head with all of your bullets. Eventually, he is finally defeated. You and the girl then get back to your cabins and live happily ever after.*\n\n**YOU SURVIVED**\nEnding 5 out of ${endings}: The team\n${artist}`)
 
                                                         setTimeout(function(){
@@ -149,7 +144,6 @@ module.exports = {
                                     }
                                     if(reaction3.emoji.name === '👎') {
                                         message.channel.stopTyping();
-                                        message.reactions.removeAll();
                                         msg.edit(`*You became very brave and got closer to the voice and said hi, but then the voice was actually coming from a weird and tall creature with a siren for it\'s head. Then the creature started making very loud siren noises that exploded your eardrums. And then the creature grabs your neck and kills you.*\n\n**YOU DIED**\nEnding 6 out of ${endings}: the brave but dead soldier\n${artist}`)
 
                                         setTimeout(function(){
@@ -168,7 +162,6 @@ module.exports = {
                             const reaction7 = collected7.first();
                             if(reaction7.emoji.name === '👍') {
                                 message.channel.stopTyping();
-                                message.reactions.removeAll();
                                 msg.edit(`*You knew that if you went outside you couldn\'t make it out alive, so you decide to stay hidden. But then there are some different sounds coming from beneath your bed. And then a creature with sharp claws comes from underneath your bed and you couldn\'t move because you were in shock and the creature quickly starts to cut your whole body until it eventually kills you.*\n\n**YOU DIED**\nEnding 7 out of ${endings}: The fearful hider\n${artist}`)
 
                                 setTimeout(function(){
@@ -183,7 +176,6 @@ module.exports = {
                                     const reaction8 = collected8.first();
                                     if(reaction8.emoji.name === '👍') {
                                         message.channel.stopTyping();
-                                        message.reactions.removeAll();
                                         msg.edit(`How is he still alive? *you say to yourself, and because of anger, you try to kill siren head with your own hands, then you say:* If i somehow rip those sirens off of him then he might not be such a pain in the butt\n*That was the plan...but, sometimes things don\'t go as planned. You try to get closer to siren head, but as you do so, the sirens start to get louder and louder, and so you back off. You try to run away, until you suddenly reach a big pit that leads to a waterfall, and behind you there was siren head. You got cornered, and so your only solution was to jump in the water. While you fall, there was siren head, in fire, \"looking\" at you (altough he doesn\'t have eyes) from a distance.\n You start to pass out, and some hours later, you wake up on a island, unfortunately there were no trees, no food, nothing. And after 3 days you die from hunger*\n\n**YOU DIED**\nEnding 8 out of ${endings}: The hopeful fighter that lost it all\n${artist}`)
 
                                         setTimeout(function(){
@@ -192,7 +184,6 @@ module.exports = {
                                     }
                                     if(reaction8.emoji.name === '✊') {
                                         message.channel.stopTyping();
-                                        message.reactions.removeAll();
                                         msg.edit(`*You wait for something to happend, and eventually, the same car that gave you the gasoline bottle, drives over siren head, and he finally dies. You look to see who was in the car, and it was a dude, looked like he was around 25 years old, you start to be friends with him, after that you get in his car and eventually survive together as a team.*\n\n**YOU SURVIVED**\nEnding 9 out of ${endings}: Beginner\'s luck\n${artist}`)
 
                                         setTimeout(function(){
@@ -201,7 +192,6 @@ module.exports = {
                                     }
                                     if(reaction8.emoji.name === '👎') {
                                         message.channel.stopTyping();
-                                        message.reactions.removeAll();
                                         msg.edit(`*You start to run away, and you ran and ran, until eventually you decide that you\'re deep enough in the forest and siren head doesn\'t have his legs anymore, so you should be pretty far from him, but you say:* How do i kill him? *As you think of a plan, you make a small little shelter from a cave you found, you make few tools: spear, bow and an axe, then you say:* They might not be the best since i\'m not good at hand-crafting but, better than nothing. *After that, you kill few animals for food, then you start making a plan\nAs you finally prepared the plan, you wait until you hear siren head coming, and speak of the devil, there he was.* You shall die siren head! *You say as you cut down a tree directly towards him, making the tree fall on him, you really qucikly rip off his sirens so he couldn\'t attack you anymore, and as the final hit, you stab him with your spear*\n\n**YOU SURVIVED**\nEnding 10 out of ${endings}: The new-born hunter\n${artist}`)
 
                                         setTimeout(function(){
@@ -241,7 +231,6 @@ module.exports = {
                                             const reaction11 = collected11.first();
                                             if(reaction11.emoji.name === '👍') {
                                                 message.channel.stopTyping();
-                                                message.reactions.removeAll();
                                                 msg.edit(`*You wait for siren head to arrive. He eventually arrives, you load the gun, and you shoot him, and you watch him as he slowly turns into dust*\n\n**YOU SURVIVED**\nEnding 12 out of ${endings}: The gun slinger\n${artist}`)
 
                                                 setTimeout(function(){
@@ -256,7 +245,6 @@ module.exports = {
                                                     const reaction12 = collected12.first();
                                                     if(reaction12.emoji.name === '👍') {
                                                         message.channel.stopTyping();
-                                                        message.reactions.removeAll();
                                                         msg.edit(`*You thought that there\'s still hope, and so you carried her into the lab. You ask the scientist what you need to heal her:* you need to chop my leg off *vomits* quickly, idk how much i can resist. *You get your axe and chop her head off, and at the last second, you make the antidote and heal her.*\n\n**YOU SURVIVED**\nEnding 13 out of ${endings}: The pandemic antidote\n${artist}`)
 
                                                         setTimeout(function(){
@@ -265,7 +253,6 @@ module.exports = {
                                                     }
                                                     if(reaction12.emoji.name === '👎') {
                                                         message.channel.stopTyping();
-                                                        message.reactions.removeAll();
                                                         msg.edit(`*You decided to end the scientist\'s suffering, and you shot her with the gun: i\'m sorry. And now, there\'s nothing else that can threaten you*\n\n**YOU SURVIVED**\nEnding 14 out of ${endings}: The end of a horrible tradition\n${artist}`)
 
                                                         setTimeout(function(){
@@ -284,7 +271,6 @@ module.exports = {
                                             const reaction13 = collected13.first();
                                             if(reaction13.emoji.name === '👍') {
                                                 message.channel.stopTyping();
-                                                message.reactions.removeAll();
                                                 msg.edit(`*You chose the left hand, and you were correct: alright then, i will help you into killing the siren head! You then make a plan, and you, the hunter and Edward, start going after siren head: target spoted, charge on!! You throw your axe at siren head\'s chest, then the hunter shots siren head with his shotgun shells, then Edward gets his sword and...after all this trouble, siren head was defeated.*\n\n**YOU SURVIVED**\nEnding 16 out of ${endings}: The three musketeers\n${artist}`)
 
                                                 setTimeout(function(){
@@ -293,7 +279,6 @@ module.exports = {
                                             }
                                             if(reaction13.emoji.name === '✊') {
                                                 message.channel.stopTyping();
-                                                message.reactions.removeAll();
                                                 msg.edit(`*You thought that he might trick you, so you risk it for the biscuit and say that it\'s not in the left hand nor in the right hand. In this circumstance, you\'re both right and wrong, and so Edward decides to not kill you, but he doesn\'t help you either, so you get thrown out in the wild forest, with just your axe. You get very unlucky to find out that siren head was only 5 steps away from you, and since you were thrown out and the dome being locked...you get killed by siren head*\n\n**YOU DIED**\nEnding 17 out of ${endings}: The avoided risk\n${artist}`)
 
                                                 setTimeout(function(){
@@ -302,7 +287,6 @@ module.exports = {
                                             }
                                             if(reaction13.emoji.name === '👎') {
                                                 message.channel.stopTyping();
-                                                message.reactions.removeAll();
                                                 msg.edit(`*You chose the right arm, and you were wrong. You try to run away but then Edward gets his sword out with his left hand and slices your head off*\n\n**YOU DIED**\nEnding 15 out of ${endings}: The lost bet\n${artist}`)
 
                                                 setTimeout(function(){
@@ -321,7 +305,6 @@ module.exports = {
                                     const reaction14 = collected14.first();
                                     if(reaction14.emoji.name === '👍') {
                                         message.channel.stopTyping();
-                                        message.reactions.removeAll();
                                         msg.edit(`*You and Belfast get in the car and wait for siren head. After he arrives, you start the car, and drive straight to him, until you squish him between the car and a big boulder.*\n\nBelfast: master we did it nya!\nyou: yes we did, thx for helping me\nBelfast: you\'re welcome, let\'s go back in the cabin\n\n*After that, you and Belfast are reliefed that the hell is finally over, and you both live a happy life together*\n\n**YOU SURVIVED**\nEnding 18 out of ${endings}: Belfast\'s saviour\n${artist}`)
 
                                         setTimeout(function(){
@@ -330,7 +313,6 @@ module.exports = {
                                     }
                                     if(reaction14.emoji.name === '✊') {
                                         message.channel.stopTyping();
-                                        message.reactions.removeAll();
                                         msg.edit(`*You and Belfast make a plan, Belfast drives over the waterfall pit, and ties a long rope above the ground, meanwhile, you get siren head\'s attention and to follow you to the waterfall, after that, you make the risky choice of jumping right for it, sirenhead trips over the rope and falls with you, but you actually catched onto the rocks of the land before falling into your death, and Belfast got there quick to pull you up. And then you both get back to the cabin, a bit injured, but safely living a happy life*\n\n**YOU SURVIVED**\nEnding 19 out of ${endings}: The risk\n${artist}`)
 
                                         setTimeout(function(){
@@ -339,7 +321,6 @@ module.exports = {
                                     }
                                     if(reaction14.emoji.name === '👎') {
                                         message.channel.stopTyping();
-                                        message.reactions.removeAll();
                                         msg.edit(`*You wait until siren head appears, then you throw lots of spears towards him, Belfast shoots her bow at siren head, but eventually, siren head gets pissed of running around, and does some very very loud static sounds that distract you both from concentrating, then he gets closer and closer, then he eventually kills you both*\n\n**YOU DIED**\nEnding 20 out of ${endings}: The ambitious loser\n${artist}`)
 
                                         setTimeout(function(){
@@ -350,6 +331,7 @@ module.exports = {
                             }
                         })
                     }
+                    message.reactions.removeAll();
                 })
             })
         }else return;
