@@ -94,7 +94,7 @@ module.exports = {
                                         .then(collected4 => {
                                             const reaction4 = collected4.first();
                                             if(reaction4.emoji.name === '👍') {
-                                                message.channel.stopTyping();
+                                                message.channel.stopTyping()
                                                 msg.edit(`*You thought to yourself that the creature can\'t be that tough so it can survive multiple bullets. The creature breaks the door, you and the girl start shooting at it. But that only slowed him down, and since both of you were so close to the door, the creature grabbed you with it\'s long hands and suffocated you both.*\n\n**YOU DIED**\nEnding 2 out of ${endings}: The slaughter\n${artist}`)
                                                 
                                                 setTimeout(function(){
