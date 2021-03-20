@@ -5,7 +5,7 @@ module.exports = {
         const Discord = require('discord.js');
         const links = '➤[Invite me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) ➤[Join my server!](https://discord.gg/xSkkeVf) ➤[Vote me!](https://top.gg/bot/727093236954431488/vote) ➤[Become my patreon!](https://www.patreon.com/user?u=10619598)'
         
-        const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`rps\`, \`storyrun\`';
+        const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`rps\`, \`ship\`, \`storyrun\`';
         const info = '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`';
         const interractive = '\`bite\`, \`boop\`, \`brofist\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`hug\`, \`kiss\`, \`lick\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`sorry\`, \`stare\`, \`tickle\`, \`wave\`';
         const mod = '\`ban\`, \`clear\`, \`help\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`';
@@ -139,6 +139,10 @@ module.exports = {
 
             case 'rps':
                 message.channel.send('It\'s just a command that lets you play rock paper scissors with the bot: \`b.rps (rock/paper/scissors)\`')
+            break;
+
+            case 'ship':
+                message.channel.send('It \"ships\" two users\'s names, the output being the first half of the first ping\'s name + the second half of the second ping\'s name: \`b.ship (ping) (ping)\`')
             break;
 
             case 'storyrun':

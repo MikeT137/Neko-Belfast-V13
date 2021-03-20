@@ -2,7 +2,7 @@ module.exports = {
     name: 'ship',
     description: 'The user ships two other users',
     run: async (bot, message, args) => {
-        const mentions = message.mentions.users.array();
+        const mentions = message.mentions.users.first(2);
         const person = mentions[0];
         const person2 = mentions[1];
 
