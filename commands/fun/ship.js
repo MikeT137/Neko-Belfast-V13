@@ -7,7 +7,7 @@ module.exports = {
         const person2 = mentions[1];
 
         if(message.mentions.members.size == 2) {
-            message.channel.send(`**${person.username}** :revolving_hearts: **${person2.username} = ${person.username.slice(0, person.username.length / 2)}${person2.username.slice(person2.username.length / 2, 0)}**`)
+            message.channel.send(`**${person.username}** :revolving_hearts: **${person2.username} = ${person.username.slice(0, person.username.length / 2)}${person2.username.slice(person2.username.length / 2, -2)}**`)
         }else {
             message.channel.send('You have to ping two users to ship them.')
         }
