@@ -7,13 +7,13 @@ module.exports = {
         const random_shot = [
             'https://media.tenor.com/images/29145d2d2903a529aebfb343722ce841/tenor.gif',
             'https://media1.tenor.com/images/9151e40f867c131255c4ebfdb1500e17/tenor.gif?itemid=16421088',
-            'https://i.pinimg.com/originals/a0/f0/c3/a0f0c3dacfa0962425f34e011d30e9be.gif',
+            'https://media1.tenor.com/images/0c7d6aac3d955b166c4bd1fba2e0e21d/tenor.gif?itemid=13871978',
             'https://i.pinimg.com/originals/63/c0/c6/63c0c6b632dfffd790b60a87007f1bfd.gif',
             'https://media.tenor.com/images/a34dd7537be45df945cfd91eba72576c/tenor.gif',
             'https://media1.tenor.com/images/cfb7817a23645120d4baba2dcb9205e0/tenor.gif?itemid=5710495',
-            'https://media1.tenor.com/images/e9f33b7ded139a73590878cf3f9d59a4/tenor.gif?itemid=16999058',
-            'https://64.media.tumblr.com/cd9501e1de17c178317a0008245025eb/ed4df66f25ca5c66-e8/s500x750/69155246fb1eb16e66499040a9da3d4ad82b3005.gifv',
-            'https://i.pinimg.com/originals/4a/36/ee/4a36eecf1f377a916866df9a382eda2f.gif',
+            'https://tenor.com/view/survival-game-club-anime-gatling-gun-mini-gif-11472070',
+            'https://tenor.com/view/jormungand-shoot-firearms-manga-anime-gif-5597802',
+            'https://tenor.com/view/black-lagoon-revy-shooting-revy-shooting-black-lagoon-revy-gif-15579105',
             'https://i.gifer.com/DRn.gif'
         ]
         if(message.mentions.members.size >= 1) {
