@@ -358,7 +358,11 @@ module.exports = {
                 message.channel.send(embedS2);
             break;
 
-            case 'awoo':
+            case ['awoo', 'blush', 'bored', 'clap', 'cry', 'dab', 'dance', 'drool', 'facepalm']:
+                message .channel.send(`It sends a ${args[0]}ing gif: \`b.${args[0]}\``)
+            break;
+
+            /*case 'awoo':
                 message.channel.send('It sends a howling gif: \`b.awoo\`')
             break;
 
@@ -472,7 +476,7 @@ module.exports = {
 
             case 'yawn':
                 message.channel.send(`It sends a ${args[1]}ing gif: \`b.${args[1]}\``)
-            break;
+            break;*/
         }
     }
 }
