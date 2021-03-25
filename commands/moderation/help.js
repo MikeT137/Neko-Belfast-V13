@@ -10,7 +10,7 @@ module.exports = {
         const interractive = '\`bite\`, \`boop\`, \`brofist\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`hug\`, \`kiss\`, \`lick\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`sorry\`, \`stare\`, \`tickle\`, \`wave\`';
         const mod = '\`ban\`, \`clear\`, \`help\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`';
         const random = '\`8ball\`, \`coinflip\`, \`love\`, \`rng\`';
-        const self = '\`awoo\`, \`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`facepalm\`, \`huh\`, \`laugh\`, \`nom\`, \`peek\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`shrug\`, \`sigh\`, \`sip\`, \`smile\`, \`smug\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
+        const self = '\`awoo\`, \`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`drool\`, \`facepalm\`, \`huh\`, \`laugh\`, \`nom\`, \`peek\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`scared\`, \`shrug\`, \`sigh\`, \`sip\`, \`smile\`, \`smug\`, \`surprised\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
 
         if(!args[0]) {
             let embed = new Discord.MessageEmbed()
@@ -385,6 +385,10 @@ module.exports = {
             case 'dance':
                 message.channel.send('It sends a dancing gif: \`b.dance\`')
             break;
+
+            case 'drool':
+                message.channel.send('It sends a drooling gif: \`b.droole\`')
+            break;
                         
             case 'facepalm':
                 message.channel.send('It sends a facepalm gif: \`b.facepalm\`')
@@ -422,6 +426,10 @@ module.exports = {
                 message.channel.send('It sends a running gif: \`b.run\`')
             break;
 
+            case 'scared':
+                message.channel.send('It sends a scary gif: \`b.scared\`')
+            break;
+
             case 'shrug':
                 message.channel.send('It sends a shrug gif: \`b.shrug\`')
             break;
@@ -442,6 +450,10 @@ module.exports = {
                 message.channel.send('It sends a smuging gif: \`b.smug\`')
             break;
 
+            case 'surprised':
+                message.channel.send('It sends a surprising gif: \`b.surprised\`')
+            break;
+
             case 'think':
                 message.channel.send('It sends a thinking gif: \`b.think\`')
             break;
@@ -456,6 +468,10 @@ module.exports = {
                         
             case 'yawn':
                 message.channel.send('It sends a yawning gif: \`b.yawn\`')
+            break;
+
+            case 'yawn':
+                message.channel.send(`It sends a ${args[1]}ing gif: \`b.${args[1]}\``)
             break;
         }
     }
