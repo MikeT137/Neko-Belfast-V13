@@ -21,6 +21,7 @@ module.exports = {
 
                     .setAuthor(`${message.author.username} x ${person.username} =`, message.author.displayAvatarURL({ dynamic: true }))
                     .setTitle(`**${message.author.username.slice(0, message.author.username.length / 2)}${person.username.slice(person.username.length / 2, person.username.length)}**`)
+                    .setThumbnail(message.author.displayAvatarURL({dynamic: true}))
                     .addField(`💟 ${Math.floor(love)}%`, `${loveLevel}`)
                     .setColor('#7d77df')
                 message.channel.send(embed);
@@ -31,6 +32,7 @@ module.exports = {
 
                 .setAuthor(`${person.username} x ${person2.username} =`, message.author.displayAvatarURL({ dynamic: true }))
                 .setTitle(`**${person.username.slice(0, person.username.length / 2)}${person2.username.slice(person2.username.length / 2, person2.username.length)}**`)
+                .setThumbnail(person.displayAvatarURL({dynamic: true}))
                 .addField(`💟 ${Math.floor(love)}%`, `${loveLevel}`)
                 .setColor('#7d77df')
             message.channel.send(embed);
