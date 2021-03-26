@@ -19,9 +19,8 @@ module.exports = {
             }else {
                 const embed = new Discord.MessageEmbed()
 
-                    .setAuthor(`${message.author.username} and ${person.username} love eachother this much:`, message.author.displayAvatarURL({ dynamic: true }))
-                    .setTitle(`${message.author.username.slice(0, message.author.username.length / 2)}${person.username.slice(person.username.length / 2, person.username.length)}`)
-                    .setThumbnail(message.author.displayAvatarURL({dynamic: true}))
+                    .setAuthor(`**${message.author.username}** x **${person.username}** =`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setTitle(`**${message.author.username.slice(0, message.author.username.length / 2)}${person.username.slice(person.username.length / 2, person.username.length)}**`)
                     .addField(`💟 ${Math.floor(love)}%`, `${loveLevel}`)
                     .setColor('#7d77df')
                 message.channel.send(embed);
@@ -30,9 +29,8 @@ module.exports = {
         if(message.mentions.members.size == 2) {
             const embed = new Discord.MessageEmbed()
 
-                .setAuthor(`${person.username} and ${person2.username} love eachother this much:`, message.author.displayAvatarURL({ dynamic: true }))
-                .setTitle(`${person.username.slice(0, person.username.length / 2)}${person2.username.slice(person2.username.length / 2, person2.username.length)}`)
-                .setThumbnail(message.author.displayAvatarURL({dynamic: true}))
+                .setAuthor(`**${person.username}** x **${person2.username}** =`, message.author.displayAvatarURL({ dynamic: true }))
+                .setTitle(`**${person.username.slice(0, person.username.length / 2)}${person2.username.slice(person2.username.length / 2, person2.username.length)}**`)
                 .addField(`💟 ${Math.floor(love)}%`, `${loveLevel}`)
                 .setColor('#7d77df')
             message.channel.send(embed);
