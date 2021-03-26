@@ -2,6 +2,7 @@ module.exports = {
     name: 'ship',
     description: 'The user ships itself with another user, or ships two other users',
     run: async (bot, message, args) => {
+        const Discord = require('discord.js');
         const mentions = message.mentions.users.first(2);
         const person = mentions[0];
         const person2 = mentions[1];
@@ -19,7 +20,8 @@ module.exports = {
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`${message.author.username} and ${person.username} love eachother this much:`, message.author.displayAvatarURL({ dynamic: true }))
-                    .setThumbnail(person.displayAvatarURL({dynamic: true}))
+                    .setTitle(`${message.author.username.slice(0, message.author.username.length / 2)}${person.username.slice(person.username.length / 2, person.username.length)}`)
+                    .setThumbnail(message.author.displayAvatarURL({dynamic: true}))
                     .addField(`💟 ${Math.floor(love)}%`, `${loveLevel}`)
                     .setColor('#7d77df')
                 message.channel.send(embed);
@@ -28,11 +30,12 @@ module.exports = {
         if(message.mentions.members.size == 2) {
             const embed = new Discord.MessageEmbed()
 
-                    .setAuthor(`${person.username} and ${person2.username} love eachother this much:`, message.author.displayAvatarURL({ dynamic: true }))
-                    .setThumbnail(person.displayAvatarURL({dynamic: true}))
-                    .addField(`💟 ${Math.floor(love)}%`, `${loveLevel}`)
-                    .setColor('#7d77df')
-                message.channel.send(embed);
+                .setAuthor(`${person.username} and ${person2.username} love eachother this much:`, message.author.displayAvatarURL({ dynamic: true }))
+                .setTitle(`${person.username.slice(0, person.username.length / 2)}${person2.username.slice(person2.username.length / 2, person2.username.length)}`)
+                .setThumbnail(message.author.displayAvatarURL({dynamic: true}))
+                .addField(`💟 ${Math.floor(love)}%`, `${loveLevel}`)
+                .setColor('#7d77df')
+            message.channel.send(embed);
         }
     }
 }
