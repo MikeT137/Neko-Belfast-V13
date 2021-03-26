@@ -5,11 +5,11 @@ module.exports = {
         const Discord = require('discord.js');
         const links = '➤[Invite me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) ➤[Join my server!](https://discord.gg/xSkkeVf) ➤[Vote me!](https://top.gg/bot/727093236954431488/vote) ➤[Become my patreon!](https://www.patreon.com/user?u=10619598)'
         
-        const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`rps\`, \`ship\`, \`storyrun\`';
+        const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`rps\`, \`storyrun\`';
         const info = '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`';
         const interractive = '\`bite\`, \`boop\`, \`brofist\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`hug\`, \`kiss\`, \`lick\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`sorry\`, \`stare\`, \`tickle\`, \`wave\`';
         const mod = '\`ban\`, \`clear\`, \`help\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`';
-        const random = '\`8ball\`, \`coinflip\`, \`love\`, \`rng\`';
+        const random = '\`8ball\`, \`coinflip\`, \`rng\`, \`ship\`';
         const self = '\`awoo\`, \`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`drool\`, \`facepalm\`, \`huh\`, \`laugh\`, \`nom\`, \`peek\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`scared\`, \`shrug\`, \`sigh\`, \`sip\`, \`smile\`, \`smug\`, \`surprised\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
 
         if(!args[0]) {
@@ -142,7 +142,7 @@ module.exports = {
             break;
 
             case 'ship':
-                message.channel.send('It \"ships\" two users\'s names, the output being the first half of the first ping\'s name + the second half of the second ping\'s name: \`b.ship (ping) (ping)\`')
+                message.channel.send('It sends a random level of love-affinity between 2 users:\n-yourself with another user: \`b.love (ping)\`\n-two other users: \`b.ship (ping) (ping)\`')
             break;
 
             case 'storyrun':
@@ -259,10 +259,6 @@ module.exports = {
 
             case 'coinflip':
                 message.channel.send('It flips a coin: \`b.coinflip\`')
-            break;
-
-            case 'love':
-                message.channel.send('It sends a random level of love-affinity between 2 users: \`b.love (ping)\`')
             break;
 
             case 'rng':
