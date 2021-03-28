@@ -10,7 +10,7 @@ module.exports = {
         const interractive = '\`bite\`, \`boop\`, \`brofist\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`hug\`, \`kiss\`, \`lick\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`sorry\`, \`stare\`, \`tickle\`, \`wave\`';
         const mod = '\`ban\`, \`clear\`, \`help\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`';
         const random = '\`8ball\`, \`coinflip\`, \`rng\`, \`ship\`';
-        const self = '\`awoo\`, \`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`drool\`, \`facepalm\`, \`huh\`, \`laugh\`, \`nom\`, \`peek\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`scared\`, \`shrug\`, \`sigh\`, \`sip\`, \`smile\`, \`smug\`, \`surprised\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
+        const self = '\`blush\`, \`bored\`, \`clap\`, \`cry\`, \`dab\`, \`dance\`, \`drool\`, \`facepalm\`, \`howl\`, \`huh\`, \`laugh\`, \`nom\`, \`peek\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`scared\`, \`shrug\`, \`sigh\`, \`sip\`, \`smile\`, \`smug\`, \`surprised\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
 
         if(!args[0]) {
             let embed = new Discord.MessageEmbed()
@@ -141,10 +141,6 @@ module.exports = {
                 message.channel.send('It\'s just a command that lets you play rock paper scissors with the bot: \`b.rps (rock/paper/scissors)\`')
             break;
 
-            case 'ship':
-                message.channel.send('It sends a random level of love-affinity between 2 users:\n-yourself with another user: \`b.love (ping)\`\n-two other users: \`b.ship (ping) (ping)\`')
-            break;
-
             case 'storyrun':
                 message.channel.send('It\'s a choose your adventure type of story where you have to (read a lot) and react with emojis to make your choice, eventually you get an ending, now it depends if it\'s good or bad, good luck: \`b.storyrun\`')
             break;
@@ -265,6 +261,10 @@ module.exports = {
                 message.channel.send('It gives you a random number but you have to specify the maximum value: \`b.rng (number)\`\nSidenote: your value has to be higher than 1')
             break;
 
+            case 'ship':
+                message.channel.send('It sends a random level of love-affinity between 2 users:\n-yourself with another user: \`b.love (ping)\`\n-two other users: \`b.ship (ping) (ping)\`')
+            break;
+
             //Self
             case 'self' || 'self roleplay':
                 let embedS2 = new Discord.MessageEmbed()
@@ -278,7 +278,7 @@ module.exports = {
                 message.channel.send(embedS2);
             break;
 
-            case ['awoo', 'blush', 'bored', 'clap', 'cry', 'dab', 'dance', 'drool', 'facepalm', 'huh', 'laugh', 'nom', 'peek', 'pout', 'purr', 'rage', 'run', 'scared', 'shrug', 'sigh', 'sip', 'smile', 'smug', 'surprised', 'think', 'wag', 'wink', 'yawn']:
+            case ['blush', 'bored', 'clap', 'cry', 'dab', 'dance', 'drool', 'facepalm', 'howl', 'huh', 'laugh', 'nom', 'peek', 'pout', 'purr', 'rage', 'run', 'scared', 'shrug', 'sigh', 'sip', 'smile', 'smug', 'surprised', 'think', 'wag', 'wink', 'yawn']:
                 message.channel.send(`It sends a ${args[0]}ing gif: \`b.${args[0]}\``)
             break;
         }

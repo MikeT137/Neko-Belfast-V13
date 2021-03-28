@@ -1,6 +1,6 @@
 module.exports = {
-    name:'awoo',
-    description: "The user awoos",
+    name:'howl',
+    description: "The user howls",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
 
