@@ -33,6 +33,7 @@ module.exports = {
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`Don\'t do that nya!! Don\'t hurt yourself please..`)
+                    .setDescription(`${args.slice(1, args.length).join(' ')}`)
                     .setImage(random_cry[Math.floor(Math.random() * random_cry.length)])
                     .setColor('#7d77df')
                 message.channel.send(embed);
@@ -40,6 +41,7 @@ module.exports = {
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`${message.author.username} gave ${person.username} a punch...awee`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setDescription(`${args.slice(1, args.length).join(' ')}`)
                     .setImage(random_punch[Math.floor(Math.random() * random_punch.length)])
                     .setColor('#7d77df')
                 message.channel.send(embed);

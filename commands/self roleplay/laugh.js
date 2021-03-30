@@ -2,15 +2,15 @@ module.exports = {
     name:'laugh',
     description: "The user laughs",
     run: async (bot, message, args) => {
-        const author = message.author;
         const Discord = require('discord.js');
+        const {api_key} = require ('../../config.json')
         const fetch = require('node-fetch');
         const url = 'https://api.otakugifs.xyz/gif/laugh';
 
         fetch(url, {
             method: 'GET',
             headers: {
-                'X-API-KEY': 'pj7g9seujJByserio0awmvx66W8fFtrboW9kVVNeu13yHbBgE3IsgNBS3rUuD8321l2CH3tST900dhEyd0qH9P2',
+                'X-API-KEY': api_key,
             },
         }).then((res) =>
             res.json()
