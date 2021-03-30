@@ -23,7 +23,7 @@ module.exports = {
                     const embed = new Discord.MessageEmbed()
             
                         .setAuthor(`${message.author.username} bit ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
-                        .setDescription(`${args.slice(0, 1).join(' ')}`)
+                        .setDescription(`${args.slice(1, args.length).join(' ')}`)
                         .setImage(json.url)
                         .setFooter('Powered by otakugifs.xyz')
                         .setColor('#7d77df')
