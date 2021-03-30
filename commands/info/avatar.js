@@ -10,14 +10,14 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
 
                 .setTitle(`${author.username}\'s avatar:`)
-                .setImage(`${author.displayAvatarURL({ dynamic: true })}`)
+                .setImage(`${author.displayAvatarURL({ dynamic: true , size: 2048})}`)
                 .setColor('#7d77df')
             message.channel.send(embed);
         }else if (!args[1] && message.mentions.members.size == 1) {
             const embed = new Discord.MessageEmbed()
             
                 .setTitle(`${person.username}\'s avatar:`)
-                .setImage(`${person.displayAvatarURL({ dynamic: true })}`)
+                .setImage(`${person.displayAvatarURL({ dynamic: true , size: 2048})}`)
                 .setColor('#7d77df')
             message.channel.send(embed);
         }else {
