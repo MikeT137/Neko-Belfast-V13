@@ -40,5 +40,6 @@ module.exports = {
                 message.channel.send('You have to ping someone to pat them')
             }
         })
+        message.delete();
     }
 }

@@ -19,5 +19,6 @@ module.exports = {
             .setImage(random_dab[Math.floor(Math.random() * random_dab.length)])
             .setColor('#7d77df')
         message.channel.send(embed)
+        message.delete();
     }
 }

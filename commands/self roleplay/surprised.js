@@ -24,5 +24,6 @@ module.exports = {
                 .setColor('#7d77df')
             message.channel.send(embed)
         })
+        message.delete();
     }
 }

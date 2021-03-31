@@ -22,5 +22,6 @@ module.exports = {
             .setImage(random_purr[Math.floor(Math.random() * random_purr.length)])
             .setColor('#7d77df')
         message.channel.send(embed);
+        message.delete();
     }
 }

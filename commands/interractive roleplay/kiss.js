@@ -33,5 +33,6 @@ module.exports = {
                 message.channel.send('You have to ping someone to kiss them')
             }
         })
+        message.delete();
     }
 }

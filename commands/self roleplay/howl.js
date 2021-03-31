@@ -21,5 +21,6 @@ module.exports = {
             .setImage(random_awoo[Math.floor(Math.random() * random_awoo.length)])
             .setColor('#7d77df')
         message.channel.send(embed)
+        message.delete();
     }
 }

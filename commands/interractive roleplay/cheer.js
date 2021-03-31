@@ -37,5 +37,6 @@ module.exports = {
         }else {
             message.channel.send('You have to ping someone to cheer them up')
         }
+        message.delete();
     }
 }

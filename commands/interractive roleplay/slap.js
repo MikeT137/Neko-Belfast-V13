@@ -49,5 +49,6 @@ module.exports = {
         }else {
             message.channel.send('You have to ping someone to slap them')
         }
+        message.delete();
     }
 }
