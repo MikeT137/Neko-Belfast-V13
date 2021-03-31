@@ -14,6 +14,7 @@ module.exports = {
             'https://thumbs.gfycat.com/DefensiveRigidHorsefly-max-1mb.gif',
             'https://steamuserimages-a.akamaihd.net/ugc/490145495169359481/DF0519A6B51DDE1F4DFAEC03C997374AA851D28E/'
         ]
+        message.delete();
         const embed = new Discord.MessageEmbed()
         
             .setAuthor(`${message.author.username} is howling, awoo`, message.author.displayAvatarURL({ dynamic: true }))
@@ -21,6 +22,5 @@ module.exports = {
             .setImage(random_awoo[Math.floor(Math.random() * random_awoo.length)])
             .setColor('#7d77df')
         message.channel.send(embed)
-        message.delete();
     }
 }

@@ -17,6 +17,7 @@ module.exports = {
             'https://img.kokakiwi.net/anime/cheer2.gif',
         ]
         if(message.mentions.members.size >= 1) {
+            message.delete();
             if(person.id == message.author.id) {
                 const embed = new Discord.MessageEmbed()
 
@@ -37,6 +38,5 @@ module.exports = {
         }else {
             message.channel.send('You have to ping someone to cheer them up')
         }
-        message.delete();
     }
 }

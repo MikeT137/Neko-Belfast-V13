@@ -20,6 +20,7 @@ module.exports = {
                 if(person.id == message.author.id) {
                     message.channel.send('Just like a kitty aren\'t you? I\'m proud of you nya~')
                 }else {
+                    message.delete();
                     const embed = new Discord.MessageEmbed()
             
                         .setAuthor(`${message.author.username} is licking ${person.username} O///O`, message.author.displayAvatarURL({ dynamic: true }))
@@ -33,6 +34,5 @@ module.exports = {
                 message.channel.send('You have to ping someone to lick them')
             }
         })
-        message.delete();
     }
 }

@@ -7,7 +7,7 @@ module.exports = {
         const person = message.mentions.users.first();
         const fetch = require('node-fetch');
         const url = 'https://api.otakugifs.xyz/gif/brofist';
-
+        
         fetch(url, {
             method: 'GET',
             headers: {
@@ -20,6 +20,7 @@ module.exports = {
                 if(person.id == message.author.id) {
                     return;
                 }else {
+                    message.delete();
                     const embed = new Discord.MessageEmbed()
 
                         .setAuthor(`${message.author.username} brofists ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
@@ -33,6 +34,5 @@ module.exports = {
                 message.channel.send('You have to ping someone to brofist them')
             }
         })
-        message.delete();
     }
 }

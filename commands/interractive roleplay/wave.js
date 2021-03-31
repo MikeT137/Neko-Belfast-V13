@@ -20,6 +20,7 @@ module.exports = {
                 if(person.id == message.author.id) {
                     message.channel.send('Look at you, you\'re so cute nya~')
                 }else {
+                    message.delete();
                     const embed = new Discord.MessageEmbed()
             
                         .setAuthor(`${message.author.username} is waving at ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
@@ -33,6 +34,5 @@ module.exports = {
                 message.channel.send('You have to ping someone to wave at them')
             }
         })
-        message.delete();
     }
 }

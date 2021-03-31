@@ -20,6 +20,7 @@ module.exports = {
             if(person.id == message.author.id) {
                 message.channel.send('NO')
             }else {
+                message.delete();
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`${message.author.username} just shot ${person.username}, so brutal`, message.author.displayAvatarURL({ dynamic: true }))
@@ -31,6 +32,5 @@ module.exports = {
         }else {
             message.channel.send('You have to ping someone to shoot them')
         }
-        message.delete();
     }
 }

@@ -29,6 +29,7 @@ module.exports = {
             'https://thumbs.gfycat.com/HalfAssuredBorderterrier-size_restricted.gif',
         ]
         if(message.mentions.members.size >= 1) {
+            message.delete();
             if(person.id == message.author.id) {
                 const embed = new Discord.MessageEmbed()
 
@@ -49,6 +50,5 @@ module.exports = {
         }else {
             message.channel.send('You have to ping someone to slap them')
         }
-        message.delete();
     }
 }

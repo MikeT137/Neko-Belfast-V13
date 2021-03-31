@@ -20,6 +20,7 @@ module.exports = {
                 if(person.id == message.author.id) {
                     message.channel.send('I don\'t blame you for staring at yourself, you\'re so beautiful nya~')
                 }else {
+                    message.delete();
                     const embed = new Discord.MessageEmbed()
             
                         .setAuthor(`${message.author.username} stares at ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
@@ -33,6 +34,5 @@ module.exports = {
                 message.channel.send('You have to ping someone to stare at them')
             }
         })
-        message.delete();
     }
 }

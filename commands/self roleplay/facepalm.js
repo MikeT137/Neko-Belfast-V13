@@ -15,6 +15,7 @@ module.exports = {
             'https://media.tenor.com/images/53d8027aca11f5e3ebbcd54f0f25c4c9/tenor.gif',
             'https://media.tenor.com/images/0649be57365455f5a6518c00695c6779/tenor.gif',
         ]
+        message.delete();
         const embed = new Discord.MessageEmbed()
 
             .setAuthor(`${message.author.username} is making a facepalm`, message.author.displayAvatarURL({ dynamic: true }))
@@ -22,6 +23,5 @@ module.exports = {
             .setImage(random_fp[Math.floor(Math.random() * random_fp.length)])
             .setColor('#7d77df')
         message.channel.send(embed);
-        message.delete();
     }
 }

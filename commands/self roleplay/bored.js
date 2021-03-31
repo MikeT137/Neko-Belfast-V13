@@ -15,6 +15,7 @@ module.exports = {
             'https://i.imgur.com/EzAWv47.gif',
             'https://2.bp.blogspot.com/-RsPepQekbus/UsKt6g1gMDI/AAAAAAAACEY/78y2DEakcDo/s640/Bored+004.gif'
         ]
+        message.delete();
         const embed = new Discord.MessageEmbed()
 
             .setAuthor(`${message.author.username} is bored`, message.author.displayAvatarURL({ dynamic: true }))
@@ -22,6 +23,5 @@ module.exports = {
             .setImage(random_bored[Math.floor(Math.random() * random_bored.length)])
             .setColor('#7d77df')
         message.channel.send(embed);
-        message.delete();
     }
 }

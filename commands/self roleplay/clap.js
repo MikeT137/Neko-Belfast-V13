@@ -6,7 +6,7 @@ module.exports = {
         const {api_key} = require ('../../config.json')
         const fetch = require('node-fetch');
         const url = 'https://api.otakugifs.xyz/gif/clap';
-
+        message.delete();
         fetch(url, {
             method: 'GET',
             headers: {
@@ -24,6 +24,5 @@ module.exports = {
                 .setColor('#7d77df')
             message.channel.send(embed);
         })
-        message.delete();
     }
 }

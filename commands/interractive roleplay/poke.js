@@ -20,6 +20,7 @@ module.exports = {
                 if(person.id == message.author.id) {
                     message.channel.send('If you\'re wondering, yes you are awake, this isn\'t a dream')
                 }else {
+                    message.delete();
                     const embed = new Discord.MessageEmbed()
             
                         .setAuthor(`${message.author.username} is poking ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
@@ -33,6 +34,5 @@ module.exports = {
                 message.channel.send('You have to ping someone to poke them')
             }
         })
-        message.delete();
     }
 }

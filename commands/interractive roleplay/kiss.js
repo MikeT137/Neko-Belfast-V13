@@ -20,6 +20,7 @@ module.exports = {
                 if(person.id == message.author.id) {
                     message.channel.send(`It\'s okay ${message.author.username}! I\'m sure you\'ll get someone to be by your side! Stay strong nya~`)
                 }else {
+                    message.delete();
                     const embed = new Discord.MessageEmbed()
             
                         .setAuthor(`${message.author.username} gave ${person.username} a kiss`, message.author.displayAvatarURL({ dynamic: true }))
@@ -33,6 +34,5 @@ module.exports = {
                 message.channel.send('You have to ping someone to kiss them')
             }
         })
-        message.delete();
     }
 }

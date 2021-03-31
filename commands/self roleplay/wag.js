@@ -15,6 +15,7 @@ module.exports = {
             'https://pa1.narvii.com/6165/7a3f9d44541cf33dc28ec082352f60249ed5124e_hq.gif',
             'https://forum.wotlabs.net/uploads/monthly_2015_10/wag2.gif.3eea1e4d76fed4e30e0d3b1c4f4ebbdf.thumb.gif.d1a842833fd3cbfb209e6ecb32297325.gif',
         ]
+        message.delete();
         const embed = new Discord.MessageEmbed()
 
             .setAuthor(`${message.author.username} wags their tail ^^`, message.author.displayAvatarURL({ dynamic: true }))
@@ -22,6 +23,5 @@ module.exports = {
             .setImage(random_wag[Math.floor(Math.random() * random_wag.length)])
             .setColor('#7d77df')
         message.channel.send(embed);
-        message.delete();
     }
 }

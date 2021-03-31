@@ -17,6 +17,7 @@ module.exports = {
             res.json()
         ).then((json) => {
             if(message.mentions.members.size >= 1) {
+                message.delete();
                 if(person.id == message.author.id) {
                     const embed = new Discord.MessageEmbed()
     
@@ -40,6 +41,5 @@ module.exports = {
                 message.channel.send('You have to ping someone to cuddle them')
             }
         })
-        message.delete();
     }
 }

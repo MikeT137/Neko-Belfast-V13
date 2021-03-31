@@ -12,6 +12,7 @@ module.exports = {
             'https://i.imgur.com/1YSjbGo.gif',
             'https://media.tenor.com/images/f29331e4557e2deaf14817d6fc230251/tenor.gif'
         ]
+        message.delete();
         const embed = new Discord.MessageEmbed()
         
             .setAuthor(`${message.author.username} is dabbing (づ￣ ³￣)づ`, message.author.displayAvatarURL({ dynamic: true }))
@@ -19,6 +20,5 @@ module.exports = {
             .setImage(random_dab[Math.floor(Math.random() * random_dab.length)])
             .setColor('#7d77df')
         message.channel.send(embed)
-        message.delete();
     }
 }

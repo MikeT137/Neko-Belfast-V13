@@ -7,7 +7,7 @@ module.exports = {
         const person = message.mentions.users.first();
         const fetch = require('node-fetch');
         const url = 'https://api.otakugifs.xyz/gif/poke';
-
+        
         fetch(url, {
             method: 'GET',
             headers: {
@@ -20,6 +20,7 @@ module.exports = {
                 if(person.id == message.author.id) {
                     message.channel.send('Eh? Why did you boop yourself?')
                 }else {
+                    message.delete();
                     const embed = new Discord.MessageEmbed()
             
                         .setAuthor(`${message.author.username} booped ${person.username}\'s nose !`, message.author.displayAvatarURL({ dynamic: true }))
@@ -33,6 +34,5 @@ module.exports = {
                 message.channel.send('You have to ping someone to boop them')
             }
         })
-        message.delete();
     }
 }

@@ -20,6 +20,7 @@ module.exports = {
                 if(person.id == message.author.id) {
                     return
                 }else {
+                    message.delete();
                     const embed = new Discord.MessageEmbed()
             
                         .setAuthor(`${message.author.username} is apologising to ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
@@ -33,6 +34,5 @@ module.exports = {
                 message.channel.send('You have to ping someone to apologise to')
             }
         })
-        message.delete();
     }
 }
