@@ -15,13 +15,12 @@ module.exports = {
             'https://lh3.googleusercontent.com/proxy/mfHzeM6p3uB_XXIq8d0Jv4pUZTWAhsBRuAd5Gq6zt1Vn8ObhrHg8PgQBBRcmXxxUB61rnhwIOGf6rir20s77WHB7qVLnlIdFw8U4U8QoVhaOkl2XoqwmDGLa6Rp8z2uBveZDidZGgAc',
             'https://i.kym-cdn.com/photos/images/original/001/004/286/096.gif',
         ]
-        if (!args[0]){
-            const embed = new Discord.MessageEmbed()
+        const embed = new Discord.MessageEmbed()
 
-                .setAuthor(`${message.author.username} is purring, nyaa~`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(random_purr[Math.floor(Math.random() * random_purr.length)])
-                .setColor('#7d77df')
-            message.channel.send(embed);
-        }
+            .setAuthor(`${message.author.username} is purring, nyaa~`, message.author.displayAvatarURL({ dynamic: true }))
+            .setDescription(`${args.join(' ')}`)
+            .setImage(random_purr[Math.floor(Math.random() * random_purr.length)])
+            .setColor('#7d77df')
+        message.channel.send(embed);
     }
 }

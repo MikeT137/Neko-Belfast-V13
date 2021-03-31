@@ -15,13 +15,12 @@ module.exports = {
             'https://media1.tenor.com/images/c86474bac2991a3e8029787955cced23/tenor.gif?itemid=6013432',
             'https://data.whicdn.com/images/149221907/original.gif',
         ]
-        if (!args[0]){
-            const embed = new Discord.MessageEmbed()
+        const embed = new Discord.MessageEmbed()
 
-                .setAuthor(`${message.author.username} is thinking, hmm`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(random_think[Math.floor(Math.random() * random_think.length)])
-                .setColor('#7d77df')
-            message.channel.send(embed);
-        }
+            .setAuthor(`${message.author.username} is thinking, hmm`, message.author.displayAvatarURL({ dynamic: true }))
+            .setDescription(`${args.join(' ')}`)
+            .setImage(random_think[Math.floor(Math.random() * random_think.length)])
+            .setColor('#7d77df')
+        message.channel.send(embed);
     }
 }
