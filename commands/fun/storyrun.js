@@ -68,7 +68,9 @@ module.exports = {
                 .then(collected => {
                     const reaction = collected.first();
                     if(reaction.emoji.name === '👍') {
-                        react.users.remove(message.author.id);
+                        for (const react of userReactions.values()) {
+                            react.users.remove(message.author.id)
+                        }
                         msg.edit('*You think to yourself that it was just an animal or something, so you decide to ignore it. You then finish chopping the wood, you grab all of it, and go towards your basement so you can leave it there. But then you hear that weird sound again, this time coming from your basement. You then:\n\n👍 - go in the basement\n👎 - leave the cabin*\n\n**Select your choice:**')
 
                         msg.awaitReactions(filter2, { max: 1 })
