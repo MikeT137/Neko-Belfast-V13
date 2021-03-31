@@ -15,7 +15,7 @@ module.exports = {
         }).then((res) =>
             res.json()
         ).then((json) => {
-            const embed = new Discord.MessageEmbed()
+            const embed = await new Discord.MessageEmbed()
         
                 .setAuthor(`${message.author.username} is blushing`, message.author.displayAvatarURL({ dynamic: true }))
                 .setDescription(`${args.join(' ')}`)
