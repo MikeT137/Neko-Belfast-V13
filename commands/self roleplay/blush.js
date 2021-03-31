@@ -6,7 +6,7 @@ module.exports = {
         const {api_key} = require ('../../config.json')
         const fetch = require('node-fetch');
         const url = 'https://api.otakugifs.xyz/gif/blush';
-        message.delete();
+        message.delete(1000);
         fetch(url, {
             method: 'GET',
             headers: {
