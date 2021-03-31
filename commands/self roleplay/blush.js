@@ -6,7 +6,7 @@ module.exports = {
         const {api_key} = require ('../../config.json')
         const fetch = require('node-fetch');
         const url = 'https://api.otakugifs.xyz/gif/blush';
-        message.delete();
+        await message.delete();
         fetch(url, {
             method: 'GET',
             headers: {
@@ -15,7 +15,7 @@ module.exports = {
         }).then((res) =>
             res.json()
         ).then((json) => {
-            const embed = await new Discord.MessageEmbed()
+            const embed = new Discord.MessageEmbed()
         
                 .setAuthor(`${message.author.username} is blushing`, message.author.displayAvatarURL({ dynamic: true }))
                 .setDescription(`${args.join(' ')}`)
