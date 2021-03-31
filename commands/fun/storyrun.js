@@ -62,7 +62,7 @@ module.exports = {
             const filter14 = (reaction14, user) => {
                 return ['👍', '✊', '👎'].includes(reaction14.emoji.name) && user.id === message.author.id;
             }
-            const userReactions = msg.reactions.cache.filter(react => react.users.cache.has(message.author.id));
+            const userReactions = message.reactions.cache.filter(react => react.users.cache.has(message.author.id));
 
             msg.awaitReactions(filter, { max: 1 })
                 .then(collected => {
