@@ -17,7 +17,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
 
                 .setAuthor(`- Hentai`, message.author.displayAvatarURL({ dynamic: true }))
-                .setURL(`${image}`)
+                .setImage(image)
                 .setColor('#7d77df')
             message.channel.send(embed);
         } else {
