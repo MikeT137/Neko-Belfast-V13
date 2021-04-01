@@ -10,7 +10,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
 
                 .setAuthor(`- Hentai`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(`${gif.nsfw.randomHentaiGif()}`)
+                .setImage(`${gif.nsfw.randomHentaiGif().url}`)
                 .setColor('#7d77df')
             message.channel.send(embed);
         } else {
