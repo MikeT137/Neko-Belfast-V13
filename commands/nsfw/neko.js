@@ -2,6 +2,7 @@ module.exports = {
     name:'neko',
     description: "neko hentai image",
     run: async (bot, message, args) => {
+        const Discord = require('discord.js');
     	const neko = require('nekos.life');
     	const {nsfw} = new neko();
 
