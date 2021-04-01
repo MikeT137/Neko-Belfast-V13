@@ -7,10 +7,13 @@ module.exports = {
     	const gif = new neko();
 
         if (message.channel.nsfw) {
+            fetch(url, {
+                method: 'GET'
+            })
             const embed = new Discord.MessageEmbed()
 
                 .setAuthor(`- Hentai`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(`${gif.nsfw.randomHentaiGif().url}`)
+                .setImage(`${gif.nsfw.randomHentaiGif(url)}`)
                 .setColor('#7d77df')
             message.channel.send(embed);
         } else {
