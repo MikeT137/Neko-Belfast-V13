@@ -10,7 +10,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
 
                 .setAuthor(`- Yuri`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(gif.nsfw.lesbian())
+                .setImage(`${gif.nsfw.lesbian()}`)
                 .setColor('#7d77df')
             message.channel.send(embed);
         } else {

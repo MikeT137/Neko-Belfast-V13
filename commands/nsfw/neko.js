@@ -10,7 +10,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
 
                 .setAuthor(`- Neko`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(gif.nsfw.nekoGif())
+                .setImage(`${gif.nsfw.nekoGif()}`)
                 .setColor('#7d77df')
             message.channel.send(embed);
         } else {
