@@ -108,8 +108,7 @@ module.exports = {
                     }else return;
                 })
             })
-        }
-        switch (args[0]){
+        }else switch (args[0]){
             //Fun
             case 'fun':
                 let embedF2 = new Discord.MessageEmbed()
