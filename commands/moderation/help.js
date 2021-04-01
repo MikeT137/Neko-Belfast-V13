@@ -266,7 +266,7 @@ module.exports = {
             break;
 
             case ['hentai', 'neko', 'yuri']:
-                message.channel.send(`It sends a Not Safe For Work images tagged with ${args[0]}`)
+                message.channel.send(`It sends a Not Safe For Work images tagged with \"${args[0]}\"`)
             break;
 
             //Random
