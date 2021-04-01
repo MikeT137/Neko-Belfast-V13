@@ -4,7 +4,7 @@ module.exports = {
     run: async (bot, message, args) => {
         const Discord = require('discord.js')
         const api = require('imageapi.js')
-        const subreddits = ["dankmemes", "goodanimemes", "memes", "meme"]
+        const subreddits = ["dankmemes", "goodanimemes", "memes", 'Animemes', "meme"]
         const subreddit = subreddits[Math.floor(Math.random() * (subreddits.length))]
         const meme = await api.advanced(subreddit)
 
