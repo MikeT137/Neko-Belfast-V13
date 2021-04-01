@@ -2,6 +2,7 @@ module.exports = {
     name:'meme',
     description: "Gives the user a meme",
     run: async (bot, message, args) => {
+        const Discord = require('discord.js')
         const api = require('imageapi.js')
         const subreddits = ["dankmemes", "goodanimemes", "memes", "meme"]
         const subreddit = subreddits[Math.floor(Math.random() * (subreddits.length))]
