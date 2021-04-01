@@ -3,14 +3,14 @@ module.exports = {
     description: "hentai image",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-    	const neko = require('nekos.life');
-    	const {nsfw} = new neko();
+    	const NSFW = require("discord-nsfw");
+        const nsfw = new NSFW();
 
         if (message.channel.nsfw) {
             const embed = new Discord.MessageEmbed()
 
                 .setAuthor(`- Hentai`, message.author.displayAvatarURL({ dynamic: true }))
-                .setURL(`${nsfw.randomHentaiGif()}`)
+                .setURL(`${nsfw.hentai()}`)
                 .setColor('#7d77df')
             message.channel.send(embed);
         } else {
