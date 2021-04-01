@@ -4,7 +4,7 @@ module.exports = {
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
     	const neko = require('nekos.life');
-    	const nsfw = new neko();
+    	const {nsfw} = new neko();
 
         if (message.channel.nsfw) {
             const embed = new Discord.MessageEmbed()
