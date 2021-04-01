@@ -8,9 +8,7 @@ module.exports = {
             'Tails!'
         ]
         const answer = coinface[Math.floor(Math.random() * coinface.length)];
-
-        if(!args[0]){
-            message.channel.send(`${answer}:coin:`)
-        }else return;
+        
+        message.channel.send(`${answer}:coin:`)
     }
 }

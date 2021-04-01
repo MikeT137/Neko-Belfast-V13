@@ -19,6 +19,7 @@
     "discord.js": "^12.2.0",
     "discord.js-tictactoe": "^1.0.2",
     "erela.js": "^2.0.1",
+    "imageapi.js": "^1.6.1",
     "math": "0.0.3",
     "mathjs": "^7.1.0",
     "ms": "^2.1.2",

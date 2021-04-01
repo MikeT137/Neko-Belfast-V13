@@ -2,9 +2,8 @@ module.exports = {
     name: '8ball',
     description: 'Gives a random response to a question',
     run: async (bot, message, args) => {
-        let question = message.content.split(`${bot.prefix}8ball `).join('');
-        
-        if(!question){
+
+        if(!args[0]){
             message.channel.send('You must ask a question to use that command');
         }else{
             //Answers (yes or no)
