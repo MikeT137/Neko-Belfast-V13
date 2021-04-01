@@ -9,7 +9,6 @@ module.exports = {
         const info = '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`';
         const interractive = '\`bite\`, \`boop\`, \`brofist\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`hug\`, \`kiss\`, \`lick\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`sorry\`, \`stare\`, \`tickle\`, \`wave\`';
         const mod = '\`ban\`, \`clear\`, \`help\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`';
-        const nsfw = '\`hentai\`, \`neko\`, \`yuri\`';
         const random = '\`8ball\`, \`coinflip\`, \`rng\`, \`ship\`';
         const self = '\`blush\`, \`bored\`, \`clap\`, \`confused\`, \`cry\`, \`dab\`, \`dance\`, \`drool\`, \`facepalm\`, \`howl\`, \`laugh\`, \`nom\`, \`peek\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`scared\`, \`shrug\`, \`sigh\`, \`sip\`, \`smile\`, \`smug\`, \`surprised\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
 
@@ -23,7 +22,6 @@ module.exports = {
                     {name: ':face_with_monocle: - Info', value: 'Commands that give more information about specific things', inline: true },
                     {name: ':performing_arts: - Interactive Roleplay (@someone)', value: 'Commands that only work WITH pinging', inline: true },
                     {name: ':tools: - Moderation', value: 'Commands that help admins to moderate their own servers', inline: true },
-                    {name: ':underage: - NSFW', value: 'Commands that are adult only', inline: true },
                     {name: ':game_die: - Random', value: 'Commands that give a random output everytime', inline: true },
                     {name: ':clown: - Self Roleplay', value: 'Commands that only work WITHOUT pinging', inline: true }
                 )
@@ -35,12 +33,11 @@ module.exports = {
                 msg.react('🧐'),
                 msg.react('🎭'),
                 msg.react('🛠️'),
-                msg.react('🔞'),
                 msg.react('🎲'),
                 msg.react('🤡')
 
                 const filter = (reaction, user) => {
-                    return ['😃', '🧐', '🎭', '🛠️', '🔞', '🎲', '🤡'].includes(reaction.emoji.name) && user.id === message.author.id;
+                    return ['😃', '🧐', '🎭', '🛠️', '🎲', '🤡'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
 
                 msg.awaitReactions(filter, { max: 1 }).then(collected => {
@@ -86,16 +83,6 @@ module.exports = {
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
                         msg.edit(embedM);
-                    }else if(reaction.emoji.name === '🔞') {
-                        let embedN = new Discord.MessageEmbed()
-
-                            .setTitle('Help - NSFW')
-                            .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', `${nsfw}`)
-                            .addField('Want to support me?', `${links}`)
-                            .setThumbnail(bot.user.displayAvatarURL())
-                            .setColor('#7d77df')
-                        msg.edit(embedN);
                     }else if(reaction.emoji.name === '🎲') {
                         let embedR = new Discord.MessageEmbed()
                         
@@ -250,23 +237,6 @@ module.exports = {
 
             case 'unmute':
                 message.channel.send('It unmutes a user that is muted: \`b.unmute (ping)\`, BUT you need to have a role called \"BMuted\", it\'s the only way it\'ll work')
-            break;
-
-            //NSFW
-            case 'nsfw' || 'NSFW':
-                let embedN2 = new Discord.MessageEmbed()
-
-                    .setTitle('Help - NSFW')
-                    .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                    .addField('Commands:', `${nsfw}`)
-                    .addField('Want to support me?', `${links}`)
-                    .setThumbnail(bot.user.displayAvatarURL())
-                    .setColor('#7d77df')
-                message.channel.send(embedN2);
-            break;
-
-            case ['hentai', 'neko', 'yuri']:
-                message.channel.send(`It sends a Not Safe For Work images tagged with \"${args[0]}\"`)
             break;
 
             //Random
