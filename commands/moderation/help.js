@@ -48,7 +48,7 @@ module.exports = {
                         
                             .setTitle('Help - Fun')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', `\`${Array.from(bot.commands.name).join(`, `)}\``)
+                            .addField('Commands:', `\`${bot.commands.name.join(`, `)}\``)
                             .addField('Want to support me?', `${links}`)
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
