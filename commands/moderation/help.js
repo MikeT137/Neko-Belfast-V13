@@ -3,6 +3,8 @@ module.exports = {
     description: "Shows you the commands",
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
+        const cmd = args.shift().toLowerCase();
+        var command = bot.commands.get(cmd);
         const links = '➤[Invite me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) ➤[Join my server!](https://discord.gg/xSkkeVf) ➤[Vote me!](https://top.gg/bot/727093236954431488/vote) ➤[Become my patreon!](https://www.patreon.com/user?u=10619598)'
         
         const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`meme\`, \`rps\`, \`storyrun\`';
@@ -48,7 +50,7 @@ module.exports = {
                         
                             .setTitle('Help - Fun')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', `\`${bot.commands.name.join(`, `)}\``)
+                            .addField('Commands:', `\`${command.name.join(`, `)}\``)
                             .addField('Want to support me?', `${links}`)
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
