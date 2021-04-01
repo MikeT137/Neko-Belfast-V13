@@ -16,12 +16,13 @@ module.exports = {
             'https://pa1.narvii.com/6729/31d1baa26c7c31e22b2e065f7dd4493abeb9ae5a_hq.gif',
             'https://64.media.tumblr.com/3fe6ba134426f050d1b6d81c9d72578d/tumblr_o0ohsePy0l1uxvvvzo1_500.gifv'
         ]
-
+        message.delete();
         if(message.mentions.members.size >= 1) {
             if(person.id == message.author.id) {
                 const embed = new Discord.MessageEmbed()
         
                     .setAuthor(`${message.author.username} just got a cookie 🍪`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setDescription(`${args.slice(1, args.length).join(' ')}`)
                     .setImage(random_cookie[Math.floor(Math.random() * random_cookie.length)])
                     .setColor('#7d77df')
                 message.channel.send(embed)
@@ -29,17 +30,19 @@ module.exports = {
                 const embed = new Discord.MessageEmbed()
         
                     .setAuthor(`${message.author.username} gave a cookie to ${person.username}, how nice 🍪`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setDescription(`${args.slice(1, args.length).join(' ')}`)
                     .setImage(random_cookie[Math.floor(Math.random() * random_cookie.length)])
                     .setColor('#7d77df')
                 message.channel.send(embed)
             }
-        }else if (!args[0]) {
+        }else {
             const embed = new Discord.MessageEmbed()
         
                 .setAuthor(`${message.author.username} just got a cookie 🍪`, message.author.displayAvatarURL({ dynamic: true }))
+                .setDescription(`${args.join(' ')}`)
                 .setImage(random_cookie[Math.floor(Math.random() * random_cookie.length)])
                 .setColor('#7d77df')
             message.channel.send(embed)
-        }else return;
+        }
     }
 }
