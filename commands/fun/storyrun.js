@@ -272,16 +272,16 @@ module.exports = {
                                                 `*You were correct: alright then, i will help you into killing the siren head! You then make a plan, and you, the hunter and Edward, start going after siren head: target spoted, charge on!! You throw your axe at siren head\'s chest, then the hunter shots siren head with his shotgun shells, then Edward gets his sword and...after all this trouble, siren head was defeated.*\n\n**YOU SURVIVED**\nEnding 16 out of ${endings}: The three musketeers\n${artist}`,
                                                 `*You were wrong. You try to run away but then Edward gets his sword out with his left hand and slices your head off*\n\n**YOU DIED**\nEnding 15 out of ${endings}: The lost bet\n${artist}`
                                             ]
-                                            msg.edit(choices[Math.floor(Math.random() * choices.length)])
-
-                                            if(msg.edit(choices[Math.floor(Math.random() * choices.length)]) === choices[0]) {
-                                                setTimeout(function(){
-                                                    msg.edit('**YOU SURVIVED**')
-                                                }, 45000);
-                                            }else if(msg.edit(choices[Math.floor(Math.random() * choices.length)]) === choices[1]) {
-                                                setTimeout(function(){
-                                                    msg.edit('**YOU DIED**')
-                                                }, 45000);
+                                            msg.edit(choices[Math.floor(Math.random() * choices.length)]).then(m => {
+                                                if(m == choices[0]) {
+                                                    setTimeout(function(){
+                                                        msg.edit('**YOU SURVIVED**')
+                                                    }, 45000);
+                                                }else if(m == choices[1]) {
+                                                    setTimeout(function(){
+                                                        msg.edit('**YOU DIED**')
+                                                    }, 45000);
+                                                }
                                             }
                                         }
                                         if(reaction13.emoji.name === '✊') {
