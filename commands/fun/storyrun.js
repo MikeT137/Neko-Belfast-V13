@@ -276,9 +276,9 @@ module.exports = {
 
                                             setTimeout(function(){
                                                 if(choice[Math.floor(Math.random() * choice.length)] === choice[0]) {
-                                                    msg.edit('**YOU SURVIVED**')
+                                                    msg.edit('**YOU DIED**')
                                                 }else if(choice[Math.floor(Math.random() * choice.length)] === choice[1]) {
-                                                    msg.edit('**DIED**')
+                                                    msg.edit('**YOU SURVIVED**')
                                                 }
                                             }, 45000)
                                         }
