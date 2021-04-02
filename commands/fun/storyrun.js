@@ -266,9 +266,13 @@ module.exports = {
                                     msg.awaitReactions(filter13, { max: 1 })
                                     .then(collected13 => {
                                         const reaction13 = collected13.first();
-                                        if(reaction13.emoji.name === '👍') {
+                                        if(reaction13.emoji.name === '👍' || reaction13.emoji.name === '👎') {
                                             message.channel.stopTyping();
-                                            msg.edit(`*You chose the left hand, and you were correct: alright then, i will help you into killing the siren head! You then make a plan, and you, the hunter and Edward, start going after siren head: target spoted, charge on!! You throw your axe at siren head\'s chest, then the hunter shots siren head with his shotgun shells, then Edward gets his sword and...after all this trouble, siren head was defeated.*\n\n**YOU SURVIVED**\nEnding 16 out of ${endings}: The three musketeers\n${artist}`)
+                                            const choices = [
+                                                `*You were correct: alright then, i will help you into killing the siren head! You then make a plan, and you, the hunter and Edward, start going after siren head: target spoted, charge on!! You throw your axe at siren head\'s chest, then the hunter shots siren head with his shotgun shells, then Edward gets his sword and...after all this trouble, siren head was defeated.*\n\n**YOU SURVIVED**\nEnding 16 out of ${endings}: The three musketeers\n${artist}`,
+                                                `*You were wrong. You try to run away but then Edward gets his sword out with his left hand and slices your head off*\n\n**YOU DIED**\nEnding 15 out of ${endings}: The lost bet\n${artist}`
+                                            ]
+                                            msg.edit(choices[Math.floor(Math.random() * choices.length)])
 
                                             setTimeout(function(){
                                                 msg.edit('**YOU SURVIVED**')
@@ -277,14 +281,6 @@ module.exports = {
                                         if(reaction13.emoji.name === '✊') {
                                             message.channel.stopTyping();
                                             msg.edit(`*You thought that he might trick you, so you risk it for the biscuit and say that it\'s not in the left hand nor in the right hand. In this circumstance, you\'re both right and wrong, and so Edward decides to not kill you, but he doesn\'t help you either, so you get thrown out in the wild forest, with just your axe. You get very unlucky to find out that siren head was only 5 steps away from you, and since you were thrown out and the dome being locked...you get killed by siren head*\n\n**YOU DIED**\nEnding 17 out of ${endings}: The avoided risk\n${artist}`)
-
-                                            setTimeout(function(){
-                                                msg.edit('**YOU DIED**')
-                                            }, 45000);
-                                        }
-                                        if(reaction13.emoji.name === '👎') {
-                                            message.channel.stopTyping();
-                                            msg.edit(`*You chose the right arm, and you were wrong. You try to run away but then Edward gets his sword out with his left hand and slices your head off*\n\n**YOU DIED**\nEnding 15 out of ${endings}: The lost bet\n${artist}`)
 
                                             setTimeout(function(){
                                                 msg.edit('**YOU DIED**')
