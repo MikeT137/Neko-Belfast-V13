@@ -274,8 +274,9 @@ module.exports = {
                                                     setTimeout(function(){
                                                         m.edit('**YOU SURVIVED**')
                                                     }, 45000)
-                                                }),
-
+                                                })
+                                            ]
+                                            const choice2 = [
                                                 msg.edit(`*You were wrong. You try to run away but then Edward gets his sword out with his left hand and slices your head off*\n\n**YOU DIED**\nEnding 15 out of ${endings}: The lost bet\n${artist}`)
                                                 .then(n => {
                                                     setTimeout(function(){
@@ -283,7 +284,11 @@ module.exports = {
                                                     }, 45000)
                                                 })
                                             ]
-                                            choice[Math.floor(Math.random() * choice.length)];
+                                            let choices = [
+                                                choice,
+                                                choice2
+                                            ]
+                                            choices[Math.floor(Math.random() * choices.length)];
                                         }
                                         if(reaction13.emoji.name === '✊') {
                                             message.channel.stopTyping();
