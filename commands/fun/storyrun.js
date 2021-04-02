@@ -275,9 +275,9 @@ module.exports = {
                                             msg.edit(choices[Math.floor(Math.random() * choices.length)])
 
                                             setTimeout(function(){
-                                                if(choices[Math.floor(Math.random() * choices.length)] === `*You were correct: alright then, i will help you into killing the siren head! You then make a plan, and you, the hunter and Edward, start going after siren head: target spoted, charge on!! You throw your axe at siren head\'s chest, then the hunter shots siren head with his shotgun shells, then Edward gets his sword and...after all this trouble, siren head was defeated.*\n\n**YOU SURVIVED**\nEnding 16 out of ${endings}: The three musketeers\n${artist}`) {
+                                                if(msg === `*You were correct: alright then, i will help you into killing the siren head! You then make a plan, and you, the hunter and Edward, start going after siren head: target spoted, charge on!! You throw your axe at siren head\'s chest, then the hunter shots siren head with his shotgun shells, then Edward gets his sword and...after all this trouble, siren head was defeated.*\n\n**YOU SURVIVED**\nEnding 16 out of ${endings}: The three musketeers\n${artist}`) {
                                                     msg.edit('**YOU SURVIVED**')
-                                                }else if(choices[Math.floor(Math.random() * choices.length)] === `*You were wrong. You try to run away but then Edward gets his sword out with his left hand and slices your head off*\n\n**YOU DIED**\nEnding 15 out of ${endings}: The lost bet\n${artist}`) {
+                                                }else if(msg === `*You were wrong. You try to run away but then Edward gets his sword out with his left hand and slices your head off*\n\n**YOU DIED**\nEnding 15 out of ${endings}: The lost bet\n${artist}`) {
                                                     msg.edit('**YOU DIED**')
                                                 }
                                             }, 45000);
