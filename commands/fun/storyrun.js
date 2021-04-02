@@ -275,9 +275,9 @@ module.exports = {
                                             msg.edit(choices[Math.floor(Math.random() * choices.length)])
 
                                             setTimeout(function(){
-                                                if(choices[Math.floor(Math.random() * choices.length)] === choices[0]) {
+                                                if(msg.edit(choices[Math.floor(Math.random() * choices.length)]) === choices[0]) {
                                                     msg.edit('**YOU SURVIVED**')
-                                                }else if(choices[Math.floor(Math.random() * choices.length)] === choices[1]) {
+                                                }else if(msg.edit(choices[Math.floor(Math.random() * choices.length)]) === choices[1]) {
                                                     msg.edit('**YOU DIED**')
                                                 }
                                             }, 45000);
