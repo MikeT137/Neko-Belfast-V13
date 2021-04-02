@@ -20,7 +20,7 @@ module.exports = {
                 .addFields(
                     {name: ':smiley: - Fun', value: 'Commands that everyone can use if they\'re bored', inline: true },
                     {name: ':face_with_monocle: - Info', value: 'Commands that give more information about specific things', inline: true },
-                    {name: ':performing_arts: - Interactive Roleplay (@someone)', value: 'Commands that work WITH pinging', inline: true },
+                    {name: ':performing_arts: - Interactive Roleplay', value: 'Commands that work WITH pinging', inline: true },
                     {name: ':tools: - Moderation', value: 'Commands that help admins to moderate their own servers', inline: true },
                     {name: ':game_die: - Random', value: 'Commands that give a random output everytime', inline: true },
                     {name: ':clown: - Self Roleplay', value: 'Commands that work WITHOUT pinging', inline: true }
@@ -66,7 +66,7 @@ module.exports = {
                     }else if(reaction.emoji.name === '🎭') {
                         let embedI = new Discord.MessageEmbed()
 
-                            .setTitle('Help - Interactive Roleplay (@someone)')
+                            .setTitle('Help - Interactive Roleplay')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
                             .addField('Commands:', `${interractive}`)
                             .addField('Want to support me?', `${links}`)
@@ -181,7 +181,7 @@ module.exports = {
             case 'interractive' || 'interractive roleplay':
                 let embedI2 = new Discord.MessageEmbed()
 
-                    .setTitle('Help - Interactive Roleplay (@someone)')
+                    .setTitle('Help - Interactive Roleplay')
                     .setDescription('Type \`b.help (command)\` to get information about a specific command')
                     .addField('Commands:', `${interractive}`)
                     .addField('Want to support me?', `${links}`)
