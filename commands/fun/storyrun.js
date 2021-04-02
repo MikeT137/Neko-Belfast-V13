@@ -274,13 +274,15 @@ module.exports = {
                                             ]
                                             msg.edit(choices[Math.floor(Math.random() * choices.length)])
 
-                                            setTimeout(function(){
-                                                if(msg.edit(choices[Math.floor(Math.random() * choices.length)]) === choices[0]) {
+                                            if(msg.edit(choices[Math.floor(Math.random() * choices.length)]) === choices[0]) {
+                                                setTimeout(function(){
                                                     msg.edit('**YOU SURVIVED**')
-                                                }else if(msg.edit(choices[Math.floor(Math.random() * choices.length)]) === choices[1]) {
+                                                }, 45000);
+                                            }else if(msg.edit(choices[Math.floor(Math.random() * choices.length)]) === choices[1]) {
+                                                setTimeout(function(){
                                                     msg.edit('**YOU DIED**')
-                                                }
-                                            }, 45000);
+                                                }, 45000);
+                                            }
                                         }
                                         if(reaction13.emoji.name === '✊') {
                                             message.channel.stopTyping();
