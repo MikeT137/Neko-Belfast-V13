@@ -282,7 +282,7 @@ module.exports = {
                                                         msg.edit('**YOU DIED**')
                                                     }, 45000);
                                                 }
-                                            }
+                                            })
                                         }
                                         if(reaction13.emoji.name === '✊') {
                                             message.channel.stopTyping();
