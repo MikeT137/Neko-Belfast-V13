@@ -18,12 +18,12 @@ module.exports = {
                 .setTitle('Help')
                 .setDescription('React with an emoji, or type \`b.help (category)\` to get the commands of that specific category!')
                 .addFields(
-                    {name: ':smiley: - Fun', value: 'Commands that everyone can use if they\'re bored', inline: true },
-                    {name: ':face_with_monocle: - Info', value: 'Commands that give more information about specific things', inline: true },
-                    {name: ':performing_arts: - Interactive Roleplay (@someone)', value: 'Commands that only work WITH pinging', inline: true },
-                    {name: ':tools: - Moderation', value: 'Commands that help admins to moderate their own servers', inline: true },
-                    {name: ':game_die: - Random', value: 'Commands that give a random output everytime', inline: true },
-                    {name: ':clown: - Self Roleplay', value: 'Commands that only work WITHOUT pinging', inline: true }
+                    {name: ':smiley: - Fun', value: 'Commands made for entertaining', inline: true },
+                    {name: ':face_with_monocle: - Info', value: 'Commands that give more information', inline: true },
+                    {name: ':performing_arts: - Interactive Roleplay (@someone)', value: 'Commands that work WITH pinging', inline: true },
+                    {name: ':tools: - Moderation', value: 'Commands that help admins to moderate', inline: true },
+                    {name: ':game_die: - Random', value: 'Commands that give a random output', inline: true },
+                    {name: ':clown: - Self Roleplay', value: 'Commands that work WITHOUT pinging', inline: true }
                 )
                 .addField('Want to support me?', `${links}`)
                 .setThumbnail(bot.user.displayAvatarURL())
@@ -137,7 +137,7 @@ module.exports = {
             break;
 
             case 'meme':
-                message.channel.send('It sends a meme off of a random subreddit, those being: [dankmemes, memes, meme, Animemes, goodanimemes]')
+                message.channel.send('It sends a meme off of a random subreddit, those being: dankmemes, memes, meme, Animemes, goodanimemes: \`b.meme\`')
             break;
 
             case 'rps':
