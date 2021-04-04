@@ -10,7 +10,7 @@ module.exports = {
 
         const embed = new Discord.MessageEmbed()
 
-            .setTitle(`${meme.title}`)
+            .setTitle(meme.title)
             .setDescription(`${meme.upvoteRatio}% of people have liked this :thumbsup:`)
             .setImage(meme.img)
             .setURL(`https://reddit.com/r/${subreddit}`)
