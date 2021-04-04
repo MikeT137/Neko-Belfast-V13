@@ -10,11 +10,11 @@ module.exports = {
 
         const embed = new Discord.MessageEmbed()
 
-            .setTitle(`From r/${subreddit}`)
+            .setTitle(`${meme.title}`)
             .setDescription(`${meme.upvoteRatio}% of people have liked this :thumbsup:`)
             .setImage(meme.img)
             .setURL(`https://reddit.com/r/${subreddit}`)
-            .setFooter(`Posted by u/${meme.author}`)
+            .setFooter(`Posted by in r/${subreddit} by u/${meme.author}`)
             .setColor('#7d77df')
         message.channel.send(embed);
     }
