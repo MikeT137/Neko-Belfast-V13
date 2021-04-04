@@ -15,14 +15,25 @@ module.exports = {
         }).then((res) =>
             res.json()
         ).then((json) => {
-            const embed = new Discord.MessageEmbed()
-        
-                .setAuthor(`${message.author.username} is running away`, message.author.displayAvatarURL({ dynamic: true }))
-                .setDescription(`${args.join(' ')}`)
-                .setImage(json.url)
-                .setFooter('Powered by otakugifs.xyz')
-                .setColor('#7d77df')
-            message.channel.send(embed)
+            if(message.mentions.members.size >= 1 && person.id != message.author.id) {
+                    const embed = new Discord.MessageEmbed()
+            
+                        .setAuthor(`${message.author.username} is running away from ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
+                        .setDescription(`${args.slice(1, args.length).join(' ')}`)
+                        .setImage(json.url)
+                        .setFooter('Powered by otakugifs.xyz')
+                        .setColor('#7d77df')
+                    message.channel.send(embed);
+            }else {
+                const embed = new Discord.MessageEmbed()
+            
+                    .setAuthor(`${message.author.username} is running away`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setDescription(`${args.join(' ')}`)
+                    .setImage(json.url)
+                    .setFooter('Powered by otakugifs.xyz')
+                    .setColor('#7d77df')
+                message.channel.send(embed)
+            }
         })
     }
 }
