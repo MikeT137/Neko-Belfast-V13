@@ -7,21 +7,25 @@ module.exports = {
         if(!args[0]){
             message.channel.send('You didn\'t add a calculation')
         }else{
-        let resp;
+            let resp;
 
-        try{
-            resp = math.evaluate(args.join(' '));
+            try{
+                resp = math.evaluate(args.join(' '));
 
-            const embed = new Discord.MessageEmbed()
+                if(resp > 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+                    message.channel.send('M-master, that\'s too big nya!')
+                }else {
+                    const embed = new Discord.MessageEmbed()
 
-                .setTitle('Calculation')
-                .addField('Question', `${args.join(' ')} = ?`)
-                .addField('Answer', `${resp}`)
-                .setColor('#7d77df')
-            message.channel.send(embed);
-        }catch(e){
-            message.channel.send('I can\'t solve that, please input a valid calculation.')
-        }
+                        .setTitle('Calculation')
+                        .addField('Question', `${args.join(' ')} = ?`)
+                        .addField('Answer', `${resp}`)
+                        .setColor('#7d77df')
+                    message.channel.send(embed);
+                }
+            }catch(e){
+                message.channel.send('I can\'t solve that, please input a valid calculation.')
+            }
         }
     }
 }
