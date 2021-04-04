@@ -4,6 +4,7 @@ module.exports = {
     run: async(bot, message, args) => {
         const Discord = require('discord.js');
         const {api_key} = require ('../../config.json')
+        const person = message.mentions.users.first();
         const fetch = require('node-fetch');
         const url = 'https://api.otakugifs.xyz/gif/run';
         message.delete();
