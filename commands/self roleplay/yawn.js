@@ -17,7 +17,7 @@ module.exports = {
         ).then((json) => {
             const embed = new Discord.MessageEmbed()
         
-                .setAuthor(`${message.author.username} is feeling sleepy`, message.author.displayAvatarURL({ dynamic: true }))
+                .setAuthor(`${message.author.username} is sleepy`, message.author.displayAvatarURL({ dynamic: true }))
                 .setDescription(`${args.join(' ')}`)
                 .setImage(json.url)
                 .setFooter('Powered by otakugifs.xyz')
