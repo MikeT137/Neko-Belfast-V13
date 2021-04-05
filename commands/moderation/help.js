@@ -281,15 +281,34 @@ module.exports = {
                 message.channel.send(embedS2);
             break;
 
-            case 'blush' || 'bored' || 'clap' || 'confused' || 'cry' || 'dab' || 'dance' || 'drool' || 'facepalm' || 'howl':
-                message.channel.send(`It sends a ${args[0]}ing gif: \`b.${args[0]}\``)
-            break;
-
-            case 'laugh' || 'nom' || 'peek' || 'pout' || 'purr' || 'rage' || 'run' || 'scared' || 'shrug':
-                message.channel.send(`It sends a ${args[0]}ing gif: \`b.${args[0]}\``)
-            break;
-
-            case 'sigh' || 'sip' || 'smile' || 'smug' || 'surprised' || 'think' || 'wag' || 'wink' || 'yawn':
+            case 'blush':
+            case 'bored':
+            case 'clap':
+            case 'confused':
+            case 'cry':
+            case 'dab':
+            case 'dance':
+            case 'droll':
+            case 'facepalm':
+            case 'howl':
+            case 'laugh':
+            case 'nom':
+            case 'peek':
+            case 'pout':
+            case 'purr':
+            case 'rage':
+            case 'run':
+            case 'scared':
+            case 'shrug':
+            case 'sigh':
+            case 'sip':
+            case 'smile':
+            case 'smug':
+            case 'surprised':
+            case 'think':
+            case 'wag':
+            case 'wink':
+            case 'yawn':
                 message.channel.send(`It sends a ${args[0]}ing gif: \`b.${args[0]}\``)
             break;
         }
