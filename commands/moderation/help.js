@@ -191,7 +191,7 @@ module.exports = {
             break;
 
             case ['bite', 'boop', 'brofist', 'cheer', 'cuddle', 'handhold', 'hug', 'kiss', 'lick', 'nuzzle', 'pat', 'poke', 'punch', 'shoot', 'slap', 'snuggle', 'sorry', 'stare', 'tickle', 'wave']:
-                message.channel.send(`It sends a ${args[0]}ing gif: \`b.${args[0]} (ping)\``)
+                message.channel.send(`It sends a ${args[1]}ing gif: \`b.${args[1]} (ping)\``)
             break;
 
             //Moderation
