@@ -281,11 +281,11 @@ module.exports = {
                 message.channel.send(embedS2);
             break;
 
-            case 'blush' || 'bored' || 'clap' || 'confused' || 'cry' || 'dab' || 'dance' || 'drool' || 'facepalm' || 'howl' || 'laugh' || 'nom' || 'peek' || 'pout' || 'purr' || 'rage' || 'run' || 'scared' || 'shrug' || 'sigh' || 'sip' || 'smile' || 'smug' || 'surprised' || 'think':
+            case 'blush' || 'bored' || 'clap' || 'confused' || 'cry' || 'dab' || 'dance' || 'drool' || 'facepalm' || 'howl' || 'laugh' || 'nom' || 'peek' || 'pout' || 'purr' || 'rage' || 'run' || 'scared' || 'shrug' || 'sigh':
                 message.channel.send(`It sends a ${args[0]}ing gif: \`b.${args[0]}\``)
             break;
 
-            case 'wag' || 'wink' || 'yawn':
+            case 'sip' || 'smile' || 'smug' || 'surprised' || 'think' || 'wag' || 'wink' || 'yawn':
                 message.channel.send(`It sends a ${args[0]}ing gif: \`b.${args[0]}\``)
             break;
         }
