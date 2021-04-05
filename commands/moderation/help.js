@@ -265,7 +265,7 @@ module.exports = {
             break;
 
             case 'ship':
-                message.channel.send('It sends a random level of love-affinity between 2 users:\n-yourself with another user: \`b.love (ping)\`\n-two other users: \`b.ship (ping) (ping)\`')
+                message.channel.send('It sends a random level of love-affinity between 2 users:\n-yourself with another user: \`b.ship (ping)\`\n-two other users: \`b.ship (ping) (ping)\`')
             break;
 
             //Self
