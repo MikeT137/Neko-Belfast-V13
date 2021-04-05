@@ -190,7 +190,26 @@ module.exports = {
                 message.channel.send(embedI2);
             break;
 
-            case 'bite' || 'boop' || 'brofist' || 'cheer' || 'cuddle' || 'handhold' || 'hug' || 'kiss' || 'lick' || 'nuzzle' || 'pat' || 'poke' || 'punch' || 'shoot' || 'slap' || 'snuggle' || 'sorry' || 'stare' || 'tickle' || 'wave':
+            case 'bite':
+            case 'boop':
+            case 'brofist':
+            case 'cheer':
+            case 'cuddle':
+            case 'handhold':
+            case 'hug':
+            case 'kiss':
+            case 'lick':
+            case 'nuzzle':
+            case 'pat':
+            case 'poke':
+            case 'punch':
+            case 'shoot':
+            case 'slap':
+            case 'snuggle':
+            case 'sorry':
+            case 'stare':
+            case 'tickle':
+            case 'wave':
                 message.channel.send(`It sends a ${args[0]}ing gif: \`b.${args[0]} (ping)\``)
             break;
 
