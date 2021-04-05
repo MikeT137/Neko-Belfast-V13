@@ -190,8 +190,8 @@ module.exports = {
                 message.channel.send(embedI2);
             break;
 
-            case ['bite', 'boop', 'brofist', 'cheer', 'cuddle', 'handhold', 'hug', 'kiss', 'lick', 'nuzzle', 'pat', 'poke', 'punch', 'shoot', 'slap', 'snuggle', 'sorry', 'stare', 'tickle', 'wave']:
-                message.channel.send(`It sends a ${args[1]}ing gif: \`b.${args[1]} (ping)\``)
+            case 'bite' || 'boop' || 'brofist' || 'cheer' || 'cuddle' || 'handhold' || 'hug' || 'kiss' || 'lick' || 'nuzzle' || 'pat' || 'poke' || 'punch' || 'shoot' || 'slap' || 'snuggle' || 'sorry' || 'stare' || 'tickle' || 'wave':
+                message.channel.send(`It sends a ${args[0]}ing gif: \`b.${args[0]} (ping)\``)
             break;
 
             //Moderation
@@ -281,7 +281,7 @@ module.exports = {
                 message.channel.send(embedS2);
             break;
 
-            case ['blush', 'bored', 'clap', 'confused', 'cry', 'dab', 'dance', 'drool', 'facepalm', 'howl', 'laugh', 'nom', 'peek', 'pout', 'purr', 'rage', 'run', 'scared', 'shrug', 'sigh', 'sip', 'smile', 'smug', 'surprised', 'think', 'wag', 'wink', 'yawn']:
+            case 'blush' || 'bored' || 'clap' || 'confused' || 'cry' || 'dab' || 'dance' || 'drool' || 'facepalm' || 'howl' || 'laugh' || 'nom' || 'peek' || 'pout' || 'purr' || 'rage' || 'run' || 'scared' || 'shrug' || 'sigh' || 'sip' || 'smile' || 'smug' || 'surprised' || 'think' || 'wag' || 'wink' || 'yawn':
                 message.channel.send(`It sends a ${args[0]}ing gif: \`b.${args[0]}\``)
             break;
         }
