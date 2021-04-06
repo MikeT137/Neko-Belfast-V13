@@ -68,19 +68,25 @@ module.exports = {
                     }else return;
                 })
             })
-        }else if (args[0] == 'fun') {
-            message.channel.send(embedF);
-        }else if (args[0] == 'info') {
-            message.channel.send(embedi);
-        }else if (args[0] == 'interactive' || 'interractive roleplay') {
-            message.channel.send(embedI);
-        }else if (args[0] == 'moderation') {
-            message.channel.send(embedM);
-        }else if (args[0] == 'random') {
-            message.channel.send(embedR);
-        }else if (args[0] == 'self' || 'self roleplay') {
-            message.channel.send(embedS);
         }else {
+            if (args[0] == 'fun') {
+                message.channel.send(embedF);
+            }
+            if (args[0] == 'info') {
+                message.channel.send(embedi);
+            }
+            if (args[0] == 'interactive' || 'interractive roleplay') {
+                message.channel.send(embedI);
+            }
+            if (args[0] == 'moderation') {
+                message.channel.send(embedM);
+            }
+            if (args[0] == 'random') {
+                message.channel.send(embedR);
+            }
+            if (args[0] == 'self' || 'self roleplay') {
+                message.channel.send(embedS);
+            }
             const command = bot.commands.get(args[0].toLowerCase());
 
             if(command) {
