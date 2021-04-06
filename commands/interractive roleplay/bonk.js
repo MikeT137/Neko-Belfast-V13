@@ -25,7 +25,7 @@ module.exports = {
 
                     .setAuthor(`${message.author.username} is bonking ${person.username}, auch`, message.author.displayAvatarURL({ dynamic: true }))
                     .setDescription(`${args.slice(1, args.length).join(' ')}`)
-                    .setImage(random_bonk[Math.floor(Math.random() * random_punch.length)])
+                    .setImage(random_bonk[Math.floor(Math.random() * random_bonk.length)])
                     .setColor('#7d77df')
                 message.channel.send(embed);
             }
