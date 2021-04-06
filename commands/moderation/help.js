@@ -106,9 +106,16 @@ module.exports = {
                     }else return;
                 })
             })
-        }else switch (args[0]){
+        }else if (args[0] == command){
+            const embedC = new Discord.MessageEmbed()
+                        
+                .setTitle(`Command: ${command.name}`)
+                .setDescription(`Description: ${command.description}`)
+                .addField('Usage:', `b.${command.name}`)
+                .setColor('#7d77df')
+            message.channel.send(embedC);
             //Fun
-            case 'fun':
+            /*case 'fun':
                 let embedF2 = new Discord.MessageEmbed()
                         
                     .setTitle('Help - Fun')
@@ -330,7 +337,7 @@ module.exports = {
             case 'wink':
             case 'yawn':
                 message.channel.send(`It sends a ${args[0]}ing gif: \`b.${args[0]}\``)
-            break;
+            break;*/
         }
     }
 }
