@@ -49,7 +49,7 @@ module.exports = {
                         
                             .setTitle('Help - Fun')
                             .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', `${fun}`)
+                            .addField('Commands:', `\`${bot.commands.get("./commands/fun/").join('\`, \`')}\``)
                             .addField('Want to support me?', `${links}`)
                             .setThumbnail(bot.user.displayAvatarURL())
                             .setColor('#7d77df')
@@ -110,8 +110,8 @@ module.exports = {
         }else if (command){
             const embedC = new Discord.MessageEmbed()
                         
-                .setTitle(`Command: ${command.name}`)
-                .setDescription(`Description: ${command.description}`)
+                .setTitle(`Command: \`${command.name}\``)
+                .addField('Description:', `${command.description}`)
                 .addField('Usage:', `b.${command.name}`)
                 .setColor('#7d77df')
             message.channel.send(embedC);
