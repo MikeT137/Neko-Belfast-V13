@@ -9,10 +9,17 @@ module.exports = {
         
         const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`meme\`, \`rps\`, \`storyrun\`';
         const info = '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`';
-        const interractive = '\`apologise\`, \`bite\`, \`bonk\`, \`boop\`, \`brofist\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`hug\`, \`kiss\`, \`lick\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`tickle\`, \`wave\`';
+        const interactive = '\`apologise\`, \`bite\`, \`bonk\`, \`boop\`, \`brofist\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`hug\`, \`kiss\`, \`lick\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`tickle\`, \`wave\`';
         const mod = '\`ban\`, \`clear\`, \`help\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`';
         const random = '\`8ball\`, \`coinflip\`, \`rng\`, \`ship\`';
         const self = '\`blush\`, \`bored\`, \`clap\`, \`confused\`, \`cry\`, \`dab\`, \`dance\`, \`drool\`, \`facepalm\`, \`howl\`, \`laugh\`, \`nom\`, \`peek\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`scared\`, \`shrug\`, \`sigh\`, \`sip\`, \`smile\`, \`smug\`, \`surprised\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
+
+        const embedF = new Discord.MessageEmbed().setTitle('Help - Fun').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `${fun}`).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
+        const embedi = new Discord.MessageEmbed().setTitle('Help - Info').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `${info}`).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
+        const embedI = new Discord.MessageEmbed().setTitle('Help - Interactive Roleplay').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `${interactive}`).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
+        const embedM = new Discord.MessageEmbed().setTitle('Help - Moderation').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `${mod}`).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
+        const embedR = new Discord.MessageEmbed().setTitle('Help - Random').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `${random}`).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
+        const embedS = new Discord.MessageEmbed().setTitle('Help - Self Roleplay').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `${self}`).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
 
         if(!args[0]) {
             const embed = new Discord.MessageEmbed()
@@ -46,64 +53,17 @@ module.exports = {
                     const reaction = collected.first();
 
                     if(reaction.emoji.name === '😃') {
-                        let embedF = new Discord.MessageEmbed()
-                        
-                            .setTitle('Help - Fun')
-                            .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', `${fun}`)
-                            .addField('Want to support me?', `${links}`)
-                            .setThumbnail(bot.user.displayAvatarURL())
-                            .setColor('#7d77df')
                         msg.edit(embedF);
                     }else if(reaction.emoji.name === '🧐') {
-                        let embedi = new Discord.MessageEmbed()
-                        
-                            .setTitle('Help - Info')
-                            .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', `${info}`)
-                            .addField('Want to support me?', `${links}`)
-                            .setThumbnail(bot.user.displayAvatarURL())
-                            .setColor('#7d77df')
                         msg.edit(embedi);
                     }else if(reaction.emoji.name === '🎭') {
-                        let embedI = new Discord.MessageEmbed()
-
-                            .setTitle('Help - Interactive Roleplay')
-                            .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', `${interractive}`)
-                            .addField('Want to support me?', `${links}`)
-                            .setThumbnail(bot.user.displayAvatarURL())
-                            .setColor('#7d77df')
                         msg.edit(embedI);
                     }else if(reaction.emoji.name === '🛠️') {
                         let embedM = new Discord.MessageEmbed()
-
-                            .setTitle('Help - Moderation')
-                            .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', `${mod}`)
-                            .addField('Want to support me?', `${links}`)
-                            .setThumbnail(bot.user.displayAvatarURL())
-                            .setColor('#7d77df')
                         msg.edit(embedM);
                     }else if(reaction.emoji.name === '🎲') {
-                        let embedR = new Discord.MessageEmbed()
-                        
-                            .setTitle('Help - Random')
-                            .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', `${random}`)
-                            .addField('Want to support me?', `${links}`)
-                            .setThumbnail(bot.user.displayAvatarURL())
-                            .setColor('#7d77df')
                         msg.edit(embedR);
                     }else if(reaction.emoji.name === '🤡') {
-                        let embedS = new Discord.MessageEmbed()
-
-                            .setTitle('Help - Self Roleplay')
-                            .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                            .addField('Commands:', `${self}`)
-                            .addField('Want to support me?', `${links}`)
-                            .setThumbnail(bot.user.displayAvatarURL())
-                            .setColor('#7d77df')
                         msg.edit(embedS);
                     }else return;
                 })
