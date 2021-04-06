@@ -25,7 +25,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
             
                 .setTitle('Help')
-                .setDescription('React with an emoji, or type \`b.help (category)\` to get the commands of that specific category!')
+                .setDescription('React with an emoji to get the commands of that specific category!')
                 .addFields(
                     {name: ':smiley: - Fun', value: 'Commands that everyone can use if they\'re bored', inline: true },
                     {name: ':face_with_monocle: - Info', value: 'Commands that give more information about specific things', inline: true },
@@ -69,37 +69,19 @@ module.exports = {
                 })
             })
         }else {
-            if (args[0] == 'fun') {
-                message.channel.send(embedF);
-            }
-            if (args[0] == 'info') {
-                message.channel.send(embedi);
-            }
-            if (args[0] == 'interactive' || 'interractive roleplay') {
-                message.channel.send(embedI);
-            }
-            if (args[0] == 'moderation') {
-                message.channel.send(embedM);
-            }
-            if (args[0] == 'random') {
-                message.channel.send(embedR);
-            }
-            if (args[0] == 'self' || 'self roleplay') {
-                message.channel.send(embedS);
-            }
             const command = bot.commands.get(args[0].toLowerCase());
 
             if(command) {
                 const embedC = new Discord.MessageEmbed()
                             
                     .setTitle(`Command: \`${command.name}\``)
-                    .addField('Category:', `${command.category.toUpperCase()}`)
+                    .addField('Category:', `${command.category}`)
                     .addField('Description:', `${command.description}`)
                     .addField('Usage:', `${command.usage}`)
                     .setColor('#7d77df')
                 message.channel.send(embedC);
             }else {
-                message.channel.send('You typed the wrong category / command')
+                message.channel.send('You typed the wrong command')
             }
         }
     }
