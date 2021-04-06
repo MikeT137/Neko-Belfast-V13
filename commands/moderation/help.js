@@ -117,7 +117,7 @@ module.exports = {
                     .setTitle(`Command: \`${command.name}\``)
                     .addField('Category:', `${command.category}`)
                     .addField('Description:', `${command.description}`)
-                    .addField('Usage:', `${usage}`)
+                    .addField('Usage:', `${command.usage}`)
                     .setColor('#7d77df')
                 message.channel.send(embedC);
             }
