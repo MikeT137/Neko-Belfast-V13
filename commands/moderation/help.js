@@ -4,9 +4,8 @@ module.exports = {
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const links = '➤[Invite me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) ➤[Join my server!](https://discord.gg/xSkkeVf) ➤[Vote me!](https://top.gg/bot/727093236954431488/vote) ➤[Become my patreon!](https://www.patreon.com/user?u=10619598)'
-        const command = bot.commands.get(args[0].toLowerCase());
         
-        const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`meme\`, \`rps\`, \`storyrun\`';
+        //const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`meme\`, \`rps\`, \`storyrun\`';
         const info = '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`';
         const interractive = '\`bite\`, \`bonk\`, \`boop\`, \`brofist\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`hug\`, \`kiss\`, \`lick\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`sorry\`, \`stare\`, \`tickle\`, \`wave\`';
         const mod = '\`ban\`, \`clear\`, \`help\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`';
@@ -107,14 +106,18 @@ module.exports = {
                     }else return;
                 })
             })
-        }else if (command){
-            const embedC = new Discord.MessageEmbed()
-                        
-                .setTitle(`Command: \`${command.name}\``)
-                .addField('Description:', `${command.description}`)
-                .addField('Usage:', `b.${command.name}`)
-                .setColor('#7d77df')
-            message.channel.send(embedC);
+        }else {
+            const command = bot.commands.get(args[0].toLowerCase());
+
+            if(command) {
+                const embedC = new Discord.MessageEmbed()
+                            
+                    .setTitle(`Command: \`${command.name}\``)
+                    .addField('Description:', `${command.description}`)
+                    .addField('Usage:', `b.${command.name}`)
+                    .setColor('#7d77df')
+                message.channel.send(embedC);
+            }
             //Fun
             /*case 'fun':
                 let embedF2 = new Discord.MessageEmbed()
