@@ -115,7 +115,7 @@ module.exports = {
                 const embedC = new Discord.MessageEmbed()
                             
                     .setTitle(`Command: \`${command.name}\``)
-                    .addField('Category:' `${command.category}`)
+                    .addField('Category:', `${command.category}`)
                     .addField('Description:', `${command.description}`)
                     .addField('Usage:', `${usage}`)
                     .setColor('#7d77df')
