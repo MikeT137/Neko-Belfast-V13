@@ -5,7 +5,7 @@ module.exports = {
         const Discord = require('discord.js');
         const links = '➤[Invite me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) ➤[Join my server!](https://discord.gg/xSkkeVf) ➤[Vote me!](https://top.gg/bot/727093236954431488/vote) ➤[Become my patreon!](https://www.patreon.com/user?u=10619598)'
         const cmd = args.shift().toLowerCase();
-        //var command = bot.commands.get(cmd);
+        let command = bot.commands.get(cmd);
         
         const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`meme\`, \`rps\`, \`storyrun\`';
         const info = '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`';
@@ -108,12 +108,12 @@ module.exports = {
                     }else return;
                 })
             })
-        }else if (args[0] == cmd){
+        }else if (args[0] == command){
             const embedC = new Discord.MessageEmbed()
                         
-                .setTitle(`Command: ${cmd.name}`)
-                .setDescription(`Description: ${cmd.description}`)
-                .addField('Usage:', `b.${cmd.name}`)
+                .setTitle(`Command: ${command.name}`)
+                .setDescription(`Description: ${command.description}`)
+                .addField('Usage:', `b.${command.name}`)
                 .setColor('#7d77df')
             message.channel.send(embedC);
             //Fun
