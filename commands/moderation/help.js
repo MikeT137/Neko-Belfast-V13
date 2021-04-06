@@ -15,7 +15,7 @@ module.exports = {
         const self = '\`blush\`, \`bored\`, \`clap\`, \`confused\`, \`cry\`, \`dab\`, \`dance\`, \`drool\`, \`facepalm\`, \`howl\`, \`laugh\`, \`nom\`, \`peek\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`scared\`, \`shrug\`, \`sigh\`, \`sip\`, \`smile\`, \`smug\`, \`surprised\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
 
         if(!args[0]) {
-            let embed = new Discord.MessageEmbed()
+            const embed = new Discord.MessageEmbed()
             
                 .setTitle('Help')
                 .setDescription('React with an emoji, or type \`b.help (category)\` to get the commands of that specific category!')
@@ -108,6 +108,18 @@ module.exports = {
                     }else return;
                 })
             })
+        }else if (args[0] == 'fun') {
+            message.channel.send(embedF);
+        }else if (args[0] == 'info') {
+            message.channel.send(embedi);
+        }else if (args[0] == 'interactive' || 'interractive roleplay') {
+            message.channel.send(embedI);
+        }else if (args[0] == 'moderation') {
+            message.channel.send(embedM);
+        }else if (args[0] == 'random') {
+            message.channel.send(embedR);
+        }else if (args[0] == 'self' || 'self roleplay') {
+            message.channel.send(embedS);
         }else {
             const command = bot.commands.get(args[0].toLowerCase());
 
@@ -115,120 +127,14 @@ module.exports = {
                 const embedC = new Discord.MessageEmbed()
                             
                     .setTitle(`Command: \`${command.name}\``)
-                    .addField('Category:', `${command.category}`)
+                    .addField('Category:', `${command.category.toUpperCase()}`)
                     .addField('Description:', `${command.description}`)
                     .addField('Usage:', `${command.usage}`)
                     .setColor('#7d77df')
                 message.channel.send(embedC);
+            }else {
+                message.channel.send('You typed the wrong category / command')
             }
-            //Fun
-            /*case 'fun':
-                let embedF2 = new Discord.MessageEmbed()
-                        
-                    .setTitle('Help - Fun')
-                    .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                    .addField('Commands:', `${fun}`)
-                    .addField('Want to support me?', `${links}`)
-                    .setThumbnail(bot.user.displayAvatarURL())
-                    .setColor('#7d77df')
-                message.channel.send(embedF2);
-            break;
-
-            //Info
-            case 'info':
-                let embedi2 = new Discord.MessageEmbed()
-                        
-                    .setTitle('Help - Info')
-                    .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                    .addField('Commands:', `${info}`)
-                    .addField('Want to support me?', `${links}`)
-                    .setThumbnail(bot.user.displayAvatarURL())
-                    .setColor('#7d77df')
-                message.channel.send(embedi2);
-            break;
-
-            //Interactive (@someone)
-            case 'interractive' || 'interractive roleplay':
-                let embedI2 = new Discord.MessageEmbed()
-
-                    .setTitle('Help - Interactive Roleplay')
-                    .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                    .addField('Commands:', `${interractive}`)
-                    .addField('Want to support me?', `${links}`)
-                    .setThumbnail(bot.user.displayAvatarURL())
-                    .setColor('#7d77df')
-                message.channel.send(embedI2);
-            break;
-
-            //Moderation
-            case 'moderation':
-                let embedM2 = new Discord.MessageEmbed()
-
-                    .setTitle('Help - Moderation')
-                    .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                    .addField('Commands:', `${mod}`)
-                    .addField('Want to support me?', `${links}`)
-                    .setThumbnail(bot.user.displayAvatarURL())
-                    .setColor('#7d77df')
-                message.channel.send(embedM2);
-            break;
-
-            //Random
-            case 'random':
-                let embedR2 = new Discord.MessageEmbed()
-                        
-                    .setTitle('Help - Random')
-                    .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                    .addField('Commands:', `${random}`)
-                    .addField('Want to support me?', `${links}`)
-                    .setThumbnail(bot.user.displayAvatarURL())
-                    .setColor('#7d77df')
-                message.channel.send(embedR2);
-            break;
-
-            //Self
-            case 'self' || 'self roleplay':
-                let embedS2 = new Discord.MessageEmbed()
-
-                    .setTitle('Help - Self Roleplay')
-                    .setDescription('Type \`b.help (command)\` to get information about a specific command')
-                    .addField('Commands:', `${self}`)
-                    .addField('Want to support me?', `${links}`)
-                    .setThumbnail(bot.user.displayAvatarURL())
-                    .setColor('#7d77df')
-                message.channel.send(embedS2);
-            break;
-
-            case 'blush':
-            case 'bored':
-            case 'clap':
-            case 'confused':
-            case 'cry':
-            case 'dab':
-            case 'dance':
-            case 'droll':
-            case 'facepalm':
-            case 'howl':
-            case 'laugh':
-            case 'nom':
-            case 'peek':
-            case 'pout':
-            case 'purr':
-            case 'rage':
-            case 'run':
-            case 'scared':
-            case 'shrug':
-            case 'sigh':
-            case 'sip':
-            case 'smile':
-            case 'smug':
-            case 'surprised':
-            case 'think':
-            case 'wag':
-            case 'wink':
-            case 'yawn':
-                message.channel.send(`It sends a ${args[0]}ing gif: \`b.${args[0]}\``)
-            break;*/
         }
     }
 }
