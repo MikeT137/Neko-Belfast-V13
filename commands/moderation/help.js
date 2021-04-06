@@ -106,12 +106,12 @@ module.exports = {
                     }else return;
                 })
             })
-        }else if (args[0] == command){
+        }else if (args[0] == cmd){
             const embedC = new Discord.MessageEmbed()
                         
-                .setTitle(`Command: ${command.name}`)
-                .setDescription(`Description: ${command.description}`)
-                .addField('Usage:', `b.${command.name}`)
+                .setTitle(`Command: ${cmd.name}`)
+                .setDescription(`Description: ${cmd.description}`)
+                .addField('Usage:', `b.${cmd.name}`)
                 .setColor('#7d77df')
             message.channel.send(embedC);
             //Fun
