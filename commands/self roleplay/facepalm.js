@@ -1,6 +1,8 @@
 module.exports = {
     name:'facepalm',
-    description: "The user facepalms",
+    description: "It sends a facepalming gif",
+    usage: 'b.facepalm',
+    category: 'self roleplay',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const random_fp = [

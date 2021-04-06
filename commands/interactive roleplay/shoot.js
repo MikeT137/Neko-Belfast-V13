@@ -1,6 +1,8 @@
 module.exports = {
     name:'shoot',
-    description: "Shoots at a user",
+    description: "It sends a shooting gif",
+    usage: 'b.shoot (ping)',
+    category: 'interactive roleplay',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const person = message.mentions.users.first();

@@ -1,6 +1,8 @@
 module.exports = {
     name: 'ship',
-    description: 'The user ships itself with another user, or ships two other users',
+    description: 'It sends a random level of love-affinity between 2 users (yourself with another user / two other users)',
+    usage: 'b.ship (ping) / b.ship (ping) (ping)',
+    category: 'random',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const mentions = message.mentions.users.first(2);

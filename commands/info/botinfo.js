@@ -1,6 +1,8 @@
 module.exports = {
     name:'botinfo',
-    description: "Shows the bot's information",
+    description: "It sends information about the bot",
+    usage: 'b.botinfo',
+    category: 'info',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const moment = require('moment');

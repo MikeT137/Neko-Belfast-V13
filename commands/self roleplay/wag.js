@@ -1,6 +1,8 @@
 module.exports = {
     name:'wag',
-    description: "The user wags their tail",
+    description: "It sends a wagging gif",
+    usage: 'b.wag',
+    category: 'self roleplay',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const random_wag = [

@@ -1,6 +1,8 @@
 module.exports = {
     name:'think',
-    description: "The user is thinking",
+    description: "It sends a thinking gif",
+    usage: 'b.think',
+    category: 'self roleplay',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const random_think = [

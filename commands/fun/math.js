@@ -2,7 +2,9 @@ const math = require('mathjs');
 const Discord = require('discord.js');
 module.exports = {
     name: 'math',
-    description: "Solves a mathematic equation",
+    description: "It solves a math equation\`\nOperations:\n\`+\` = addition\n\`-\` = subtraction\n\`*\` = multiplication\n\`/\` = division\n\`%\` = remainder after division\n\`^\` = exponentiation\n\`log(x, y)\` = inverse function to exponentiation\n\`sqrt()\` = square root",
+    usage: 'b.math (equation)',
+    category: 'fun',
     run: async(bot, message, args) => {
         if(!args[0]){
             message.channel.send('You didn\'t add a calculation')

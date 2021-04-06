@@ -1,20 +1,22 @@
 module.exports = {
-    name:'slap',
-    description: "Slaps a user",
+    name:'punch',
+    description: "It sends a punching gif",
+    usage: 'b.punch (ping)',
+    category: 'interactive roleplay',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const person = message.mentions.users.first();
-        const random_slap = [
-            'https://media.tenor.com/images/9a2c17416b01df4363c05702a489425b/tenor.gif',
-            'https://i.imgur.com/GPQJEx5.gif',
-            'https://media.tenor.com/images/c366bb3a5d7820139646d8cdce96f7a8/tenor.gif',
-            'https://media.tenor.com/images/356fec15c3c741170a67fd740f918ecd/tenor.gif',
-            'https://i.pinimg.com/originals/bf/ef/b4/bfefb401ed8f1f7a3fee62d76a2856a4.gif',
-            'https://i.pinimg.com/originals/46/b0/a2/46b0a213e3ea1a9c6fcc060af6843a0e.gif',
-            'https://i.pinimg.com/originals/4e/9e/a1/4e9ea150354ad3159339b202cbc6cad9.gif',
-            'https://i.imgur.com/o2SJYUS.gif',
-            'https://media1.tenor.com/images/9ea4fb41d066737c0e3f2d626c13f230/tenor.gif?itemid=7355956',
-            'https://i.imgur.com/Li9mx3A.gif',
+        const random_punch = [
+            'https://media1.tenor.com/images/31686440e805309d34e94219e4bedac1/tenor.gif?itemid=4790446',
+            'https://media.giphy.com/media/AlsIdbTgxX0LC/giphy.gif',
+            'https://media1.tenor.com/images/6834932465e2659dc5b1ee38dfd42b44/tenor.gif?itemid=14615839',
+            'https://i.pinimg.com/originals/d7/c3/0e/d7c30e46a937aaade4d7bc20eb09339b.gif',
+            'https://media.tenor.com/images/483ede2afbcf3afca6465d0de112c0d5/tenor.gif',
+            'https://i.pinimg.com/originals/92/f4/59/92f4595d3f6ac39b6c175eb3d454fec2.gif',
+            'https://media1.tenor.com/images/7a582f32ef2ed527c0f113f81a696ae3/tenor.gif?itemid=5012110',
+            'https://i.chzbgr.com/full/8583163648/h2396FC8A/screw-you-power-star',
+            'https://i.pinimg.com/originals/bc/96/17/bc9617a2460e4640fcd9cf474bea2c10.gif',
+            'https://66.media.tumblr.com/992e4cac19f6a0ef68ea89ab5c3a59a0/tumblr_nrnfw7UZyR1uo5k7bo1_500.gif',
         ]
         const random_cry = [
             'https://media1.tenor.com/images/b88fa314f0f172832a5f41fce111f359/tenor.gif?itemid=13356071',
@@ -41,14 +43,14 @@ module.exports = {
             }else {
                 const embed = new Discord.MessageEmbed()
 
-                    .setAuthor(`${message.author.username} gave ${person.username} a slap...so violent`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setAuthor(`${message.author.username} gave ${person.username} a punch...awee`, message.author.displayAvatarURL({ dynamic: true }))
                     .setDescription(`${args.slice(1, args.length).join(' ')}`)
-                    .setImage(random_slap[Math.floor(Math.random() * random_slap.length)])
+                    .setImage(random_punch[Math.floor(Math.random() * random_punch.length)])
                     .setColor('#7d77df')
                 message.channel.send(embed);
             }
         }else {
-            message.channel.send('You have to ping someone to slap them')
+            message.channel.send('You have to ping someone to punch them')
         }
     }
 }

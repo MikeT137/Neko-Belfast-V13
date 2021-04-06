@@ -1,12 +1,14 @@
 module.exports = {
-    name:'handhold',
-    description: "Hold a user's hand",
+    name:'pat',
+    description: "It sends a patting gif",
+    usage: 'b.pat (ping)',
+    category: 'interactive roleplay',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const {api_key} = require ('../../config.json')
         const person = message.mentions.users.first();
         const fetch = require('node-fetch');
-        const url = 'https://api.otakugifs.xyz/gif/handhold';
+        const url = 'https://api.otakugifs.xyz/gif/pat';
 
         fetch(url, {
             method: 'GET',
@@ -20,8 +22,8 @@ module.exports = {
                 message.delete();
                 if(person.id == message.author.id) {
                     const embed = new Discord.MessageEmbed()
-
-                        .setAuthor(`Are you cold? Here, hold my hand!`, message.author.displayAvatarURL({ dynamic: true }))
+    
+                        .setAuthor('Aww, its okay, belfast will give you some pats nya~', message.author.displayAvatarURL({ dynamic: true }))
                         .setDescription(`${args.slice(1, args.length).join(' ')}`)
                         .setImage(json.url)
                         .setFooter('Powered by otakugifs.xyz')
@@ -29,8 +31,8 @@ module.exports = {
                     message.channel.send(embed);
                 }else {
                     const embed = new Discord.MessageEmbed()
-
-                        .setAuthor(`${message.author.username} holds ${person.username}\'s hand...O///O`, message.author.displayAvatarURL({ dynamic: true }))
+    
+                        .setAuthor(`${message.author.username} is patting ${person.username}, so cute`, message.author.displayAvatarURL({ dynamic: true }))
                         .setDescription(`${args.slice(1, args.length).join(' ')}`)
                         .setImage(json.url)
                         .setFooter('Powered by otakugifs.xyz')
@@ -38,7 +40,7 @@ module.exports = {
                     message.channel.send(embed);
                 }
             }else {
-                message.channel.send('You have to ping someone to handhold them')
+                message.channel.send('You have to ping someone to pat them')
             }
         })
     }

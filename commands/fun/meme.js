@@ -1,6 +1,8 @@
 module.exports = {
     name:'meme',
-    description: "Gives the user a meme",
+    description: "It sends a meme off of a random subreddit, those being: dankmemes, memes, meme, Animemes, goodanimemes",
+    usage: 'b.meme',
+    category: 'fun',
     run: async (bot, message, args) => {
         const Discord = require('discord.js')
         const api = require('imageapi.js')

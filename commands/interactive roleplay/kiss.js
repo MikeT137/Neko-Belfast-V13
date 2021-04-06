@@ -1,12 +1,14 @@
 module.exports = {
-    name:'wave',
-    description: "Waves at a user",
+    name:'kiss',
+    description: "It sends a kissing gif",
+    usage: 'b.kiss (ping)',
+    category: 'interactive roleplay',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const {api_key} = require ('../../config.json')
         const person = message.mentions.users.first();
         const fetch = require('node-fetch');
-        const url = 'https://api.otakugifs.xyz/gif/wave';
+        const url = 'https://api.otakugifs.xyz/gif/kiss';
 
         fetch(url, {
             method: 'GET',
@@ -18,12 +20,12 @@ module.exports = {
         ).then((json) => {
             if(message.mentions.members.size >= 1) {
                 if(person.id == message.author.id) {
-                    message.channel.send('Look at you, you\'re so cute nya~')
+                    message.channel.send(`It\'s okay ${message.author.username}! I\'m sure you\'ll get someone to be by your side! Stay strong nya~`)
                 }else {
                     message.delete();
                     const embed = new Discord.MessageEmbed()
             
-                        .setAuthor(`${message.author.username} is waving at ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
+                        .setAuthor(`${message.author.username} gave ${person.username} a kiss`, message.author.displayAvatarURL({ dynamic: true }))
                         .setDescription(`${args.slice(1, args.length).join(' ')}`)
                         .setImage(json.url)
                         .setFooter('Powered by otakugifs.xyz')
@@ -31,7 +33,7 @@ module.exports = {
                     message.channel.send(embed);
                 }
             }else {
-                message.channel.send('You have to ping someone to wave at them')
+                message.channel.send('You have to ping someone to kiss them')
             }
         })
     }

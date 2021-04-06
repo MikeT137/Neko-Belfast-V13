@@ -1,8 +1,8 @@
-const { Message } = require("discord.js")
-
 module.exports = {
     name: 'ping',
-    description: "Says the latency of the bot",
+    description: "It shows the latency of the bot AKA how fast the bot is responding to user input",
+    usage: 'b.ping',
+    category: 'moderation',
     run: async (bot, message, args) => {
         message.channel.send('Calculating ping...')
         .then((result) => {

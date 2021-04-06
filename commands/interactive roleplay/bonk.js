@@ -1,6 +1,8 @@
 module.exports = {
     name:'bonk',
-    description: "Bonks a user",
+    description: "It sends a bonking gif",
+    usage: 'b.bonk (ping)',
+    category: 'interactive roleplay',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const person = message.mentions.users.first();

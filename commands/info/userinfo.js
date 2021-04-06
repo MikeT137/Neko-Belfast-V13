@@ -1,6 +1,8 @@
 module.exports = {
     name:'userinfo',
-    description: "Shows you the information of that specific user",
+    description: "It sends information about yourself, or the pinged user. The information is taken from the server you do the command in",
+    usage: 'b.userinfo (no ping / ping)',
+    category: 'info',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const moment = require('moment');

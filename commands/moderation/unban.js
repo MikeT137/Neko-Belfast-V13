@@ -1,6 +1,8 @@
 module.exports = {
     name: 'unban',
-    description: 'A caommand that an admin uses to unban users',
+    description: 'It unbans a user (you have to be admin)',
+    usage: 'b.unban (user ID)',
+    category: 'moderation',
     run: async(bot, message, args) => {
         if(!message.member.hasPermission("BAN_MEMBERS")) {
             return message.channel.send(`You do not have the permission to unban someone`)

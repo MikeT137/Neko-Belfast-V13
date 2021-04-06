@@ -1,6 +1,8 @@
 module.exports = {
     name: 'rng',
-    description: 'It gives a random number',
+    description: 'It gives you a random number but you have to specify the maximum value\nSidenote: your value has to be higher than 1',
+    usage: 'b.rng (number)',
+    category: 'random',
     run: async (bot, message, args) => {
         if(!args[0]) {
             message.channel.send('You have to specify a number/limit of the random number (has to be higher than 1)')

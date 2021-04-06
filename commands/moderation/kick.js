@@ -1,6 +1,8 @@
 module.exports = {
     name:'kick',
-    description: "Kicks a user",
+    description: "It kicks someone out of a server. Keep in mind:\n-the bot needs admin\n-you need admin as well\n-you can\'t kick someone that has admin\n-the bot needs to have a role higher than the person you are trying to kick(server settings -> roles)",
+    usage: 'b.kick (ping)',
+    category: 'moderation',
     run: async (bot, message, args) => {
         const member = message.mentions.users.first();
 

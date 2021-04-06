@@ -1,6 +1,8 @@
 module.exports = {
     name:'avatar',
-    description: "Shows you your avatar",
+    description: "It shows yours or someone else\'s avatar",
+    usage: 'b.avatar (no ping / ping)',
+    category: 'info',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const author = message.author;

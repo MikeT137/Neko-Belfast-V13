@@ -1,6 +1,8 @@
 module.exports = {
     name:'tickle',
-    description: "Tickles at a user",
+    description: "It sends a tickling gif",
+    usage: 'b.tickle (ping)',
+    category: 'interactive roleplay',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const {api_key} = require ('../../config.json')

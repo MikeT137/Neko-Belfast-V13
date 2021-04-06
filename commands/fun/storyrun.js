@@ -1,6 +1,8 @@
 module.exports = {
     name:'storyrun',
-    description: "It tells the story of a helpless boy (Story - RUN)",
+    description: "It\'s a choose your adventure type of story where you have to (read a lot) and react with emojis to make your choice, eventually you get an ending, now it depends if it\'s good or bad, good luck",
+    usage: 'b.storyrun',
+    category: 'fun',
     run: async (bot, message, args) => {
         const endings = '20';
         const artist = 'Creature created by: Trevor Henderson'

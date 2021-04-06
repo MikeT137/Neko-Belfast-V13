@@ -1,6 +1,8 @@
 module.exports = {
     name:'bored',
-    description: "The user is bored",
+    description: "It sends a boring gif",
+    usage: 'b.bored',
+    category: 'self roleplay',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const random_bored = [

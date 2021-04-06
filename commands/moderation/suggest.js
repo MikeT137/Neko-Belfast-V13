@@ -1,6 +1,8 @@
 module.exports = {
     name: 'suggest',
-    description: "It sends the creator a suggestion",
+    description: "If you have any suggestions about the bot, you can send it to the creator",
+    usage: 'b.suggest (message)',
+    category: 'moderation',
     run: async (bot, message, args) => {
         const mikuid = '486276124549316619';
 

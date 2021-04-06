@@ -1,6 +1,8 @@
 module.exports = {
     name:'clear',
-    description: "Clears the ammount of message you want",
+    description: "It deletes how many messages you want (as long as you\'re an admin), however you can\'t delete more than 100 messages",
+    usage: 'b.clear (number)',
+    category: 'moderation',
     run: async (bot, message, args) => {
         let amount;
 

@@ -1,6 +1,8 @@
 module.exports = {
     name:'howl',
-    description: "The user howls",
+    description: "It sends a howling gif",
+    usage: 'b.howl',
+    category: 'self roleplay',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
 

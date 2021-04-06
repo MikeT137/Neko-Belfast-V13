@@ -1,6 +1,8 @@
 module.exports = {
     name:'cookie',
-    description: "The user can get or give cookies",
+    description: "The user gets a cookie or gives a cookie to another user",
+    usage: 'b.cookie (no ping / ping)',
+    category: 'fun',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const person = message.mentions.users.first();

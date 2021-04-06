@@ -1,6 +1,8 @@
 module.exports = {
     name: 'rps',
-    description: 'The user plays rock paper scissors',
+    description: 'It\'s just a command that lets you play rock paper scissors with the bot',
+    usage: 'b.rps (rock/paper/scissors)',
+    category: 'fun',
     run: async (bot, message, args) => {
         const acceptedReplies = ['rock', 'paper', 'scissors'];
         const result = acceptedReplies[Math.floor(Math.random() * acceptedReplies.length)];

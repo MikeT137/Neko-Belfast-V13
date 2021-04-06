@@ -1,6 +1,8 @@
 module.exports = {
     name: 'coinflip',
-    description: 'The user flips a coin',
+    description: 'It flips a coin',
+    usage: 'b.coinflip',
+    category: 'random',
     run: async (bot, message, args) => {
         const coinface = [
             'Heads!',

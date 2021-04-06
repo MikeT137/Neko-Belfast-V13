@@ -1,6 +1,8 @@
 module.exports = {
     name:'mute',
-    description: "Mutes a user temporarily",
+    description: "It mutes a user temporarily, BUT you need to create a role called \"BMuted\", it\'s the only way it\'ll work: \`b.mute @(someone) 12s\`",
+    usage: 'b.mute (ping) (number + time: s, m, h, d)',
+    category: 'moderation',
     run: async (bot, message, args) => {
         const ms = require('ms');
         const person = message.guild.member(message.mentions.users.first());

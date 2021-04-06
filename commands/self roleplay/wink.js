@@ -1,6 +1,8 @@
 module.exports = {
     name:'wink',
-    description: "The user winks",
+    description: "It sends a winking gif",
+    usage: 'b.wink',
+    category: 'self roleplay',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const {api_key} = require ('../../config.json')

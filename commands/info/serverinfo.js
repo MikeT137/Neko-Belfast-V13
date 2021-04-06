@@ -1,6 +1,8 @@
 module.exports = {
     name:'serverinfo',
-    description: "Shows you the information of that specific server",
+    description: "It sends information about the server you do the command in",
+    usage: 'b.serverinfo',
+    category: 'info',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         const moment = require('moment');
