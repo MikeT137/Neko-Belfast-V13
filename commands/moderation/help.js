@@ -59,7 +59,6 @@ module.exports = {
                     }else if(reaction.emoji.name === '🎭') {
                         msg.edit(embedI);
                     }else if(reaction.emoji.name === '🛠️') {
-                        let embedM = new Discord.MessageEmbed()
                         msg.edit(embedM);
                     }else if(reaction.emoji.name === '🎲') {
                         msg.edit(embedR);
