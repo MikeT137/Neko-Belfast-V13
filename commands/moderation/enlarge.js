@@ -5,6 +5,7 @@ module.exports = {
     usage: `${prefix}enlarge (emoji)`,
     category: 'moderation',
     run: async (bot, message, args) => {
+        const Discord = require('discord.js');
         const emoji = args[0];
         const custom = Discord.Util.parseEmoji(emoji);
 
