@@ -1,7 +1,8 @@
+const {prefix} = require('../../config.json')
 module.exports = {
     name:'meme',
     description: "It sends a meme off of a random subreddit, those being: dankmemes, memes, meme, Animemes, goodanimemes",
-    usage: 'b.meme',
+    usage: `${prefix}meme`,
     category: 'fun',
     run: async (bot, message, args) => {
         const Discord = require('discord.js')

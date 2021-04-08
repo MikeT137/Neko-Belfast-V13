@@ -1,7 +1,8 @@
+const {prefix} = require('../../config.json')
 module.exports = {
     name: 'rng',
     description: 'It gives you a random number but you have to specify the maximum value\nSidenote: your value has to be higher than 1',
-    usage: 'b.rng (number)',
+    usage: `${prefix}rng (number)`,
     category: 'random',
     run: async (bot, message, args) => {
         if(!args[0]) {

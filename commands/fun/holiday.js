@@ -1,7 +1,8 @@
+const {prefix} = require('../../config.json')
 module.exports = {
     name:'holiday',
     description: "When there is a holiday, the bot will send a gif about that holiday\nHolidays:\n\nNew Year - january 1st\nValentine\'s Day - february 14th\nEaster - april 8th\nHalloween - october 31st\nThanksgiving - november 25th\nChristmas - december 25th",
-    usage: 'b.holiday',
+    usage: `${prefix}holiday`,
     category: 'fun',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');

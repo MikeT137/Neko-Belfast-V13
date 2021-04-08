@@ -1,7 +1,8 @@
+const {prefix} = require('../../config.json')
 module.exports = {
     name: '8ball',
     description: 'It sends a random response to your question',
-    usage: 'b.8ball (question)',
+    usage: `${prefix}8ball (question)`,
     category: 'random',
     run: async (bot, message, args) => {
 

@@ -1,7 +1,8 @@
+const {prefix} = require('../../config.json')
 module.exports = {
     name: 'coinflip',
     description: 'It flips a coin',
-    usage: 'b.coinflip',
+    usage: `${prefix}coinflip`,
     category: 'random',
     run: async (bot, message, args) => {
         const coinface = [

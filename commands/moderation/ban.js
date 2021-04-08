@@ -1,7 +1,8 @@
+const {prefix} = require('../../config.json')
 module.exports = {
     name:'ban',
     description: "It bans someone out of a server. Keep in mind:\n-the bot needs admin\n-you need admin as well\n-you can\'t ban someone that has admin\n-the bot needs to have a role higher than the person you are trying to ban(server settings -> roles)",
-    usage: 'b.ban (ping)',
+    usage: `${prefix}ban (ping)`,
     category: 'moderation',
     run: async (bot, message, args) => {
         const member = message.mentions.users.first();

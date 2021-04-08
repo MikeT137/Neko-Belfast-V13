@@ -1,7 +1,8 @@
+const {prefix} = require('../../config.json')
 module.exports = {
     name:'unmute',
     description: "It unmutes a user that is muted, BUT you need to have a role called \"BMuted\", it\'s the only way it\'ll work'",
-    usage: 'b.unmute (ping)',
+    usage: `${prefix}unmute (ping)`,
     category: 'moderation',
     run: async (bot, message, args) => {
         const ms = require('ms');

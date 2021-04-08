@@ -1,7 +1,8 @@
+const {prefix} = require('../../config.json')
 module.exports = {
     name:'pout',
     description: "It sends a pouting gif",
-    usage: 'b.pout',
+    usage: `${prefix}pout`,
     category: 'self roleplay',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');

@@ -1,7 +1,8 @@
+const {prefix} = require('../../config.json')
 module.exports = {
     name:'clear',
     description: "It deletes how many messages you want (as long as you\'re an admin), however you can\'t delete more than 100 messages",
-    usage: 'b.clear (number)',
+    usage: `${prefix}clear (number)`,
     category: 'moderation',
     run: async (bot, message, args) => {
         let amount;

@@ -1,7 +1,8 @@
+const {prefix} = require('../../config.json')
 module.exports = {
     name: 'rps',
     description: 'It\'s just a command that lets you play rock paper scissors with the bot',
-    usage: 'b.rps (rock/paper/scissors)',
+    usage: `${prefix}rps (rock/paper/scissors)`,
     category: 'fun',
     run: async (bot, message, args) => {
         const acceptedReplies = ['rock', 'paper', 'scissors'];
