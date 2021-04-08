@@ -94,6 +94,7 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
 
             .setAuthor(`Happy Easter nya~!`, message.author.displayAvatarURL({ dynamic: true }))
+            .setDescription(`${args.join(' ')}`)
             .setImage(random_easter[Math.floor(Math.random() * random_easter.length)])
             .setColor('#7d77df')
         message.channel.send(embed)
