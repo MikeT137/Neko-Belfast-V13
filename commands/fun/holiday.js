@@ -91,14 +91,14 @@ module.exports = {
             'https://cdn62.picsart.com/188752053001202.gif?to=min&r=640',
             'https://data.whicdn.com/images/264113355/original.gif'
         ]
-        message.delete();
+        /*message.delete();
         const embed = new Discord.MessageEmbed()
 
             .setAuthor(`Happy Easter nya~!`, message.author.displayAvatarURL({ dynamic: true }))
             .setDescription(`${args.join(' ')}`)
             .setImage(random_easter[Math.floor(Math.random() * random_easter.length)])
             .setColor('#7d77df')
-        message.channel.send(embed)
+        message.channel.send(embed)*/
         /*
         Holidays
 
