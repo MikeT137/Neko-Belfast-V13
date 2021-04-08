@@ -29,7 +29,7 @@ module.exports = {
                 const embed = new Discord.MessageEmbed()
 
                     .setColor('#7d77df')
-                    .setImage(parse[0].url);
+                    .setImage(parsed[0].url);
                 message.channel.send(embed);
             }
         }
