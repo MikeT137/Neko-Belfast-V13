@@ -5,7 +5,6 @@ module.exports = {
     category: 'fun',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        var schedule = require('node-schedule');
 
         const random_newyear = [
             'https://i.gifer.com/2PHx.gif',
@@ -91,87 +90,25 @@ module.exports = {
             'https://cdn62.picsart.com/188752053001202.gif?to=min&r=640',
             'https://data.whicdn.com/images/264113355/original.gif'
         ]
-        const startTime = new Date('1 0 * * *');
-        const endTime = new Date('59 23 * * *');
+        const embed = new Discord.MessageEmbed()
 
-        const newyear = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 1 1 *'}, function(){
-            const embed = new Discord.MessageEmbed()
+            .setAuthor(`Happy Easter nya~!`, message.author.displayAvatarURL({ dynamic: true }))
+            .setImage(random_easter[Math.floor(Math.random() * random_easter.length)])
+            .setColor('#7d77df')
+        message.channel.send(embed)
+        /*
+        Holidays
 
-                .setAuthor(`Happy New Year everyone!!`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(random_newyear[Math.floor(Math.random() * random_newyear.length)])
-                .setColor('#7d77df')
-            message.channel.send(embed)
-        });
-        newyear.cancel()
+        January 1st - Happy New Year everyone!!
+        February 14th - Happy Valentine\'s Day!!
+        April 8th - Happy Easter nya~!
+        June 29th - M-Myaster, it\'s my birthday today!
+        September 16th - It\'s Miku-senpai\'s birthday nya~!
+        October 31st - Happy Halloween everyone!
+        November 25th - Happy Thanksgiving! With this occasion I\'ll say: thanks for threating me well myaster~
+        December 25th - Merry Xmas nya~!
 
-        const valentine = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 14 2 *'}, function(){
-            const embed = new Discord.MessageEmbed()
-
-                .setAuthor(`Happy Valentine\'s Day!!`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(random_valentine[Math.floor(Math.random() * random_valentine.length)])
-                .setColor('#7d77df')
-            message.channel.send(embed)
-        });
-        valentine.cancel()
-
-        const easter = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 8 4 *'}, function(){
-            const embed = new Discord.MessageEmbed()
-
-                .setAuthor(`Happy Easter nya~!`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(random_easter[Math.floor(Math.random() * random_easter.length)])
-                .setColor('#7d77df')
-            message.channel.send(embed)
-        });
-        easter.cancel()
-
-        const bel = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 29 6 *'}, function() {
-            const embed = new Discord.MessageEmbed()
-
-                .setAuthor(`M-Myaster, it\'s my birthday today!`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(random_bday[Math.floor(Math.random() * random_bday.length)])
-                .setColor('#7d77df')
-            message.channel.send(embed)
-        });
-        bel.cancel()
-
-        const miku = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 29 6 *'}, function() {
-            const embed = new Discord.MessageEmbed()
-
-                .setAuthor(`It\'s Miku-senpai\'s birthday nya~!`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(random_bday[Math.floor(Math.random() * random_bday.length)])
-                .setColor('#7d77df')
-            message.channel.send(embed)
-        });
-        miku.cancel()
-
-        const halloween = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 31 10 *'}, function(){
-            const embed = new Discord.MessageEmbed()
-
-                .setAuthor(`Happy Halloween everyone!`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(random_halloween[Math.floor(Math.random() * random_halloween.length)])
-                .setColor('#7d77df')
-            message.channel.send(embed)
-        });
-        halloween.cancel()
-
-        const thanks = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 11 *'}, function(){
-            const embed = new Discord.MessageEmbed()
-
-                .setAuthor(`Happy Thanksgiving! With this occasion I\'ll say: thanks for threating me well myaster~`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(random_thanks[Math.floor(Math.random() * random_thanks.length)])
-                .setColor('#7d77df')
-            message.channel.send(embed)
-        });
-        thanks.cancel()
-
-        const xmas = schedule.scheduleJob({start: startTime, end: endTime, rule: '* * 25 12 *'}, function(){
-            const embed = new Discord.MessageEmbed()
-
-                .setAuthor(`Merry Xmas nya~!`, message.author.displayAvatarURL({ dynamic: true }))
-                .setImage(random_xmas[Math.floor(Math.random() * random_xmas.length)])
-                .setColor('#7d77df')
-            message.channel.send(embed)
-        });
-        xmas.cancel()
+        Every other day - with my tail nya~
+        */
     }
 }
