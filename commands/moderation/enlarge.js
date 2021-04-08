@@ -1,6 +1,6 @@
 const {prefix} = require('../../config.json')
 module.exports = {
-    name:'henlarge',
+    name:'enlarge',
     description: "It sends a bigger version of an emoji",
     usage: `${prefix}enlarge (emoji)`,
     category: 'moderation',
