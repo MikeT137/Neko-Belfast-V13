@@ -2,7 +2,7 @@ const {prefix} = require('../../config.json')
 
 module.exports = bot => {
     console.log('Neko Belfast is online!');
-    bot.user.setActivity(`Happy birthday Miku-senpai! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
+    bot.user.setActivity(`Happy Easter nya~! | ${prefix}help`, {type: 'PLAYING'}).catch(console.error);
 
     /*
     Holidays
