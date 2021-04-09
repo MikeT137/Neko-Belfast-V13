@@ -10,7 +10,7 @@ module.exports = {
 
             console.log(randomcode)
         }
-        setInterval(codegen, 900000)
+        setInterval(codeGen, 900000)
             module.exports = { codeGen } 
     }
 }
