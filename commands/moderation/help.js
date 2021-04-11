@@ -10,10 +10,10 @@ module.exports = {
         
         const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`meme\`, \`rps\`, \`storyrun\`';
         const info = '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`';
-        const interactive = '\`apologise\`, \`bite\`, \`bonk\`, \`boop\`, \`brofist\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`hug\`, \`kiss\`, \`lick\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`tickle\`, \`wave\`';
+        const interactive = '\`apologise\`, \`bite\`, \`bonk\`, \`boop\`, \`brofist\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`hug\`, \`kiss\`, \`lick\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`tickle\`';
         const mod = '\`ban\`, \`clear\`, \`enlarge\`, \`help\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`';
         const random = '\`8ball\`, \`coinflip\`, \`rng\`, \`ship\`';
-        const self = '\`blush\`, \`bored\`, \`clap\`, \`confused\`, \`cry\`, \`dab\`, \`dance\`, \`drool\`, \`facepalm\`, \`howl\`, \`laugh\`, \`nom\`, \`peek\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`scared\`, \`shrug\`, \`sigh\`, \`sip\`, \`smile\`, \`smug\`, \`surprised\`, \`think\`, \`wag\`, \`wink\`, \`yawn\`';
+        const self = '\`blush\`, \`bored\`, \`clap\`, \`confused\`, \`cry\`, \`dab\`, \`dance\`, \`drool\`, \`facepalm\`, \`howl\`, \`laugh\`, \`nom\`, \`peek\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`scared\`, \`shrug\`, \`sigh\`, \`sip\`, \`smile\`, \`smug\`, \`surprised\`, \`think\`, \`wag\`, \`wave\`, \`wink\`, \`yawn\`';
 
         const embedF = new Discord.MessageEmbed().setTitle('Help - Fun').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `${fun}`).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
         const embedi = new Discord.MessageEmbed().setTitle('Help - Info').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `${info}`).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
