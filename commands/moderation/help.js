@@ -8,14 +8,14 @@ module.exports = {
         const Discord = require('discord.js');
         const links = '➤[Invite me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) ➤[Join my server!](https://discord.gg/M3sNjT8vt9) ➤[Vote me!](https://top.gg/bot/727093236954431488/vote)' //➤[Donate!]()
         
-        const funCommands = commands.filter(({ category }) => category === "fun").map(({ name }) => name).join(", ");
-        const infoCommands = commands.filter(({ category }) => category === "info").map(({ name }) => name).join(", ");
-        const interactiveCommands = commands.filter(({ category }) => category === "interactive roleplay").map(({ name }) => name).join(", ");
-        const modCommands = commands.filter(({ category }) => category === "moderation").map(({ name }) => name).join(", ");
-        const randomCommands = commands.filter(({ category }) => category === "random").map(({ name }) => name).join(", ");
-        const selfCommands = commands.filter(({ category }) => category === "self roleplay").map(({ name }) => name).join(", ");
+        const funCommands = bot.commands.filter(({ category }) => category === "fun").map(({ name }) => name).join(", ");
+        /*const infoCommands = bot.commands.filter(({ category }) => category === "info").map(({ name }) => name).join(", ");
+        const interactiveCommands = bot.commands.filter(({ category }) => category === "interactive roleplay").map(({ name }) => name).join(", ");
+        const modCommands = bot.commands.filter(({ category }) => category === "moderation").map(({ name }) => name).join(", ");
+        const randomCommands = bot.commands.filter(({ category }) => category === "random").map(({ name }) => name).join(", ");
+        const selfCommands = bot.commands.filter(({ category }) => category === "self roleplay").map(({ name }) => name).join(", ");
 
-        const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`meme\`, \`rps\`, \`storyrun\`';
+        const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`meme\`, \`rps\`, \`storyrun\`';*/
         const info = '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`';
         const interactive = '\`apologise\`, \`bite\`, \`bonk\`, \`boop\`, \`brofist\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`hug\`, \`kiss\`, \`lick\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`tickle\`';
         const mod = '\`ban\`, \`clear\`, \`enlarge\`, \`help\`, \`kick\`, \`mute\`, \`ping\`, \`suggest\`, \`unban\`, \`unmute\`';
