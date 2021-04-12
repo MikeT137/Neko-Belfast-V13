@@ -9,8 +9,8 @@ bot.aliases = new Collection();
 bot.categories = fs.readdirSync("./commands/");
 
 ["command", "event"].forEach(handler => {
-    require(`./handlers/${handler}`)(bot);
-});
+    require(`./handlers/${handler}`)(bot)
+})
 
 //Discord Bot List - Server Count
 const DBL = require("dblapi.js");
