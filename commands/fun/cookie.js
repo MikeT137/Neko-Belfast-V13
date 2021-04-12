@@ -1,4 +1,4 @@
-const {prefix} = require('../../config.json')
+const {prefix} = require('../../config.json');
 module.exports = {
     name:'cookie',
     description: "The user gets a cookie or gives a cookie to another user",
