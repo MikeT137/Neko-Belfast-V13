@@ -50,19 +50,19 @@ module.exports = {
                         const embedF = new Discord.MessageEmbed().setTitle('Help - Fun').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `\`${funCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
                         msg.edit(embedF);
                     }else if(reaction.emoji.name === '🧐') {
-                        const embedi = new Discord.MessageEmbed().setTitle('Help - Info').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `${infoCommands}`).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
+                        const embedi = new Discord.MessageEmbed().setTitle('Help - Info').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `\`${infoCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
                         msg.edit(embedi);
                     }else if(reaction.emoji.name === '🎭') {
-                        const embedI = new Discord.MessageEmbed().setTitle('Help - Interactive Roleplay').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `${interactiveCommands}`).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
+                        const embedI = new Discord.MessageEmbed().setTitle('Help - Interactive Roleplay').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `\`${interactiveCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
                         msg.edit(embedI);
                     }else if(reaction.emoji.name === '🛠️') {
-                        const embedM = new Discord.MessageEmbed().setTitle('Help - Moderation').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `${modCommands}`).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
+                        const embedM = new Discord.MessageEmbed().setTitle('Help - Moderation').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `\`${modCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
                         msg.edit(embedM);
                     }else if(reaction.emoji.name === '🎲') {
-                        const embedR = new Discord.MessageEmbed().setTitle('Help - Random').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `${randomCommands}`).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
+                        const embedR = new Discord.MessageEmbed().setTitle('Help - Random').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `\`${randomCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
                         msg.edit(embedR);
                     }else if(reaction.emoji.name === '🤡') {
-                        const embedS = new Discord.MessageEmbed().setTitle('Help - Self Roleplay').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `${selfCommands}`).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
+                        const embedS = new Discord.MessageEmbed().setTitle('Help - Self Roleplay').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `\`${selfCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
                         msg.edit(embedS);
                     }else return;
                 })
