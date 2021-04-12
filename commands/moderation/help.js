@@ -8,6 +8,13 @@ module.exports = {
         const Discord = require('discord.js');
         const links = '➤[Invite me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) ➤[Join my server!](https://discord.gg/M3sNjT8vt9) ➤[Vote me!](https://top.gg/bot/727093236954431488/vote)' //➤[Donate!]()
         
+        const funCommands = commands.filter(({ category }) => category === "fun").map(({ name }) => name).join(", ");
+        const infoCommands = commands.filter(({ category }) => category === "info").map(({ name }) => name).join(", ");
+        const interactiveCommands = commands.filter(({ category }) => category === "interactive roleplay").map(({ name }) => name).join(", ");
+        const modCommands = commands.filter(({ category }) => category === "moderation").map(({ name }) => name).join(", ");
+        const randomCommands = commands.filter(({ category }) => category === "random").map(({ name }) => name).join(", ");
+        const selfCommands = commands.filter(({ category }) => category === "self roleplay").map(({ name }) => name).join(", ");
+
         const fun = '\`blackjack\`, \`cookie\`, \`holiday\`, \`math\`, \`meme\`, \`rps\`, \`storyrun\`';
         const info = '\`avatar\`, \`botinfo\`, \`serverinfo\`, \`userinfo\`';
         const interactive = '\`apologise\`, \`bite\`, \`bonk\`, \`boop\`, \`brofist\`, \`cheer\`, \`cuddle\`, \`handhold\`, \`hug\`, \`kiss\`, \`lick\`, \`nuzzle\`, \`pat\`, \`poke\`, \`punch\`, \`shoot\`, \`slap\`, \`snuggle\`, \`stare\`, \`tickle\`';
@@ -15,7 +22,7 @@ module.exports = {
         const random = '\`8ball\`, \`coinflip\`, \`rng\`, \`ship\`';
         const self = '\`blush\`, \`bored\`, \`clap\`, \`confused\`, \`cry\`, \`dab\`, \`dance\`, \`drool\`, \`facepalm\`, \`howl\`, \`laugh\`, \`nom\`, \`peek\`, \`pout\`, \`purr\`, \`rage\`, \`run\`, \`scared\`, \`shrug\`, \`sigh\`, \`sip\`, \`smile\`, \`smug\`, \`surprised\`, \`think\`, \`wag\`, \`wave\`, \`wink\`, \`yawn\`';
 
-        const embedF = new Discord.MessageEmbed().setTitle('Help - Fun').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `${fun}`).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
+        const embedF = new Discord.MessageEmbed().setTitle('Help - Fun').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `\`${funCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
         const embedi = new Discord.MessageEmbed().setTitle('Help - Info').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `${info}`).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
         const embedI = new Discord.MessageEmbed().setTitle('Help - Interactive Roleplay').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `${interactive}`).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
         const embedM = new Discord.MessageEmbed().setTitle('Help - Moderation').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `${mod}`).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
