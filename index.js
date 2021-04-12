@@ -27,4 +27,3 @@ dbl.on('error', e => {
 
 //Token
 bot.login(process.env.token);
-//bot.login(token);
