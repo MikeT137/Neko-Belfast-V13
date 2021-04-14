@@ -19,26 +19,27 @@ module.exports = {
         }).then((res) =>
             res.json()
         ).then((json) => {
-            if(message.mentions.members.size >= 1 && person.id != message.author.id) {
+            if(message.mentions.members.size >= 1) {
                 message.delete();
-                const embed = new Discord.MessageEmbed()
+                if(person.id === '727093236954431488') {
+                    const embed2 = new Discord.MessageEmbed()
 
-                    .setAuthor(`${message.author.username} brofists ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
-                    .setDescription(`${args.slice(1, args.length).join(' ')}`)
-                    .setImage(json.url)
-                    .setFooter('Powered by otakugifs.xyz')
-                    .setColor('#7d77df')
-                message.channel.send(embed);
-            }else if(person.id === '727093236954431488') {
-                message.delete();
-                const embed2 = new Discord.MessageEmbed()
+                        .setAuthor(`We make a pretty good team you and me, nyaa~`, message.author.displayAvatarURL({ dynamic: true }))
+                        .setDescription(`${args.slice(1, args.length).join(' ')}`)
+                        .setImage(json.url)
+                        .setFooter('Powered by otakugifs.xyz')
+                        .setColor('#7d77df')
+                    message.channel.send(embed2);
+                }else if (person.id != message.author.id) {
+                    const embed = new Discord.MessageEmbed()
 
-                    .setAuthor(`We make a pretty good team you and me, nyaa~`, message.author.displayAvatarURL({ dynamic: true }))
-                    .setDescription(`${args.slice(1, args.length).join(' ')}`)
-                    .setImage(json.url)
-                    .setFooter('Powered by otakugifs.xyz')
-                    .setColor('#7d77df')
-                message.channel.send(embed2);
+                        .setAuthor(`${message.author.username} brofists ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
+                        .setDescription(`${args.slice(1, args.length).join(' ')}`)
+                        .setImage(json.url)
+                        .setFooter('Powered by otakugifs.xyz')
+                        .setColor('#7d77df')
+                    message.channel.send(embed);
+                }
             }else {
                 message.channel.send('You have to ping someone to brofist them')
             }

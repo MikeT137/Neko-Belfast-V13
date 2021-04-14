@@ -21,18 +21,18 @@ module.exports = {
         ]
         if(message.mentions.members.size >= 1) {
             message.delete();
-            if(person.id == message.author.id) {
+            if(person.id === '727093236954431488') {
                 const embed = new Discord.MessageEmbed()
 
-                    .setAuthor(`${message.author.username} is cheering themselves up`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setAuthor(`Aww, thank you ${message.author.username}. But there\'s no need to worry about me, as long as i\'m near my master, i\'ll always be happy nya.${message.author.username} is cheering up ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
                     .setDescription(`${args.slice(1, args.length).join(' ')}`)
                     .setImage(random_cheer[Math.floor(Math.random() * random_cheer.length)])
                     .setColor('#7d77df')
                 message.channel.send(embed);
-            }else if(person.id === '727093236954431488') {
+            }else if(person.id == message.author.id) {
                 const embed2 = new Discord.MessageEmbed()
 
-                    .setAuthor(`Aww, thank you ${message.author.username}. But there\'s no need to worry about me, as long as i\'m near my master, i\'ll always be happy nya.${message.author.username} is cheering up ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setAuthor(`${message.author.username} is cheering themselves up`, message.author.displayAvatarURL({ dynamic: true }))
                     .setDescription(`${args.slice(1, args.length).join(' ')}`)
                     .setImage(random_cheer[Math.floor(Math.random() * random_cheer.length)])
                     .setColor('#7d77df')
