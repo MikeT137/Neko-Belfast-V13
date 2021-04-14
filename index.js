@@ -1,5 +1,8 @@
 const {Collection, Client} = require('discord.js');
-const bot = new Client();
+const bot = new Client({ 
+    disableMentions: "everyone",
+    restTimeOffset: 0
+});
 
 //Handlers
 const fs = require('fs');
