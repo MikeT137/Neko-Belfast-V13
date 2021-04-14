@@ -6,7 +6,7 @@ module.exports = {
     category: 'moderation',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        const links = '➤[Invite me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) ➤[Join my server!](https://discord.gg/M3sNjT8vt9) ➤[Vote me!](https://top.gg/bot/727093236954431488/vote) ➤[Donate!](buymeacoffee.com/mikuyoruka)'
+        const links = '➤[Invite me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) ➤[Join my server!](https://discord.gg/M3sNjT8vt9) ➤[Vote me!](https://top.gg/bot/727093236954431488/vote) ➤[Donate!](https://www.buymeacoffee.com/mikuyoruka)'
         
         const funCommands = bot.commands.filter(({ category }) => category === "fun").map(({ name }) => name).join("\`, \`");
         const infoCommands = bot.commands.filter(({ category }) => category === "info").map(({ name }) => name).join("\`, \`");
