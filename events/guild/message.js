@@ -1,5 +1,5 @@
 module.exports = async(bot, message) => {
-    const Discord = require ('dicsord.js')
+    const Discord = require ('discord.js')
     const {prefix} = require ('../../config.json');
 
     if(message.content === `<@${bot.user.id}>`) {
