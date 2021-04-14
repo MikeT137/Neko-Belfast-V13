@@ -7,11 +7,13 @@ module.exports = {
     run: async (bot, message, args) => {
         const coinface = [
             'Heads!',
-            'OMG it landed on the edge! Amazing!',
             'Tails!'
         ]
-        const answer = coinface[Math.floor(Math.random() * coinface.length)];
-        
-        message.channel.send(`${answer}:coin:`)
+
+        if(Math.random() * 100 < 0.01) {
+            message.channel.send('OMG it landed on the edge! Amazing!')
+        }else {
+            message.channel.send(`${coinface[Math.floor(Math.random() * coinface.length)]}`)
+        }
     }
 }
