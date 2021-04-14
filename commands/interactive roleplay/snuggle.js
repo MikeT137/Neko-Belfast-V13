@@ -30,6 +30,15 @@ module.exports = {
                         .setFooter('Powered by otakugifs.xyz')
                         .setColor('#7d77df')
                     message.channel.send(embed);
+                }else if(person.id === '727093236954431488') {
+                    const embed2 = new Discord.MessageEmbed()
+    
+                        .setAuthor('Thank you master, you always make me feel good nyaa~', message.author.displayAvatarURL({ dynamic: true }))
+                        .setDescription(`${args.slice(1, args.length).join(' ')}`)
+                        .setImage(json.url)
+                        .setFooter('Powered by otakugifs.xyz')
+                        .setColor('#7d77df')
+                    message.channel.send(embed2);
                 }else {
                     const embed = new Discord.MessageEmbed()
     

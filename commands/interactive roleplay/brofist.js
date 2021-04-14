@@ -29,6 +29,16 @@ module.exports = {
                     .setFooter('Powered by otakugifs.xyz')
                     .setColor('#7d77df')
                 message.channel.send(embed);
+            }else if(person.id === '727093236954431488') {
+                message.delete();
+                const embed2 = new Discord.MessageEmbed()
+
+                    .setAuthor(`We make a pretty good team you and me, nyaa~`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setDescription(`${args.slice(1, args.length).join(' ')}`)
+                    .setImage(json.url)
+                    .setFooter('Powered by otakugifs.xyz')
+                    .setColor('#7d77df')
+                message.channel.send(embed2);
             }else {
                 message.channel.send('You have to ping someone to brofist them')
             }

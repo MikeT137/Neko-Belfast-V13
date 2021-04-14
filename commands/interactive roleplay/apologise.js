@@ -29,6 +29,8 @@ module.exports = {
                     .setFooter('Powered by otakugifs.xyz')
                     .setColor('#7d77df')
                 message.channel.send(embed);
+            }else if(person.id === '727093236954431488') {
+                message.channel.send(`Im not sure why you\'re apologising, but it\'s okay, i forgive you.`)
             }else {
                 message.channel.send('You have to ping someone to apologise to')
             }

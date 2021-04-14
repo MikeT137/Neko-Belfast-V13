@@ -22,6 +22,8 @@ module.exports = {
             if(message.mentions.members.size >= 1) {
                 if(person.id == message.author.id) {
                     message.channel.send('I don\'t blame you for staring at yourself, you\'re so beautiful nya~')
+                }else if(person.id === '727093236954431488') {
+                    message.channel.send(`${message.author.username}! Where do you think you\'re looking at nya?`)
                 }else {
                     message.delete();
                     const embed = new Discord.MessageEmbed()

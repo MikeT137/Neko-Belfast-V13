@@ -22,15 +22,24 @@ module.exports = {
         if(message.mentions.members.size >= 1) {
             if(person.id == message.author.id) {
                 message.channel.send(`Don\'t do that nya!! Don\'t hurt yourself please..`)
-            }else {
+            }else if(person.id === '727093236954431488') {
                 message.delete();
                 const embed = new Discord.MessageEmbed()
+
+                    .setAuthor(`NYAA! Why did you bonk me? I\'m sorry if i did something wrong.`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setDescription(`${args.slice(1, args.length).join(' ')}`)
+                    .setImage(random_bonk[Math.floor(Math.random() * random_bonk.length)])
+                    .setColor('#7d77df')
+                message.channel.send(embed);
+            }else {
+                message.delete();
+                const embed2 = new Discord.MessageEmbed()
 
                     .setAuthor(`${message.author.username} is bonking ${person.username}, auch`, message.author.displayAvatarURL({ dynamic: true }))
                     .setDescription(`${args.slice(1, args.length).join(' ')}`)
                     .setImage(random_bonk[Math.floor(Math.random() * random_bonk.length)])
                     .setColor('#7d77df')
-                message.channel.send(embed);
+                message.channel.send(embed2);
             }
         }else {
             message.channel.send('You have to ping someone to bonk them')

@@ -30,15 +30,24 @@ module.exports = {
                         .setFooter('Powered by otakugifs.xyz')
                         .setColor('#7d77df')
                     message.channel.send(embed);
+                }else if(person.id === '727093236954431488') {
+                    const embed2 = new Discord.MessageEmbed()
+    
+                        .setAuthor('Thank you master, you always make me feel good nyaa~', message.author.displayAvatarURL({ dynamic: true }))
+                        .setDescription(`${args.slice(1, args.length).join(' ')}`)
+                        .setImage(json.url)
+                        .setFooter('Powered by otakugifs.xyz')
+                        .setColor('#7d77df')
+                    message.channel.send(embed2);
                 }else {
-                    const embed = new Discord.MessageEmbed()
+                    const embed3 = new Discord.MessageEmbed()
     
                         .setAuthor(`${message.author.username} is patting ${person.username}, so cute`, message.author.displayAvatarURL({ dynamic: true }))
                         .setDescription(`${args.slice(1, args.length).join(' ')}`)
                         .setImage(json.url)
                         .setFooter('Powered by otakugifs.xyz')
                         .setColor('#7d77df')
-                    message.channel.send(embed);
+                    message.channel.send(embed3);
                 }
             }else {
                 message.channel.send('You have to ping someone to pat them')

@@ -29,14 +29,22 @@ module.exports = {
                     .setImage(random_cheer[Math.floor(Math.random() * random_cheer.length)])
                     .setColor('#7d77df')
                 message.channel.send(embed);
+            }else if(person.id === '727093236954431488') {
+                const embed2 = new Discord.MessageEmbed()
+
+                    .setAuthor(`Aww, thank you ${message.author.username}. But there\'s no need to worry about me, as long as i\'m near my master, i\'ll always be happy nya.${message.author.username} is cheering up ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setDescription(`${args.slice(1, args.length).join(' ')}`)
+                    .setImage(random_cheer[Math.floor(Math.random() * random_cheer.length)])
+                    .setColor('#7d77df')
+                message.channel.send(embed2);
             }else {
-                const embed = new Discord.MessageEmbed()
+                const embed3 = new Discord.MessageEmbed()
 
                     .setAuthor(`${message.author.username} is cheering up ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
                     .setDescription(`${args.slice(1, args.length).join(' ')}`)
                     .setImage(random_cheer[Math.floor(Math.random() * random_cheer.length)])
                     .setColor('#7d77df')
-                message.channel.send(embed);
+                message.channel.send(embed3);
             }
         }else {
             message.channel.send('You have to ping someone to cheer them up')

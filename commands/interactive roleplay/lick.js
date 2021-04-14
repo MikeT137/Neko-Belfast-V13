@@ -22,6 +22,16 @@ module.exports = {
             if(message.mentions.members.size >= 1) {
                 if(person.id == message.author.id) {
                     message.channel.send('Just like a kitty aren\'t you? I\'m proud of you nya~')
+                }else if(person.id === '727093236954431488') {
+                    message.delete();
+                    const embed = new Discord.MessageEmbed()
+            
+                        .setAuthor(`I shall fight fire with fire nya!!`, message.author.displayAvatarURL({ dynamic: true }))
+                        .setDescription(`${args.slice(1, args.length).join(' ')}`)
+                        .setImage(json.url)
+                        .setFooter('Powered by otakugifs.xyz')
+                        .setColor('#7d77df')
+                    message.channel.send(embed);
                 }else {
                     message.delete();
                     const embed = new Discord.MessageEmbed()

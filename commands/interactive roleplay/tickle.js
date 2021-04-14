@@ -28,6 +28,15 @@ module.exports = {
                     .setImage(json.url)
                     .setFooter('Powered by otakugifs.xyz')
                     .setColor('#7d77df')
+                message.channel.send(embed);message.delete();
+            }else if(person.id === '727093236954431488') {
+                const embed = new Discord.MessageEmbed()
+            
+                    .setAuthor(`${message.author.username} s-stoop, nyaaa!!`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setDescription(`${args.slice(1, args.length).join(' ')}`)
+                    .setImage(json.url)
+                    .setFooter('Powered by otakugifs.xyz')
+                    .setColor('#7d77df')
                 message.channel.send(embed);
             }else {
                 message.channel.send('You have to ping someone to tickle them')

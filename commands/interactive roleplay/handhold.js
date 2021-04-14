@@ -30,6 +30,15 @@ module.exports = {
                         .setFooter('Powered by otakugifs.xyz')
                         .setColor('#7d77df')
                     message.channel.send(embed);
+                }else if(person.id === '727093236954431488') {
+                    const embed2 = new Discord.MessageEmbed()
+
+                        .setAuthor(`I will never let go of master\'s hand nya!`, message.author.displayAvatarURL({ dynamic: true }))
+                        .setDescription(`${args.slice(1, args.length).join(' ')}`)
+                        .setImage(json.url)
+                        .setFooter('Powered by otakugifs.xyz')
+                        .setColor('#7d77df')
+                    message.channel.send(embed2);
                 }else {
                     const embed = new Discord.MessageEmbed()
 
