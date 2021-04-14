@@ -28,8 +28,9 @@ module.exports = {
                     .setImage(json.url)
                     .setFooter('Powered by otakugifs.xyz')
                     .setColor('#7d77df')
-                message.channel.send(embed);message.delete();
+                message.channel.send(embed);
             }else if(person.id === '727093236954431488') {
+                message.delete();
                 const embed = new Discord.MessageEmbed()
             
                     .setAuthor(`${message.author.username} s-stoop, nyaaa!!`, message.author.displayAvatarURL({ dynamic: true }))
