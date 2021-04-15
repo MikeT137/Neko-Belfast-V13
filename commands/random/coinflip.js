@@ -1,7 +1,7 @@
 const {prefix} = require('../../config.json')
 module.exports = {
     name: 'coinflip',
-    description: 'It flips a coin',
+    description: 'It flips a coin and says if it\'s heads or tails, but it has a 0.01% (or 1 in 6000) chance that it will land on it\'s edge.',
     usage: `${prefix}coinflip`,
     category: 'random',
     run: async (bot, message, args) => {
