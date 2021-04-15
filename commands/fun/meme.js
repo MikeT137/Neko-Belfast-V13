@@ -10,7 +10,7 @@ module.exports = {
         const subreddits = ["dankmemes", "goodanimemes", "memes", 'Animemes', "meme"]
         const subreddit = subreddits[Math.floor(Math.random() * (subreddits.length))]
         const meme = await api.advanced(subreddit)
-
+        
         const embed = new Discord.MessageEmbed()
 
             .setTitle(meme.title)
