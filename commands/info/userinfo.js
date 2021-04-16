@@ -29,11 +29,10 @@ module.exports = {
             VERIFIED_DEVELOPER: 'Verified Bot Developer'
         };
         const userFlags = member.user.flags.toArray();
-        //const userFlags2 = message.author.flags.toArray();
+        const userFlags2 = message.author.flags.toArray();
 
         if(!args[0]) {
-            member = message.author;
-            /*const embed = new Discord.MessageEmbed()
+            const embed = new Discord.MessageEmbed()
 
                 .setDescription(`**The information is taken from this server**`)
                 .setThumbnail(message.author.displayAvatarURL({dynamic: true}))
@@ -51,29 +50,27 @@ module.exports = {
                     `\`Roles:\` ${roles.length}`
                 ])
                 .setColor('#7d77df')
-            message.channel.send(embed)*/
+            message.channel.send(embed)
         }else if(args[0] && message.mentions.members.size == 1) {
-            member = member.member
-        }
-        
-        const embed = new Discord.MessageEmbed()
+            const embed = new Discord.MessageEmbed()
 
-            .setDescription(`**The information is taken from this server**`)
-            .setThumbnail(member.user.displayAvatarURL({dynamic: true}))
-            .addField('User', [
-                `\`Username:\` ${member.user.username}`,
-                `\`ID:\` ${member.id}`,
-                `\`Flags:\` ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
-                `\`Time Created:\` ${moment(member.user.createdTimestamp).format('LT')}; ${moment(member.user.createdTimestamp).format('LL')}; ${moment(member.user.createdTimestamp).fromNow()}`,
-                `\`Status:\` ${member.user.presence.status}`,
-                `\`Game Status:\` ${member.user.presence.game || 'Not playing a game'}`
-            ])
-            .addField(`Stats in ${message.guild.name}`, [
-                `\`Highest role:\` ${member.roles.highest.id === message.guild.id ? 'None' : member.roles.highest.name}`,
-                `\`Server join date:\` ${moment(member.joinedAt).format('LL\; LTS')}`,
-                `\`Roles:\` ${roles.length}`
-            ])
-            .setColor('#7d77df')
-        message.channel.send(embed)
+                .setDescription(`**The information is taken from this server**`)
+                .setThumbnail(member.user.displayAvatarURL({dynamic: true}))
+                .addField('User', [
+                    `\`Username:\` ${member.user.username}`,
+                    `\`ID:\` ${member.id}`,
+                    `\`Flags:\` ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
+                    `\`Time Created:\` ${moment(member.user.createdTimestamp).format('LT')}; ${moment(member.user.createdTimestamp).format('LL')}; ${moment(member.user.createdTimestamp).fromNow()}`,
+                    `\`Status:\` ${member.user.presence.status}`,
+                    `\`Game Status:\` ${member.user.presence.game || 'Not playing a game'}`
+                ])
+                .addField(`Stats in ${message.guild.name}`, [
+                    `\`Highest role:\` ${member.roles.highest.id === message.guild.id ? 'None' : member.roles.highest.name}`,
+                    `\`Server join date:\` ${moment(member.joinedAt).format('LL\; LTS')}`,
+                    `\`Roles:\` ${roles.length}`
+                ])
+                .setColor('#7d77df')
+            message.channel.send(embed)
+        }else return;
     }
 }
