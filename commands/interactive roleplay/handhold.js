@@ -27,7 +27,7 @@ module.exports = {
                         .setAuthor(`Are you cold? Here, hold my hand!`, message.author.displayAvatarURL({ dynamic: true }))
                         .setDescription(`${args.slice(1, args.length).join(' ')}`)
                         .setImage(json.url)
-                        .setFooter('Powered by otakugifs.xyz')
+                        .setFooter('Powered by otakugifs.xyz', 'https://cdn.discordapp.com/emojis/832616362794942475.png?v=1')
                         .setColor('#7d77df')
                     message.channel.send(embed);
                 }else if(person.id === '727093236954431488') {
@@ -36,7 +36,7 @@ module.exports = {
                         .setAuthor(`I will never let go of master\'s hand nya!`, message.author.displayAvatarURL({ dynamic: true }))
                         .setDescription(`${args.slice(1, args.length).join(' ')}`)
                         .setImage(json.url)
-                        .setFooter('Powered by otakugifs.xyz')
+                        .setFooter('Powered by otakugifs.xyz', 'https://cdn.discordapp.com/emojis/832616362794942475.png?v=1')
                         .setColor('#7d77df')
                     message.channel.send(embed2);
                 }else {
@@ -45,7 +45,7 @@ module.exports = {
                         .setAuthor(`${message.author.username} holds ${person.username}\'s hand...O///O`, message.author.displayAvatarURL({ dynamic: true }))
                         .setDescription(`${args.slice(1, args.length).join(' ')}`)
                         .setImage(json.url)
-                        .setFooter('Powered by otakugifs.xyz')
+                        .setFooter('Powered by otakugifs.xyz', 'https://cdn.discordapp.com/emojis/832616362794942475.png?v=1')
                         .setColor('#7d77df')
                     message.channel.send(embed);
                 }

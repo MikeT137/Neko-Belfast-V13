@@ -27,7 +27,7 @@ module.exports = {
                         .setAuthor('Aww, its okay, belfast will give you some nuzzles nya~', message.author.displayAvatarURL({ dynamic: true }))
                         .setDescription(`${args.slice(1, args.length).join(' ')}`)
                         .setImage(json.url)
-                        .setFooter('Powered by otakugifs.xyz')
+                        .setFooter('Powered by otakugifs.xyz', 'https://cdn.discordapp.com/emojis/832616362794942475.png?v=1')
                         .setColor('#7d77df')
                     message.channel.send(embed);
                 }else if(person.id === '727093236954431488') {
@@ -36,7 +36,7 @@ module.exports = {
                         .setAuthor('Thank you master, you always make me feel good nyaa~', message.author.displayAvatarURL({ dynamic: true }))
                         .setDescription(`${args.slice(1, args.length).join(' ')}`)
                         .setImage(json.url)
-                        .setFooter('Powered by otakugifs.xyz')
+                        .setFooter('Powered by otakugifs.xyz', 'https://cdn.discordapp.com/emojis/832616362794942475.png?v=1')
                         .setColor('#7d77df')
                     message.channel.send(embed2);
                 }else {
@@ -45,7 +45,7 @@ module.exports = {
                         .setAuthor(`${message.author.username} is nuzzing ${person.username}, so cute`, message.author.displayAvatarURL({ dynamic: true }))
                         .setDescription(`${args.slice(1, args.length).join(' ')}`)
                         .setImage(json.url)
-                        .setFooter('Powered by otakugifs.xyz')
+                        .setFooter('Powered by otakugifs.xyz', 'https://cdn.discordapp.com/emojis/832616362794942475.png?v=1')
                         .setColor('#7d77df')
                     message.channel.send(embed3);
                 }

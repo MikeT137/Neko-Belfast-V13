@@ -29,7 +29,7 @@ module.exports = {
                         .setAuthor(`${message.author.username} is apologising to ${person.username}, sorry T-T`, message.author.displayAvatarURL({ dynamic: true }))
                         .setDescription(`${args.slice(1, args.length).join(' ')}`)
                         .setImage(json.url)
-                        .setFooter('Powered by otakugifs.xyz')
+                        .setFooter('Powered by otakugifs.xyz', 'https://cdn.discordapp.com/emojis/832616362794942475.png?v=1')
                         .setColor('#7d77df')
                     message.channel.send(embed);
                 }

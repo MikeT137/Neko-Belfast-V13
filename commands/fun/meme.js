@@ -17,7 +17,7 @@ module.exports = {
             .setDescription(`${meme.upvoteRatio}% of people have liked this :thumbsup:`)
             .setImage(meme.img)
             .setURL(`https://reddit.com/r/${subreddit}`)
-            .setFooter(`Posted in r/${subreddit} by u/${meme.author}`)
+            .setFooter(`Posted in r/${subreddit} by u/${meme.author}`, 'https://cdn.discordapp.com/emojis/697937639701086268.png?v=1')
             .setColor('#7d77df')
         message.channel.send(embed);
     }
