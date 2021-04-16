@@ -23,7 +23,7 @@ module.exports = {
                 .setAuthor(`${message.author.username} is blushing`, message.author.displayAvatarURL({ dynamic: true }))
                 .setDescription(`${args.join(' ')}`)
                 .setImage(json.url)
-                .setFooter(`${client.emojis.cache.get("832617295246917642")} Powered by otakugifs.xyz`)
+                .setFooter(`${bot.emojis.cache.get("832617295246917642")} Powered by otakugifs.xyz`)
                 .setColor('#7d77df')
             message.channel.send(embed)
         })
