@@ -17,8 +17,8 @@ module.exports = {
                     .setDescription('**New Suggestion nya~!**')
                     .setThumbnail(message.author.displayAvatarURL({dynamic: true}))
                     .addField('User', [
-                        `\`User tag:\` ${message.author.tag}`,
-                        `\`ID:\` ${message.author.id}`,
+                        `\`User Tag:\` ${message.author.tag}`,
+                        `\`User ID:\` ${message.author.id}`,
                     ])
                     .addField(`Server`, [
                         `\`Server Name:\` ${message.guild.name}`,
