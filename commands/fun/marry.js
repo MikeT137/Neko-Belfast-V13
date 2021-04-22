@@ -49,7 +49,7 @@ module.exports = {
                     msg.awaitReactions(filter, { max: 1, time: 60000 })
                     .then(collected => {
                         const reaction = collected.first();
-                        if(reaction.emoji.name === '✅' && married[message.author.id].married == 0 && married[person.id].married == 0) {
+                        if(reaction.emoji.name === '✅') {
                             fs.stat('./marriage.json', (err, stats) => {
                                 if(err) {
                                     throw err;
