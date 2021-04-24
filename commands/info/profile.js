@@ -1,14 +1,15 @@
 const {prefix} = require('../../config.json')
 const fs = require('fs')
 module.exports = {
-    name:'userinfo',
+    name:'profile',
     description: "It sends information about yourself, or the pinged user. The information is taken from the server you do the command in",
-    usage: `${prefix}userinfo (no ping / ping)`,
+    usage: `${prefix}profile (no ping / ping)`,
     category: 'info',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
         let married = JSON.parse(fs.readFileSync('./marriage.json', 'utf8'))
         const moment = require('moment');
+        const {version} = require('../../package.json');
 
         const person = message.mentions.members.first() || message.guild.members.cache.get(args) || message.member;
         const roles = person.roles.cache
@@ -81,26 +82,44 @@ module.exports = {
                 .setColor('#7d77df')
             message.channel.send(embed)
         }else if(args[0] && message.mentions.members.size == 1) {
-            const embed = new Discord.MessageEmbed()
+            if(person.id === '727093236954431488') {
+                const embed = new Discord.MessageEmbed()
 
-                .setDescription(`**The information is taken from this server**`)
-                .setThumbnail(person.user.displayAvatarURL({dynamic: true}))
-                .addField('User', [
-                    `\`Username:\` ${person.user.username}`,
-                    `\`ID:\` ${person.id}`,
-                    `\`Married:\` ${spouse2}`,
-                    `\`Flags:\` ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
-                    `\`Time Created:\` ${moment(person.user.createdTimestamp).format('LT')}; ${moment(person.user.createdTimestamp).format('LL')}; ${moment(person.user.createdTimestamp).fromNow()}`,
-                    `\`Status:\` ${person.user.presence.status}`,
-                    `\`Game Status:\` ${person.user.presence.game || 'Not playing a game'}`
-                ])
-                .addField(`Stats in ${message.guild.name}`, [
-                    `\`Highest role:\` ${person.roles.highest.id === message.guild.id ? 'None' : person.roles.highest.name}`,
-                    `\`Server join date:\` ${moment(person.joinedAt).format('LL\; LTS')}`,
-                    `\`Roles:\` ${roles.length}`
-                ])
-                .setColor('#7d77df')
-            message.channel.send(embed)
-        }else return;
+                    .setThumbnail(bot.user.displayAvatarURL())
+                    .setDescription('**Information about this bot**')
+                    .addField('General', [
+                        `\`Name:\` ${bot.user.tag} (${bot.user.id})`,
+                        `\`Servers: \` ${bot.guilds.cache.size}`,
+                        `\`Creation Date:\` ${moment(bot.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
+                        `\`Version:\` ${version}.${bot.commands.size}`,
+                        `\`Developer:\` [Miku](https://discord.bio/p/mikuyoruka)`,
+                        `\`Profile picture artist:\` [Linkool21](https://www.reddit.com/user/Linkool21/)`
+                    ])
+                    .addField('Want to support me?', '➤[Invite me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) ➤[Join my server!](https://discord.gg/M3sNjT8vt9) ➤[Vote me!](https://top.gg/bot/727093236954431488/vote) ➤[Donate!](https://www.buymeacoffee.com/mikuyoruka)')
+                    .setColor('#7d77df')
+                message.channel.send(embed);
+            }else {
+                const embed = new Discord.MessageEmbed()
+
+                    .setDescription(`**The information is taken from this server**`)
+                    .setThumbnail(person.user.displayAvatarURL({dynamic: true}))
+                    .addField('User', [
+                        `\`Username:\` ${person.user.username}`,
+                        `\`ID:\` ${person.id}`,
+                        `\`Married:\` ${spouse2}`,
+                        `\`Flags:\` ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
+                        `\`Time Created:\` ${moment(person.user.createdTimestamp).format('LT')}; ${moment(person.user.createdTimestamp).format('LL')}; ${moment(person.user.createdTimestamp).fromNow()}`,
+                        `\`Status:\` ${person.user.presence.status}`,
+                        `\`Game Status:\` ${person.user.presence.game || 'Not playing a game'}`
+                    ])
+                    .addField(`Stats in ${message.guild.name}`, [
+                        `\`Highest role:\` ${person.roles.highest.id === message.guild.id ? 'None' : person.roles.highest.name}`,
+                        `\`Server join date:\` ${moment(person.joinedAt).format('LL\; LTS')}`,
+                        `\`Roles:\` ${roles.length}`
+                    ])
+                    .setColor('#7d77df')
+                message.channel.send(embed)
+            }
+        }
     }
 }
