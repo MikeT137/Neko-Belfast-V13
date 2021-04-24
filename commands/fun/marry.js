@@ -37,7 +37,7 @@ module.exports = {
             }else if(findUser(person.id, married)) {
                 message.channel.send(`${person.username} is already married!`)
             }else {
-                message.channel.send(`${person.username}!! ${message.author.username} wants to marry you. You have 1 minute to answer, what is your response?`)
+                message.channel.send(`${person.username}!! ${message.author.username} wants to marry you. What is your response?`)
                 .then(msg => {
                     msg.react('✅'),
                     msg.react('❌')
