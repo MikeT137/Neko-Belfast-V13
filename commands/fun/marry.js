@@ -46,7 +46,7 @@ module.exports = {
                         return ['✅', '❌'].includes(reaction.emoji.name) && user.id === person.id;
                     }
 
-                    msg.awaitReactions(filter, { max: 1, time: 60000 })
+                    msg.awaitReactions(filter, { max: 1 })
                     .then(collected => {
                         const reaction = collected.first();
                         if(reaction.emoji.name === '✅') {
