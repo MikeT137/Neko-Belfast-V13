@@ -7,7 +7,7 @@ module.exports = {
     category: 'info',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        let married = JSON.parse(fs.readFileSync('./marriage.json', 'utf8'))
+        //let married = JSON.parse(fs.readFileSync('./marriage.json', 'utf8'))
         const moment = require('moment');
         const {version} = require('../../package.json');
 
@@ -34,7 +34,7 @@ module.exports = {
         const userFlags = person.user.flags.toArray();
         const userFlags2 = message.author.flags.toArray();
 
-        function findUser (userId, data) {
+        /*function findUser (userId, data) {
             for (let i = 0; i < data.length; i++) {
                 if (data[i].hasOwnProperty(userId)) {
                     return data[i];
@@ -58,7 +58,7 @@ module.exports = {
             spouse2 = 'Not married yet';
         }else {
             spouse2 = `<@${userIndex2[person.id]}>`
-        }
+        }*/
 
         if(!args[0]) {
             const embed = new Discord.MessageEmbed()
@@ -68,7 +68,7 @@ module.exports = {
                 .addField('User', [
                     `\`Username:\` ${message.author.username}`,
                     `\`ID:\` ${message.author.id}`,
-                    `\`Married:\` ${spouse}`,
+                    //`\`Married:\` ${spouse}`,
                     `\`Flags:\` ${userFlags2.length ? userFlags2.map(flag => flags[flag]).join(', ') : 'None'}`,
                     `\`Time Created:\` ${moment(message.author.createdTimestamp).format('LT')}; ${moment(message.author.createdTimestamp).format('LL')}; ${moment(message.author.createdTimestamp).fromNow()}`,
                     `\`Status:\` ${message.author.presence.status}`,
@@ -106,7 +106,7 @@ module.exports = {
                     .addField('User', [
                         `\`Username:\` ${person.user.username}`,
                         `\`ID:\` ${person.id}`,
-                        `\`Married:\` ${spouse2}`,
+                        //`\`Married:\` ${spouse2}`,
                         `\`Flags:\` ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
                         `\`Time Created:\` ${moment(person.user.createdTimestamp).format('LT')}; ${moment(person.user.createdTimestamp).format('LL')}; ${moment(person.user.createdTimestamp).fromNow()}`,
                         `\`Status:\` ${person.user.presence.status}`,
