@@ -93,7 +93,7 @@ module.exports = {
                         `\`Creation Date:\` ${moment(bot.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
                         `\`Version:\` ${version}.${bot.commands.size}`,
                         `\`Developer:\` [Miku](https://discord.bio/p/mikuyoruka)`,
-                        `\`Profile picture artist:\` [ほしみやましろ。](https://www.pixiv.net/en/artworks/70817772)`
+                        `\`Profile picture artist:\` [ほしみやましろ。](https://www.pixiv.net/en/users/3580504)`
                     ])
                     .addField('Want to support me?', '➤[Invite me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) ➤[Join my server!](https://discord.gg/M3sNjT8vt9) ➤[Vote me!](https://top.gg/bot/727093236954431488/vote) ➤[Donate!](https://www.buymeacoffee.com/mikuyoruka)')
                     .setColor('#7d77df')
