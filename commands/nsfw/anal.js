@@ -21,7 +21,7 @@ module.exports = {
                     const GIF = await neko.nsfw.anal();
                     const embed = new Discord.MessageEmbed()
                             
-                        .setTitle(`A nsfw iamge/gif about: \`anal\``)
+                        .setTitle(`A nsfw image/gif about: \`anal\``)
                         .setImage(GIF.url)
                         .setColor('#7d77df')
                     message.channel.send(embed);
