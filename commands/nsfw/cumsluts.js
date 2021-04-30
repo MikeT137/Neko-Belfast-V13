@@ -15,7 +15,7 @@ module.exports = {
 
             let voted = await topgg.hasVoted(message.author.id)
             if(!voted) {
-                message.channel.send(`If you want to access nsfw commands, you have to vote for me. That\'s the only way that it can work nya~.\nHere\'s the link: https://top.gg/bot/727093236954431488/vote`)
+                message.channel.send(`If you want to access nsfw commands, you have to vote for me once every 12 hours. That\'s the only way that it can work nya~.\nHere\'s the link: https://top.gg/bot/727093236954431488/vote`)
              }else {
                 async function cumsluts() {
                     const GIF = await neko.nsfw.cumsluts();
