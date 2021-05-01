@@ -24,7 +24,7 @@ module.exports = {
             if(person.id === '727093236954431488') {
                 const embed = new Discord.MessageEmbed()
 
-                    .setAuthor(`Aww, thank you ${message.author.username}. But there\'s no need to worry about me, as long as i\'m near my master, i\'ll always be happy nya.${message.author.username} is cheering up ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setAuthor(`Aww, thank you ${message.author.username}. But there\'s no need to worry about me, as long as i\'m near my master, i\'ll always be happy nya.`, message.author.displayAvatarURL({ dynamic: true }))
                     .setDescription(`${args.slice(1, args.length).join(' ')}`)
                     .setImage(random_cheer[Math.floor(Math.random() * random_cheer.length)])
                     .setColor('#7d77df')
