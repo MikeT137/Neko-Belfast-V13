@@ -16,7 +16,7 @@ bot.categories = fs.readdirSync("./commands/");
 });
 
 //Discord Bot List - Server Count
-const DBL = require("dblapi.js")
+const DBL = require("dblapi.js");
 const {topggtoken} = require('./config.json');
 const dbl = new DBL(`${topggtoken}`, bot);
 
