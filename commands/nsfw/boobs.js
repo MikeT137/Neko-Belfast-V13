@@ -18,7 +18,13 @@ module.exports = {
                 message.channel.send(`If you want to access nsfw commands, you have to vote for me once every 12 hours. That\'s the only way that it can work nya~.\nHere\'s the link: https://top.gg/bot/727093236954431488/vote`)
              }else {
                 async function boobs() {
-                    const GIF = await neko.nsfw.boobs();
+                    const image = await neko.nsfw.boobs()
+                    const image2 = await neko.nsfw.tits()
+                    let random_boobs = [
+                        image,
+                        image2
+                    ]
+                    const GIF = random_boobs[Math.floor(Math.random() * random_boobs.length)]
                     const embed = new Discord.MessageEmbed()
                             
                         .setTitle(`A nsfw image/gif about: \`boobs\``)
