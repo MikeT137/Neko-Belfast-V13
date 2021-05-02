@@ -7,9 +7,13 @@ module.exports = {
     category: 'info',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        //let married = JSON.parse(fs.readFileSync('./marriage.json', 'utf8'))
+        let servers;
         const moment = require('moment');
         const {version} = require('../../package.json');
+
+        client.shard.fetchClientValues('guilds.cache.size').then(results => {
+            servers = `${results.reduce((acc, guildCount) => acc + guildCount, 0)}`
+        }).catch(console.error);
 
         const person = message.mentions.members.first() || message.guild.members.cache.get(args) || message.member;
         const roles = person.roles.cache
@@ -33,32 +37,6 @@ module.exports = {
         };
         const userFlags = person.user.flags.toArray();
         const userFlags2 = message.author.flags.toArray();
-
-        /*function findUser (userId, data) {
-            for (let i = 0; i < data.length; i++) {
-                if (data[i].hasOwnProperty(userId)) {
-                    return data[i];
-                }
-            }
-            return false;
-        }
-        let userIndex = findUser(message.author.id, married);
-        let userIndex2 = findUser(person.id, married);
-
-        let spouse;
-        let spouse2;
-        
-        if (!userIndex) {
-            spouse = 'Not married yet';
-        }else {
-            spouse = `<@${userIndex[message.author.id]}>`
-        }
-        
-        if (!userIndex2) {
-            spouse2 = 'Not married yet';
-        }else {
-            spouse2 = `<@${userIndex2[person.id]}>`
-        }*/
 
         if(!args[0]) {
             const embed = new Discord.MessageEmbed()
@@ -89,7 +67,7 @@ module.exports = {
                     .setDescription('**Information about this bot**')
                     .addField('General', [
                         `\`Name:\` ${bot.user.tag} (${bot.user.id})`,
-                        `\`Servers: \` ${bot.guilds.cache.size}`,
+                        `\`Servers: \` ${servers}`,
                         `\`Creation Date:\` ${moment(bot.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
                         `\`Version:\` ${version}.${bot.commands.size}`,
                         `\`Developer:\` [Miku](https://discord.bio/p/mikuyoruka)`,
@@ -106,7 +84,6 @@ module.exports = {
                     .addField('User', [
                         `\`Username:\` ${person.user.username}`,
                         `\`ID:\` ${person.id}`,
-                        //`\`Married:\` ${spouse2}`,
                         `\`Flags:\` ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
                         `\`Time Created:\` ${moment(person.user.createdTimestamp).format('LT')}; ${moment(person.user.createdTimestamp).format('LL')}; ${moment(person.user.createdTimestamp).fromNow()}`,
                         `\`Status:\` ${person.user.presence.status}`,
