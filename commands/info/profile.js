@@ -11,7 +11,7 @@ module.exports = {
         const moment = require('moment');
         const {version} = require('../../package.json');
 
-        client.shard.fetchClientValues('guilds.cache.size').then(results => {
+        bot.shard.fetchClientValues('guilds.cache.size').then(results => {
             servers = `${results.reduce((acc, guildCount) => acc + guildCount, 0)}`
         }).catch(console.error);
 
