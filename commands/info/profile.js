@@ -7,13 +7,8 @@ module.exports = {
     category: 'info',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        let servers;
         const moment = require('moment');
         const {version} = require('../../package.json');
-
-        bot.shard.fetchClientValues('guilds.cache.size').then(results => {
-            servers = `${results.reduce((acc, guildCount) => acc + guildCount, 0)}`
-        }).catch(console.error);
 
         const person = message.mentions.members.first() || message.guild.members.cache.get(args) || message.member;
         const roles = person.roles.cache
@@ -61,21 +56,23 @@ module.exports = {
             message.channel.send(embed)
         }else if(args[0] && message.mentions.members.size == 1) {
             if(person.id === '727093236954431488') {
-                const embed = new Discord.MessageEmbed()
+                bot.shard.fetchClientValues('guilds.cache.size').then(results => {
+                    const embed = new Discord.MessageEmbed()
 
-                    .setThumbnail(bot.user.displayAvatarURL())
-                    .setDescription('**Information about this bot**')
-                    .addField('General', [
-                        `\`Name:\` ${bot.user.tag} (${bot.user.id})`,
-                        `\`Servers: \` ${servers}`,
-                        `\`Creation Date:\` ${moment(bot.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
-                        `\`Version:\` ${version}.${bot.commands.size}`,
-                        `\`Developer:\` [Miku](https://discord.bio/p/mikuyoruka)`,
-                        `\`Profile picture artist:\` [ほしみやましろ。](https://www.pixiv.net/en/users/3580504)`
-                    ])
-                    .addField('Want to support me?', '➤[Invite me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) ➤[Join my server!](https://discord.gg/M3sNjT8vt9) ➤[Vote me!](https://top.gg/bot/727093236954431488/vote) ➤[Donate!](https://www.buymeacoffee.com/mikuyoruka)')
-                    .setColor('#7d77df')
-                message.channel.send(embed);
+                        .setThumbnail(bot.user.displayAvatarURL())
+                        .setDescription('**Information about this bot**')
+                        .addField('General', [
+                            `\`Name:\` ${bot.user.tag} (${bot.user.id})`,
+                            `\`Servers: \` ${results.reduce((acc, guildCount) => acc + guildCount, 0)}`,
+                            `\`Creation Date:\` ${moment(bot.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
+                            `\`Version:\` ${version}.${bot.commands.size}`,
+                            `\`Developer:\` [Miku](https://discord.bio/p/mikuyoruka)`,
+                            `\`Profile picture artist:\` [ほしみやましろ。](https://www.pixiv.net/en/users/3580504)`
+                        ])
+                        .addField('Want to support me?', '➤[Invite me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) ➤[Join my server!](https://discord.gg/M3sNjT8vt9) ➤[Vote me!](https://top.gg/bot/727093236954431488/vote) ➤[Donate!](https://www.buymeacoffee.com/mikuyoruka)')
+                        .setColor('#7d77df')
+                    message.channel.send(embed);
+                }).catch(console.error);
             }else {
                 const embed = new Discord.MessageEmbed()
 
