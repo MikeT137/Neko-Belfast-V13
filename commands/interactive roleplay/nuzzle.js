@@ -42,7 +42,7 @@ module.exports = {
                 }else {
                     const embed3 = new Discord.MessageEmbed()
     
-                        .setAuthor(`${message.author.username} is nuzzing ${person.username}, so cute`, message.author.displayAvatarURL({ dynamic: true }))
+                        .setAuthor(`${message.author.username} is nuzzling ${person.username}, so cute`, message.author.displayAvatarURL({ dynamic: true }))
                         .setDescription(`${args.slice(1, args.length).join(' ')}`)
                         .setImage(json.url)
                         .setFooter('Powered by otakugifs.xyz', 'https://cdn.discordapp.com/emojis/832616362794942475.png?v=1')
