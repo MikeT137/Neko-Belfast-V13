@@ -8,7 +8,7 @@ module.exports = {
         const ms = require('ms');
         const person = message.guild.member(message.mentions.users.first());
         
-        if(!message.member.hasPermission("MANAGE_MESSAGES") || !message.guild.owner) return message.channel.send('You dont have permissions to use this command');
+        if(!message.member.hasPermission("MANAGE_ROLES") || !message.guild.owner) return message.channel.send('You dont have permissions to use this command');
         if(!person) return message.channel.send('Please specify a member');
         
         let muterole = message.guild.roles.cache.find(role => role.name === 'BMuted')
@@ -20,11 +20,11 @@ module.exports = {
         if(!time){
             return message.channel.send('You didnt specify the time');
         }else{
-        person.roles.add(muterole.id);
+        person.roles.add(muterole);
         message.channel.send(`@${person.user.tag} has been muted for ${ms(ms(time))}`)
 
         setTimeout(function(){
-            person.roles.remove(muterole.id);
+            person.roles.remove(muterole);
             message.channel.send(`@${person.user.tag}'s ${time} of being muted has ran out`);
 
         }, ms(time));

@@ -5,8 +5,6 @@ module.exports = {
     usage: `${prefix}unmute (ping)`,
     category: 'moderation',
     run: async (bot, message, args) => {
-        const ms = require('ms');
-        let mainrole = message.guild.roles.cache.find(role => role.name === 'Member')
         let muterole = message.guild.roles.cache.find(role => role.name === 'BMuted')
         let person = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]))
         
@@ -17,7 +15,7 @@ module.exports = {
         if(!muterole) {
             return message.channel.send('Couldnt find the mute role');
         }
-        person.roles.remove(muterole.id);
+        person.roles.remove(muterole);
         message.channel.send(`@${person.user.tag} has been unmuted`);
     }
 }
