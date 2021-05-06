@@ -8,7 +8,7 @@ module.exports = {
         const ms = require('ms');
         const person = message.guild.member(message.mentions.users.first());
         
-        if(!message.member.hasPermission("MANAGE_ROLES") || !message.guild.owner) return message.channel.send('You dont have permissions to use this command');
+        if(!message.member.hasPermission("MANAGE_ROLES" || "ADMINISTRATOR") || !message.guild.owner) return message.channel.send('You dont have permissions to use this command');
         if(!person) return message.channel.send('Please specify a member');
         
         let muterole = message.guild.roles.cache.find(role => role.name === 'BMuted')

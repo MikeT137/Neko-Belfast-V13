@@ -8,7 +8,7 @@ module.exports = {
         let muterole = message.guild.roles.cache.find(role => role.name === 'BMuted')
         let person = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]))
         
-        if(!message.member.hasPermission("MANAGE_ROLES") || !message.guild.owner) return message.channel.send('You dont have permissions to use this command');
+        if(!message.member.hasPermission("MANAGE_ROLES" || "ADMINISTRATOR") || !message.guild.owner) return message.channel.send('You dont have permissions to use this command');
         if (!person) {
             message.channel.send('Please specify a muted member')
         }
