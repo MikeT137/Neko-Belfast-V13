@@ -13,14 +13,16 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
 
                 .setTitle(`${author.username}\'s avatar:`)
-                .setImage(`${author.displayAvatarURL({ dynamic: true , size: 2048})}`)
+                .setDescription(`Format options: [webp](${author.displayAvatarURL({ format: "webp" })}), [png](${author.displayAvatarURL({ format: "png" })}), [jpg](${author.displayAvatarURL({ format: "jpg" })}), [jpeg](${author.displayAvatarURL({ format: "jpeg" })}), [gif](${author.displayAvatarURL({ format: "gif" })})`)
+                .setImage(`${author.displayAvatarURL({ dynamic: true , size: 2048, format: "png" })}`)
                 .setColor('#7d77df')
             message.channel.send(embed);
         }else if (!args[1] && message.mentions.members.size == 1) {
             const embed = new Discord.MessageEmbed()
             
                 .setTitle(`${person.username}\'s avatar:`)
-                .setImage(`${person.displayAvatarURL({ dynamic: true , size: 2048})}`)
+                .setDescription(`Format options: [webp](${person.displayAvatarURL({ format: "webp" })}), [png](${person.displayAvatarURL({ format: "png" })}), [jpg](${person.displayAvatarURL({ format: "jpg" })}), [jpeg](${person.displayAvatarURL({ format: "jpeg" })}), [gif](${person.displayAvatarURL({ format: "gif" })})`)
+                .setImage(`${person.displayAvatarURL({ dynamic: true , size: 2048, format: "png" })}`)
                 .setColor('#7d77df')
             message.channel.send(embed);
         }else {
