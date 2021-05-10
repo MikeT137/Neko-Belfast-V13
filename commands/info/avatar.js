@@ -21,7 +21,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
             
                 .setTitle(`${person.username}\'s avatar:`)
-                .setDescription(`Format options: [WEBP(${person.displayAvatarURL({ format: "webp" })}), [PNG](${person.displayAvatarURL({ format: "png" })}), [JPG](${person.displayAvatarURL({ format: "jpg" })}), [JPEG](${person.displayAvatarURL({ format: "jpeg" })}), [GIF](${person.displayAvatarURL({ format: "gif" })})`)
+                .setDescription(`Format options: [WEBP](${person.displayAvatarURL({ format: "webp" })}), [PNG](${person.displayAvatarURL({ format: "png" })}), [JPG](${person.displayAvatarURL({ format: "jpg" })}), [JPEG](${person.displayAvatarURL({ format: "jpeg" })}), [GIF](${person.displayAvatarURL({ format: "gif" })})`)
                 .setImage(`${person.displayAvatarURL({ dynamic: true , size: 2048, format: "png" })}`)
                 .setColor('#7d77df')
             message.channel.send(embed);
