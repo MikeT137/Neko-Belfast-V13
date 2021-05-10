@@ -13,7 +13,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
 
                 .setTitle(`${author.username}\'s avatar:`)
-                .setDescription(`Format options: [webp](${author.displayAvatarURL({ format: "webp" })}), [png](${author.displayAvatarURL({ format: "png" })}), [jpg](${author.displayAvatarURL({ format: "jpg" })}), [jpeg](${author.displayAvatarURL({ format: "jpeg" })}), [gif](${author.displayAvatarURL({ format: "gif" })})`)
+                .setDescription(`Format options: [WEBP](${author.displayAvatarURL({ format: "webp" })}), [PNG](${author.displayAvatarURL({ format: "png" })}), [JPG](${author.displayAvatarURL({ format: "jpg" })}), [JPEG](${author.displayAvatarURL({ format: "jpeg" })}), [GIF](${author.displayAvatarURL({ format: "gif" })})`)
                 .setImage(`${author.displayAvatarURL({ dynamic: true , size: 2048, format: "png" })}`)
                 .setColor('#7d77df')
             message.channel.send(embed);
@@ -21,7 +21,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
             
                 .setTitle(`${person.username}\'s avatar:`)
-                .setDescription(`Format options: [webp](${person.displayAvatarURL({ format: "webp" })}), [png](${person.displayAvatarURL({ format: "png" })}), [jpg](${person.displayAvatarURL({ format: "jpg" })}), [jpeg](${person.displayAvatarURL({ format: "jpeg" })}), [gif](${person.displayAvatarURL({ format: "gif" })})`)
+                .setDescription(`Format options: [WEBP(${person.displayAvatarURL({ format: "webp" })}), [PNG](${person.displayAvatarURL({ format: "png" })}), [JPG](${person.displayAvatarURL({ format: "jpg" })}), [JPEG](${person.displayAvatarURL({ format: "jpeg" })}), [GIF](${person.displayAvatarURL({ format: "gif" })})`)
                 .setImage(`${person.displayAvatarURL({ dynamic: true , size: 2048, format: "png" })}`)
                 .setColor('#7d77df')
             message.channel.send(embed);
