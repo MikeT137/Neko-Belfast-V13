@@ -6,19 +6,21 @@ module.exports = {
     category: 'moderation',
     run: async(bot, message, args) => {
         if(!message.member.hasPermission("BAN_MEMBERS")) {
-            return message.channel.send(`You do not have the permission to unban someone`)
+            return message.channel.send(`You do not have the permission to unban someone. (BAN_MEMBERS)`)
         } else if(!message.guild.me.hasPermission("BAN_MEMBERS")) {
             return message.channel.send(`I do not have the permission to unban someone`)
         }
-          
-        let userID = args[0]
+
         message.guild.fetchBans()
         .then(bans => {
-            if(bans.size == 0) return 
-            let bUser = bans.find(b => b.user.id == userID)
-            if(!bUser) return
-            message.guild.members.unban(bUser.user)
-            message.channel.send('Successfully unbanned!')
+            let bUser = bans.find(b => b.user.id == args[0])
+
+            if(bUser) {
+                message.guild.members.unban(bUser.user)
+                message.channel.send('Successfully unbanned!')
+            }else{
+                message.channel.send('I couldn\'t find the user you are trying to unban')
+            }
         })
     }
 }

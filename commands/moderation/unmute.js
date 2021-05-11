@@ -8,14 +8,14 @@ module.exports = {
         let muterole = message.guild.roles.cache.find(role => role.name === 'BMuted')
         let person = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]))
         
-        if(!message.member.hasPermission("MANAGE_ROLES" || "ADMINISTRATOR") || !message.guild.owner) return message.channel.send('You dont have permissions to use this command');
+        if(!message.member.hasPermission("MANAGE_ROLES")) return message.channel.send('You don\'t have permissions to use this command. (MANAGE_ROLES)');
         if (!person) {
             message.channel.send('Please specify a muted member')
-        }
-        if(!muterole) {
+        }else if(!muterole) {
             return message.channel.send('Couldnt find the mute role');
+        }else {
+            person.roles.remove(muterole);
+            message.channel.send(`@${person.user.tag} has been unmuted`);
         }
-        person.roles.remove(muterole);
-        message.channel.send(`@${person.user.tag} has been unmuted`);
     }
 }

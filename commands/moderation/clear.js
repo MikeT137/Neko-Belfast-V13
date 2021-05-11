@@ -7,8 +7,8 @@ module.exports = {
     run: async (bot, message, args) => {
         let amount;
 
-        if(!message.member.hasPermission("ADMINISTRATOR")) {
-            message.channel.send('You can\'t delete messages')
+        if(!message.member.hasPermission("MANAGE_MESSAGES")) {
+            message.channel.send('You don\'t have the permission to delete messages. (MANAGE_MESSAGES)')
         }else if(isNaN(args[0]) || parseInt(args[0]) <= 0) {
             message.channel.send('You didn\'t tell me how many messages to delete')
         }else if(message.deletable) {
@@ -21,6 +21,6 @@ module.exports = {
 
             message.channel.bulkDelete(amount, true)
             .then(deleted => message.channel.send(`I deleted \`${deleted.size}\` messages`))
-        }else return;
+        }
     }
 }
