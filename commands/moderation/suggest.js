@@ -1,7 +1,7 @@
 const {prefix} = require('../../config.json')
 module.exports = {
     name: 'suggest',
-    description: "If you have any suggestions about the bot, you can send it to the creator",
+    description: "If you have any suggestions about the bot, you can send it to the creator.",
     usage: `${prefix}suggest (message)`,
     category: 'moderation',
     run: async (bot, message, args) => {
@@ -9,7 +9,7 @@ module.exports = {
         const mikuid = '486276124549316619';
 
         if(!args[0]) {
-            message.channel.send('You have to say something to suggest it to the creator')
+            message.channel.send('You have to say something to suggest it to the creator, but please try to be as explicit as possible.')
         }else if(args[0]) {
             bot.users.fetch(`${mikuid}`).then((user) => {
                 const embed = new Discord.MessageEmbed()
