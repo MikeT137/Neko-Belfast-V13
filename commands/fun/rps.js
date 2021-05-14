@@ -32,21 +32,21 @@ module.exports = {
                             const embedR = new Discord.MessageEmbed()
         
                                 .setAuthor(`I won!`, message.author.displayAvatarURL({ dynamic: true }))
-                                .addField('Bot: vs You', ':page_facing_up: vs :rock:')
+                                .addField('Bot vs You', ':page_facing_up: vs :rock:')
                                 .setColor('RED')
                             msg.edit(embedR)
                         }else if (result === 'rock') {
                             const embedR2 = new Discord.MessageEmbed()
         
                                 .setAuthor(`It\'s a tie!`, message.author.displayAvatarURL({ dynamic: true }))
-                                .addField('Bot: vs You', ':rock: vs :rock:')
+                                .addField('Bot vs You', ':rock: vs :rock:')
                                 .setColor('YELLOW')
                             msg.edit(embedR2)
                         }else {
                             const embedR3 = new Discord.MessageEmbed()
         
                                 .setAuthor(`You won!`, message.author.displayAvatarURL({ dynamic: true }))
-                                .addField('Bot: vs You', ':scissors: vs :rock:')
+                                .addField('Bot vs You', ':scissors: vs :rock:')
                                 .setColor('GREEN')
                             msg.edit(embedR3)
                         }
@@ -55,21 +55,21 @@ module.exports = {
                             const embedP = new Discord.MessageEmbed()
         
                                 .setAuthor(`I won!`, message.author.displayAvatarURL({ dynamic: true }))
-                                .addField('Bot: vs You', ':scissors: vs :page_facing_up:')
+                                .addField('Bot vs You', ':scissors: vs :page_facing_up:')
                                 .setColor('RED')
                             msg.edit(embedP)
                         }else if (result === 'paper') {
                             const embedP2 = new Discord.MessageEmbed()
         
                                 .setAuthor(`It's a tie!`, message.author.displayAvatarURL({ dynamic: true }))
-                                .addField('Bot: vs You', ':page_facing_up: vs :page_facing_up:')
+                                .addField('Bot vs You', ':page_facing_up: vs :page_facing_up:')
                                 .setColor('YELLOW')
                             msg.edit(embedP2)
                         }else {
                             const embedP3 = new Discord.MessageEmbed()
         
                                 .setAuthor(`You won!`, message.author.displayAvatarURL({ dynamic: true }))
-                                .addField('Bot: vs You', ':rock: vs :page_facing_up:')
+                                .addField('Bot vs You', ':rock: vs :page_facing_up:')
                                 .setColor('GREEN')
                             msg.edit(embedP3) 
                         }   
@@ -78,21 +78,21 @@ module.exports = {
                             const embedS = new Discord.MessageEmbed()
         
                                 .setAuthor(`I won!`, message.author.displayAvatarURL({ dynamic: true }))
-                                .addField('Bot: vs You', ':rock: vs :scissors:')
+                                .addField('Bot vs You', ':rock: vs :scissors:')
                                 .setColor('RED')
                             msg.edit(embedS)
                         }else if (result === 'scissors') {
                                 const embedS2 = new Discord.MessageEmbed()
             
                                 .setAuthor(`It\'s a tie!`, message.author.displayAvatarURL({ dynamic: true }))
-                                .addField('Bot: vs You', ':scissors: vs :scissors:')
+                                .addField('Bot vs You', ':scissors: vs :scissors:')
                                 .setColor('YELLOW')
                             msg.edit(embedS2)
                         }else {
                             const embedS3 = new Discord.MessageEmbed()
         
                                 .setAuthor(`You won!`, message.author.displayAvatarURL({ dynamic: true }))
-                                .addField('Bot: vs You', ':page_facing_up: vs :scissors:')
+                                .addField('Bot vs You', ':page_facing_up: vs :scissors:')
                                 .setColor('GREEN')
                             msg.edit(embedS3)
                         }
