@@ -6,7 +6,7 @@ module.exports = {
     category: 'moderation',
     run: async (bot, message, args) => {
         const ms = require('ms');
-        const person = message.guild.member(message.mentions.users.first());
+        const person = message.mentions.users.first()
         
         if(!message.member.hasPermission("MANAGE_ROLES")) return message.channel.send('You don\'t have permissions to use this command. (MANAGE_ROLES)');
         if(!person) return message.channel.send('Please specify a member');
