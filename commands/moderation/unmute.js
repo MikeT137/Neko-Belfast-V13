@@ -1,7 +1,7 @@
 const {prefix} = require('../../config.json')
 module.exports = {
     name:'unmute',
-    description: "It unmutes a user that is muted, BUT you need to have a role called \"BMuted\", it\'s the only way it\'ll work'",
+    description: "It unmutes a user that is muted, however, you still need to have the role called \"BMuted\" (which you can get by using the \`muterole\` command).",
     usage: `${prefix}unmute (ping)`,
     category: 'moderation',
     run: async (bot, message, args) => {
@@ -12,7 +12,7 @@ module.exports = {
         if (!person) {
             message.channel.send('Please specify a muted member')
         }else if(!muterole) {
-            return message.channel.send('Couldnt find the mute role');
+            message.channel.send('Couldnt find the mute role');
         }else {
             person.roles.remove(muterole);
             message.channel.send(`@${person.user.tag} has been unmuted`);
