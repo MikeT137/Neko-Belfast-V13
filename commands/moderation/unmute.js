@@ -6,7 +6,7 @@ module.exports = {
     category: 'moderation',
     run: async (bot, message, args) => {
         let muterole = message.guild.roles.cache.find(role => role.name === 'BMuted')
-        let person = message.mentions.users.first()
+        let person = message.mentions.members.first()
         
         if(!message.member.hasPermission("MANAGE_ROLES")) return message.channel.send('You don\'t have permissions to use this command. (MANAGE_ROLES)');
         if (!person) {
