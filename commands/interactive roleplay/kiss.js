@@ -32,26 +32,6 @@ module.exports = {
                         .setFooter('Powered by otakugifs.xyz', 'https://cdn.discordapp.com/emojis/832616362794942475.png?v=1')
                         .setColor('#7d77df')
                     message.channel.send(embed);
-                }else if(message.author.id == '486276124549316619' && person.id == '539141373425876993'){
-                    message.delete();
-                    const embedJ = new Discord.MessageEmbed()
-            
-                        .setAuthor(`I love you so much, my cute femboy gf <3`, message.author.displayAvatarURL({ dynamic: true }))
-                        .setDescription(`${args.slice(1, args.length).join(' ')}`)
-                        .setImage(json.url)
-                        .setFooter('Powered by otakugifs.xyz', 'https://cdn.discordapp.com/emojis/832616362794942475.png?v=1')
-                        .setColor('#7d77df')
-                    message.channel.send(embedJ);
-                }else if(message.author.id == '539141373425876993' && person.id == '486276124549316619') {
-                    message.delete();
-                    const embedJ = new Discord.MessageEmbed()
-            
-                        .setAuthor(`I love you so much, my cute femboy gf <3`, message.author.displayAvatarURL({ dynamic: true }))
-                        .setDescription(`${args.slice(1, args.length).join(' ')}`)
-                        .setImage(json.url)
-                        .setFooter('Powered by otakugifs.xyz', 'https://cdn.discordapp.com/emojis/832616362794942475.png?v=1')
-                        .setColor('#7d77df')
-                    message.channel.send(embedJ);
                 }else {
                     message.delete();
                     const embed2 = new Discord.MessageEmbed()
