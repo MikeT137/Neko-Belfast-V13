@@ -345,6 +345,10 @@ module.exports = {
                                         if(reaction15.emoji.name === '❤️') {
                                             msg.edit(`Wow! I wasn\'t expecting that someone would find this easter egg but, want a romantic ending? I got you. *Ahem, after the insanity has stopped, both you and belfast got to know each other more and more, until:*\n\nBelfast: I love you master!\nYou: I love you too Belfast, and i am so happy to be by your side, by such an incredible, beautiful, kind, and affectionate partner as you... which is why im doing this. *You get on your knee and pull out a ring*\nYou: Belfast, will you marry me?\nBelfast: O-O my god, Y-YES, i will marry you! We will be together forever nya~\nYou: And i wouldn\'t want it any other way.\n\n**YOU SURVIVED**\nEnding ? out of ${endings}: THE TRUE ENDING\n${artist}`)
                                             reaction15.users.remove(message.author.id);
+
+                                            setTimeout(function(){
+                                                msg.edit('**YOU SURVIVED**')
+                                            }, 30000);
                                         }
                                     })
 
@@ -363,6 +367,10 @@ module.exports = {
                                         if(reaction15.emoji.name === '❤️') {
                                             msg.edit(`Wow! I wasn\'t expecting that someone would find this easter egg but, want a romantic ending? I got you. *Ahem, after the insanity has stopped, both you and belfast got to know each other more and more, until:*\n\nBelfast: I love you master!\nYou: I love you too Belfast, and i am so happy to be by your side, by such an incredible, beautiful, kind, and affectionate partner as you... which is why im doing this. *You get on your knee and pull out a ring*\nYou: Belfast, will you marry me?\nBelfast: O-O my god, Y-YES, i will marry you! We will be together forever nya~\nYou: And i wouldn\'t want it any other way.\n\n**YOU SURVIVED**\nEnding ? out of ${endings}: THE TRUE ENDING\n${artist}`)
                                             reaction15.users.remove(message.author.id);
+
+                                            setTimeout(function(){
+                                                msg.edit('**YOU SURVIVED**')
+                                            }, 30000);
                                         }
                                     })
 
