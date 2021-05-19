@@ -233,7 +233,7 @@ module.exports = {
                 }
                 if(reaction.emoji.name === '👎') {
                     msg.edit('*You then decide to investigate the zone. But then you see a tall creature with a siren for a head. The creature sees you and runs at you really fast, and then your reflexes starts to kick in and you hit his leg with your axe and then you quickly run away. And because you were very close to your cabin, you thought it wasn\'t the best idea to go back to your cabin. You then start running away from him and eventually you see a hunter with a double barrel shotgun driving near you. You then say:* Help! This creature is chasing me! *And then you get in the car and the hunter drives away from the monster. It was a long ride, but eventually you arrive at the hunter\'s cabin. You then sit down at the table with him and have a chat.*\n\nhunter: What was that creature?\nyou: I don\'t know, but it definitely wasn\'t friendly. I was just doing my thing, cutting wood, and then i heard some siren noises coming from the forest. Though it was my mistake that i went to check what it was. Thanks for saving me from that thing\nhunter: You\'re welcome. Come on, eat up, i imagine you\'re pretty hungry. I sure am!\nyou: Ah, thanks.\n\n*You then start eating, but the food had a weird flavour and smell. After you\'re done eating, you then go to sleep. The hunter said he\'ll go to sleep too. But he lied. And he slowly walks in with a knife and a fork towards you. You then realise that the hunter was a cannibal. You then:\n\n👍 - get up and run away\n👎 - get your axe and throw it at him*\n\n**Select your choice:**')
-
+                    reaction.users.remove(message.author.id);
                     msg.awaitReactions(filter9, { max: 1 })
                     .then(collected9 => {
                         const reaction9 = collected9.first();
@@ -344,8 +344,6 @@ module.exports = {
                                         if(reaction15.emoji.name === '❤️') {
                                             msg.edit(`Wow! I wasn\'t expecting that someone would find this easter egg but, want a romantic ending? I got you. *Ahem, after the insanity has stopped, both you and belfast got to know each other more and more, until:*\n\nBelfast: I love you master!\nYou: I love you too Belfast, and i am so happy to be by your side, by such an incredible, beautiful, kind, and affectionate partner as you... which is why im doing this. *You get on your knee and pull out a ring*\nYou: Belfast, will you marry me?\nBelfast: O-O my god, Y-YES, i will marry you! We will be together forever nya~\nYou: And i wouldn\'t want it any other way.\n\n**YOU SURVIVED**\nEnding ? out of ${endings}: THE TRUE ENDING\n${artist}\n\nBy the way (if i have the permissions to do so), your nickname has been changed to have a ring near it, because you married belfast.(keep in mind, the bot needs MANAGE_NICKNAMES permissions)`)
                                             reaction15.users.remove(message.author.id);
-                                            if(!message.guild.me.hasPermission("MANAGE_NICKNAMES")) return;
-                                            message.member.setNickname(`[💍] ${message.author.username}`)
                                         }
                                     })
 
@@ -364,8 +362,6 @@ module.exports = {
                                         if(reaction15.emoji.name === '❤️') {
                                             msg.edit(`Wow! I wasn\'t expecting that someone would find this easter egg but, want a romantic ending? I got you. *Ahem, after the insanity has stopped, both you and belfast got to know each other more and more, until:*\n\nBelfast: I love you master!\nYou: I love you too Belfast, and i am so happy to be by your side, by such an incredible, beautiful, kind, and affectionate partner as you... which is why im doing this. *You get on your knee and pull out a ring*\nYou: Belfast, will you marry me?\nBelfast: O-O my god, Y-YES, i will marry you! We will be together forever nya~\nYou: And i wouldn\'t want it any other way.\n\n**YOU SURVIVED**\nEnding ? out of ${endings}: THE TRUE ENDING\n${artist}\n\nBy the way (if i have the permissions to do so), your nickname has been changed to have a ring near it, because you married belfast.(keep in mind, the bot needs MANAGE_NICKNAMES permissions)`)
                                             reaction15.users.remove(message.author.id);
-                                            if(!message.guild.me.hasPermission("MANAGE_NICKNAMES")) return;
-                                            message.member.setNickname(`[💍] ${message.author.username}`)
                                         }
                                     })
 
