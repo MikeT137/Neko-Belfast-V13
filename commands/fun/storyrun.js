@@ -62,6 +62,9 @@ module.exports = {
         const filter14 = (reaction14, user) => {
             return ['👍', '✊', '👎'].includes(reaction14.emoji.name) && user.id === message.author.id;
         }
+        const filter15 = (reaction15, user) => {
+            return ['❤️'].includes(reaction15.emoji.name) && user.id === message.author.id;
+        }
 
         msg.awaitReactions(filter, { max: 1 })
             .then(collected => {
@@ -332,8 +335,16 @@ module.exports = {
                                 const reaction14 = collected14.first();
                                 if(reaction14.emoji.name === '👍') {
                                     message.channel.stopTyping();
-                                    msg.edit(`*You and Belfast get in the car and wait for siren head. After he arrives, you start the car, and drive straight to him, until you squish him between the car and a big boulder.*\n\nBelfast: master we did it nya!\nyou: yes we did, thx for helping me\nBelfast: you\'re welcome, let\'s go back in the cabin\n\n*After that, you and Belfast are reliefed that the hell is finally over, and you both live a happy life together*\n\n**YOU SURVIVED**\nEnding 18 out of ${endings}: Belfast\'s saviour\n${artist}`)
+                                    msg.edit(`*You and Belfast get in the car and wait for siren head. After he arrives, you start the car, and drive straight to him, until you squish him between the car and a big boulder.*\n\nBelfast: master we did it nya!\nyou: yes we did, thx for helping me\nBelfast: you\'re welcome, let\'s go back in the cabin\n\n*After that, you and Belfast are reliefed that the hell is finally over.*\n\n**YOU SURVIVED**\nEnding 18 out of ${endings}: Belfast\'s saviour\n${artist}`)
                                     reaction14.users.remove(message.author.id);
+
+                                    msg.awaitReactions(filter15, { max: 1 })
+                                    .then(collected15 => {
+                                        const reaction15 = collected15.first();
+                                        if(reaction15.emoji.name === '❤️') {
+                                            msg.edit(`Wow! I wasn\'t expecting that someone would find this easter egg (tip: you should deselect the heart so people dont notice it when they see the message) but, want a romantic ending? I got you. *Ahem, after the insanity has stopped, both you and belfast got to know each other more and more, until:*\n\nBelfast: I love you master!\nYou: I love you too Belfast, and i am so happy to be by your side, by such an incredible, beautiful, kind, and affectionate partner as you... which is why im doing this. *You get on your knee and pull out a ring*\nYou: Belfast, will you marry me?\nBelfast: O-O my god, Y-YES, i will marry you! We will be together forever nya~\nYou: And i wouldn\'t want it any other way.\n\n**YOU SURVIVED**\nEnding ? out of ${endings}: THE TRUE ENDING\n${artist}`)
+                                        }
+                                    })
 
                                     setTimeout(function(){
                                         msg.edit('**YOU SURVIVED**')
@@ -341,8 +352,17 @@ module.exports = {
                                 }
                                 if(reaction14.emoji.name === '✊') {
                                     message.channel.stopTyping();
-                                    msg.edit(`*You and Belfast make a plan, Belfast drives over the waterfall pit, and ties a long rope above the ground, meanwhile, you get siren head\'s attention and to follow you to the waterfall, after that, you make the risky choice of jumping right for it, sirenhead trips over the rope and falls with you, but you actually catched onto the rocks of the land before falling into your death, and Belfast got there quick to pull you up. And then you both get back to the cabin, a bit injured, but safely living a happy life*\n\n**YOU SURVIVED**\nEnding 19 out of ${endings}: The risk\n${artist}`)
+                                    msg.edit(`*You and Belfast make a plan, Belfast drives over the waterfall pit, and ties a long rope above the ground, meanwhile, you get siren head\'s attention and to follow you to the waterfall, after that, you make the risky choice of jumping right for it, sirenhead trips over the rope and falls with you, but you actually catched onto the rocks of the land before falling into your death, and Belfast got there quick to pull you up. And then you both get back to the cabin, a bit injured, but safely living in peace.*\n\n**YOU SURVIVED**\nEnding 19 out of ${endings}: The risk\n${artist}`)
                                     reaction14.users.remove(message.author.id);
+
+                                    msg.awaitReactions(filter15, { max: 1 })
+                                    .then(collected15 => {
+                                        const reaction15 = collected15.first();
+                                        if(reaction15.emoji.name === '❤️') {
+                                            msg.edit(`Wow! I wasn\'t expecting that someone would find this easter egg (tip: you should deselect the heart so people dont notice it when they see the message) but, want a romantic ending? I got you. *Ahem, after the insanity has stopped, both you and belfast got to know each other more and more, until:*\n\nBelfast: I love you master!\nYou: I love you too Belfast, and i am so happy to be by your side, by such an incredible, beautiful, kind, and affectionate partner as you... which is why im doing this. *You get on your knee and pull out a ring*\nYou: Belfast, will you marry me?\nBelfast: O-O my god, Y-YES, i will marry you! We will be together forever nya~\nYou: And i wouldn\'t want it any other way.\n\n**YOU SURVIVED**\nEnding ? out of ${endings}: THE TRUE ENDING\n${artist}`)
+                                        }
+                                    })
+                                    reaction15.users.remove(message.author.id);
 
                                     setTimeout(function(){
                                         msg.edit('**YOU SURVIVED**')
