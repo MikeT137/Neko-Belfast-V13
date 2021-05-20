@@ -157,7 +157,7 @@ module.exports = {
                                 }
                                 if(reaction3.emoji.name === '👎') {
                                     message.channel.stopTyping();
-                                    msg.edit(`*You became very brave and got closer to the voice and said hi, but then the voice was actually coming from a weird and tall creature with a siren for it\'s head. Then the creature started making very loud siren noises that exploded your eardrums. And then the creature grabs your neck and kills you.*\n\n**YOU DIED**\nEnding 6 out of ${endings}: the brave but dead soldier\n${artist}`)
+                                    msg.edit(`*You became very brave and got closer to the voice and said hi, but then the voice was actually coming from a weird and tall creature with a siren for it\'s head. Then the creature started making very loud siren noises that exploded your eardrums. And then the creature grabs your neck and kills you.*\n\n**YOU DIED**\nEnding 6 out of ${endings}: The brave but dead soldier\n${artist}`)
                                     reaction3.users.remove(message.author.id);
 
                                     setTimeout(function(){
