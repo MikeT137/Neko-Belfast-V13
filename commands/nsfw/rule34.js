@@ -2,8 +2,8 @@ const {prefix} = require('../../config.json')
 const {topggtoken} = require('../../config.json')
 module.exports = {
     name:'rule34',
-    description: "It sends a nsfw image of anything you want.",
-    usage: `${prefix}rule34 (something)`,
+    description: "It sends a nsfw image of anything you want. Although keep in mind that you can only use underscore instead of space, and when you use characters instead of normal tags, you also need to say the franchise they\'re from. Example: b.rule34 belfast_(azur_lane)",
+    usage: `${prefix}rule34 some_tag / b.rule34 character_name_(franchise_title)`,
     category: 'nsfw',
     run: async (bot, message, args) => {
         if(message.channel.nsfw) {
