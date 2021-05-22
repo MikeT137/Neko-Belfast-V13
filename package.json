@@ -21,6 +21,7 @@
     "discord.js": "^12.2.0",
     "discord.js-tictactoe": "^1.0.2",
     "erela.js": "^2.0.1",
+    "https": "^1.0.0",
     "imageapi.js": "^1.6.1",
     "math": "0.0.3",
     "mathjs": "^7.1.0",
@@ -31,6 +32,7 @@
     "random-puppy": "^1.1.0",
     "request": "^2.88.2",
     "save": "^2.4.0",
-    "twemoji-parser": "^13.0.0"
+    "twemoji-parser": "^13.0.0",
+    "xml2js": "^0.4.23"
   }
 }
