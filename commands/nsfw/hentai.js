@@ -29,6 +29,7 @@ module.exports = {
                             
                         .setTitle(`A nsfw image/gif about: \`hentai\``)
                         .setImage(GIF.url)
+                        .setFooter('Image/Gif taken from nekos.life', 'https://avatars.githubusercontent.com/u/34457007?s=200&v=4')
                         .setColor('#7d77df')
                     message.channel.send(embed);
                 }
