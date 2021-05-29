@@ -41,11 +41,13 @@ module.exports = {
                                     var r34Pic = result.posts.post[picNum].$.file_url;
                                     const embed = new Discord.MessageEmbed()
 
-                                    .setTitle(`Rule34 of: \`${args}\``)
-                                    .setImage(r34Pic)
-                                    .setFooter('Image taken from rule34.xxx', 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3861ce61-8c45-473a-a082-1b1a6c1b7b39/d4wgqwr-2a8fc00c-5e7c-403c-a153-6ae2c682e34b.png/v1/fill/w_1024,h_436,strp/rule_34_logo_by_iloveportalz0r_d4wgqwr-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDM2IiwicGF0aCI6IlwvZlwvMzg2MWNlNjEtOGM0NS00NzNhLWEwODItMWIxYTZjMWI3YjM5XC9kNHdncXdyLTJhOGZjMDBjLTVlN2MtNDAzYy1hMTUzLTZhZTJjNjgyZTM0Yi5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.zSjNi10zwlQOry9sm5PA3DUzQXoKDvQ6qSuDt_Gm7s4')
-                                    .setColor('#7d77df')
-                                message.channel.send(embed);
+                                        .setTitle(`Rule34 of: \`${args}\``)
+                                        .setImage(r34Pic)
+                                        .setFooter('Image taken from rule34.xxx', 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3861ce61-8c45-473a-a082-1b1a6c1b7b39/d4wgqwr-2a8fc00c-5e7c-403c-a153-6ae2c682e34b.png/v1/fill/w_1024,h_436,strp/rule_34_logo_by_iloveportalz0r_d4wgqwr-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDM2IiwicGF0aCI6IlwvZlwvMzg2MWNlNjEtOGM0NS00NzNhLWEwODItMWIxYTZjMWI3YjM5XC9kNHdncXdyLTJhOGZjMDBjLTVlN2MtNDAzYy1hMTUzLTZhZTJjNjgyZTM0Yi5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.zSjNi10zwlQOry9sm5PA3DUzQXoKDvQ6qSuDt_Gm7s4')
+                                        .setColor('#7d77df')
+                                    message.channel.send(embed);
+                                }else {
+                                    message.channel.send("I couldn\'t find anything nya~! Either because the thing you searched isn\'t accurate enough, or i couldn\'t find any images.");
                                 }
                             })
                         })
