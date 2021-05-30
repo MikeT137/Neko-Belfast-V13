@@ -41,11 +41,8 @@ module.exports = {
                 .addField('User', [
                     `\`Username:\` ${message.author.username}`,
                     `\`ID:\` ${message.author.id}`,
-                    //`\`Married:\` ${spouse}`,
                     `\`Flags:\` ${userFlags2.length ? userFlags2.map(flag => flags[flag]).join(', ') : 'None'}`,
-                    `\`Time Created:\` ${moment(message.author.createdTimestamp).format('LT')}; ${moment(message.author.createdTimestamp).format('LL')}; ${moment(message.author.createdTimestamp).fromNow()}`,
-                    `\`Status:\` ${message.author.presence.status}`,
-                    `\`Game Status:\` ${message.author.presence.game || 'Not playing a game'}`
+                    `\`Time Created:\` ${moment(message.author.createdTimestamp).format('LT')}; ${moment(message.author.createdTimestamp).format('LL')}; ${moment(message.author.createdTimestamp).fromNow()}`
                 ])
                 .addField(`Stats in ${message.guild.name}`, [
                     `\`Highest role:\` ${person.roles.highest.id === message.guild.id ? 'None' : person.roles.highest.name}`,
@@ -56,23 +53,21 @@ module.exports = {
             message.channel.send(embed)
         }else if(args[0] && message.mentions.members.size == 1) {
             if(person.id === '727093236954431488') {
-                bot.shard.fetchClientValues('guilds.cache.size').then(results => {
-                    const embed = new Discord.MessageEmbed()
+                const embed = new Discord.MessageEmbed()
 
-                        .setThumbnail(bot.user.displayAvatarURL())
-                        .setDescription('**Information about this bot**')
-                        .addField('General', [
-                            `\`Name:\` ${bot.user.tag} (${bot.user.id})`,
-                            `\`Servers: \` ${results.reduce((acc, guildCount) => acc + guildCount, 0)}`,
-                            `\`Creation Date:\` ${moment(bot.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
-                            `\`Version:\` ${version}.${bot.commands.size}`,
-                            `\`Developer:\` [Miku](https://discord.bio/p/mikuyoruka)`,
-                            `\`Profile picture artist:\` [ほしみやましろ。](https://www.pixiv.net/en/users/3580504)`
-                        ])
-                        .addField('Want to support me?', '➤[Invite me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) ➤[Join my server!](https://discord.gg/M3sNjT8vt9) ➤[Vote me!](https://top.gg/bot/727093236954431488/vote) ➤[Donate!](https://www.buymeacoffee.com/mikuyoruka)')
-                        .setColor('#7d77df')
-                    message.channel.send(embed);
-                }).catch(console.error);
+                    .setThumbnail(bot.user.displayAvatarURL())
+                    .setDescription('**Information about this bot**')
+                    .addField('General', [
+                        `\`Name:\` ${bot.user.tag} (${bot.user.id})`,
+                        `\`Servers: \` ${bot.guilds.cache.size}`,
+                        `\`Creation Date:\` ${moment(bot.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
+                        `\`Version:\` ${version}.${bot.commands.size}`,
+                        `\`Developer:\` [Miku](https://discord.bio/p/mikuyoruka)`,
+                        `\`Profile picture artist:\` [ほしみやましろ。](https://www.pixiv.net/en/users/3580504)`
+                    ])
+                    .addField('Want to support me?', '➤[Invite me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) ➤[Join my server!](https://discord.gg/M3sNjT8vt9) ➤[Vote me!](https://top.gg/bot/727093236954431488/vote) ➤[Donate!](https://www.buymeacoffee.com/mikuyoruka)')
+                    .setColor('#7d77df')
+                message.channel.send(embed);
             }else {
                 const embed = new Discord.MessageEmbed()
 
@@ -82,9 +77,7 @@ module.exports = {
                         `\`Username:\` ${person.user.username}`,
                         `\`ID:\` ${person.id}`,
                         `\`Flags:\` ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
-                        `\`Time Created:\` ${moment(person.user.createdTimestamp).format('LT')}; ${moment(person.user.createdTimestamp).format('LL')}; ${moment(person.user.createdTimestamp).fromNow()}`,
-                        `\`Status:\` ${person.user.presence.status}`,
-                        `\`Game Status:\` ${person.user.presence.game || 'Not playing a game'}`
+                        `\`Time Created:\` ${moment(person.user.createdTimestamp).format('LT')}; ${moment(person.user.createdTimestamp).format('LL')}; ${moment(person.user.createdTimestamp).fromNow()}`
                     ])
                     .addField(`Stats in ${message.guild.name}`, [
                         `\`Highest role:\` ${person.roles.highest.id === message.guild.id ? 'None' : person.roles.highest.name}`,

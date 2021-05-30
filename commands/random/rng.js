@@ -11,8 +11,6 @@ module.exports = {
             message.channel.send(`Your random number is: ${Math.floor(Math.random() * Math.floor(args[0]))+1}`)
         }else if(args[0] = '1') {
             message.channel.send('Try again but with a number higher than 1')
-        }else if (args[1]) {
-            message.channel.send('Please dont add any other arguments other than your number')
-        }else return;
+        }
     }
 }
