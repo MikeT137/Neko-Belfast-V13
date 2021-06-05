@@ -8,13 +8,13 @@ module.exports = {
         const person = message.mentions.members.first()
         const { tictactoe } = require('reconlx')
 
-        if(!args[0]) {
-            message.channel.send('Please specify a member!')
-        }else if(message.mentions.members.size >= 1) {
+        if(message.mentions.members.size >= 1) {
             new tictactoe({
                 player_two: person,
                 message: message
             })
+        }else {
+            message.channel.send('Please specify a member!')
         }
     }
 }
