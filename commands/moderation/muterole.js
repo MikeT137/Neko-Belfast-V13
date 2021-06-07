@@ -50,8 +50,8 @@ module.exports = {
                             message.channel.send('The muterole has been deleted!')
                         }
                     }
-                })
-            })
+                }).catch(err)
+            }).catch(err)
         }
     }
 }

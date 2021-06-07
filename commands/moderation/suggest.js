@@ -29,10 +29,10 @@ module.exports = {
                 user.send(embed).then(msg => {
                     msg.react('✅'),
                     msg.react('❌')
-                })
+                }).catch(err)
 
                 message.channel.send('Your suggestion has been sent to the creator, thank you for your time<3')
-            });
+            }).catch(err)
         }else return;
     }
 }

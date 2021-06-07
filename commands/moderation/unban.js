@@ -21,6 +21,6 @@ module.exports = {
             }else{
                 message.channel.send('I couldn\'t find the user you are trying to unban')
             }
-        })
+        }).catch(err)
     }
 }
