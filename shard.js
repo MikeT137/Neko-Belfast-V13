@@ -6,7 +6,7 @@ const shards = new ShardingManager("./index.js", {
 })
 
 shards.on("shardCreate", shard => {
-    console.log(`[${new Date().toString().split(" ", 5).join(" ")}] Launched shard #${shard.id}`);
+    console.log(`[${new Date().toString().split(" ", 5).join(" ")}] Launched shard #${shard.id + 1}`);
 })
 
 shards.spawn(shards.totalShards, 10000)
