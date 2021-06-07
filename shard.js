@@ -9,4 +9,4 @@ shards.on("shardCreate", shard => {
     console.log(`Launched shard #${shard.id}`);
 })
 
-shards.spawn(shards.totalShards, 10000)
+shards.spawn()
