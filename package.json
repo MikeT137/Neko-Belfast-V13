@@ -33,6 +33,7 @@
     "reconlx": "^1.3.0",
     "request": "^2.88.2",
     "save": "^2.4.0",
+    "sharp": "^0.28.3",
     "twemoji-parser": "^13.0.0",
     "xml2js": "^0.4.23"
   }

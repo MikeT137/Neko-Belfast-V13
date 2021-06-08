@@ -4,6 +4,9 @@ const bot = new Client({
     restTimeOffset: 0
 });
 
+const sharp = require('sharp');
+sharp.cache(false);
+
 //Handlers
 const fs = require('fs');
 
