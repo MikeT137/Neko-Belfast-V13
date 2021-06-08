@@ -140,7 +140,7 @@ module.exports = {
                                                                  msg.edit('**YOU DIED**')
                                                             }, 45000);
                                                         }
-                                                    }).catch(err)
+                                                    }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
                                                 }
                                                 if(reaction5.emoji.name === '👎') {
                                                     message.channel.stopTyping();
@@ -151,9 +151,9 @@ module.exports = {
                                                         msg.edit('**YOU SURVIVED**')
                                                     }, 45000);
                                                 }
-                                            }).catch(err)
+                                            }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
                                         }
-                                    }).catch(err)
+                                    }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
                                 }
                                 if(reaction3.emoji.name === '👎') {
                                     message.channel.stopTyping();
@@ -164,9 +164,9 @@ module.exports = {
                                         msg.edit('**YOU DIED**')
                                     }, 45000);
                                 }
-                            }).catch(err)
+                            }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
                         }
-                    }).catch(err)
+                    }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
                 }
                 if(reaction.emoji.name === '✊') {
                     msg.edit('*The noises started to get louder and louder. And so because you were scared you tried to call for help, but there was no signal. And then a tall creature with a siren for a head gets closer to your cabin. You:\n\n👍 - go on bed and hide yourself with a blanket\n✊ - wait until siren head gets inside to have a 1v1\n👎 - go outside and try to run away from the siren head*\n\n**Select your choice:**')
@@ -218,7 +218,7 @@ module.exports = {
                                         msg.edit('**YOU SURVIVED**')
                                     }, 45000);
                                 }
-                            }).catch(err)
+                            }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
                         }
                         if(reaction7.emoji.name === '👎') {
                             message.channel.stopTyping();
@@ -229,7 +229,7 @@ module.exports = {
                                  msg.edit('**YOU DIED**')
                             }, 45000);
                         }
-                    }).catch(err)
+                    }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
                 }
                 if(reaction.emoji.name === '👎') {
                     msg.edit('*You then decide to investigate the zone. But then you see a tall creature with a siren for a head. The creature sees you and runs at you really fast, and then your reflexes starts to kick in and you hit his leg with your axe and then you quickly run away. And because you were very close to your cabin, you thought it wasn\'t the best idea to go back to your cabin. You then start running away from him and eventually you see a hunter with a double barrel shotgun driving near you. You then say:* Help! This creature is chasing me! *And then you get in the car and the hunter drives away from the monster. It was a long ride, but eventually you arrive at the hunter\'s cabin. You then sit down at the table with him and have a chat.*\n\nhunter: What was that creature?\nyou: I don\'t know, but it definitely wasn\'t friendly. I was just doing my thing, cutting wood, and then i heard some siren noises coming from the forest. Though it was my mistake that i went to check what it was. Thanks for saving me from that thing\nhunter: You\'re welcome. Come on, eat up, i imagine you\'re pretty hungry. I sure am!\nyou: Ah, thanks.\n\n*You then start eating, but the food had a weird flavour and smell. After you\'re done eating, you then go to sleep. The hunter said he\'ll go to sleep too. But he lied. And he slowly walks in with a knife and a fork towards you. You then realise that the hunter was a cannibal. You then:\n\n👍 - get up and run away\n👎 - get your axe and throw it at him*\n\n**Select your choice:**')
@@ -286,9 +286,9 @@ module.exports = {
                                                         msg.edit('**YOU SURVIVED**')
                                                     }, 45000);
                                                 }
-                                            }).catch(err)
+                                            }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
                                         }
-                                    }).catch(err)
+                                    }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
                                 }
                                 if(reaction10.emoji.name === '👎') {
                                     msg.edit('*You try to give the hunter a second chance, and you start driving, getting away from siren head as he chases after both of you. As you try to get away, you ask the hunter for a place they can hide. Both of you go for a long trip until you reach a big dome with a manshion inside it. The hunter tells a password to a guard and then the guard opens a path for us to drive through. You then go inside the mansion and you meet a very tall man with a sword*\n\nyou: who are you?\nhim: hello i\'m Edward, the owner of this mansion, and you?\nyou: i\'m y̶͞͞o͜͠͏̛u̧͘͞r̡̀ ̵̛̕͜͞ń̷a̵̴m̷͏͏҉è̸̵͜,, me and the hunter were chased by this siren head and we want your help\nedward:and why should i help YOU? you\'re a complete stranger, and what will i get in return?\nyou: uhh...idk i-\nedward: *sigh* you know what? here, you see this red small ball? ill throw it in the air, and ill catch it with one of my hands, while youre not looking, and you have to guess which hand has the ball. If you guess, then i\'ll help you out, if not, i\'ll kill you\nyou: alright\n\n*As Edward does his little "magic trick" You say the the ball is in:\n\n👍 - the left hand\n✊ - none\n👎 - right hand*\n\n**Select your choice:**')
@@ -323,9 +323,9 @@ module.exports = {
                                                 msg.edit('**YOU DIED**')
                                             }, 45000);
                                         }
-                                    }).catch(err)
+                                    }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
                                 }
-                            }).catch(err)
+                            }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
                         }
                         if(reaction9.emoji.name === '👎') {
                             msg.edit('*You throw the axe at the hunter and kill him and go back to sleep. The next day you start to hear the door opening, and there was a beautiful woman in front of the door.*\n\nthe woman: Who are you? And where\'s the hunter?\nyou: Calm down, first of all, who are YOU?\nthe woman: Oh, excuse my manners, i\'m Belfast, a neko maid, and who are you?\nyou: My name is y̶͞͞o͜͠͏̛u̧͘͞r̡̀ ̵̛̕͜͞ń̷a̵̴m̷͏͏҉è̸̵͜, and i got chased by a siren headed creature, then i ran into the hunter and he picked me up, although he then tried to eat me alive, so i had to \"put him to sleep\"\nBelfast: oh god, i had to be his wife if i wanted to live, but it is a relief to finally be free, thank you for saving me nya~\nyou: you\'re welcome, anyway where did you come from?\nBelfast: he told me i should leave the cabin and come back in the morning\nyou: alright then, but that siren head really is a problem, can you help me take him down?\nBelfast: yes! i\'ll be at your service nya~!\n\n*After that, you and Belfast start to get closer, and cooperate as a team to take down siren head. Then Belfast says:* Alright, so since the noises that comes from his sirens are very loud and damaging, we need some long range weapons\n*As you craft more weapons, you decide to go with the spear, and Belfast with the bow. As you search for siren head, you hunt for food to have more of energy for the battle.\n\nShortly enough siren head arives, you and Belfast run away towards the hunter\'s cabin to be a bit more prepared for his attacks. After you wait for siren head, you then:\n\n👍 - get the car and drive him over\n✊ - ||get in the car and lead siren head to the waterfall|| (you need to get the 8th ending for no spoilers)\n👎 - fight him with your weapons*\n\n**Select your choice:**')
@@ -350,7 +350,7 @@ module.exports = {
                                                 msg.edit('**YOU SURVIVED**')
                                             }, 30000);
                                         }
-                                    }).catch(err)
+                                    }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
 
                                     setTimeout(function(){
                                         msg.edit('**YOU SURVIVED**')
@@ -372,7 +372,7 @@ module.exports = {
                                                 msg.edit('**YOU SURVIVED**')
                                             }, 30000);
                                         }
-                                    }).catch(err)
+                                    }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
 
                                     setTimeout(function(){
                                         msg.edit('**YOU SURVIVED**')
@@ -387,11 +387,11 @@ module.exports = {
                                         msg.edit('**YOU DIED**')
                                     }, 45000);
                                 }
-                            }).catch(err)
+                            }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
                         }
-                    }).catch(err)
+                    }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
                 }
-            }).catch(err)
-        })
+            }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
+        }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
     }
 }

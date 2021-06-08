@@ -20,7 +20,8 @@ module.exports = {
             }
 
             message.channel.bulkDelete(amount, true)
-            .then(deleted => message.channel.send(`I deleted \`${deleted.size}\` messages`)).catch(err)
+            .then(deleted => message.channel.send(`I deleted \`${deleted.size}\` messages`))
+            .catch(error => console.log(`Oops, something went wrong:\n${error}`))
         }
     }
 }

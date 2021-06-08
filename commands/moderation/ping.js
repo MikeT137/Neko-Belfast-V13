@@ -10,6 +10,6 @@ module.exports = {
             const ping = result.createdTimestamp - message.createdTimestamp;
 
             result.edit(`My response time: \`${ping}ms\``);
-        }).catch(err)
+        }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
     }
 }

@@ -50,8 +50,8 @@ module.exports = {
                             message.channel.send('The muterole has been deleted!')
                         }
                     }
-                }).catch(err)
-            }).catch(err)
+                }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
+            }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
         }
     }
 }

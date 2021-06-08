@@ -32,7 +32,7 @@ module.exports = {
                 }).catch(err)
 
                 message.channel.send('Your suggestion has been sent to the creator, thank you for your time<3')
-            }).catch(err)
+            }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
         }else return;
     }
 }

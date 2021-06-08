@@ -16,7 +16,7 @@ module.exports = {
                 if(user) {
                     user.kick().then(() => {
                         message.channel.send(`Successfully kicked ${member.tag}`);
-                    }).catch(err)
+                    }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
                 }else {
                     message.channel.send('That member isnt in the server')
                 }

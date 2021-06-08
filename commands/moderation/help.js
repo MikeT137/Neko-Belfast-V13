@@ -72,8 +72,8 @@ module.exports = {
                     }else if(reaction.emoji.name === '🤡') {
                         msg.edit(embedS);
                     }else return;
-                }).catch(err)
-            }).catch(err)
+                }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
+            }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
         }else if(args[0] == 'fun') {
             message.channel.send(embedF)
         }else if(args[0] == 'info') {

@@ -16,7 +16,7 @@ module.exports = {
             if(user) {
                 user.ban().then(() => {
                     message.channel.send(`Successfully banned ${member.tag}\nUser ID: ${member.id}`);
-                }).catch(err)
+                }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
             }else {
                 message.channel.send('That member isn\'t in the server')
             }
