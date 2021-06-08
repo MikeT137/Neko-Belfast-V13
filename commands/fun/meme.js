@@ -11,9 +11,6 @@ module.exports = {
         const subreddit = subreddits[Math.floor(Math.random() * (subreddits.length))]
         const meme = await api.advanced(subreddit)
 
-        const sharp = require('sharp');
-        sharp.cache(false);
-        
         const embed = new Discord.MessageEmbed()
 
             .setTitle(meme.title)
