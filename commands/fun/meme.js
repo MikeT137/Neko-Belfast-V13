@@ -10,6 +10,9 @@ module.exports = {
         const subreddits = ["dankmemes", "memes", 'Animemes', "meme"]
         const subreddit = subreddits[Math.floor(Math.random() * (subreddits.length))]
         const meme = await api.advanced(subreddit)
+
+        const sharp = require('sharp');
+        sharp.cache(false);
         
         const embed = new Discord.MessageEmbed()
 
@@ -18,6 +21,7 @@ module.exports = {
             .setImage(meme.img)
             .setFooter(`Posted in r/${subreddit} by u/${meme.author}`, 'https://cdn.discordapp.com/emojis/697937639701086268.png?v=1')
             .setColor('#7d77df')
-        message.channel.send(embed);
+        message.channel.send(embed)
+        .catch(error => console.log(`Oops, something went wrong:\n${error}`))
     }
 }
