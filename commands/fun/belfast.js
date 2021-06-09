@@ -17,10 +17,10 @@ module.exports = {
             'A gentleman does not touch a woman inelegantly. Please refrain from doing so to others.',
             'It is a maid\'s duty to devote all of herself to her master. Master, do you wish to take a look?',
             'Welcome back, master. I have prepared a small meal for you. This way, if you\'d please.',
-            'This is a dish that I obtained through my connections within the fleet. Please slowy savor it... Was it to your taste?',
+            'This is a dish that I obtained through my connections within the fleet. Please slowly savor it... Was it to your taste?',
             'It is important to be aware of my master\'s intentions, and especially of the things my master isn\'t conscious of himself.... You believe that\'s bullying? Ufufu, lately I\'ve become somewhat fond of seeing your trouble face. I humbly ask you to overlook that.',
             'Are you awake? Ufufu, your sleeping face was so cute that I could not bring myself to wake you up.... What do you think of my lap pillow? Please enjoy it to your heart\'s content as long as you\'d like.',
-            'This is slightly troubling.... I would have been satisfied with always attending to you and sometimes seeing you troubled, master, but... when you make such a big vow of me, it makes me want to server you even more and long for more of your affection...',
+            'This is slightly troubling.... I would have been satisfied with always attending to you and sometimes seeing you troubled, master, but... when you make such a big vow of me, it makes me want to serve you even more and long for more of your affection...',
             'Happy holiday, master. This is infused with my appreciation and love for you, a small token from Belfast, please accept it.'
         ]
         const random_bel = [
