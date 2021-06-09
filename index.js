@@ -1,5 +1,6 @@
 const {Collection, Client} = require('discord.js');
-const bot = new Client({ 
+const bot = new Client({
+    shardCount: "auto",
     disableMentions: "everyone",
     restTimeOffset: 0
 });

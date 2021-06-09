@@ -1,5 +1,4 @@
 const {prefix} = require('../../config.json')
-const fs = require('fs')
 module.exports = {
     name:'profile',
     description: "It sends information about yourself, or the pinged user. The information is taken from the server you do the command in",
@@ -59,7 +58,10 @@ module.exports = {
                     .setDescription('**Information about this bot**')
                     .addField('General', [
                         `\`Name:\` ${bot.user.tag} (${bot.user.id})`,
-                        `\`Servers: \` ${bot.guilds.cache.size}`,
+                        `\`Servers: \` ${client.shard.fetchClientValues('guilds.cache.size')
+                        .then(results => {
+                            results.reduce((acc, guildCount) => acc + guildCount, 0)
+                        })}`,
                         `\`Creation Date:\` ${moment(bot.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
                         `\`Version:\` ${version}.${bot.commands.size}`,
                         `\`Developer:\` [Miku](https://discord.bio/p/mikuyoruka)`,
