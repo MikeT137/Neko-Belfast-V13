@@ -6,6 +6,7 @@ module.exports = {
     category: 'info',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
+        const req = await bot.shard.fetchClientValues('guilds.cache.size')
         const moment = require('moment');
         const {version} = require('../../package.json');
 
@@ -58,7 +59,7 @@ module.exports = {
                     .setDescription('**Information about this bot**')
                     .addField('General', [
                         `\`Name:\` ${bot.user.tag} (${bot.user.id})`,
-                        `\`Servers: \` ${bot.shard.fetchClientValues('guilds.cache.size').reduce((acc, guildCount) => acc + guildCount, 0)}`,
+                        `\`Servers: \` ${req.reduce((p, n) => p + n, 0)}`,
                         `\`Creation Date:\` ${moment(bot.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
                         `\`Version:\` ${version}.${bot.commands.size}`,
                         `\`Developer:\` [Miku](https://discord.bio/p/mikuyoruka)`,
