@@ -58,7 +58,7 @@ module.exports = {
                     .setDescription('**Information about this bot**')
                     .addField('General', [
                         `\`Name:\` ${bot.user.tag} (${bot.user.id})`,
-                        `\`Servers: \` ${client.shard.fetchClientValues('guilds.cache.size')
+                        `\`Servers: \` ${bot.shard.fetchClientValues('guilds.cache.size')
                         .then(results => {
                             results.reduce((acc, guildCount) => acc + guildCount, 0)
                         })}`,
