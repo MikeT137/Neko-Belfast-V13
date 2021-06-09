@@ -58,10 +58,7 @@ module.exports = {
                     .setDescription('**Information about this bot**')
                     .addField('General', [
                         `\`Name:\` ${bot.user.tag} (${bot.user.id})`,
-                        `\`Servers: \` ${bot.shard.fetchClientValues('guilds.cache.size')
-                        .then(results => {
-                            results.reduce((acc, guildCount) => acc + guildCount, 0)
-                        })}`,
+                        `\`Servers: \` ${bot.shard.fetchClientValues('guilds.cache.size').reduce((acc, guildCount) => acc + guildCount, 0)}`,
                         `\`Creation Date:\` ${moment(bot.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
                         `\`Version:\` ${version}.${bot.commands.size}`,
                         `\`Developer:\` [Miku](https://discord.bio/p/mikuyoruka)`,
