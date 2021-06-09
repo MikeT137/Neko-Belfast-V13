@@ -24,7 +24,6 @@ module.exports = {
             'Happy holiday, master. This is infused with my appreciation and love for you, a small token from Belfast, please accept it.'
         ]
         const random_bel = [
-            'https://i.pinimg.com/originals/f7/05/34/f70534ad558174edcb76b80c0c1144ee.gif',
             'https://media.tenor.com/images/39f2224df78d9e915a2b59b73074ea05/tenor.gif',
             'https://thumbs.gfycat.com/ExcellentMediumBull-max-1mb.gif',
             'https://1.bp.blogspot.com/-Cz18jeQ60ho/YEa0zE-dsLI/AAAAAAACHM8/55t-pCOVI4AFihzFaqJGVrexJm5L9ldWACPcBGAsYHg/s1920/Azur%2BLane%2B-%2BBisoku%2BZenshin%2521%2B-%2BEpisode%2B9%2B-%2BBel-chan%2BThinks%2Bof%2BBelfast.gif',
