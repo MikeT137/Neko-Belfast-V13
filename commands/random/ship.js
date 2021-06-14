@@ -19,7 +19,7 @@ module.exports = {
         }else if(message.mentions.members.size == 1) {
             if(person.id == message.author.id) {
                 message.channel.send('You can\'t ship yourself');
-            }else if(person.id === '831192129635483718') {
+            }else if(person.id === '727093236954431488') {
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`${message.author.username} x ${person.username} =`, message.author.displayAvatarURL({ dynamic: true }))
@@ -40,7 +40,7 @@ module.exports = {
             }
         }
         if(message.mentions.members.size == 2) {
-            if(person.id === '831192129635483718' || person2.id === '831192129635483718') {
+            if(person.id === '727093236954431488' || person2.id === '727093236954431488') {
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`${person.username} x ${person2.username} =`, person.displayAvatarURL({ dynamic: true }))
