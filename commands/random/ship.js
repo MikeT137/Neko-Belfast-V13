@@ -40,7 +40,9 @@ module.exports = {
             }
         }
         if(message.mentions.members.size == 2) {
-            if(person.id === '727093236954431488' || person2.id === '727093236954431488') {
+            if(person.id == person2.id) {
+                message.channel.send('You have to ping someone for the command to work')
+            }else if(person.id === '727093236954431488' || person2.id === '727093236954431488') {
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`${person.username} x ${person2.username} =`, person.displayAvatarURL({ dynamic: true }))
