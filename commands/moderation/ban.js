@@ -9,19 +9,20 @@ module.exports = {
 
         if(!message.member.hasPermission("BAN_MEMBERS")) {
             message.channel.send('You don\'t have permissions to use this command. (BAN_MEMBERS)');
-        }
-        if(member) {
-            const user = message.guild.member(member);
+        }else {
+            if(member) {
+                const user = message.guild.member(member);
 
-            if(user) {
-                user.ban().then(() => {
-                    message.channel.send(`Successfully banned ${member.tag}\nUser ID: ${member.id}`);
-                }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
-            }else {
-                message.channel.send('That member isn\'t in the server')
+                if(user) {
+                    user.ban().then(() => {
+                        message.channel.send(`Successfully banned ${member.tag}\nUser ID: ${member.id}`);
+                    }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
+                }else {
+                    message.channel.send('That member isn\'t in the server')
+                }
+            }else{
+                message.channel.send('Please specify a member');
             }
-        }else{
-            message.channel.send('Please specify a member');
         }
     }
 }

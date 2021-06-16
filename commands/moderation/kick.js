@@ -9,19 +9,20 @@ module.exports = {
 
         if(!message.member.hasPermission("KICK_MEMBERS")) {
             message.channel.send('You don\'t have permissions to use this command. (KICK_MEMBERS)');
-        }
-        if(member) {
-                const user = message.guild.member(member);
+        }else {
+            if(member) {
+                    const user = message.guild.member(member);
 
-                if(user) {
-                    user.kick().then(() => {
-                        message.channel.send(`Successfully kicked ${member.tag}`);
-                    }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
-                }else {
-                    message.channel.send('That member isnt in the server')
-                }
-        }else{
-            message.channel.send('Please specify a member');
+                    if(user) {
+                        user.kick().then(() => {
+                            message.channel.send(`Successfully kicked ${member.tag}`);
+                        }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
+                    }else {
+                        message.channel.send('That member isnt in the server')
+                    }
+            }else{
+                message.channel.send('Please specify a member');
+            }
         }
     }
 }
