@@ -10,7 +10,11 @@ module.exports = {
         if(!message.member.hasPermission("BAN_MEMBERS")) {
             message.channel.send('You don\'t have permissions to use this command. (BAN_MEMBERS)');
         }else {
-            if(member) {
+            if(!member) {
+                message.channel.send('Please specify a member.');
+            }else if(member.id == message.author.id) {
+                message.channel.send('You can\'t use this command on yourself.')
+            }else {
                 const user = message.guild.member(member);
 
                 if(user) {
@@ -20,8 +24,6 @@ module.exports = {
                 }else {
                     message.channel.send('That member isn\'t in the server')
                 }
-            }else{
-                message.channel.send('Please specify a member');
             }
         }
     }
