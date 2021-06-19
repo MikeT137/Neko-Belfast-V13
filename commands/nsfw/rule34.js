@@ -2,8 +2,8 @@ const {prefix} = require('../../config.json')
 const {topggtoken} = require('../../config.json')
 module.exports = {
     name:'rule34',
-    description: "It sends a nsfw image of anything you want. Although keep in mind that:\n-you can only use underscore instead of space, and you have to use rule34 tags\n-when searching characters the name might not be enough, and for that you have to specify the franchise as well, example: b.rule34 belfast_(azur_lane)",
-    usage: `${prefix}rule34 some_tag / b.rule34 character_(franchise_title)`,
+    description: "It sends a nsfw image of anything you want. Although keep in mind that:\n\n-you can only use underscore instead of space, and you have to use rule34 tags\n-when searching characters the name might not be enough, and for that you have to specify the franchise as well, example: b.rule34 belfast_(azur_lane)",
+    usage: `${prefix}rule34 some_tag / b.rule34 character(franchise_title)`,
     category: 'nsfw',
     run: async (bot, message, args) => {
         if(message.channel.nsfw) {
