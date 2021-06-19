@@ -16,13 +16,18 @@ module.exports = {
         const randomCommands = bot.commands.filter(({ category }) => category === "random").map(({ name }) => name).join("\`, \`");
         const selfCommands = bot.commands.filter(({ category }) => category === "self roleplay").map(({ name }) => name).join("\`, \`");
 
-        const embedF = new Discord.MessageEmbed().setTitle('Help - Fun').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `\`${funCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
-        const embedi = new Discord.MessageEmbed().setTitle('Help - Info').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `\`${infoCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
+        const embedF = new Discord.MessageEmbed().setTitle('Help - Fun').setDescription(`Type \`${prefix}help (command)\` to get information about a specific command`).addField('Commands:', `\`${funCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
+        const embedi = new Discord.MessageEmbed().setTitle('Help - Info').setDescription(`Type \`${prefix}help (command)\` to get information about a specific command`).addField('Commands:', `\`${infoCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
         const embedI = new Discord.MessageEmbed().setTitle('Help - Interactive Roleplay').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `\`${interactiveCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
-        const embedM = new Discord.MessageEmbed().setTitle('Help - Moderation').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `\`${modCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
-        const embedN = new Discord.MessageEmbed().setTitle('Help - NSFW').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `\`${nsfwCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
-        const embedR = new Discord.MessageEmbed().setTitle('Help - Random').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `\`${randomCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
-        const embedS = new Discord.MessageEmbed().setTitle('Help - Self Roleplay').setDescription('Type \`b.help (command)\` to get information about a specific command').addField('Commands:', `\`${selfCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
+        const embedM = new Discord.MessageEmbed().setTitle('Help - Moderation').setDescription(`Type \`${prefix}help (command)\` to get information about a specific command`).addField('Commands:', `\`${modCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
+        let embedN;
+        if(message.channel.nsfw) {
+            embedN = new Discord.MessageEmbed().setTitle('Help - NSFW').setDescription(`Type \`${prefix}help (command)\` to get information about a specific command`).addField('Commands:', `\`${nsfwCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
+        }else {
+            embedN = new Discord.MessageEmbed().setTitle('Help - NSFW').setDescription(`Type \`${prefix}help (command)\` to get information about a specific command`).addField('Commands:', `This is not a nsfw channel nya~!`).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
+        }
+        const embedR = new Discord.MessageEmbed().setTitle('Help - Random').setDescription(`Type \`${prefix}help (command)\` to get information about a specific command`).addField('Commands:', `\`${randomCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
+        const embedS = new Discord.MessageEmbed().setTitle('Help - Self Roleplay').setDescription(`Type \`${prefix}help (command)\` to get information about a specific command`).addField('Commands:', `\`${selfCommands}\``).addField('Want to support me?', `${links}`).setThumbnail(bot.user.displayAvatarURL()).setColor('#7d77df')
 
         if(!args[0]) {
             const embed = new Discord.MessageEmbed()
