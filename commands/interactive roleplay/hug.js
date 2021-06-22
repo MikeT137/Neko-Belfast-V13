@@ -52,6 +52,6 @@ module.exports = {
             }else {
                 message.channel.send('You have to ping someone to hug them')
             }
-        })
+        }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
     }
 }
