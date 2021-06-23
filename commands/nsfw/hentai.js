@@ -11,7 +11,7 @@ module.exports = {
             const Topgg = require('@top-gg/sdk')
             const topgg = new Topgg.Api(topggtoken)
             const reddit = require('reddit-fetch')
-            const subreddits = ["hentai", "rule34", "ecchi", "CumHentai", "HentaiCumsluts"]
+            const subreddits = ["hentai", "CumHentai", "HentaiCumsluts"]
             const subreddit = subreddits[Math.floor(Math.random() * (subreddits.length))]
             
             let voted = await topgg.hasVoted(message.author.id)
