@@ -1,33 +1,34 @@
 const {prefix} = require('../../config.json')
 const {topggtoken} = require('../../config.json')
 module.exports = {
-    name:'anal',
-    description: "It sends a nsfw gif about anal",
-    usage: `${prefix}anal`,
+    name:'bunnygirl',
+    description: "It sends a nsfw gif about bunny girls",
+    usage: `${prefix}bunnygirl`,
     category: 'nsfw',
     run: async (bot, message, args) => {
         if(message.channel.nsfw) {
             const Discord = require('discord.js')
-            const nekoclient = require('nekos.life');
-            const neko = new nekoclient();
             const Topgg = require('@top-gg/sdk')
             const topgg = new Topgg.Api(topggtoken)
-
+            const reddit = require('reddit-fetch')
+            
             let voted = await topgg.hasVoted(message.author.id)
             if(!voted) {
                 message.channel.send(`If you want to access nsfw commands, you have to vote for me once every 12 hours. That\'s the only way that it can work nya~.\nHere\'s the link: https://top.gg/bot/727093236954431488/vote`)
              }else {
-                async function anal() {
-                    const GIF = await neko.nsfw.anal();
+                reddit({
+                    subreddit: "Usagimimi",
+                    sort: 'hot',
+                    allowNSFW: true
+                }).then(post => {
                     const embed = new Discord.MessageEmbed()
-                            
-                        .setTitle(`A nsfw image/gif about: \`anal\``)
-                        .setImage(GIF.url)
-                        .setFooter('Image/Gif taken from nekos.life', 'https://avatars.githubusercontent.com/u/34457007?s=200&v=4')
+
+                        .setTitle(post.title)
+                        .setImage(post.url)
+                        .setFooter(`Posted in r/Usagimimi`, 'https://cdn.discordapp.com/emojis/697937639701086268.png?v=1')
                         .setColor('#7d77df')
-                    message.channel.send(embed);
-                }
-                anal();
+                    message.channel.send(embed)
+                }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
             }
         }else {
             message.channel.send(`${message.author.username} what are you doing?! This is not a nsfw channel nyaa!`)
