@@ -20,7 +20,7 @@ module.exports = {
                 if(!voted) {
                     message.channel.send(`If you want to access nsfw commands, you have to vote for me once every 12 hours. That\'s the only way that it can work nya~.\nHere\'s the link: https://top.gg/bot/727093236954431488/vote`)
                 }else {
-                    var url = 'https://rule34.xxx/index.php?page=dapi&s=post&q=index&tags=' + `${args[0]}`;
+                    var url = 'https://rule34.xxx/index.php?page=dapi&s=post&q=index&tags=' + args.join('+');
  
                     https.get(url, function(res){
                         var body = '';
