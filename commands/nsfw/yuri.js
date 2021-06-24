@@ -18,8 +18,11 @@ module.exports = {
              }else {
                 reddit({
                     subreddit: "Yuri",
-                    sort: 'hot',
-                    allowNSFW: true
+                    sort: 'new',
+                    allowNSFW: true,
+                    allowModPost: true,
+                    allowCrossPost: true,
+                    allowVideo: true
                 }).then(post => {
                     const embed = new Discord.MessageEmbed()
 

@@ -18,14 +18,17 @@ module.exports = {
              }else {
                 reddit({
                     subreddit: "Monstergirl",
-                    sort: 'hot',
-                    allowNSFW: true
+                    sort: 'new',
+                    allowNSFW: true,
+                    allowModPost: true,
+                    allowCrossPost: true,
+                    allowVideo: true
                 }).then(post => {
                     const embed = new Discord.MessageEmbed()
 
                         .setTitle(post.title)
                         .setImage(post.url)
-                        .setFooter(`Posted in r/AnimeMILFS`, 'https://cdn.discordapp.com/emojis/697937639701086268.png?v=1')
+                        .setFooter(`Posted in r/Monstergirl`, 'https://cdn.discordapp.com/emojis/697937639701086268.png?v=1')
                         .setColor('#7d77df')
                     message.channel.send(embed)
                 }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
