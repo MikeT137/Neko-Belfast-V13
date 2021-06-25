@@ -2,7 +2,7 @@ const {prefix} = require('../../config.json')
 const {topggtoken} = require('../../config.json')
 module.exports = {
     name:'tomboy',
-    description: "It sends a nsfw gif about tomboys",
+    description: "It sends a nsfw image about tomboys",
     usage: `${prefix}tomboy`,
     category: 'nsfw',
     run: async (bot, message, args) => {
@@ -17,7 +17,7 @@ module.exports = {
             let voted = await topgg.hasVoted(message.author.id)
             if(!voted) {
                 message.channel.send(`If you want to access nsfw commands, you have to vote for me once every 12 hours. That\'s the only way that it can work nya~.\nHere\'s the link: https://top.gg/bot/727093236954431488/vote`)
-             }else {
+            }else {
                 reddit({
                     subreddit: `${subreddit}`,
                     sort: 'new',
