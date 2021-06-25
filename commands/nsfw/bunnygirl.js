@@ -11,13 +11,15 @@ module.exports = {
             const Topgg = require('@top-gg/sdk')
             const topgg = new Topgg.Api(topggtoken)
             const reddit = require('reddit-fetch')
+            const subreddits = ["Usagimimi", "bunnygirlhentai"]
+            const subreddit = subreddits[Math.floor(Math.random() * (subreddits.length))]
             
             let voted = await topgg.hasVoted(message.author.id)
             if(!voted) {
                 message.channel.send(`If you want to access nsfw commands, you have to vote for me once every 12 hours. That\'s the only way that it can work nya~.\nHere\'s the link: https://top.gg/bot/727093236954431488/vote`)
              }else {
                 reddit({
-                    subreddit: "Usagimimi",
+                    subreddit: `${subreddit}`,
                     sort: 'new',
                     allowNSFW: true,
                     allowModPost: true,
@@ -28,7 +30,7 @@ module.exports = {
 
                         .setTitle(post.title)
                         .setImage(post.url)
-                        .setFooter(`Posted in r/Usagimimi`, 'https://cdn.discordapp.com/emojis/697937639701086268.png?v=1')
+                        .setFooter(`Posted in r/${subreddit}`, 'https://cdn.discordapp.com/emojis/697937639701086268.png?v=1')
                         .setColor('#7d77df')
                     message.channel.send(embed)
                 }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
