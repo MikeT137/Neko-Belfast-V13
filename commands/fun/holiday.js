@@ -97,7 +97,7 @@ module.exports = {
 
             .setAuthor(`M-Myaster, it\'s my birthday today!`, message.author.displayAvatarURL({ dynamic: true }))
             .setDescription(`${args.join(' ')}`)
-            .setImage(random_easter[Math.floor(Math.random() * random_easter.length)])
+            .setImage(random_bday[Math.floor(Math.random() * random_bday.length)])
             .setColor('#7d77df')
         message.channel.send(embed)
         /*
