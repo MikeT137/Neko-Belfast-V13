@@ -45,15 +45,14 @@ module.exports = {
         ]
         const random_bday = [
             'https://media.tenor.com/images/852a1b5e39337565710f904fcb828fe1/tenor.gif',
-            'https://ro.pinterest.com/pin/383650461992544329/',
-            'https://ro.pinterest.com/pin/669558669598740120/',
             'https://gfycat.com/frayedgrimcolt-happy-birthday-sekaiichi-hatsukoi',
-            'https://www.pinterest.dk/pin/419186677801609314/',
-            'https://ro.pinterest.com/pin/415527503122772203/',
-            'https://ro.pinterest.com/pin/74239093844353842/',
-            'https://www.pinterest.co.kr/pin/417638565418441992/',
             'https://i.gifer.com/QAvI.gif',
-            'https://ro.pinterest.com/pin/415527503122772203/'
+            'https://i.pinimg.com/originals/34/34/c4/3434c4b692a5176c13079980e94dd6df.gif',
+            'https://media1.tenor.com/images/fbc51b5f97aebf20cf021ff3522dce93/tenor.gif?itemid=12279714',
+            'https://i.pinimg.com/originals/11/14/0e/11140ea1c87559b14c806e74e9220be3.gif',
+            'https://i.pinimg.com/originals/3e/e0/14/3ee014f1ca84605dec4ad71591917285.gif',
+            'https://78.media.tumblr.com/43993d79a980525ca3f85799c7f12279/tumblr_o1wl18brRw1r60zuio1_540.gif',
+            'https://image.myanimelist.net/ui/FgSQXwnU0GElnZ3SNgHOiC7uQR-fY8O7r5ihQkAc9D6W2PQvfpXBaUMZksw6SU56Tcel2Jv4QEhRJyAtHaCSsUeq4FybJFPBSioBcRd0jLg'
         ]
         const random_halloween = [
             'https://media1.tenor.com/images/a8681310fe7105955afe13292e9a97b9/tenor.gif?itemid=15224642',
