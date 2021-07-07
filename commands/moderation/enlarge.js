@@ -2,7 +2,7 @@ const {prefix} = require('../../config.json')
 module.exports = {
     name:'enlarge',
     description: "It sends a bigger version of an emoji",
-    usage: `${prefix}enlarge (emoji)`,
+    usage: `${prefix}enlarge emoji`,
     category: 'moderation',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');

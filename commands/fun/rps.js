@@ -2,7 +2,7 @@ const {prefix} = require('../../config.json')
 module.exports = {
     name: 'rps',
     description: 'It\'s just a command that lets you play rock paper scissors with the bot. And you can either type nothing and react with an emoji, or directly type what you want to use.',
-    usage: `${prefix}rps / ${prefix}rps (rock/paper/scissors)`,
+    usage: `${prefix}rps / ${prefix}rps rock/paper/scissors`,
     category: 'fun',
     run: async (bot, message, args) => {
         const Discord = require('discord.js')

@@ -2,7 +2,7 @@ const {prefix} = require('../../config.json')
 module.exports = {
     name: 'unban',
     description: 'It unbans a user (you have to be admin)',
-    usage: `${prefix}unban (user ID)`,
+    usage: `${prefix}unban userID`,
     category: 'moderation',
     run: async(bot, message, args) => {
         if(!message.member.hasPermission("BAN_MEMBERS")) {

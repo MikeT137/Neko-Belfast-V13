@@ -2,11 +2,10 @@ const {prefix} = require('../../config.json')
 module.exports = {
     name:'profile',
     description: "It sends information about yourself, or the pinged user. The information is taken from the server you do the command in",
-    usage: `${prefix}profile (no ping / ping)`,
+    usage: `${prefix}profile / ${prefix}profile @ping`,
     category: 'info',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        const req = await bot.shard.fetchClientValues('guilds.cache.size')
         const moment = require('moment');
         const {version} = require('../../package.json');
 
@@ -52,14 +51,14 @@ module.exports = {
                 .setColor('#7d77df')
             message.channel.send(embed)
         }else if(args[0] && message.mentions.members.size == 1) {
-            if(person.id === '727093236954431488') {
+            if(person.id === '831192129635483718') {
                 const embed = new Discord.MessageEmbed()
 
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setDescription('**Information about this bot**')
                     .addField('General', [
                         `\`Name:\` ${bot.user.tag} (${bot.user.id})`,
-                        `\`Servers: \` ${req.reduce((p, n) => p + n, 0)}`,
+                        `\`Servers: \` ${bot.guilds.cache.size}`,
                         `\`Creation Date:\` ${moment(bot.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
                         `\`Version:\` ${version}.${bot.commands.size}`,
                         `\`Developer:\` [Miku](https://discord.bio/p/mikuyoruka)`,

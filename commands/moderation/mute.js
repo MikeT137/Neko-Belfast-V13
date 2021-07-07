@@ -2,7 +2,7 @@ const {prefix} = require('../../config.json')
 module.exports = {
     name:'mute',
     description: "It mutes a user temporarily, however, you still have to set the permissions of the \"BMuted\" role (which you can get by using the \`muterole\` command) in the channel or category to \`SEND_MESSAGES: false\`. (\`b.mute @someone 12s\`)",
-    usage: `${prefix}mute (ping) (number + time: s, m, h, d)`,
+    usage: `${prefix}mute @ping time(s, m, h, d)`,
     category: 'moderation',
     run: async (bot, message, args) => {
         const ms = require('ms');

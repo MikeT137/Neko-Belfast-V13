@@ -2,7 +2,7 @@ const {prefix} = require('../../config.json')
 module.exports = {
     name:'owofy',
     description: "It sends your exact message, but in the form of \"owo\"",
-    usage: `${prefix}owofy (message)`,
+    usage: `${prefix}owofy message`,
     category: 'fun',
     run: async (bot, message, args) => {
         const Discord = require('discord.js')

@@ -2,7 +2,7 @@ const {prefix} = require('../../config.json')
 module.exports = {
     name:'unmute',
     description: "It unmutes a user that is muted, however, you still need to have the role called \"BMuted\" (which you can get by using the \`muterole\` command).",
-    usage: `${prefix}unmute (ping)`,
+    usage: `${prefix}unmute @ping`,
     category: 'moderation',
     run: async (bot, message, args) => {
         let muterole = message.guild.roles.cache.find(role => role.name === 'BMuted')

@@ -2,7 +2,7 @@ const {prefix} = require('../../config.json')
 module.exports = {
     name:'handhold',
     description: "It sends a handholding gif",
-    usage: `${prefix}handhold (ping)`,
+    usage: `${prefix}handhold @ping`,
     category: 'interactive roleplay',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');

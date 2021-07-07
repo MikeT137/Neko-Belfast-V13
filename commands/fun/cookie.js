@@ -2,7 +2,7 @@ const {prefix} = require('../../config.json');
 module.exports = {
     name:'cookie',
     description: "The user gets a cookie or gives a cookie to another user",
-    usage: `${prefix}cookie / ${prefix}cookie @someone`,
+    usage: `${prefix}cookie / ${prefix}cookie @ping`,
     category: 'fun',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');

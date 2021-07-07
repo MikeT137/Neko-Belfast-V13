@@ -2,7 +2,7 @@ const {prefix} = require('../../config.json')
 module.exports = {
     name: 'ship',
     description: 'It sends a random level of love-affinity between 2 users (yourself with another user / two other users)',
-    usage: `${prefix}ship (ping) / b.ship (ping) (ping)`,
+    usage: `${prefix}ship @ping / ${prefix}ship @ping @ping2`,
     category: 'random',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');

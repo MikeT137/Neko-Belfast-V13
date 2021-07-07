@@ -2,7 +2,7 @@ const {prefix} = require('../../config.json')
 module.exports = {
     name: 'suggest',
     description: "If you have any suggestions about the bot, you can send it to the creator.",
-    usage: `${prefix}suggest (message)`,
+    usage: `${prefix}suggest message`,
     category: 'moderation',
     run: async (bot, message, args) => {
         const Discord = require('discord.js')
