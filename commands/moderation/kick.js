@@ -6,6 +6,7 @@ module.exports = {
     category: 'moderation',
     run: async (bot, message, args) => {
         const member = message.mentions.users.first();
+        const reason = args.slice(1).join(' ');
 
         if(!message.member.hasPermission("KICK_MEMBERS")) {
             message.channel.send('You don\'t have permissions to use this command. (KICK_MEMBERS)');
@@ -18,7 +19,7 @@ module.exports = {
                 const user = message.guild.member(member);
 
                 if(user) {
-                    user.kick({days: 3, reason: args.slice(1).join(' ')}).then(() => {
+                    user.kick({days: 3, reason: reason}).then(() => {
                         message.channel.send(`Successfully kicked ${member.tag}`);
                     }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
                 }else {
