@@ -33,7 +33,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
             
                 .setTitle('Help')
-                .setDescription(`React with an emoji or type \`${prefix}help (category)\` to get the commands of that specific category!`)
+                .setDescription(`React with an emoji or type \`${prefix}help category\` to get the commands of that specific category!`)
                 .addFields(
                     {name: ':smiley: - Fun', value: 'Commands that everyone can use if they\'re bored', inline: true },
                     {name: ':face_with_monocle: - Info', value: 'Commands that give more information about specific things', inline: true },
