@@ -51,7 +51,7 @@ module.exports = {
                 .setColor('#7d77df')
             message.channel.send(embed)
         }else if(args[0] && message.mentions.members.size == 1) {
-            if(person.id === '831192129635483718') {
+            if(person.id === '727093236954431488') {
                 const embed = new Discord.MessageEmbed()
 
                     .setThumbnail(bot.user.displayAvatarURL())
