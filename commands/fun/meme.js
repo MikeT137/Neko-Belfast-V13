@@ -16,6 +16,7 @@ module.exports = {
             .setTitle(meme.title)
             .setDescription(`Upvotes: ${meme.upvotes}\nComments: ${meme.comments}`)
             .setImage(meme.img)
+            .setURL(meme.post)
             .setFooter(`Posted in r/${subreddit} by u/${meme.author}`, 'https://cdn.discordapp.com/emojis/697937639701086268.png?v=1')
             .setColor('#7d77df')
         message.channel.send(embed)

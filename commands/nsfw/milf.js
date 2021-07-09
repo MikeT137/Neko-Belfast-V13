@@ -28,6 +28,7 @@ module.exports = {
 
                         .setTitle(post.title)
                         .setImage(post.url)
+                        .setURL(`https://www.reddit.com/${post.permalink}`)
                         .setFooter(`Posted in r/AnimeMILFS`, 'https://cdn.discordapp.com/emojis/697937639701086268.png?v=1')
                         .setColor('#7d77df')
                     message.channel.send(embed)
