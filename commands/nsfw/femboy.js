@@ -2,7 +2,7 @@ const {prefix} = require('../../config.json')
 const {topggtoken} = require('../../config.json')
 module.exports = {
     name:'femboy',
-    description: "It sends a nsfw image about femboys",
+    description: "It sends a nsfw image about males with a feminine appearance and behaviour aka femboys",
     usage: `${prefix}femboy`,
     category: 'nsfw',
     run: async (bot, message, args) => {
