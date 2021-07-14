@@ -11,9 +11,27 @@ module.exports = {
             const Topgg = require('@top-gg/sdk')
             const topgg = new Topgg.Api(topggtoken)
             const reddit = require('reddit-fetch')
-            
             let voted = await topgg.hasVoted(message.author.id)
-            if(!voted) {
+            
+            if(message.author.id == '486276124549316619') {
+                reddit({
+                    subreddit: "AnimeMILFS",
+                    sort: 'new',
+                    allowNSFW: true,
+                    allowModPost: true,
+                    allowCrossPost: true,
+                    allowVideo: true
+                }).then(post => {
+                    const embed = new Discord.MessageEmbed()
+
+                        .setTitle(post.title)
+                        .setImage(post.url)
+                        .setURL(`https://www.reddit.com/${post.permalink}`)
+                        .setFooter(`Posted in r/AnimeMILFS`, 'https://cdn.discordapp.com/emojis/697937639701086268.png?v=1')
+                        .setColor('#7d77df')
+                    message.channel.send(embed)
+                }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
+            }else if(!voted) {
                 message.channel.send(`If you want to access nsfw commands, you have to vote for me once every 12 hours. That\'s the only way that it can work nya~.\nHere\'s the link: https://top.gg/bot/727093236954431488/vote`)
             }else {
                 reddit({
