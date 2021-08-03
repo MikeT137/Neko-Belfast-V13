@@ -38,7 +38,7 @@ module.exports = {
             'https://cdn.discordapp.com/attachments/733965627018182688/872210749865472020/belfast.gif'
         ]
 
-        if(Math.random() * 100 < 10) {
+        if(Math.random() * 100 < 25) {
             image = random_special[Math.floor(Math.random() * random_special.length)]
         }else {
             image = random_bel[Math.floor(Math.random() * random_bel.length)]
