@@ -37,7 +37,7 @@ module.exports = {
             'https://i.redd.it/yj12heak3ym21.png'
         ]
 
-        if(Math.random() * 100 < 1) {
+        if(Math.random() * 100 < 10) {
             image = random_special[Math.floor(Math.random() * random_special.length)]
         }else {
             image = random_bel[Math.floor(Math.random() * random_bel.length)]
