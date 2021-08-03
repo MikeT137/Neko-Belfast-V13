@@ -34,7 +34,8 @@ module.exports = {
         ]
         const random_special = [
             'https://i.imgur.com/Ach6gQp.jpeg',
-            'https://i.redd.it/yj12heak3ym21.png'
+            'https://i.redd.it/yj12heak3ym21.png',
+            'https://cdn.discordapp.com/attachments/733965627018182688/872210749865472020/belfast.gif'
         ]
 
         if(Math.random() * 100 < 10) {
