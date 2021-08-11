@@ -10,7 +10,7 @@ module.exports = bot => {
     February 14th - Will you be my Valentine?
     April 8th - Happy Easter nya~!
     June 29th - It\'s my birthday nya~!
-    September 16th - Happy birthday Miku-senpai!
+    September 16th - Happy birthday Miku!
     October 31st - Have a spooky Halloween tee hee
     November 25th - Happy Thanksgiving nya~!
     December 25th - Merry Xmas nya!

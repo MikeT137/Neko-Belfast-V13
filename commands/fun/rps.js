@@ -9,28 +9,28 @@ module.exports = {
         const acceptedReplies = ['rock', 'paper', 'scissors', 'rocket'];
         const result = acceptedReplies[Math.floor(Math.random() * acceptedReplies.length)];
 
-        const embedR = new Discord.MessageEmbed().setAuthor(`I won!`, message.author.displayAvatarURL({ dynamic: true })).addField('Bot vs You', ':page_facing_up: vs :rock:').setColor('RED')
-        const embedR2 = new Discord.MessageEmbed().setAuthor(`It\'s a tie!`, message.author.displayAvatarURL({ dynamic: true })).addField('Bot vs You', ':rock: vs :rock:').setColor('YELLOW')
-        const embedR3 = new Discord.MessageEmbed().setAuthor(`You won!`, message.author.displayAvatarURL({ dynamic: true })).addField('Bot vs You', ':scissors: vs :rock:').setColor('GREEN')
+        const embedR = new Discord.MessageEmbed().setAuthor(`I won!`, message.author.displayAvatarURL({ dynamic: true })).addField('You vs Bot', ':rock: vs :page_facing_up:').setColor('RED')
+        const embedR2 = new Discord.MessageEmbed().setAuthor(`It\'s a tie!`, message.author.displayAvatarURL({ dynamic: true })).addField('You vs Bot', ':rock: vs :rock:').setColor('YELLOW')
+        const embedR3 = new Discord.MessageEmbed().setAuthor(`You won!`, message.author.displayAvatarURL({ dynamic: true })).addField('You vs Bot', ':rock: vs :scissors:').setColor('GREEN')
 
-        const embedP = new Discord.MessageEmbed().setAuthor(`I won!`, message.author.displayAvatarURL({ dynamic: true })).addField('Bot vs You', ':scissors: vs :page_facing_up:').setColor('RED')
-        const embedP2 = new Discord.MessageEmbed().setAuthor(`It's a tie!`, message.author.displayAvatarURL({ dynamic: true })).addField('Bot vs You', ':page_facing_up: vs :page_facing_up:').setColor('YELLOW')
-        const embedP3 = new Discord.MessageEmbed().setAuthor(`You won!`, message.author.displayAvatarURL({ dynamic: true })).addField('Bot vs You', ':rock: vs :page_facing_up:').setColor('GREEN')
+        const embedP = new Discord.MessageEmbed().setAuthor(`I won!`, message.author.displayAvatarURL({ dynamic: true })).addField('You vs Bot', ':page_facing_up: vs :scissors:').setColor('RED')
+        const embedP2 = new Discord.MessageEmbed().setAuthor(`It's a tie!`, message.author.displayAvatarURL({ dynamic: true })).addField('You vs Bot', ':page_facing_up: vs :page_facing_up:').setColor('YELLOW')
+        const embedP3 = new Discord.MessageEmbed().setAuthor(`You won!`, message.author.displayAvatarURL({ dynamic: true })).addField('You vs Bot', ':page_facing_up: vs :rock:').setColor('GREEN')
 
-        const embedS = new Discord.MessageEmbed().setAuthor(`I won!`, message.author.displayAvatarURL({ dynamic: true })).addField('Bot vs You', ':rock: vs :scissors:').setColor('RED')
-        const embedS2 = new Discord.MessageEmbed().setAuthor(`It\'s a tie!`, message.author.displayAvatarURL({ dynamic: true })).addField('Bot vs You', ':scissors: vs :scissors:').setColor('YELLOW')
-        const embedS3 = new Discord.MessageEmbed().setAuthor(`You won!`, message.author.displayAvatarURL({ dynamic: true })).addField('Bot vs You', ':page_facing_up: vs :scissors:').setColor('GREEN')
+        const embedS = new Discord.MessageEmbed().setAuthor(`I won!`, message.author.displayAvatarURL({ dynamic: true })).addField('You vs Bot', ':scissors: vs :rock:').setColor('RED')
+        const embedS2 = new Discord.MessageEmbed().setAuthor(`It\'s a tie!`, message.author.displayAvatarURL({ dynamic: true })).addField('You vs Bot', ':scissors: vs :scissors:').setColor('YELLOW')
+        const embedS3 = new Discord.MessageEmbed().setAuthor(`You won!`, message.author.displayAvatarURL({ dynamic: true })).addField('You vs Bot', ':scissors: vs :page_facing_up:').setColor('GREEN')
 
-        const embedRocket = new Discord.MessageEmbed().setAuthor(`KABOOM! Nothing beats the rocket!`, message.author.displayAvatarURL({ dynamic: true })).addField('Bot vs You', ':page_facing_up: vs :rocket:').setColor('BLUE')
-        const embedRocket2 = new Discord.MessageEmbed().setAuthor(`KABOOM! Nothing beats the rocket!`, message.author.displayAvatarURL({ dynamic: true })).addField('Bot vs You', ':rock: vs :rocket:').setColor('BLUE')
-        const embedRocket3 = new Discord.MessageEmbed().setAuthor(`KABOOM! Nothing beats the rocket!`, message.author.displayAvatarURL({ dynamic: true })).addField('Bot vs You', ':scissors: vs :rocket:').setColor('BLUE')
+        const embedRocket = new Discord.MessageEmbed().setAuthor(`KABOOM! Nothing beats the rocket!`, message.author.displayAvatarURL({ dynamic: true })).addField('You vs Bot', ':rocket: vs :page_facing_up:').setColor('BLUE')
+        const embedRocket2 = new Discord.MessageEmbed().setAuthor(`KABOOM! Nothing beats the rocket!`, message.author.displayAvatarURL({ dynamic: true })).addField('You vs Bot', ':rocket: vs :rock:').setColor('BLUE')
+        const embedRocket3 = new Discord.MessageEmbed().setAuthor(`KABOOM! Nothing beats the rocket!`, message.author.displayAvatarURL({ dynamic: true })).addField('You vs Bot', ':rocket: vs :scissors:').setColor('BLUE')
 
 
         if (!args[0]) {
             const embed = new Discord.MessageEmbed()
         
                 .setAuthor(`Rock-Paper-Scissors - Choose your weapon!`, message.author.displayAvatarURL({ dynamic: true }))
-                .addField('Bot vs You', '? vs ?')
+                .addField('You vs Bot', '? vs ?')
             message.channel.send(embed)
             .then(msg => {
                 msg.react('🪨'),
