@@ -23,7 +23,7 @@ module.exports = {
         
             .setAuthor(`${message.author.username} is napping, sweet dreams!`, message.author.displayAvatarURL({ dynamic: true }))
             .setDescription(`${args.join(' ')}`)
-            .setImage(random_dab[Math.floor(Math.random() * random_nap.length)])
+            .setImage(random_nap[Math.floor(Math.random() * random_nap.length)])
             .setColor('#7d77df')
         message.channel.send(embed)
     }
