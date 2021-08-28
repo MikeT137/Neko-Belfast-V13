@@ -24,6 +24,7 @@ module.exports = {
                     allowCrossPost: true,
                     allowVideo: true
                 }).then(post => {
+                    message.delete();
                     const embed = new Discord.MessageEmbed()
 
                         .setTitle(post.title)
@@ -44,6 +45,7 @@ module.exports = {
                     allowCrossPost: true,
                     allowVideo: true
                 }).then(post => {
+                    message.delete();
                     const embed = new Discord.MessageEmbed()
 
                         .setTitle(post.title)
