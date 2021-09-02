@@ -62,7 +62,8 @@ module.exports = {
                         `\`Servers: \` ${req.reduce((p, n) => p + n, 0)}`,
                         `\`Creation Date:\` ${moment(bot.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
                         `\`Version:\` ${version}.${bot.commands.size}`,
-                        `\`Developer:\` [Miku](https://discord.bio/p/mikuyoruka)`,
+                        `\`Developer:\` [Miku](https://discords.com/bio/p/mikuyoruka)`,
+                        //`\`Hoster:\` [Mono](https://discords.com/bio/p/monoxi)`,
                         `\`Profile picture artist:\` [ほしみやましろ。](https://www.pixiv.net/en/users/3580504)`
                     ])
                     .addField('Want to support me?', '➤[Invite me!](https://discord.com/oauth2/authorize?client_id=727093236954431488&scope=bot&permissions=2146958847) ➤[Join my server!](https://discord.gg/7DnSZX8Tze) ➤[Vote me!](https://top.gg/bot/727093236954431488/vote) ➤[Donate!](https://www.buymeacoffee.com/mikuyoruka)')

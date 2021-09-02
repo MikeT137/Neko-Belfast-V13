@@ -107,6 +107,7 @@ module.exports = {
         April 8th - Happy Easter nya~!
         June 29th - M-Myaster, it\'s my birthday today!
         September 16th - It\'s Miku\'s birthday nya~!
+        someday - It\'s Mono\'s birthday nya~!
         October 31st - Happy Halloween everyone!
         November 25th - Happy Thanksgiving! With this occasion I\'ll say: thanks for threating me well myaster~
         December 25th - Merry Xmas nya~!
