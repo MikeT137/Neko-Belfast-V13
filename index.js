@@ -29,4 +29,4 @@ dbl.on('error', e => {
 });
 
 //Token
-bot.login(process.env.token)
+bot.login("NzI3MDkzMjM2OTU0NDMxNDg4.Xvm0WA.SKa92unlj_4RZvYAy2Tf6ZiwvJ8");
