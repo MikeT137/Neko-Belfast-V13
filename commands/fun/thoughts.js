@@ -9,7 +9,7 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
         
             .setAuthor('Thoughts', message.author.displayAvatarURL({ dynamic: true }))
-            .setDescription('*Hello, Miku here. I wrote these few topics with all the knowledge i gathered about those specific topics, because theyre thoughts which really overwhelm me. But either way, keep in mind that whatever i wrote in here must be taken with a grain of salt, because im just a kid rambling about things, so don\'t take them as actual advice. Thank you.*\n\n**Select what thought you want to read:**\n1️⃣ - The comfort zone\n2️⃣ - The fear of being lonely\n3️⃣ - The fear of the unknown\n4️⃣ - The meaning of life\n5️⃣ - The never-ending movement of time\n6️⃣ - The potential of being skilled at everything')
+            .setDescription('*Hello, Miku here. I wrote these few topics with all the knowledge i gathered about those specific topics, because theyre thoughts which really overwhelm me. But either way, keep in mind that whatever i wrote in here must be taken with a grain of salt, because im just a kid rambling about things, so don\'t take them as actual advice. Thank you.*\n\n**Select what thought you want to read:**\n1️⃣ - The comfort zone\n2️⃣ - The fear of being lonely\n3️⃣ - The fear of the unknown\n4️⃣ - The meaning of life\n5️⃣ - The never-ending movement of time\n6️⃣ - The potential of being skilled at everything\n7️⃣ - The struggles of anxiety')
             .setColor('#7d77df')
         message.channel.send(embed).then(msg => {
             msg.react('1️⃣'),
@@ -17,10 +17,11 @@ module.exports = {
             msg.react('3️⃣'),
             msg.react('4️⃣'),
             msg.react('5️⃣'),
-            msg.react('6️⃣')
+            msg.react('6️⃣'),
+            msg.react('7️⃣')
 
             const filter = (reaction, user) => {
-                return ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣'].includes(reaction.emoji.name) && user.id === message.author.id;
+                return ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣'].includes(reaction.emoji.name) && user.id === message.author.id;
             }
 
             msg.awaitReactions(filter, { max: 1 })
@@ -72,6 +73,14 @@ module.exports = {
         
                         .setAuthor('Thoughts - The potential of being skilled at everything', message.author.displayAvatarURL({ dynamic: true }))
                         .setDescription('*You know, being talented is really cool and yet a rare thing to find in some people. Which is great, because what i learned is that it\'s better to be skilled and talented. If you\'re talented, you may be sucessful on the first go, but if you\'re not talented, you have to fail and fail and fail, but when you fail, you learn, and that pushes you forward into progressing and becoming skilled. And because you\'re skilled, you memorised, the failing, the bad techniques, you know everything there is to know about doing that something. And what\'s even better is that, not everyone can be talented, very few people are, but everyone can be skilled, if given enough time, because as a wise man once said \"Its all about practice\".*')
+                        .setColor('#7d77df')
+                    msg.edit(embed6)
+                }
+                if(reaction.emoji.name === '7️⃣') {
+                    const embed6 = new Discord.MessageEmbed()
+        
+                        .setAuthor('Thoughts - The struggles of anxiety', message.author.displayAvatarURL({ dynamic: true }))
+                        .setDescription('*I\'ve always been a shy person from the moment i was born, and even if in some cases it got better, in other cases i\'d be so shy my face would turn red. And a really big problem with that in which i found very annoying, is that i can be a very rude individual from the outside, and hide all the nice feelings i ACTUALLY have for certain people, on the inside. For example: saying a joke to your friend that if you\'d say it in a serious tone it will become an insult, and yet when the moment passed you regret even saying that joke in the first place. Or here\'s a personal one: my dad suggesting me that i should get flowers for our teacher since it\'s the first day of school, but i didn\'t do that because, my anxiety wouldn\'t let me. So how do you solve this? Well the only way that seems rational to me is trying to be as socially active as possible, and to have a lot, and i mean A LOT of courage to even attempt it in the first place. But you know what they say \"easy to say, but hard to do\".*')
                         .setColor('#7d77df')
                     msg.edit(embed6)
                 }
