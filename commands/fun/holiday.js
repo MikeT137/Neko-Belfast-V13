@@ -90,15 +90,15 @@ module.exports = {
             'https://cdn62.picsart.com/188752053001202.gif?to=min&r=640',
             'https://data.whicdn.com/images/264113355/original.gif'
         ]
-        message.channel.send('S-sorry, but there is no holiday today nyaa~')
-        /*message.delete();
+        //message.channel.send('S-sorry, but there is no holiday today nyaa~')
+        message.delete();
         const embed = new Discord.MessageEmbed()
 
-            .setAuthor(`M-Myaster, it\'s my birthday today!`, message.author.displayAvatarURL({ dynamic: true }))
+            .setAuthor(`It\'s Miku\'s birthday nya~!`, message.author.displayAvatarURL({ dynamic: true }))
             .setDescription(`${args.join(' ')}`)
             .setImage(random_bday[Math.floor(Math.random() * random_bday.length)])
             .setColor('#7d77df')
-        message.channel.send(embed)*/
+        message.channel.send(embed)
         /*
         Holidays
 
