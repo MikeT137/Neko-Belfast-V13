@@ -1,9 +1,9 @@
 const {prefix} = require('../../config.json')
 const {topggtoken} = require('../../config.json')
 module.exports = {
-    name:'bunnygirl',
+    name:'usagi',
     description: "It sends a nsfw image about bunny girls",
-    usage: `${prefix}bunnygirl`,
+    usage: `${prefix}usagi`,
     category: 'nsfw',
     run: async (bot, message, args) => {
         if(message.channel.nsfw) {
