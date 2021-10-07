@@ -9,7 +9,7 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
         
             .setAuthor('Thoughts', message.author.displayAvatarURL({ dynamic: true }))
-            .setDescription('*Hello, Miku here. I wrote these few topics with all the knowledge i gathered about those specific topics, because theyre thoughts which really overwhelm me. But either way, keep in mind that whatever i wrote in here must be taken with a grain of salt, because im just a kid rambling about things, so don\'t take them as actual advice. Thank you.*\n\n**Select what thought you want to read:**\n1️⃣ - The advantage of having negative emotions\n2️⃣ - The comfort zone\n3️⃣ - The fear of being lonely\n4️⃣ - The fear of the unknown\n5️⃣ - The meaning of life\n6️⃣ - The never-ending movement of time\n7️⃣ - The potential of being skilled at everything')
+            .setDescription('*Hello, Miku here. I wrote these few topics with all the knowledge i gathered about those specific topics, because theyre thoughts which really overwhelm me. But either way, keep in mind that whatever i wrote in here must be taken with a grain of salt, because im just a kid rambling about things, so don\'t take them as actual advice. Thank you.*\n\n**Select what thought you want to read:**\n1️⃣ - The advantage of having negative emotions\n2️⃣ - The comfort zone\n3️⃣ - The fear of being lonely\n4️⃣ - The fear of the unknown\n5️⃣ - The meaning of life\n6️⃣ - The never-ending movement of time\n7️⃣ - The potential of being skilled at everything\n8️⃣ - The thought of being useless')
             .setColor('#7d77df')
         message.channel.send(embed).then(msg => {
             msg.react('1️⃣'),
@@ -18,10 +18,11 @@ module.exports = {
             msg.react('4️⃣'),
             msg.react('5️⃣'),
             msg.react('6️⃣'),
-            msg.react('7️⃣')
+            msg.react('7️⃣'),
+            msg.react('8️⃣')
 
             const filter = (reaction, user) => {
-                return ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣'].includes(reaction.emoji.name) && user.id === message.author.id;
+                return ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣'].includes(reaction.emoji.name) && user.id === message.author.id;
             }
 
             msg.awaitReactions(filter, { max: 1 })
@@ -83,6 +84,13 @@ module.exports = {
                         .setDescription('*You know, being talented is really cool and yet a rare thing to find in some people. Which is great, because what i learned is that it\'s better to be skilled than talented. If you\'re talented, you may be sucessful on the first go, but if you\'re not talented, you have to fail and fail and fail, but when you fail, you learn, and that pushes you forward into progressing and becoming skilled. And because you\'re skilled, you memorised the failing, the bad techniques, you know everything there is to know about doing that something. And what\'s even better is that, not everyone can be talented, very few people are, but everyone can be skilled, if given enough time, because as a wise man once said \"Its all about practice\".*')
                         .setColor('#7d77df')
                     msg.edit(embed7)
+                }if(reaction.emoji.name === '8️⃣') {
+                    const embed8 = new Discord.MessageEmbed()
+        
+                        .setAuthor('Thoughts - The thought of being useless', message.author.displayAvatarURL({ dynamic: true }))
+                        .setDescription('*I\'m sure that all of us had at some point the thought of \"i feel so useless, what am i even doing with my life\". Well, the reason of why we have such a thought is because we feel like we are not doing enough for society, for family, and/or for ourselves. And that comes from more sources, such as seeing someone do something that to you seems very impressive, etc. However, the thought itself is useless, ironic isn\'t it? Because the people that you think are impressive are doing something that youre not able to do. Likewise, you literally CAN\'T be useless since you can do stuff that other people might not be able to, so don\'t feel useless, feel proud! But if you still think that a change needs to happen, don\'t hesitate, however i was mostly speaking of the thought of feeling useless <3*')
+                        .setColor('#7d77df')
+                    msg.edit(embed8)
                 }
             })
         })
