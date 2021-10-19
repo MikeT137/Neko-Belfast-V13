@@ -14,7 +14,6 @@ module.exports = {
             'https://thumbs.gfycat.com/AcidicMindlessGopher-size_restricted.gif',
             'https://c.tenor.com/0j2Kf4vZ4GMAAAAd/nekopara-cleaning.gif',
             'https://c.tenor.com/Jva7RRCY3CEAAAAC/maid-anime.gif',
-            'https://imgur.com/i6GDy7Q',
             'https://c.tenor.com/BWvmIewm86kAAAAM/cleaning-the-floor-emilia.gif',
             'https://img1.picmix.com/output/stamp/normal/4/8/2/5/1835284_fe2f4.gif'
         ];
