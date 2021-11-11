@@ -6,20 +6,26 @@ module.exports = {
     category: 'fun',
     run: async (bot, message, args) => {
         const Discord = require('discord.js')
-        const api = require('imageapi.js')
-        const subreddits = ["dankmemes", "memes", 'Animemes', "meme"]
+        const reddit = require('reddit-fetch')
+        const subreddits = ["dankmemes", "memes", "Animemes", "meme"]
         const subreddit = subreddits[Math.floor(Math.random() * (subreddits.length))]
-        const meme = await api.advanced(subreddit)
 
-        const embed = new Discord.MessageEmbed()
+        reddit({
+            subreddit: `${subreddit}`,
+            sort: 'new',
+            allowNSFW: false,
+            allowModPost: true,
+            allowCrossPost: true,
+            allowVideo: true
+        }).then(post => {
+            const embed = new Discord.MessageEmbed()
 
-            .setTitle(meme.title)
-            .setDescription(`Upvotes: ${meme.upvotes}\nComments: ${meme.comments}`)
-            .setImage(meme.img)
-            .setURL(meme.post)
-            .setFooter(`Posted in r/${subreddit} by u/${meme.author}`, 'https://cdn.discordapp.com/emojis/697937639701086268.png?v=1')
-            .setColor('#7d77df')
-        message.channel.send(embed)
-        .catch(error => console.log(`Oops, something went wrong:\n${error}`))
+                .setTitle(post.title)
+                .setImage(post.url)
+                .setURL(`https://www.reddit.com/${post.permalink}`)
+                .setFooter(`Posted in r/${subreddit} by u/${post.author}`, 'https://cdn.discordapp.com/emojis/697937639701086268.png?v=1')
+                .setColor('#7d77df')
+            message.channel.send(embed)
+        }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
     }
-}
+};

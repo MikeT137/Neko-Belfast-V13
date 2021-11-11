@@ -12,7 +12,7 @@ module.exports = {
             new tictactoe({
                 player_two: person,
                 message: message
-            })
+            }).catch(error => console.log(`Oops, something went wrong:\n${error}`))
         }else {
             message.channel.send('Please specify a member!')
         }
