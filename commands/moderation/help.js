@@ -95,6 +95,8 @@ module.exports = {
             message.channel.send(embedS)
         }else if(args[0] == 'category' || args[0] == 'command') {
             message.channel.send(`Aww, don\'t be silly now, you have to use one of the ${args[0]} names nya!`)
+        }else if(args[0] == 'lola') {
+            return;
         }else {
             const command = bot.commands.get(args[0].toLowerCase());
 
