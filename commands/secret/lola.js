@@ -22,7 +22,7 @@ module.exports = {
         if(message.author.id == '486276124549316619' || message.author.id == '387156726060810250') {
             const embed = new Discord.MessageEmbed()
     
-                .setAuthor(`Hey babe, hope you like this exclusive command i made for ya. Youre very nice with me, kind, i look up to you a lot given to how smart you are, ||also hot as hell||, and i couldnt ask for more. Love you lots`, message.author.displayAvatarURL({ dynamic: true }))
+                .setAuthor(`Hey babe, hope you like this exclusive command i made for ya. Youre very nice with me, kind, i look up to you a lot given to how smart you are (also hot as hell), and i couldnt ask for more. Love you lots`, message.author.displayAvatarURL({ dynamic: true }))
                 .setImage(gif[Math.floor(Math.random() * gif.length)])
                 .setColor('#7d77df')
             message.channel.send(embed)
