@@ -7,6 +7,6 @@ const shards = new ShardingManager("./index.js", {
 
 shards.on("shardCreate", shard => {
     console.log(`Launched shard #${shard.id}`);
-})
+}).catch(error => console.log(`Oops, something went wrong:\n${error}`))
 
-shards.spawn()
+shards.spawn().catch(error => console.log(`Oops, something went wrong:\n${error}`))
