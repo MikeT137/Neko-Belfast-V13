@@ -1,12 +1,11 @@
 const { ShardingManager } = require("discord.js")
 
-const shards = new ShardingManager("./index.js", {
-    token: "NzI3MDkzMjM2OTU0NDMxNDg4.Xvm0WA.SKa92unlj_4RZvYAy2Tf6ZiwvJ8", 
-    totalShards: "auto"
+const manager = new ShardingManager("./index.js", {
+    token: "NzI3MDkzMjM2OTU0NDMxNDg4.Xvm0WA.SKa92unlj_4RZvYAy2Tf6ZiwvJ8",
 })
 
-shards.on("shardCreate", shard => {
+manager.on("shardCreate", shard => {
     console.log(`Launched shard #${shard.id}`);
 })
 
-shards.spawn().catch(error => console.log(`Oops, something went wrong:\n${error}`))
+manager.spawn(8, 30000).catch(error => console.log(`Oops, something went wrong:\n${error}`))
