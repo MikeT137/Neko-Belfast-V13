@@ -6,26 +6,25 @@ module.exports = {
     category: 'self roleplay',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        const {api_key} = require ('../../config.json')
-        const fetch = require('node-fetch');
-        const url = 'https://api.otakugifs.xyz/gif/pout';
+        const random_pout = [
+            'https://c.tenor.com/yCR6JOoxS6wAAAAM/anime-angry.gif',
+            'https://c.tenor.com/hR8XdCeC2psAAAAM/cute-pouting.gif',
+            'https://c.tenor.com/iNu8LXx2ECgAAAAM/senko-poute-hmph.gif',
+            'https://c.tenor.com/A70scThth6MAAAAM/angry-pouting.gif',
+            'https://c.tenor.com/VidlGXLXk3gAAAAM/anime-girl.gif',
+            'https://c.tenor.com/3EgO4ozQzp4AAAAM/anime-raphtalia.gif',
+            'https://c.tenor.com/p4vHR4zM_u0AAAAM/anime-tsundere.gif',
+            'https://c.tenor.com/Ln-j0vBojk0AAAAM/pouty-anime.gif',
+            'https://c.tenor.com/TxOLuusc9LIAAAAM/pout-hmph.gif',
+            'https://c.tenor.com/0KZUMuXbDbYAAAAM/pouty-anime.gif'
+        ]
         message.delete();
-        fetch(url, {
-            method: 'GET',
-            headers: {
-                'X-API-KEY': api_key,
-            },
-        }).then((res) =>
-            res.json()
-        ).then((json) => {
-            const embed = new Discord.MessageEmbed()
-        
-                .setAuthor(`${message.author.username} is pouting, such a tsundere`, message.author.displayAvatarURL({ dynamic: true }))
-                .setDescription(`${args.join(' ')}`)
-                .setImage(json.url)
-                .setFooter('Powered by otakugifs.xyz', 'https://cdn.discordapp.com/emojis/832616362794942475.png?v=1')
-                .setColor('#7d77df')
-            message.channel.send(embed)
-        })
+        const embed = new Discord.MessageEmbed()
+
+            .setAuthor(`${message.author.username} is pouting, such a tsundere`, message.author.displayAvatarURL({ dynamic: true }))
+            .setDescription(`${args.join(' ')}`)
+            .setImage(random_pout[Math.floor(Math.random() * random_pout.length)])
+            .setColor('#7d77df')
+        message.channel.send(embed);
     }
 }

@@ -13,7 +13,7 @@ module.exports = {
             'https://i.pinimg.com/originals/4c/7d/3e/4c7d3e30212426af4e3fbbbd06b57588.gif',
             'https://acegif.com/wp-content/uploads/anime-love-13.gif',
             'https://i.pinimg.com/originals/44/07/c9/4407c96aa6d087b3f6d5f693495145e6.gif',
-            'https://monophy.com/media/bm2O3nXTcKJeU/monophy.gif',
+            'https://c.tenor.com/OV5ltVkjtooAAAAC/love-you-happy.gif',
             'https://i.pinimg.com/originals/6d/b5/4c/6db54c4d6dad5f1f2863d878cfb2d8df.gif',
             'https://media.tenor.com/images/816ebcd1165532d7a72027c331faed90/tenor.gif',
             'https://acegif.com/wp-content/uploads/anime-love-29.gif',
@@ -21,7 +21,7 @@ module.exports = {
         ]
         if(message.mentions.members.size >= 1) {
             message.delete();
-            if(person.id === '727093236954431488') {
+            if(person.id === `${bot.user.id}`) {
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`I love you too ${message.author.username}!`, message.author.displayAvatarURL({ dynamic: true }))

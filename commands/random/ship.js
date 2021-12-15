@@ -19,7 +19,7 @@ module.exports = {
         }else if(message.mentions.members.size == 1) {
             if(person.id == message.author.id) {
                 message.channel.send('You can\'t ship yourself');
-            }else if(person.id === '727093236954431488') {
+            }else if(person.id === `${bot.user.id}`) {
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`${message.author.username} x ${person.username} =`, message.author.displayAvatarURL({ dynamic: true }))

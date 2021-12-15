@@ -6,26 +6,25 @@ module.exports = {
     category: 'self roleplay',
     run: async (bot, message, args) => {
         const Discord = require('discord.js');
-        const {api_key} = require ('../../config.json')
-        const fetch = require('node-fetch');
-        const url = 'https://api.otakugifs.xyz/gif/smile';
+        const random_smile = [
+            'https://c.tenor.com/3fAZZncIHDQAAAAM/smile-anime.gif',
+            'https://c.tenor.com/VrUxJZFdmIsAAAAM/anime-excited.gif',
+            'https://c.tenor.com/P80RbbzxQU0AAAAM/izuku-midoriya-smile.gif',
+            'https://c.tenor.com/BA2eLg42RbEAAAAM/isitwrongtotryandpickupgirlsinadungeon-bellcranel.gif',
+            'https://c.tenor.com/nuKmYDgaDpAAAAAM/anime-smile.gif',
+            'https://tenor.com/view/yoruka-smile-yoruka-smile-anime-anime-girl-gif-20389447',
+            'https://tenor.com/view/headpat-smile-blush-anime-gif-13946208',
+            'https://c.tenor.com/U1p83COiAPYAAAAM/anime-happy-anime-smile.gif',
+            'https://c.tenor.com/ivEOWR55wBEAAAAM/anime-happy.gif',
+            'https://c.tenor.com/5pFqYK5spNkAAAAM/anime-girl.gif'
+        ]
         message.delete();
-        fetch(url, {
-            method: 'GET',
-            headers: {
-                'X-API-KEY': api_key,
-            },
-        }).then((res) =>
-            res.json()
-        ).then((json) => {
-            const embed = new Discord.MessageEmbed()
-        
-                .setAuthor(`${message.author.username} is smiling, how beautiful`, message.author.displayAvatarURL({ dynamic: true }))
-                .setDescription(`${args.join(' ')}`)
-                .setImage(json.url)
-                .setFooter('Powered by otakugifs.xyz', 'https://cdn.discordapp.com/emojis/832616362794942475.png?v=1')
-                .setColor('#7d77df')
-            message.channel.send(embed)
-        })
+        const embed = new Discord.MessageEmbed()
+
+            .setAuthor(`${message.author.username} is smiling, how beautiful`, message.author.displayAvatarURL({ dynamic: true }))
+            .setDescription(`${args.join(' ')}`)
+            .setImage(random_smile[Math.floor(Math.random() * random_smile.length)])
+            .setColor('#7d77df')
+        message.channel.send(embed);
     }
 }

@@ -17,11 +17,11 @@ module.exports = {
             'https://media.tenor.com/images/e284c029dad4af4bd870662f5834c847/tenor.gif',
             'https://i.kym-cdn.com/photos/images/newsfeed/001/113/007/ed9.gif',
             'https://i.imgur.com/GsiOLVC.gif',
-            'https://img.kokakiwi.net/anime/cheer2.gif',
+            'https://img.kokakiwi.net/anime/cheer2.gif'
         ]
         if(message.mentions.members.size >= 1) {
             message.delete();
-            if(person.id === '727093236954431488') {
+            if(person.id === `${bot.user.id}`) {
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`Aww, thank you ${message.author.username}. But there\'s no need to worry about me, as long as i\'m near my master, i\'ll always be happy nya.`, message.author.displayAvatarURL({ dynamic: true }))

@@ -6,38 +6,33 @@ module.exports = {
     category: 'self roleplay',
     run: async(bot, message, args) => {
         const Discord = require('discord.js');
-        const {api_key} = require ('../../config.json')
-        const person = message.mentions.users.first();
-        const fetch = require('node-fetch');
-        const url = 'https://api.otakugifs.xyz/gif/run';
+        const random_run = [
+            'https://c.tenor.com/mUIXigPWPuYAAAAM/anime-anime-girl-running.gif',
+            'https://c.tenor.com/MMA6_WvqS60AAAAM/escape-im-out.gif',
+            'https://c.tenor.com/am4tzoTsnRoAAAAM/ichigaya-arisa-bang-dream.gif',
+            'https://c.tenor.com/fCNJ5gEgwEYAAAAM/naruto-anime.gif',
+            'https://c.tenor.com/BF9yBwexIbMAAAAM/anime-run.gif',
+            'https://c.tenor.com/PAOfog-IuSAAAAAM/anime-nezuko-kamado.gif',
+            'https://c.tenor.com/Vuu21qfS4wcAAAAM/maki-natsuo-love-lab.gif',
+            'https://c.tenor.com/G2YT33dvNjQAAAAM/anime.gif'
+        ]
         message.delete();
-        fetch(url, {
-            method: 'GET',
-            headers: {
-                'X-API-KEY': api_key,
-            },
-        }).then((res) =>
-            res.json()
-        ).then((json) => {
-            if(message.mentions.members.size >= 1 && person.id != message.author.id) {
-                    const embed = new Discord.MessageEmbed()
+        if(message.mentions.members.size >= 1 && person.id != message.author.id) {
+            const embed = new Discord.MessageEmbed()
             
-                        .setAuthor(`${message.author.username} is running away from ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
-                        .setDescription(`${args.slice(1, args.length).join(' ')}`)
-                        .setImage(json.url)
-                        .setFooter('Powered by otakugifs.xyz', 'https://cdn.discordapp.com/emojis/832616362794942475.png?v=1')
-                        .setColor('#7d77df')
-                    message.channel.send(embed);
-            }else {
-                const embed = new Discord.MessageEmbed()
+                .setAuthor(`${message.author.username} is running away from ${person.username}`, message.author.displayAvatarURL({ dynamic: true }))
+                .setDescription(`${args.slice(1, args.length).join(' ')}`)
+                .setImage(random_run[Math.floor(Math.random() * random_run.length)])
+                .setColor('#7d77df')
+            message.channel.send(embed);
+        }else {
+            const embed = new Discord.MessageEmbed()
             
-                    .setAuthor(`${message.author.username} is running away`, message.author.displayAvatarURL({ dynamic: true }))
-                    .setDescription(`${args.join(' ')}`)
-                    .setImage(json.url)
-                    .setFooter('Powered by otakugifs.xyz', 'https://cdn.discordapp.com/emojis/832616362794942475.png?v=1')
-                    .setColor('#7d77df')
-                message.channel.send(embed)
-            }
-        })
+                .setAuthor(`${message.author.username} is running away`, message.author.displayAvatarURL({ dynamic: true }))
+                .setDescription(`${args.join(' ')}`)
+                .setImage(random_run[Math.floor(Math.random() * random_run.length)])
+                .setColor('#7d77df')
+            message.channel.send(embed)
+        }
     }
 }

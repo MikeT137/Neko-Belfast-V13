@@ -41,7 +41,7 @@ module.exports = {
                     .setImage(random_cry[Math.floor(Math.random() * random_cry.length)])
                     .setColor('#7d77df')
                 message.channel.send(embed);
-            }else if(person.id === '727093236954431488') {
+            }else if(person.id === `${bot.user.id}`) {
                 const embed = new Discord.MessageEmbed()
 
                     .setAuthor(`NYAA! Why do you want to abuse me like this ${message.author.username}?`, message.author.displayAvatarURL({ dynamic: true }))

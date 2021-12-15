@@ -34,7 +34,7 @@ module.exports = {
         if(message.mentions.members.size >= 1) {
             if(person.id == message.author.id) {
                 message.channel.send('NO')
-            }else if(person.id === '727093236954431488') {
+            }else if(person.id === `${bot.user.id}`) {
                 message.delete();
                 const embed = new Discord.MessageEmbed()
 
