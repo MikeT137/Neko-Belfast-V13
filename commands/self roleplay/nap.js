@@ -16,7 +16,7 @@ module.exports = {
             'https://acegif.com/wp-content/gif/anime-sleep-1.gif',
             'https://image.myanimelist.net/ui/_3fYL8i6Q-n-155t3dn_4oa8joxN4d65hmFMp22bNTIUW3ufQExKZv-GKL4AdqgU',
             'https://imgur.com/PKys6GG',
-            'https://pa1.narvii.com/5736/545fb89f5c64c4a1722d4c76261f91e9b859a1a0_hq.gif'
+            'https://media.tenor.com/images/39f2224df78d9e915a2b59b73074ea05/tenor.gif'
         ]
         message.delete();
         const embed = new Discord.MessageEmbed()

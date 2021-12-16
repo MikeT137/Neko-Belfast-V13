@@ -13,7 +13,7 @@ module.exports = {
             'https://c.tenor.com/pBkwu0RP5cEAAAAM/drink-hyouka.gif',
             'https://c.tenor.com/l0BUi2grxtgAAAAM/tea-time-tea.gif',
             'https://c.tenor.com/ecR-CbFWx6UAAAAM/anime-sip.gif',
-            'https://c.tenor.com/Nn4ydcdsdbEAAAAM/manga-rascal-does-not-dream-of-bunny-girl-senpai.gif',
+            'https://c.tenor.com/cDPmQX5_iJYAAAAM/enty-enterprise.gif',
             'https://c.tenor.com/O9nE09LWTPMAAAAM/drink-anime.gif',
             'https://c.tenor.com/RJ9qC27CvCEAAAAM/giorno-tea.gif',
             'https://c.tenor.com/xsy1eMSNR6QAAAAM/minamike-chiaki-minami.gif'

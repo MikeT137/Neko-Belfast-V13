@@ -24,12 +24,13 @@ module.exports = {
             'Happy holiday, master. This is infused with my appreciation and love for you, a small token from Belfast, please accept it.'
         ]
         const random_bel = [
+            'https://c.tenor.com/I1xDE0C3YA0AAAAM/azur-lane-anime.gif',
+            'https://c.tenor.com/PBe8GFz7fAgAAAAM/azur-lane-anime.gif',
+            'https://c.tenor.com/cDPmQX5_iJYAAAAM/enty-enterprise.gif',
             'https://media.tenor.com/images/39f2224df78d9e915a2b59b73074ea05/tenor.gif',
             'https://thumbs.gfycat.com/ExcellentMediumBull-max-1mb.gif',
             'https://1.bp.blogspot.com/-Cz18jeQ60ho/YEa0zE-dsLI/AAAAAAACHM8/55t-pCOVI4AFihzFaqJGVrexJm5L9ldWACPcBGAsYHg/s1920/Azur%2BLane%2B-%2BBisoku%2BZenshin%2521%2B-%2BEpisode%2B9%2B-%2BBel-chan%2BThinks%2Bof%2BBelfast.gif',
-            'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c9871ecf-dbb3-49ab-9193-b10683371e4c/de26lic-0eba58e6-e7bf-4d12-9af7-90cf21f8bcce.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2M5ODcxZWNmLWRiYjMtNDlhYi05MTkzLWIxMDY4MzM3MWU0Y1wvZGUyNmxpYy0wZWJhNThlNi1lN2JmLTRkMTItOWFmNy05MGNmMjFmOGJjY2UuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.yP_pum2fLdZUBqhqYGzMYsN4goaImOFT_e1UPqgxkxk',
             'https://2.bp.blogspot.com/-xPuSDvwxSuU/XalWr1yXfQI/AAAAAAABqdc/8Clgt035JKUj8P4dcAKLpUtEcOzsfZKmgCKgBGAsYHg/s1600/Azur%2BLane%2B-%2BEpisode%2B3%2B-%2BBelfast%2BIntroduction.gif',
-            'https://i.redd.it/v4hieyidhnx31.gif',
             'https://1.bp.blogspot.com/-zF0Tu9Kh5HA/XbKW_CanIpI/AAAAAAABrHo/prB9RBDhPj8majmiIXJ5wHXgavKCQm-pQCKgBGAsYHg/s1600/Azur%2BLane%2B-%2BEpisode%2B4%2B-%2BBelfast%2BHas%2Ba%2BWish.gif'
         ]
         const random_special = [

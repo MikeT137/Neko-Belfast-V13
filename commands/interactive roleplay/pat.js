@@ -15,9 +15,9 @@ module.exports = {
             'https://c.tenor.com/jEfC8cztigIAAAAC/anime-pat.gif',
             'https://i.pinimg.com/originals/ec/b8/7f/ecb87fb2827a022884d5165046f6608a.gif',
             'https://66.media.tumblr.com/a72dd82535f3e7accd827c202dacc09a/tumblr_pfyiqz0pFL1th206io1_640.gif',
-            'https://thumbs.gfycat.com/BlushingDeepBlacknorwegianelkhound-size_restricted.gif',
+            'https://media.tenor.com/images/39f2224df78d9e915a2b59b73074ea05/tenor.gif',
             'https://c.tenor.com/dmYhPDHbbI4AAAAM/misha-misha-necron-anos-voldigoad-the-misfit-of-demon-king-academy-headpat-pat.gif',
-            'https://animesher.com/orig/0/90/901/9010/animesher.com_girl-funny-pat-901096.gif'
+            'https://c.tenor.com/PBe8GFz7fAgAAAAM/azur-lane-anime.gif'
         ]
         if(message.mentions.members.size >= 1) {
             message.delete();
