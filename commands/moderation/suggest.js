@@ -18,12 +18,10 @@ module.exports = {
                         .setDescription('**New Suggestion nya~!**')
                         .setThumbnail(message.author.displayAvatarURL({dynamic: true}))
                         .addField('User', [
-                            `\`User Tag:\` ${message.author.tag}`,
-                            `\`User ID:\` ${message.author.id}`,
+                            `\`User Tag:\` ${message.author.tag}`
                         ])
                         .addField(`Server`, [
-                            `\`Server Name:\` ${message.guild.name}`,
-                            `\`Server ID\`: ${message.guild.id}`,
+                            `\`Server Name:\` ${message.guild.name}`
                         ])
                         .addField('Message', `${args.join(' ')}`)
                         .setColor('#7d77df')
